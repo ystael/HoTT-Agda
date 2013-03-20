@@ -1,0 +1,891 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Homotopy.PushoutIsPushout</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+
+</a
+      ><a name="48" class="Keyword"
+      >open</a
+      ><a name="52"
+      > </a
+      ><a name="53" class="Keyword"
+      >import</a
+      ><a name="59"
+      > </a
+      ><a name="60" href="Homotopy.PushoutDef.html#1" class="Module"
+      >Homotopy.PushoutDef</a
+      ><a name="79"
+      >
+
+</a
+      ><a name="81" class="Keyword"
+      >module</a
+      ><a name="87"
+      > </a
+      ><a name="88" href="Homotopy.PushoutIsPushout.html#1" class="Module"
+      >Homotopy.PushoutIsPushout</a
+      ><a name="113"
+      > </a
+      ><a name="114" class="Symbol"
+      >{</a
+      ><a name="115" href="Homotopy.PushoutIsPushout.html#115" class="Bound"
+      >i</a
+      ><a name="116" class="Symbol"
+      >}</a
+      ><a name="117"
+      > </a
+      ><a name="118" class="Symbol"
+      >(</a
+      ><a name="119" href="Homotopy.PushoutIsPushout.html#119" class="Bound"
+      >d</a
+      ><a name="120"
+      > </a
+      ><a name="121" class="Symbol"
+      >:</a
+      ><a name="122"
+      > </a
+      ><a name="123" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="135"
+      > </a
+      ><a name="136" href="Homotopy.PushoutIsPushout.html#115" class="Bound"
+      >i</a
+      ><a name="137" class="Symbol"
+      >)</a
+      ><a name="138"
+      > </a
+      ><a name="139" class="Keyword"
+      >where</a
+      ><a name="144"
+      >
+
+</a
+      ><a name="146" class="Keyword"
+      >import</a
+      ><a name="152"
+      > </a
+      ><a name="153" href="Homotopy.PushoutUP.html#1" class="Module"
+      >Homotopy.PushoutUP</a
+      ><a name="171"
+      > </a
+      ><a name="172" class="Symbol"
+      >as</a
+      ><a name="174"
+      > </a
+      ><a name="175" class="Module"
+      >PushoutUP</a
+      ><a name="184"
+      >
+</a
+      ><a name="185" class="Keyword"
+      >open</a
+      ><a name="189"
+      > </a
+      ><a name="190" href="Homotopy.PushoutUP.html#1" class="Module"
+      >PushoutUP</a
+      ><a name="199"
+      > </a
+      ><a name="200" href="Homotopy.PushoutIsPushout.html#119" class="Bound"
+      >d</a
+      ><a name="201"
+      > </a
+      ><a name="202" class="Symbol"
+      >(&#955;</a
+      ><a name="204"
+      > </a
+      ><a name="205" href="Homotopy.PushoutIsPushout.html#205" class="Bound"
+      >_</a
+      ><a name="206"
+      > </a
+      ><a name="207" class="Symbol"
+      >&#8594;</a
+      ><a name="208"
+      > </a
+      ><a name="209" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="213" class="Symbol"
+      >)</a
+      ><a name="214"
+      > </a
+      ><a name="215" class="Comment"
+      >-- A B C f g (&#955; _ &#8594; unit)</a
+      ><a name="240"
+      >
+
+</a
+      ><a name="242" href="Homotopy.PushoutIsPushout.html#242" class="Function"
+      >pushout-cocone</a
+      ><a name="256"
+      > </a
+      ><a name="257" class="Symbol"
+      >:</a
+      ><a name="258"
+      > </a
+      ><a name="259" href="Homotopy.PushoutUP.html#329" class="Record"
+      >cocone</a
+      ><a name="265"
+      > </a
+      ><a name="266" class="Symbol"
+      >(</a
+      ><a name="267" href="Homotopy.PushoutDef.html#2826" class="Function"
+      >pushout</a
+      ><a name="274"
+      > </a
+      ><a name="275" href="Homotopy.PushoutIsPushout.html#119" class="Bound"
+      >d</a
+      ><a name="276" class="Symbol"
+      >)</a
+      ><a name="277"
+      >
+</a
+      ><a name="278" href="Homotopy.PushoutIsPushout.html#242" class="Function"
+      >pushout-cocone</a
+      ><a name="292"
+      > </a
+      ><a name="293" class="Symbol"
+      >=</a
+      ><a name="294"
+      > </a
+      ><a name="295" class="Symbol"
+      >(</a
+      ><a name="296" href="Homotopy.PushoutDef.html#1513" class="Function"
+      >left</a
+      ><a name="300"
+      > </a
+      ><a name="301" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="302"
+      > </a
+      ><a name="303" href="Homotopy.PushoutDef.html#1550" class="Function"
+      >right</a
+      ><a name="308"
+      > </a
+      ><a name="309" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="310"
+      > </a
+      ><a name="311" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="315" class="Symbol"
+      >)</a
+      ><a name="316"
+      >
+
+</a
+      ><a name="318" href="Homotopy.PushoutIsPushout.html#318" class="Function"
+      >factor-pushout</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="Symbol"
+      >:</a
+      ><a name="334"
+      > </a
+      ><a name="335" class="Symbol"
+      >(</a
+      ><a name="336" href="Homotopy.PushoutIsPushout.html#336" class="Bound"
+      >E</a
+      ><a name="337"
+      > </a
+      ><a name="338" class="Symbol"
+      >:</a
+      ><a name="339"
+      > </a
+      ><a name="340" class="PrimitiveType"
+      >Set</a
+      ><a name="343"
+      > </a
+      ><a name="344" href="Homotopy.PushoutIsPushout.html#115" class="Bound"
+      >i</a
+      ><a name="345" class="Symbol"
+      >)</a
+      ><a name="346"
+      > </a
+      ><a name="347" class="Symbol"
+      >&#8594;</a
+      ><a name="348"
+      > </a
+      ><a name="349" class="Symbol"
+      >(</a
+      ><a name="350" href="Homotopy.PushoutUP.html#329" class="Record"
+      >cocone</a
+      ><a name="356"
+      > </a
+      ><a name="357" href="Homotopy.PushoutIsPushout.html#336" class="Bound"
+      >E</a
+      ><a name="358"
+      > </a
+      ><a name="359" class="Symbol"
+      >&#8594;</a
+      ><a name="360"
+      > </a
+      ><a name="361" class="Symbol"
+      >(</a
+      ><a name="362" href="Homotopy.PushoutDef.html#2826" class="Function"
+      >pushout</a
+      ><a name="369"
+      > </a
+      ><a name="370" href="Homotopy.PushoutIsPushout.html#119" class="Bound"
+      >d</a
+      ><a name="371"
+      > </a
+      ><a name="372" class="Symbol"
+      >&#8594;</a
+      ><a name="373"
+      > </a
+      ><a name="374" href="Homotopy.PushoutIsPushout.html#336" class="Bound"
+      >E</a
+      ><a name="375" class="Symbol"
+      >))</a
+      ><a name="377"
+      >
+</a
+      ><a name="378" href="Homotopy.PushoutIsPushout.html#318" class="Function"
+      >factor-pushout</a
+      ><a name="392"
+      > </a
+      ><a name="393" href="Homotopy.PushoutIsPushout.html#393" class="Bound"
+      >E</a
+      ><a name="394"
+      > </a
+      ><a name="395" class="Symbol"
+      >(</a
+      ><a name="396" href="Homotopy.PushoutIsPushout.html#396" class="Bound"
+      >A&#8594;top</a
+      ><a name="401"
+      > </a
+      ><a name="402" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="403"
+      > </a
+      ><a name="404" href="Homotopy.PushoutIsPushout.html#404" class="Bound"
+      >B&#8594;top</a
+      ><a name="409"
+      > </a
+      ><a name="410" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="411"
+      > </a
+      ><a name="412" href="Homotopy.PushoutIsPushout.html#412" class="Bound"
+      >h</a
+      ><a name="413" class="Symbol"
+      >)</a
+      ><a name="414"
+      > </a
+      ><a name="415" class="Symbol"
+      >=</a
+      ><a name="416"
+      > </a
+      ><a name="417" href="Homotopy.PushoutDef.html#2288" class="Function"
+      >pushout-rec-nondep</a
+      ><a name="435"
+      > </a
+      ><a name="436" href="Homotopy.PushoutIsPushout.html#393" class="Bound"
+      >E</a
+      ><a name="437"
+      > </a
+      ><a name="438" href="Homotopy.PushoutIsPushout.html#396" class="Bound"
+      >A&#8594;top</a
+      ><a name="443"
+      > </a
+      ><a name="444" href="Homotopy.PushoutIsPushout.html#404" class="Bound"
+      >B&#8594;top</a
+      ><a name="449"
+      > </a
+      ><a name="450" href="Homotopy.PushoutIsPushout.html#412" class="Bound"
+      >h</a
+      ><a name="451"
+      >
+
+</a
+      ><a name="453" class="Keyword"
+      >abstract</a
+      ><a name="461"
+      >
+  </a
+      ><a name="464" href="Homotopy.PushoutIsPushout.html#464" class="Function"
+      >pushout-is-pushout</a
+      ><a name="482"
+      > </a
+      ><a name="483" class="Symbol"
+      >:</a
+      ><a name="484"
+      > </a
+      ><a name="485" href="Homotopy.PushoutUP.html#2389" class="Function"
+      >is-pushout</a
+      ><a name="495"
+      > </a
+      ><a name="496" class="Symbol"
+      >(</a
+      ><a name="497" href="Homotopy.PushoutDef.html#2826" class="Function"
+      >pushout</a
+      ><a name="504"
+      > </a
+      ><a name="505" href="Homotopy.PushoutIsPushout.html#119" class="Bound"
+      >d</a
+      ><a name="506" class="Symbol"
+      >)</a
+      ><a name="507"
+      > </a
+      ><a name="508" href="Homotopy.PushoutIsPushout.html#242" class="Function"
+      >pushout-cocone</a
+      ><a name="522"
+      >
+  </a
+      ><a name="525" href="Homotopy.PushoutIsPushout.html#464" class="Function"
+      >pushout-is-pushout</a
+      ><a name="543"
+      > </a
+      ><a name="544" href="Homotopy.PushoutIsPushout.html#544" class="Bound"
+      >E</a
+      ><a name="545"
+      > </a
+      ><a name="546" class="Symbol"
+      >&#10627;</a
+      ><a name="547"
+      > </a
+      ><a name="548" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="550"
+      > </a
+      ><a name="551" class="Symbol"
+      >&#10628;</a
+      ><a name="552"
+      > </a
+      ><a name="553" class="Symbol"
+      >=</a
+      ><a name="554"
+      > </a
+      ><a name="555" href="Equivalences.html#3936" class="Function"
+      >iso-is-eq</a
+      ><a name="564"
+      > </a
+      ><a name="565" class="Symbol"
+      >_</a
+      ><a name="566"
+      > </a
+      ><a name="567" class="Symbol"
+      >(</a
+      ><a name="568" href="Homotopy.PushoutIsPushout.html#318" class="Function"
+      >factor-pushout</a
+      ><a name="582"
+      > </a
+      ><a name="583" href="Homotopy.PushoutIsPushout.html#544" class="Bound"
+      >E</a
+      ><a name="584" class="Symbol"
+      >)</a
+      ><a name="585"
+      >
+    </a
+      ><a name="590" class="Symbol"
+      >(&#955;</a
+      ><a name="592"
+      > </a
+      ><a name="593" href="Homotopy.PushoutIsPushout.html#593" class="Bound"
+      >y</a
+      ><a name="594"
+      > </a
+      ><a name="595" class="Symbol"
+      >&#8594;</a
+      ><a name="596"
+      > </a
+      ><a name="597" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="600"
+      > </a
+      ><a name="601" class="Symbol"
+      >(&#955;</a
+      ><a name="603"
+      > </a
+      ><a name="604" href="Homotopy.PushoutIsPushout.html#604" class="Bound"
+      >u</a
+      ><a name="605"
+      > </a
+      ><a name="606" class="Symbol"
+      >&#8594;</a
+      ><a name="607"
+      > </a
+      ><a name="608" class="Symbol"
+      >_</a
+      ><a name="609"
+      > </a
+      ><a name="610" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="611"
+      > </a
+      ><a name="612" class="Symbol"
+      >_</a
+      ><a name="613"
+      > </a
+      ><a name="614" href="Homotopy.PushoutUP.html#378" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="615"
+      > </a
+      ><a name="616" href="Homotopy.PushoutIsPushout.html#604" class="Bound"
+      >u</a
+      ><a name="617" class="Symbol"
+      >)</a
+      ><a name="618"
+      >
+               </a
+      ><a name="634" class="Symbol"
+      >(</a
+      ><a name="635" href="Funext.html#4071" class="Function"
+      >funext</a
+      ><a name="641"
+      > </a
+      ><a name="642" class="Symbol"
+      >(&#955;</a
+      ><a name="644"
+      > </a
+      ><a name="645" href="Homotopy.PushoutIsPushout.html#645" class="Bound"
+      >x</a
+      ><a name="646"
+      > </a
+      ><a name="647" class="Symbol"
+      >&#8594;</a
+      ><a name="648"
+      > </a
+      ><a name="649" href="Homotopy.PushoutDef.html#2578" class="Postulate"
+      >pushout-&#946;-glue-nondep</a
+      ><a name="670"
+      > </a
+      ><a name="671" href="Homotopy.PushoutIsPushout.html#544" class="Bound"
+      >E</a
+      ><a name="672"
+      > </a
+      ><a name="673" class="Symbol"
+      >(</a
+      ><a name="674" href="Homotopy.PushoutUP.html#396" class="Function"
+      >cocone.A&#8594;top</a
+      ><a name="686"
+      > </a
+      ><a name="687" href="Homotopy.PushoutIsPushout.html#593" class="Bound"
+      >y</a
+      ><a name="688" class="Symbol"
+      >)</a
+      ><a name="689"
+      >
+                                    </a
+      ><a name="726" class="Symbol"
+      >(</a
+      ><a name="727" href="Homotopy.PushoutUP.html#416" class="Function"
+      >cocone.B&#8594;top</a
+      ><a name="739"
+      > </a
+      ><a name="740" href="Homotopy.PushoutIsPushout.html#593" class="Bound"
+      >y</a
+      ><a name="741" class="Symbol"
+      >)</a
+      ><a name="742"
+      > </a
+      ><a name="743" class="Symbol"
+      >(</a
+      ><a name="744" href="Homotopy.PushoutUP.html#436" class="Function"
+      >cocone.h</a
+      ><a name="752"
+      > </a
+      ><a name="753" href="Homotopy.PushoutIsPushout.html#593" class="Bound"
+      >y</a
+      ><a name="754" class="Symbol"
+      >)</a
+      ><a name="755"
+      > </a
+      ><a name="756" href="Homotopy.PushoutIsPushout.html#645" class="Bound"
+      >x</a
+      ><a name="757" class="Symbol"
+      >)))</a
+      ><a name="760"
+      >
+    </a
+      ><a name="765" class="Symbol"
+      >(&#955;</a
+      ><a name="767"
+      > </a
+      ><a name="768" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="769"
+      > </a
+      ><a name="770" class="Symbol"
+      >&#8594;</a
+      ><a name="771"
+      > </a
+      ><a name="772" href="Funext.html#4071" class="Function"
+      >funext</a
+      ><a name="778"
+      > </a
+      ><a name="779" class="Symbol"
+      >(</a
+      ><a name="780" href="Homotopy.PushoutDef.html#1657" class="Function"
+      >pushout-rec</a
+      ><a name="791"
+      > </a
+      ><a name="792" class="Symbol"
+      >_</a
+      ><a name="793"
+      > </a
+      ><a name="794" class="Symbol"
+      >(&#955;</a
+      ><a name="796"
+      > </a
+      ><a name="797" href="Homotopy.PushoutIsPushout.html#797" class="Bound"
+      >_</a
+      ><a name="798"
+      > </a
+      ><a name="799" class="Symbol"
+      >&#8594;</a
+      ><a name="800"
+      > </a
+      ><a name="801" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="805"
+      > </a
+      ><a name="806" class="Symbol"
+      >_)</a
+      ><a name="808"
+      > </a
+      ><a name="809" class="Symbol"
+      >(&#955;</a
+      ><a name="811"
+      > </a
+      ><a name="812" href="Homotopy.PushoutIsPushout.html#812" class="Bound"
+      >_</a
+      ><a name="813"
+      > </a
+      ><a name="814" class="Symbol"
+      >&#8594;</a
+      ><a name="815"
+      > </a
+      ><a name="816" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="820"
+      > </a
+      ><a name="821" class="Symbol"
+      >_)</a
+      ><a name="823"
+      >
+      </a
+      ><a name="830" class="Symbol"
+      >(&#955;</a
+      ><a name="832"
+      > </a
+      ><a name="833" href="Homotopy.PushoutIsPushout.html#833" class="Bound"
+      >c</a
+      ><a name="834"
+      > </a
+      ><a name="835" class="Symbol"
+      >&#8594;</a
+      ><a name="836"
+      > </a
+      ><a name="837" href="Paths.html#5222" class="Function"
+      >trans-app&#8801;app</a
+      ><a name="850"
+      >
+             </a
+      ><a name="864" class="Symbol"
+      >(</a
+      ><a name="865" href="Homotopy.PushoutDef.html#2288" class="Function"
+      >pushout-rec-nondep</a
+      ><a name="883"
+      > </a
+      ><a name="884" href="Homotopy.PushoutIsPushout.html#544" class="Bound"
+      >E</a
+      ><a name="885"
+      > </a
+      ><a name="886" class="Symbol"
+      >(</a
+      ><a name="887" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="888"
+      > </a
+      ><a name="889" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="890"
+      > </a
+      ><a name="891" href="Homotopy.PushoutDef.html#1513" class="Function"
+      >left</a
+      ><a name="895" class="Symbol"
+      >)</a
+      ><a name="896"
+      > </a
+      ><a name="897" class="Symbol"
+      >(</a
+      ><a name="898" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="899"
+      > </a
+      ><a name="900" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="901"
+      > </a
+      ><a name="902" href="Homotopy.PushoutDef.html#1550" class="Function"
+      >right</a
+      ><a name="907" class="Symbol"
+      >)</a
+      ><a name="908"
+      >
+              </a
+      ><a name="923" class="Symbol"
+      >(&#955;</a
+      ><a name="925"
+      > </a
+      ><a name="926" href="Homotopy.PushoutIsPushout.html#926" class="Bound"
+      >c'</a
+      ><a name="928"
+      > </a
+      ><a name="929" class="Symbol"
+      >&#8594;</a
+      ><a name="930"
+      > </a
+      ><a name="931" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="934"
+      > </a
+      ><a name="935" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="936"
+      > </a
+      ><a name="937" class="Symbol"
+      >(</a
+      ><a name="938" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="942"
+      > </a
+      ><a name="943" href="Homotopy.PushoutIsPushout.html#926" class="Bound"
+      >c'</a
+      ><a name="945" class="Symbol"
+      >)))</a
+      ><a name="948"
+      >
+             </a
+      ><a name="962" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="963"
+      > </a
+      ><a name="964" class="Symbol"
+      >(</a
+      ><a name="965" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="969"
+      > </a
+      ><a name="970" href="Homotopy.PushoutIsPushout.html#833" class="Bound"
+      >c</a
+      ><a name="971" class="Symbol"
+      >)</a
+      ><a name="972"
+      > </a
+      ><a name="973" class="Symbol"
+      >(</a
+      ><a name="974" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="978"
+      > </a
+      ><a name="979" class="Symbol"
+      >_)</a
+      ><a name="981"
+      >
+             </a
+      ><a name="995" href="Paths.html#439" class="Function Operator"
+      >&#8728;</a
+      ><a name="996"
+      > </a
+      ><a name="997" class="Symbol"
+      >(</a
+      ><a name="998" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1001"
+      > </a
+      ><a name="1002" class="Symbol"
+      >(&#955;</a
+      ><a name="1004"
+      > </a
+      ><a name="1005" href="Homotopy.PushoutIsPushout.html#1005" class="Bound"
+      >u</a
+      ><a name="1006"
+      > </a
+      ><a name="1007" class="Symbol"
+      >&#8594;</a
+      ><a name="1008"
+      > </a
+      ><a name="1009" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="1010"
+      > </a
+      ><a name="1011" href="Homotopy.PushoutIsPushout.html#1005" class="Bound"
+      >u</a
+      ><a name="1012"
+      > </a
+      ><a name="1013" href="Paths.html#439" class="Function Operator"
+      >&#8728;</a
+      ><a name="1014"
+      > </a
+      ><a name="1015" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1018"
+      > </a
+      ><a name="1019" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="1020"
+      > </a
+      ><a name="1021" class="Symbol"
+      >(</a
+      ><a name="1022" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="1026"
+      > </a
+      ><a name="1027" href="Homotopy.PushoutIsPushout.html#833" class="Bound"
+      >c</a
+      ><a name="1028" class="Symbol"
+      >))</a
+      ><a name="1030"
+      >
+                  </a
+      ><a name="1049" class="Symbol"
+      >(</a
+      ><a name="1050" href="Homotopy.PushoutDef.html#2578" class="Postulate"
+      >pushout-&#946;-glue-nondep</a
+      ><a name="1071"
+      > </a
+      ><a name="1072" href="Homotopy.PushoutIsPushout.html#544" class="Bound"
+      >E</a
+      ><a name="1073"
+      > </a
+      ><a name="1074" class="Symbol"
+      >(</a
+      ><a name="1075" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="1076"
+      > </a
+      ><a name="1077" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="1078"
+      > </a
+      ><a name="1079" href="Homotopy.PushoutDef.html#1513" class="Function"
+      >left</a
+      ><a name="1083" class="Symbol"
+      >)</a
+      ><a name="1084"
+      > </a
+      ><a name="1085" class="Symbol"
+      >(</a
+      ><a name="1086" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="1087"
+      > </a
+      ><a name="1088" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="1089"
+      > </a
+      ><a name="1090" href="Homotopy.PushoutDef.html#1550" class="Function"
+      >right</a
+      ><a name="1095" class="Symbol"
+      >)</a
+      ><a name="1096"
+      >
+                   </a
+      ><a name="1116" class="Symbol"
+      >(&#955;</a
+      ><a name="1118"
+      > </a
+      ><a name="1119" href="Homotopy.PushoutIsPushout.html#1119" class="Bound"
+      >c'</a
+      ><a name="1121"
+      > </a
+      ><a name="1122" class="Symbol"
+      >&#8594;</a
+      ><a name="1123"
+      > </a
+      ><a name="1124" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1127"
+      > </a
+      ><a name="1128" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="1129"
+      > </a
+      ><a name="1130" class="Symbol"
+      >(</a
+      ><a name="1131" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="1135"
+      > </a
+      ><a name="1136" href="Homotopy.PushoutIsPushout.html#1119" class="Bound"
+      >c'</a
+      ><a name="1138" class="Symbol"
+      >))</a
+      ><a name="1140"
+      > </a
+      ><a name="1141" href="Homotopy.PushoutIsPushout.html#833" class="Bound"
+      >c</a
+      ><a name="1142" class="Symbol"
+      >)</a
+      ><a name="1143"
+      >
+                  </a
+      ><a name="1162" href="Paths.html#439" class="Function Operator"
+      >&#8728;</a
+      ><a name="1163"
+      > </a
+      ><a name="1164" href="Paths.html#3397" class="Function"
+      >opposite-left-inverse</a
+      ><a name="1185"
+      > </a
+      ><a name="1186" class="Symbol"
+      >(</a
+      ><a name="1187" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1190"
+      > </a
+      ><a name="1191" href="Homotopy.PushoutIsPushout.html#768" class="Bound"
+      >f</a
+      ><a name="1192"
+      > </a
+      ><a name="1193" class="Symbol"
+      >(</a
+      ><a name="1194" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="1198"
+      > </a
+      ><a name="1199" href="Homotopy.PushoutIsPushout.html#833" class="Bound"
+      >c</a
+      ><a name="1200" class="Symbol"
+      >))))))</a
+      ><a name="1206"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

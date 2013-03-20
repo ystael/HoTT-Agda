@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Spaces.PikSn</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+</a
+      ><a name="47" class="Keyword"
+      >open</a
+      ><a name="51"
+      > </a
+      ><a name="52" class="Keyword"
+      >import</a
+      ><a name="58"
+      > </a
+      ><a name="59" href="Integers.html#1" class="Module"
+      >Integers</a
+      ><a name="67"
+      >
+</a
+      ><a name="68" class="Keyword"
+      >open</a
+      ><a name="72"
+      > </a
+      ><a name="73" class="Keyword"
+      >import</a
+      ><a name="79"
+      > </a
+      ><a name="80" href="Homotopy.Truncation.html#1" class="Module"
+      >Homotopy.Truncation</a
+      ><a name="99"
+      >
+</a
+      ><a name="100" class="Keyword"
+      >open</a
+      ><a name="104"
+      > </a
+      ><a name="105" class="Keyword"
+      >import</a
+      ><a name="111"
+      > </a
+      ><a name="112" href="Spaces.Spheres.html#1" class="Module"
+      >Spaces.Spheres</a
+      ><a name="126"
+      >
+</a
+      ><a name="127" class="Keyword"
+      >open</a
+      ><a name="131"
+      > </a
+      ><a name="132" class="Keyword"
+      >import</a
+      ><a name="138"
+      > </a
+      ><a name="139" href="Spaces.Suspension.html#1" class="Module"
+      >Spaces.Suspension</a
+      ><a name="156"
+      >
+</a
+      ><a name="157" class="Keyword"
+      >open</a
+      ><a name="161"
+      > </a
+      ><a name="162" class="Keyword"
+      >import</a
+      ><a name="168"
+      > </a
+      ><a name="169" href="Homotopy.Connected.html#1" class="Module"
+      >Homotopy.Connected</a
+      ><a name="187"
+      >
+</a
+      ><a name="188" class="Keyword"
+      >open</a
+      ><a name="192"
+      > </a
+      ><a name="193" class="Keyword"
+      >import</a
+      ><a name="199"
+      > </a
+      ><a name="200" href="Homotopy.ConnectedSuspension.html#1" class="Module"
+      >Homotopy.ConnectedSuspension</a
+      ><a name="228"
+      >
+</a
+      ><a name="229" class="Keyword"
+      >open</a
+      ><a name="233"
+      > </a
+      ><a name="234" class="Keyword"
+      >import</a
+      ><a name="240"
+      > </a
+      ><a name="241" href="Homotopy.Pointed.html#1" class="Module"
+      >Homotopy.Pointed</a
+      ><a name="257"
+      >
+</a
+      ><a name="258" class="Keyword"
+      >open</a
+      ><a name="262"
+      > </a
+      ><a name="263" class="Keyword"
+      >import</a
+      ><a name="269"
+      > </a
+      ><a name="270" href="Homotopy.HomotopyGroups.html#1" class="Module"
+      >Homotopy.HomotopyGroups</a
+      ><a name="293"
+      >
+
+</a
+      ><a name="295" class="Keyword"
+      >module</a
+      ><a name="301"
+      > </a
+      ><a name="302" href="Spaces.PikSn.html#1" class="Module"
+      >Spaces.PikSn</a
+      ><a name="314"
+      > </a
+      ><a name="315" class="Keyword"
+      >where</a
+      ><a name="320"
+      >
+
+</a
+      ><a name="322" class="Keyword"
+      >abstract</a
+      ><a name="330"
+      >
+  </a
+      ><a name="333" href="Spaces.PikSn.html#333" class="Function"
+      >S&#8319;-S-is-connected</a
+      ><a name="350"
+      > </a
+      ><a name="351" class="Symbol"
+      >:</a
+      ><a name="352"
+      > </a
+      ><a name="353" class="Symbol"
+      >(</a
+      ><a name="354" href="Spaces.PikSn.html#354" class="Bound"
+      >n</a
+      ><a name="355"
+      > </a
+      ><a name="356" class="Symbol"
+      >:</a
+      ><a name="357"
+      > </a
+      ><a name="358" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="359" class="Symbol"
+      >)</a
+      ><a name="360"
+      > </a
+      ><a name="361" class="Symbol"
+      >&#8594;</a
+      ><a name="362"
+      > </a
+      ><a name="363" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="375"
+      > </a
+      ><a name="376" href="Types.html#1559" class="Function Operator"
+      >&#10216;</a
+      ><a name="377"
+      > </a
+      ><a name="378" href="Spaces.PikSn.html#354" class="Bound"
+      >n</a
+      ><a name="379"
+      > </a
+      ><a name="380" href="Types.html#1559" class="Function Operator"
+      >&#10217;</a
+      ><a name="381"
+      > </a
+      ><a name="382" class="Symbol"
+      >(</a
+      ><a name="383" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="385"
+      > </a
+      ><a name="386" class="Symbol"
+      >(</a
+      ><a name="387" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="388"
+      > </a
+      ><a name="389" href="Spaces.PikSn.html#354" class="Bound"
+      >n</a
+      ><a name="390" class="Symbol"
+      >))</a
+      ><a name="392"
+      >
+  </a
+      ><a name="395" href="Spaces.PikSn.html#333" class="Function"
+      >S&#8319;-S-is-connected</a
+      ><a name="412"
+      > </a
+      ><a name="413" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="414"
+      > </a
+      ><a name="415" class="Symbol"
+      >=</a
+      ><a name="416"
+      >
+    </a
+      ><a name="421" href="Homotopy.ConnectedSuspension.html#5834" class="Function"
+      >suspension-is-connected-S</a
+      ><a name="446"
+      > </a
+      ><a name="447" class="Symbol"
+      >(</a
+      ><a name="448" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="450"
+      > </a
+      ><a name="451" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="452" class="Symbol"
+      >)</a
+      ><a name="453"
+      > </a
+      ><a name="454" href="Spaces.PikSn.html#489" class="Function"
+      >ind-hyp</a
+      ><a name="461"
+      > </a
+      ><a name="462" class="Symbol"
+      >(</a
+      ><a name="463" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="467"
+      > </a
+      ><a name="468" class="Symbol"
+      >(</a
+      ><a name="469" href="Spaces.Spheres.html#208" class="Function"
+      >&#8902;S&#8319;</a
+      ><a name="472"
+      > </a
+      ><a name="473" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="474" class="Symbol"
+      >))</a
+      ><a name="476"
+      > </a
+      ><a name="477" class="Keyword"
+      >where</a
+      ><a name="482"
+      >
+      </a
+      ><a name="489" href="Spaces.PikSn.html#489" class="Function"
+      >ind-hyp</a
+      ><a name="496"
+      > </a
+      ><a name="497" class="Symbol"
+      >:</a
+      ><a name="498"
+      > </a
+      ><a name="499" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="511"
+      > </a
+      ><a name="512" class="Symbol"
+      >(</a
+      ><a name="513" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="514"
+      > </a
+      ><a name="515" href="Types.html#1512" class="Function Operator"
+      >-1</a
+      ><a name="517" class="Symbol"
+      >)</a
+      ><a name="518"
+      > </a
+      ><a name="519" class="Symbol"
+      >(</a
+      ><a name="520" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="522"
+      > </a
+      ><a name="523" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="524" class="Symbol"
+      >)</a
+      ><a name="525"
+      >
+      </a
+      ><a name="532" href="Spaces.PikSn.html#489" class="Function"
+      >ind-hyp</a
+      ><a name="539"
+      > </a
+      ><a name="540" class="Keyword"
+      >with</a
+      ><a name="544"
+      > </a
+      ><a name="545" href="Spaces.PikSn.html#413" class="Bound"
+      >n</a
+      ><a name="546"
+      >
+      </a
+      ><a name="553" href="Spaces.PikSn.html#489" class="Function"
+      >ind-hyp</a
+      ><a name="560"
+      > </a
+      ><a name="561" class="Symbol"
+      >|</a
+      ><a name="562"
+      > </a
+      ><a name="563" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="564"
+      > </a
+      ><a name="565" class="Symbol"
+      >=</a
+      ><a name="566"
+      > </a
+      ><a name="567" href="HLevel.html#3052" class="Function"
+      >inhab-prop-is-contr</a
+      ><a name="586"
+      > </a
+      ><a name="587" class="Symbol"
+      >(</a
+      ><a name="588" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="592"
+      > </a
+      ><a name="593" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="597" class="Symbol"
+      >)</a
+      ><a name="598"
+      > </a
+      ><a name="599" class="Symbol"
+      >(</a
+      ><a name="600" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="614"
+      > </a
+      ><a name="615" class="Symbol"
+      >_</a
+      ><a name="616"
+      > </a
+      ><a name="617" class="Symbol"
+      >_)</a
+      ><a name="619"
+      >
+      </a
+      ><a name="626" href="Spaces.PikSn.html#489" class="Function"
+      >ind-hyp</a
+      ><a name="633"
+      > </a
+      ><a name="634" class="Symbol"
+      >|</a
+      ><a name="635"
+      > </a
+      ><a name="636" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="637"
+      > </a
+      ><a name="638" href="Spaces.PikSn.html#638" class="Bound"
+      >n</a
+      ><a name="639"
+      > </a
+      ><a name="640" class="Symbol"
+      >=</a
+      ><a name="641"
+      > </a
+      ><a name="642" href="Spaces.PikSn.html#333" class="Function"
+      >S&#8319;-S-is-connected</a
+      ><a name="659"
+      > </a
+      ><a name="660" href="Spaces.PikSn.html#638" class="Bound"
+      >n</a
+      ><a name="661"
+      >
+
+</a
+      ><a name="663" href="Spaces.PikSn.html#663" class="Function"
+      >S&#8319;&#8902;</a
+      ><a name="666"
+      > </a
+      ><a name="667" class="Symbol"
+      >:</a
+      ><a name="668"
+      > </a
+      ><a name="669" class="Symbol"
+      >(</a
+      ><a name="670" href="Spaces.PikSn.html#670" class="Bound"
+      >n</a
+      ><a name="671"
+      > </a
+      ><a name="672" class="Symbol"
+      >:</a
+      ><a name="673"
+      > </a
+      ><a name="674" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="675" class="Symbol"
+      >)</a
+      ><a name="676"
+      > </a
+      ><a name="677" class="Symbol"
+      >&#8594;</a
+      ><a name="678"
+      > </a
+      ><a name="679" href="Homotopy.Pointed.html#243" class="Function"
+      >pType&#8320;</a
+      ><a name="685"
+      >
+</a
+      ><a name="686" href="Spaces.PikSn.html#663" class="Function"
+      >S&#8319;&#8902;</a
+      ><a name="689"
+      > </a
+      ><a name="690" href="Spaces.PikSn.html#690" class="Bound"
+      >n</a
+      ><a name="691"
+      > </a
+      ><a name="692" class="Symbol"
+      >=</a
+      ><a name="693"
+      > </a
+      ><a name="694" class="Symbol"
+      >(</a
+      ><a name="695" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="697"
+      > </a
+      ><a name="698" href="Spaces.PikSn.html#690" class="Bound"
+      >n</a
+      ><a name="699"
+      > </a
+      ><a name="700" href="Homotopy.Pointed.html#170" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="701"
+      > </a
+      ><a name="702" href="Spaces.Spheres.html#208" class="Function"
+      >&#8902;S&#8319;</a
+      ><a name="705"
+      > </a
+      ><a name="706" href="Spaces.PikSn.html#690" class="Bound"
+      >n</a
+      ><a name="707" class="Symbol"
+      >)</a
+      ><a name="708"
+      >
+
+</a
+      ><a name="710" class="Keyword"
+      >abstract</a
+      ><a name="718"
+      >
+  </a
+      ><a name="721" href="Spaces.PikSn.html#721" class="Function"
+      >&#960;k-S&#8319;-is-contr</a
+      ><a name="735"
+      > </a
+      ><a name="736" class="Symbol"
+      >:</a
+      ><a name="737"
+      > </a
+      ><a name="738" class="Symbol"
+      >(</a
+      ><a name="739" href="Spaces.PikSn.html#739" class="Bound"
+      >k</a
+      ><a name="740"
+      > </a
+      ><a name="741" href="Spaces.PikSn.html#741" class="Bound"
+      >n</a
+      ><a name="742"
+      > </a
+      ><a name="743" class="Symbol"
+      >:</a
+      ><a name="744"
+      > </a
+      ><a name="745" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="746" class="Symbol"
+      >)</a
+      ><a name="747"
+      > </a
+      ><a name="748" class="Symbol"
+      >(</a
+      ><a name="749" href="Spaces.PikSn.html#749" class="Bound"
+      >lt</a
+      ><a name="751"
+      > </a
+      ><a name="752" class="Symbol"
+      >:</a
+      ><a name="753"
+      > </a
+      ><a name="754" href="Spaces.PikSn.html#739" class="Bound"
+      >k</a
+      ><a name="755"
+      > </a
+      ><a name="756" href="Integers.html#1792" class="Datatype Operator"
+      >&lt;</a
+      ><a name="757"
+      > </a
+      ><a name="758" href="Spaces.PikSn.html#741" class="Bound"
+      >n</a
+      ><a name="759" class="Symbol"
+      >)</a
+      ><a name="760"
+      >
+    </a
+      ><a name="765" class="Symbol"
+      >&#8594;</a
+      ><a name="766"
+      > </a
+      ><a name="767" href="Homotopy.Pointed.html#483" class="Function"
+      >is-contr&#8902;</a
+      ><a name="776"
+      > </a
+      ><a name="777" class="Symbol"
+      >(</a
+      ><a name="778" href="Homotopy.HomotopyGroups.html#1913" class="Function"
+      >&#960;&#8319;</a
+      ><a name="780"
+      > </a
+      ><a name="781" href="Spaces.PikSn.html#739" class="Bound"
+      >k</a
+      ><a name="782"
+      > </a
+      ><a name="783" class="Symbol"
+      >(</a
+      ><a name="784" href="Spaces.PikSn.html#663" class="Function"
+      >S&#8319;&#8902;</a
+      ><a name="787"
+      > </a
+      ><a name="788" href="Spaces.PikSn.html#741" class="Bound"
+      >n</a
+      ><a name="789" class="Symbol"
+      >))</a
+      ><a name="791"
+      >
+  </a
+      ><a name="794" href="Spaces.PikSn.html#721" class="Function"
+      >&#960;k-S&#8319;-is-contr</a
+      ><a name="808"
+      > </a
+      ><a name="809" href="Spaces.PikSn.html#809" class="Bound"
+      >k</a
+      ><a name="810"
+      > </a
+      ><a name="811" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="812"
+      > </a
+      ><a name="813" class="Symbol"
+      >()</a
+      ><a name="815"
+      >
+  </a
+      ><a name="818" href="Spaces.PikSn.html#721" class="Function"
+      >&#960;k-S&#8319;-is-contr</a
+      ><a name="832"
+      > </a
+      ><a name="833" href="Spaces.PikSn.html#833" class="Bound"
+      >k</a
+      ><a name="834"
+      > </a
+      ><a name="835" class="Symbol"
+      >(</a
+      ><a name="836" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="837"
+      > </a
+      ><a name="838" href="Spaces.PikSn.html#838" class="Bound"
+      >n</a
+      ><a name="839" class="Symbol"
+      >)</a
+      ><a name="840"
+      > </a
+      ><a name="841" href="Spaces.PikSn.html#841" class="Bound"
+      >lt</a
+      ><a name="843"
+      > </a
+      ><a name="844" class="Symbol"
+      >=</a
+      ><a name="845"
+      > </a
+      ><a name="846" href="Homotopy.HomotopyGroups.html#3691" class="Function"
+      >connected-&#960;&#8319;</a
+      ><a name="858"
+      > </a
+      ><a name="859" href="Spaces.PikSn.html#833" class="Bound"
+      >k</a
+      ><a name="860"
+      > </a
+      ><a name="861" href="Spaces.PikSn.html#838" class="Bound"
+      >n</a
+      ><a name="862"
+      > </a
+      ><a name="863" href="Spaces.PikSn.html#841" class="Bound"
+      >lt</a
+      ><a name="865"
+      > </a
+      ><a name="866" class="Symbol"
+      >_</a
+      ><a name="867"
+      > </a
+      ><a name="868" class="Symbol"
+      >(</a
+      ><a name="869" href="Spaces.PikSn.html#333" class="Function"
+      >S&#8319;-S-is-connected</a
+      ><a name="886"
+      > </a
+      ><a name="887" href="Spaces.PikSn.html#838" class="Bound"
+      >n</a
+      ><a name="888" class="Symbol"
+      >)</a
+      ><a name="889"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

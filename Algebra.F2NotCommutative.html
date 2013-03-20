@@ -1,0 +1,1241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Algebra.F2NotCommutative</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+
+</a
+      ><a name="48" class="Keyword"
+      >module</a
+      ><a name="54"
+      > </a
+      ><a name="55" href="Algebra.F2NotCommutative.html#1" class="Module"
+      >Algebra.F2NotCommutative</a
+      ><a name="79"
+      > </a
+      ><a name="80" class="Keyword"
+      >where</a
+      ><a name="85"
+      >
+
+</a
+      ><a name="87" class="Keyword"
+      >import</a
+      ><a name="93"
+      > </a
+      ><a name="94" href="Algebra.FreeGroup.html#1" class="Module"
+      >Algebra.FreeGroup</a
+      ><a name="111"
+      >
+</a
+      ><a name="112" class="Keyword"
+      >open</a
+      ><a name="116"
+      > </a
+      ><a name="117" href="Algebra.FreeGroup.html#1" class="Module"
+      >Algebra.FreeGroup</a
+      ><a name="134"
+      > </a
+      ><a name="135" class="Symbol"
+      >(</a
+      ><a name="136" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="140"
+      > </a
+      ><a name="141" class="Symbol"
+      >{</a
+      ><a name="142" href="Types.html#116" class="Primitive"
+      >zero</a
+      ><a name="146" class="Symbol"
+      >})</a
+      ><a name="148"
+      > </a
+      ><a name="149" class="Keyword"
+      >renaming</a
+      ><a name="157"
+      > </a
+      ><a name="158" class="Symbol"
+      >(</a
+      ><a name="159"
+      >freegroup </a
+      ><a name="169" class="Symbol"
+      >to</a
+      ><a name="171"
+      > F2</a
+      ><a name="174" class="Symbol"
+      >)</a
+      ><a name="175"
+      >
+
+</a
+      ><a name="177" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="178"
+      > </a
+      ><a name="179" class="Symbol"
+      >:</a
+      ><a name="180"
+      > </a
+      ><a name="181" class="PrimitiveType"
+      >Set</a
+      ><a name="184"
+      >
+</a
+      ><a name="185" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="Symbol"
+      >=</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="193"
+      > </a
+      ><a name="194" href="Types.html#1008" class="Function Operator"
+      >&#215;</a
+      ><a name="195"
+      > </a
+      ><a name="196" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="200"
+      >
+
+</a
+      ><a name="202" href="Algebra.F2NotCommutative.html#202" class="Function"
+      >X-is-set</a
+      ><a name="210"
+      > </a
+      ><a name="211" class="Symbol"
+      >:</a
+      ><a name="212"
+      > </a
+      ><a name="213" href="HLevel.html#482" class="Function"
+      >is-set</a
+      ><a name="219"
+      > </a
+      ><a name="220" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="221"
+      >
+</a
+      ><a name="222" href="Algebra.F2NotCommutative.html#202" class="Function"
+      >X-is-set</a
+      ><a name="230"
+      > </a
+      ><a name="231" class="Symbol"
+      >=</a
+      ><a name="232"
+      > </a
+      ><a name="233" href="HLevelBis.html#3133" class="Function"
+      >&#215;-is-truncated</a
+      ><a name="247"
+      > </a
+      ><a name="248" class="Symbol"
+      >_</a
+      ><a name="249"
+      > </a
+      ><a name="250" href="HLevel.html#6692" class="Function"
+      >bool-is-set</a
+      ><a name="261"
+      > </a
+      ><a name="262" href="HLevel.html#6692" class="Function"
+      >bool-is-set</a
+      ><a name="273"
+      >
+
+</a
+      ><a name="275" class="Keyword"
+      >pattern</a
+      ><a name="282"
+      > a </a
+      ><a name="285" class="Symbol"
+      >=</a
+      ><a name="286"
+      > </a
+      ><a name="287" class="Symbol"
+      >(</a
+      ><a name="288"
+      >true  , true </a
+      ><a name="301" class="Symbol"
+      >)</a
+      ><a name="302"
+      >
+</a
+      ><a name="303" class="Keyword"
+      >pattern</a
+      ><a name="310"
+      > b </a
+      ><a name="313" class="Symbol"
+      >=</a
+      ><a name="314"
+      > </a
+      ><a name="315" class="Symbol"
+      >(</a
+      ><a name="316"
+      >true  , false</a
+      ><a name="329" class="Symbol"
+      >)</a
+      ><a name="330"
+      >
+</a
+      ><a name="331" class="Keyword"
+      >pattern</a
+      ><a name="338"
+      > c </a
+      ><a name="341" class="Symbol"
+      >=</a
+      ><a name="342"
+      > </a
+      ><a name="343" class="Symbol"
+      >(</a
+      ><a name="344"
+      >false , true </a
+      ><a name="357" class="Symbol"
+      >)</a
+      ><a name="358"
+      >
+</a
+      ><a name="359" class="Keyword"
+      >pattern</a
+      ><a name="366"
+      > d </a
+      ><a name="369" class="Symbol"
+      >=</a
+      ><a name="370"
+      > </a
+      ><a name="371" class="Symbol"
+      >(</a
+      ><a name="372"
+      >false , false</a
+      ><a name="385" class="Symbol"
+      >)</a
+      ><a name="386"
+      >
+
+</a
+      ><a name="388" class="Comment"
+      >-- [map1] and [map2] are two involutive noncommutating bijections of [X]</a
+      ><a name="460"
+      >
+
+</a
+      ><a name="462" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="466"
+      > </a
+      ><a name="467" class="Symbol"
+      >:</a
+      ><a name="468"
+      > </a
+      ><a name="469" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="470"
+      > </a
+      ><a name="471" class="Symbol"
+      >&#8594;</a
+      ><a name="472"
+      > </a
+      ><a name="473" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="474"
+      >
+</a
+      ><a name="475" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="479"
+      > </a
+      ><a name="480" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="481"
+      > </a
+      ><a name="482" class="Symbol"
+      >=</a
+      ><a name="483"
+      > </a
+      ><a name="484" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="485"
+      >
+</a
+      ><a name="486" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="490"
+      > </a
+      ><a name="491" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="492"
+      > </a
+      ><a name="493" class="Symbol"
+      >=</a
+      ><a name="494"
+      > </a
+      ><a name="495" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="496"
+      >
+</a
+      ><a name="497" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="501"
+      > </a
+      ><a name="502" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="503"
+      > </a
+      ><a name="504" class="Symbol"
+      >=</a
+      ><a name="505"
+      > </a
+      ><a name="506" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="507"
+      >
+</a
+      ><a name="508" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="512"
+      > </a
+      ><a name="513" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="514"
+      > </a
+      ><a name="515" class="Symbol"
+      >=</a
+      ><a name="516"
+      > </a
+      ><a name="517" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="518"
+      >
+
+</a
+      ><a name="520" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="524"
+      > </a
+      ><a name="525" class="Symbol"
+      >:</a
+      ><a name="526"
+      > </a
+      ><a name="527" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="528"
+      > </a
+      ><a name="529" class="Symbol"
+      >&#8594;</a
+      ><a name="530"
+      > </a
+      ><a name="531" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="532"
+      >
+</a
+      ><a name="533" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="537"
+      > </a
+      ><a name="538" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="539"
+      > </a
+      ><a name="540" class="Symbol"
+      >=</a
+      ><a name="541"
+      > </a
+      ><a name="542" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="543"
+      >
+</a
+      ><a name="544" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="548"
+      > </a
+      ><a name="549" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="550"
+      > </a
+      ><a name="551" class="Symbol"
+      >=</a
+      ><a name="552"
+      > </a
+      ><a name="553" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="554"
+      >
+</a
+      ><a name="555" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="561"
+      > </a
+      ><a name="562" class="Symbol"
+      >=</a
+      ><a name="563"
+      > </a
+      ><a name="564" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="565"
+      >
+</a
+      ><a name="566" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="570"
+      > </a
+      ><a name="571" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="572"
+      > </a
+      ><a name="573" class="Symbol"
+      >=</a
+      ><a name="574"
+      > </a
+      ><a name="575" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="576"
+      >
+
+</a
+      ><a name="578" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="581"
+      > </a
+      ><a name="582" class="Symbol"
+      >:</a
+      ><a name="583"
+      > </a
+      ><a name="584" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="588"
+      > </a
+      ><a name="589" class="Symbol"
+      >{</a
+      ><a name="590" href="Types.html#116" class="Primitive"
+      >zero</a
+      ><a name="594" class="Symbol"
+      >}</a
+      ><a name="595"
+      > </a
+      ><a name="596" class="Symbol"
+      >&#8594;</a
+      ><a name="597"
+      > </a
+      ><a name="598" class="Symbol"
+      >(</a
+      ><a name="599" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="600"
+      > </a
+      ><a name="601" class="Symbol"
+      >&#8594;</a
+      ><a name="602"
+      > </a
+      ><a name="603" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="604" class="Symbol"
+      >)</a
+      ><a name="605"
+      >
+</a
+      ><a name="606" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="609"
+      > </a
+      ><a name="610" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="614"
+      >  </a
+      ><a name="616" class="Symbol"
+      >=</a
+      ><a name="617"
+      > </a
+      ><a name="618" href="Algebra.F2NotCommutative.html#462" class="Function"
+      >map1</a
+      ><a name="622"
+      >
+</a
+      ><a name="623" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="626"
+      > </a
+      ><a name="627" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="632"
+      > </a
+      ><a name="633" class="Symbol"
+      >=</a
+      ><a name="634"
+      > </a
+      ><a name="635" href="Algebra.F2NotCommutative.html#520" class="Function"
+      >map2</a
+      ><a name="639"
+      >
+
+</a
+      ><a name="641" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="655"
+      > </a
+      ><a name="656" class="Symbol"
+      >:</a
+      ><a name="657"
+      > </a
+      ><a name="658" class="Symbol"
+      >(</a
+      ><a name="659" href="Algebra.F2NotCommutative.html#659" class="Bound"
+      >b</a
+      ><a name="660"
+      > </a
+      ><a name="661" class="Symbol"
+      >:</a
+      ><a name="662"
+      > </a
+      ><a name="663" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="667" class="Symbol"
+      >)</a
+      ><a name="668"
+      > </a
+      ><a name="669" class="Symbol"
+      >(</a
+      ><a name="670" href="Algebra.F2NotCommutative.html#670" class="Bound"
+      >x</a
+      ><a name="671"
+      > </a
+      ><a name="672" class="Symbol"
+      >:</a
+      ><a name="673"
+      > </a
+      ><a name="674" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="675" class="Symbol"
+      >)</a
+      ><a name="676"
+      > </a
+      ><a name="677" class="Symbol"
+      >&#8594;</a
+      ><a name="678"
+      > </a
+      ><a name="679" class="Symbol"
+      >(</a
+      ><a name="680" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="683"
+      > </a
+      ><a name="684" href="Algebra.F2NotCommutative.html#659" class="Bound"
+      >b</a
+      ><a name="685"
+      > </a
+      ><a name="686" class="Symbol"
+      >(</a
+      ><a name="687" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="690"
+      > </a
+      ><a name="691" href="Algebra.F2NotCommutative.html#659" class="Bound"
+      >b</a
+      ><a name="692"
+      > </a
+      ><a name="693" href="Algebra.F2NotCommutative.html#670" class="Bound"
+      >x</a
+      ><a name="694" class="Symbol"
+      >)</a
+      ><a name="695"
+      > </a
+      ><a name="696" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="697"
+      > </a
+      ><a name="698" href="Algebra.F2NotCommutative.html#670" class="Bound"
+      >x</a
+      ><a name="699" class="Symbol"
+      >)</a
+      ><a name="700"
+      >
+</a
+      ><a name="701" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="715"
+      > </a
+      ><a name="716" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="720"
+      >  </a
+      ><a name="722" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="723"
+      > </a
+      ><a name="724" class="Symbol"
+      >=</a
+      ><a name="725"
+      > </a
+      ><a name="726" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="730"
+      > </a
+      ><a name="731" class="Symbol"
+      >_</a
+      ><a name="732"
+      >
+</a
+      ><a name="733" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="747"
+      > </a
+      ><a name="748" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="752"
+      >  </a
+      ><a name="754" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="755"
+      > </a
+      ><a name="756" class="Symbol"
+      >=</a
+      ><a name="757"
+      > </a
+      ><a name="758" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="762"
+      > </a
+      ><a name="763" class="Symbol"
+      >_</a
+      ><a name="764"
+      >
+</a
+      ><a name="765" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="779"
+      > </a
+      ><a name="780" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="784"
+      >  </a
+      ><a name="786" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="787"
+      > </a
+      ><a name="788" class="Symbol"
+      >=</a
+      ><a name="789"
+      > </a
+      ><a name="790" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="794"
+      > </a
+      ><a name="795" class="Symbol"
+      >_</a
+      ><a name="796"
+      >
+</a
+      ><a name="797" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="811"
+      > </a
+      ><a name="812" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="816"
+      >  </a
+      ><a name="818" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="819"
+      > </a
+      ><a name="820" class="Symbol"
+      >=</a
+      ><a name="821"
+      > </a
+      ><a name="822" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="826"
+      > </a
+      ><a name="827" class="Symbol"
+      >_</a
+      ><a name="828"
+      >
+</a
+      ><a name="829" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="843"
+      > </a
+      ><a name="844" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="849"
+      > </a
+      ><a name="850" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="851"
+      > </a
+      ><a name="852" class="Symbol"
+      >=</a
+      ><a name="853"
+      > </a
+      ><a name="854" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="858"
+      > </a
+      ><a name="859" class="Symbol"
+      >_</a
+      ><a name="860"
+      >
+</a
+      ><a name="861" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="875"
+      > </a
+      ><a name="876" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="881"
+      > </a
+      ><a name="882" href="Types.html#790" class="InductiveConstructor Operator"
+      >b</a
+      ><a name="883"
+      > </a
+      ><a name="884" class="Symbol"
+      >=</a
+      ><a name="885"
+      > </a
+      ><a name="886" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="890"
+      > </a
+      ><a name="891" class="Symbol"
+      >_</a
+      ><a name="892"
+      >
+</a
+      ><a name="893" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="907"
+      > </a
+      ><a name="908" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="913"
+      > </a
+      ><a name="914" href="Types.html#790" class="InductiveConstructor Operator"
+      >c</a
+      ><a name="915"
+      > </a
+      ><a name="916" class="Symbol"
+      >=</a
+      ><a name="917"
+      > </a
+      ><a name="918" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="922"
+      > </a
+      ><a name="923" class="Symbol"
+      >_</a
+      ><a name="924"
+      >
+</a
+      ><a name="925" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="939"
+      > </a
+      ><a name="940" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="945"
+      > </a
+      ><a name="946" href="Types.html#790" class="InductiveConstructor Operator"
+      >d</a
+      ><a name="947"
+      > </a
+      ><a name="948" class="Symbol"
+      >=</a
+      ><a name="949"
+      > </a
+      ><a name="950" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="954"
+      > </a
+      ><a name="955" class="Symbol"
+      >_</a
+      ><a name="956"
+      >
+
+</a
+      ><a name="958" href="Algebra.F2NotCommutative.html#958" class="Function"
+      >F2-act-on-X</a
+      ><a name="969"
+      > </a
+      ><a name="970" class="Symbol"
+      >:</a
+      ><a name="971"
+      > </a
+      ><a name="972" href="Algebra.FreeGroup.html#719" class="Function"
+      >F2</a
+      ><a name="974"
+      > </a
+      ><a name="975" class="Symbol"
+      >&#8594;</a
+      ><a name="976"
+      > </a
+      ><a name="977" class="Symbol"
+      >(</a
+      ><a name="978" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="979"
+      > </a
+      ><a name="980" class="Symbol"
+      >&#8594;</a
+      ><a name="981"
+      > </a
+      ><a name="982" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="983" class="Symbol"
+      >)</a
+      ><a name="984"
+      >
+</a
+      ><a name="985" href="Algebra.F2NotCommutative.html#958" class="Function"
+      >F2-act-on-X</a
+      ><a name="996"
+      > </a
+      ><a name="997" class="Symbol"
+      >=</a
+      ><a name="998"
+      > </a
+      ><a name="999" href="Algebra.FreeGroup.html#3724" class="Function"
+      >freegroup-rec-nondep</a
+      ><a name="1019"
+      > </a
+      ><a name="1020" class="Symbol"
+      >(</a
+      ><a name="1021" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="1022"
+      > </a
+      ><a name="1023" class="Symbol"
+      >&#8594;</a
+      ><a name="1024"
+      > </a
+      ><a name="1025" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="1026" class="Symbol"
+      >)</a
+      ><a name="1027"
+      >
+  </a
+      ><a name="1030" class="Symbol"
+      >(</a
+      ><a name="1031" href="Functions.html#95" class="Function"
+      >id</a
+      ><a name="1033"
+      > </a
+      ><a name="1034" href="Algebra.F2NotCommutative.html#177" class="Function"
+      >X</a
+      ><a name="1035" class="Symbol"
+      >)</a
+      ><a name="1036"
+      >
+  </a
+      ><a name="1039" class="Symbol"
+      >(&#955;</a
+      ><a name="1041"
+      > </a
+      ><a name="1042" href="Algebra.F2NotCommutative.html#1042" class="Bound"
+      >b</a
+      ><a name="1043"
+      > </a
+      ><a name="1044" href="Algebra.F2NotCommutative.html#1044" class="Bound"
+      >f</a
+      ><a name="1045"
+      > </a
+      ><a name="1046" class="Symbol"
+      >&#8594;</a
+      ><a name="1047"
+      > </a
+      ><a name="1048" href="Algebra.F2NotCommutative.html#1044" class="Bound"
+      >f</a
+      ><a name="1049"
+      > </a
+      ><a name="1050" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="1051"
+      > </a
+      ><a name="1052" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="1055"
+      > </a
+      ><a name="1056" href="Algebra.F2NotCommutative.html#1042" class="Bound"
+      >b</a
+      ><a name="1057" class="Symbol"
+      >)</a
+      ><a name="1058"
+      >
+  </a
+      ><a name="1061" class="Symbol"
+      >(&#955;</a
+      ><a name="1063"
+      > </a
+      ><a name="1064" href="Algebra.F2NotCommutative.html#1064" class="Bound"
+      >b</a
+      ><a name="1065"
+      > </a
+      ><a name="1066" href="Algebra.F2NotCommutative.html#1066" class="Bound"
+      >f</a
+      ><a name="1067"
+      > </a
+      ><a name="1068" class="Symbol"
+      >&#8594;</a
+      ><a name="1069"
+      > </a
+      ><a name="1070" href="Algebra.F2NotCommutative.html#1066" class="Bound"
+      >f</a
+      ><a name="1071"
+      > </a
+      ><a name="1072" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="1073"
+      > </a
+      ><a name="1074" href="Algebra.F2NotCommutative.html#578" class="Function"
+      >act</a
+      ><a name="1077"
+      > </a
+      ><a name="1078" href="Algebra.F2NotCommutative.html#1064" class="Bound"
+      >b</a
+      ><a name="1079" class="Symbol"
+      >)</a
+      ><a name="1080"
+      >
+  </a
+      ><a name="1083" class="Symbol"
+      >(&#955;</a
+      ><a name="1085"
+      > </a
+      ><a name="1086" href="Algebra.F2NotCommutative.html#1086" class="Bound"
+      >b</a
+      ><a name="1087"
+      > </a
+      ><a name="1088" href="Algebra.F2NotCommutative.html#1088" class="Bound"
+      >f</a
+      ><a name="1089"
+      > </a
+      ><a name="1090" class="Symbol"
+      >&#8594;</a
+      ><a name="1091"
+      > </a
+      ><a name="1092" href="Funext.html#4071" class="Function"
+      >funext</a
+      ><a name="1098"
+      > </a
+      ><a name="1099" class="Symbol"
+      >(&#955;</a
+      ><a name="1101"
+      > </a
+      ><a name="1102" href="Algebra.F2NotCommutative.html#1102" class="Bound"
+      >x</a
+      ><a name="1103"
+      > </a
+      ><a name="1104" class="Symbol"
+      >&#8594;</a
+      ><a name="1105"
+      > </a
+      ><a name="1106" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1109"
+      > </a
+      ><a name="1110" href="Algebra.F2NotCommutative.html#1088" class="Bound"
+      >f</a
+      ><a name="1111"
+      > </a
+      ><a name="1112" class="Symbol"
+      >(</a
+      ><a name="1113" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="1127"
+      > </a
+      ><a name="1128" href="Algebra.F2NotCommutative.html#1086" class="Bound"
+      >b</a
+      ><a name="1129"
+      > </a
+      ><a name="1130" href="Algebra.F2NotCommutative.html#1102" class="Bound"
+      >x</a
+      ><a name="1131" class="Symbol"
+      >)))</a
+      ><a name="1134"
+      >
+  </a
+      ><a name="1137" class="Symbol"
+      >(&#955;</a
+      ><a name="1139"
+      > </a
+      ><a name="1140" href="Algebra.F2NotCommutative.html#1140" class="Bound"
+      >b</a
+      ><a name="1141"
+      > </a
+      ><a name="1142" href="Algebra.F2NotCommutative.html#1142" class="Bound"
+      >f</a
+      ><a name="1143"
+      > </a
+      ><a name="1144" class="Symbol"
+      >&#8594;</a
+      ><a name="1145"
+      > </a
+      ><a name="1146" href="Funext.html#4071" class="Function"
+      >funext</a
+      ><a name="1152"
+      > </a
+      ><a name="1153" class="Symbol"
+      >(&#955;</a
+      ><a name="1155"
+      > </a
+      ><a name="1156" href="Algebra.F2NotCommutative.html#1156" class="Bound"
+      >x</a
+      ><a name="1157"
+      > </a
+      ><a name="1158" class="Symbol"
+      >&#8594;</a
+      ><a name="1159"
+      > </a
+      ><a name="1160" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1163"
+      > </a
+      ><a name="1164" href="Algebra.F2NotCommutative.html#1142" class="Bound"
+      >f</a
+      ><a name="1165"
+      > </a
+      ><a name="1166" class="Symbol"
+      >(</a
+      ><a name="1167" href="Algebra.F2NotCommutative.html#641" class="Function"
+      >act-involutive</a
+      ><a name="1181"
+      > </a
+      ><a name="1182" href="Algebra.F2NotCommutative.html#1140" class="Bound"
+      >b</a
+      ><a name="1183"
+      > </a
+      ><a name="1184" href="Algebra.F2NotCommutative.html#1156" class="Bound"
+      >x</a
+      ><a name="1185" class="Symbol"
+      >)))</a
+      ><a name="1188"
+      >
+  </a
+      ><a name="1191" class="Symbol"
+      >(</a
+      ><a name="1192" href="HLevelBis.html#2086" class="Function"
+      >&#8594;-is-truncated</a
+      ><a name="1206"
+      > </a
+      ><a name="1207" class="Symbol"
+      >_</a
+      ><a name="1208"
+      > </a
+      ><a name="1209" href="Algebra.F2NotCommutative.html#202" class="Function"
+      >X-is-set</a
+      ><a name="1217" class="Symbol"
+      >)</a
+      ><a name="1218"
+      >
+
+</a
+      ><a name="1220" href="Algebra.F2NotCommutative.html#1220" class="Function"
+      >ab</a
+      ><a name="1222"
+      > </a
+      ><a name="1223" class="Symbol"
+      >:</a
+      ><a name="1224"
+      > </a
+      ><a name="1225" href="Algebra.FreeGroup.html#719" class="Function"
+      >F2</a
+      ><a name="1227"
+      >
+</a
+      ><a name="1228" href="Algebra.F2NotCommutative.html#1220" class="Function"
+      >ab</a
+      ><a name="1230"
+      > </a
+      ><a name="1231" class="Symbol"
+      >=</a
+      ><a name="1232"
+      > </a
+      ><a name="1233" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="1237"
+      >  </a
+      ><a name="1239" href="Algebra.FreeGroup.html#783" class="Function Operator"
+      >&#183;</a
+      ><a name="1240"
+      > </a
+      ><a name="1241" class="Symbol"
+      >(</a
+      ><a name="1242" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="1247"
+      > </a
+      ><a name="1248" href="Algebra.FreeGroup.html#783" class="Function Operator"
+      >&#183;</a
+      ><a name="1249"
+      > </a
+      ><a name="1250" href="Algebra.FreeGroup.html#761" class="Function"
+      >e</a
+      ><a name="1251" class="Symbol"
+      >)</a
+      ><a name="1252"
+      >
+
+</a
+      ><a name="1254" href="Algebra.F2NotCommutative.html#1254" class="Function"
+      >ba</a
+      ><a name="1256"
+      > </a
+      ><a name="1257" class="Symbol"
+      >:</a
+      ><a name="1258"
+      > </a
+      ><a name="1259" href="Algebra.FreeGroup.html#719" class="Function"
+      >F2</a
+      ><a name="1261"
+      >
+</a
+      ><a name="1262" href="Algebra.F2NotCommutative.html#1254" class="Function"
+      >ba</a
+      ><a name="1264"
+      > </a
+      ><a name="1265" class="Symbol"
+      >=</a
+      ><a name="1266"
+      > </a
+      ><a name="1267" href="Types.html#668" class="InductiveConstructor"
+      >false</a
+      ><a name="1272"
+      > </a
+      ><a name="1273" href="Algebra.FreeGroup.html#783" class="Function Operator"
+      >&#183;</a
+      ><a name="1274"
+      > </a
+      ><a name="1275" class="Symbol"
+      >(</a
+      ><a name="1276" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="1280"
+      >  </a
+      ><a name="1282" href="Algebra.FreeGroup.html#783" class="Function Operator"
+      >&#183;</a
+      ><a name="1283"
+      > </a
+      ><a name="1284" href="Algebra.FreeGroup.html#761" class="Function"
+      >e</a
+      ><a name="1285" class="Symbol"
+      >)</a
+      ><a name="1286"
+      >
+
+</a
+      ><a name="1288" href="Algebra.F2NotCommutative.html#1288" class="Function"
+      >F2-non-commutative</a
+      ><a name="1306"
+      > </a
+      ><a name="1307" class="Symbol"
+      >:</a
+      ><a name="1308"
+      > </a
+      ><a name="1309" href="Algebra.F2NotCommutative.html#1220" class="Function"
+      >ab</a
+      ><a name="1311"
+      > </a
+      ><a name="1312" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="1313"
+      > </a
+      ><a name="1314" href="Algebra.F2NotCommutative.html#1254" class="Function"
+      >ba</a
+      ><a name="1316"
+      >
+</a
+      ><a name="1317" href="Algebra.F2NotCommutative.html#1288" class="Function"
+      >F2-non-commutative</a
+      ><a name="1335"
+      > </a
+      ><a name="1336" href="Algebra.F2NotCommutative.html#1336" class="Bound"
+      >p</a
+      ><a name="1337"
+      > </a
+      ><a name="1338" class="Symbol"
+      >=</a
+      ><a name="1339"
+      >
+  </a
+      ><a name="1342" href="HLevel.html#6262" class="Function"
+      >bool-true&#8802;false</a
+      ><a name="1357"
+      > </a
+      ><a name="1358" class="Symbol"
+      >(</a
+      ><a name="1359" href="Paths.html#2236" class="Function"
+      >base-path</a
+      ><a name="1368"
+      > </a
+      ><a name="1369" class="Symbol"
+      >(</a
+      ><a name="1370" href="Funext.html#2574" class="Function"
+      >happly</a
+      ><a name="1376"
+      > </a
+      ><a name="1377" class="Symbol"
+      >(</a
+      ><a name="1378" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1381"
+      > </a
+      ><a name="1382" href="Algebra.F2NotCommutative.html#958" class="Function"
+      >F2-act-on-X</a
+      ><a name="1393"
+      > </a
+      ><a name="1394" href="Algebra.F2NotCommutative.html#1336" class="Bound"
+      >p</a
+      ><a name="1395" class="Symbol"
+      >)</a
+      ><a name="1396"
+      > </a
+      ><a name="1397" href="Types.html#790" class="InductiveConstructor Operator"
+      >a</a
+      ><a name="1398" class="Symbol"
+      >))</a
+      ><a name="1400"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

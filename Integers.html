@@ -1,0 +1,4068 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Integers</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+
+</a
+      ><a name="48" class="Keyword"
+      >module</a
+      ><a name="54"
+      > </a
+      ><a name="55" href="Integers.html#1" class="Module"
+      >Integers</a
+      ><a name="63"
+      > </a
+      ><a name="64" class="Keyword"
+      >where</a
+      ><a name="69"
+      >
+
+</a
+      ><a name="71" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="75"
+      > </a
+      ><a name="76" class="Symbol"
+      >:</a
+      ><a name="77"
+      > </a
+      ><a name="78" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="79"
+      > </a
+      ><a name="80" class="Symbol"
+      >&#8594;</a
+      ><a name="81"
+      > </a
+      ><a name="82" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="83"
+      >
+</a
+      ><a name="84" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="88"
+      > </a
+      ><a name="89" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="90"
+      > </a
+      ><a name="91" class="Symbol"
+      >=</a
+      ><a name="92"
+      > </a
+      ><a name="93" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="96"
+      > </a
+      ><a name="97" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="98"
+      >
+</a
+      ><a name="99" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="103"
+      > </a
+      ><a name="104" class="Symbol"
+      >(</a
+      ><a name="105" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="108"
+      > </a
+      ><a name="109" href="Integers.html#109" class="Bound"
+      >n</a
+      ><a name="110" class="Symbol"
+      >)</a
+      ><a name="111"
+      > </a
+      ><a name="112" class="Symbol"
+      >=</a
+      ><a name="113"
+      > </a
+      ><a name="114" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="117"
+      > </a
+      ><a name="118" class="Symbol"
+      >(</a
+      ><a name="119" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="120"
+      > </a
+      ><a name="121" href="Integers.html#109" class="Bound"
+      >n</a
+      ><a name="122" class="Symbol"
+      >)</a
+      ><a name="123"
+      >
+</a
+      ><a name="124" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="128"
+      > </a
+      ><a name="129" class="Symbol"
+      >(</a
+      ><a name="130" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="133"
+      > </a
+      ><a name="134" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="135" class="Symbol"
+      >)</a
+      ><a name="136"
+      > </a
+      ><a name="137" class="Symbol"
+      >=</a
+      ><a name="138"
+      > </a
+      ><a name="139" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="140"
+      >
+</a
+      ><a name="141" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="145"
+      > </a
+      ><a name="146" class="Symbol"
+      >(</a
+      ><a name="147" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="150"
+      > </a
+      ><a name="151" class="Symbol"
+      >(</a
+      ><a name="152" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="153"
+      > </a
+      ><a name="154" href="Integers.html#154" class="Bound"
+      >n</a
+      ><a name="155" class="Symbol"
+      >))</a
+      ><a name="157"
+      > </a
+      ><a name="158" class="Symbol"
+      >=</a
+      ><a name="159"
+      > </a
+      ><a name="160" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="163"
+      > </a
+      ><a name="164" href="Integers.html#154" class="Bound"
+      >n</a
+      ><a name="165"
+      >
+
+</a
+      ><a name="167" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="171"
+      > </a
+      ><a name="172" class="Symbol"
+      >:</a
+      ><a name="173"
+      > </a
+      ><a name="174" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="175"
+      > </a
+      ><a name="176" class="Symbol"
+      >&#8594;</a
+      ><a name="177"
+      > </a
+      ><a name="178" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="179"
+      >
+</a
+      ><a name="180" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="184"
+      > </a
+      ><a name="185" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="Symbol"
+      >=</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="192"
+      > </a
+      ><a name="193" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="194"
+      >
+</a
+      ><a name="195" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="199"
+      > </a
+      ><a name="200" class="Symbol"
+      >(</a
+      ><a name="201" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="204"
+      > </a
+      ><a name="205" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="206" class="Symbol"
+      >)</a
+      ><a name="207"
+      > </a
+      ><a name="208" class="Symbol"
+      >=</a
+      ><a name="209"
+      > </a
+      ><a name="210" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="211"
+      >
+</a
+      ><a name="212" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="Symbol"
+      >(</a
+      ><a name="218" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="221"
+      > </a
+      ><a name="222" class="Symbol"
+      >(</a
+      ><a name="223" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="224"
+      > </a
+      ><a name="225" href="Integers.html#225" class="Bound"
+      >n</a
+      ><a name="226" class="Symbol"
+      >))</a
+      ><a name="228"
+      > </a
+      ><a name="229" class="Symbol"
+      >=</a
+      ><a name="230"
+      > </a
+      ><a name="231" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="234"
+      > </a
+      ><a name="235" href="Integers.html#225" class="Bound"
+      >n</a
+      ><a name="236"
+      >
+</a
+      ><a name="237" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="241"
+      > </a
+      ><a name="242" class="Symbol"
+      >(</a
+      ><a name="243" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="246"
+      > </a
+      ><a name="247" href="Integers.html#247" class="Bound"
+      >n</a
+      ><a name="248" class="Symbol"
+      >)</a
+      ><a name="249"
+      > </a
+      ><a name="250" class="Symbol"
+      >=</a
+      ><a name="251"
+      > </a
+      ><a name="252" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="255"
+      > </a
+      ><a name="256" class="Symbol"
+      >(</a
+      ><a name="257" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="258"
+      > </a
+      ><a name="259" href="Integers.html#247" class="Bound"
+      >n</a
+      ><a name="260" class="Symbol"
+      >)</a
+      ><a name="261"
+      >
+
+</a
+      ><a name="263" class="Keyword"
+      >abstract</a
+      ><a name="271"
+      >
+  </a
+      ><a name="274" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="283"
+      > </a
+      ><a name="284" class="Symbol"
+      >:</a
+      ><a name="285"
+      > </a
+      ><a name="286" class="Symbol"
+      >(</a
+      ><a name="287" href="Integers.html#287" class="Bound"
+      >n</a
+      ><a name="288"
+      > </a
+      ><a name="289" class="Symbol"
+      >:</a
+      ><a name="290"
+      > </a
+      ><a name="291" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="292" class="Symbol"
+      >)</a
+      ><a name="293"
+      > </a
+      ><a name="294" class="Symbol"
+      >&#8594;</a
+      ><a name="295"
+      > </a
+      ><a name="296" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="300"
+      > </a
+      ><a name="301" class="Symbol"
+      >(</a
+      ><a name="302" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="306"
+      > </a
+      ><a name="307" href="Integers.html#287" class="Bound"
+      >n</a
+      ><a name="308" class="Symbol"
+      >)</a
+      ><a name="309"
+      > </a
+      ><a name="310" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="311"
+      > </a
+      ><a name="312" href="Integers.html#287" class="Bound"
+      >n</a
+      ><a name="313"
+      >
+  </a
+      ><a name="316" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="325"
+      > </a
+      ><a name="326" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="327"
+      > </a
+      ><a name="328" class="Symbol"
+      >=</a
+      ><a name="329"
+      > </a
+      ><a name="330" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="334"
+      > </a
+      ><a name="335" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="336"
+      >
+  </a
+      ><a name="339" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="348"
+      > </a
+      ><a name="349" class="Symbol"
+      >(</a
+      ><a name="350" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="353"
+      > </a
+      ><a name="354" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="355" class="Symbol"
+      >)</a
+      ><a name="356"
+      > </a
+      ><a name="357" class="Symbol"
+      >=</a
+      ><a name="358"
+      > </a
+      ><a name="359" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="363"
+      > </a
+      ><a name="364" class="Symbol"
+      >(</a
+      ><a name="365" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="368"
+      > </a
+      ><a name="369" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="370" class="Symbol"
+      >)</a
+      ><a name="371"
+      >
+  </a
+      ><a name="374" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="383"
+      > </a
+      ><a name="384" class="Symbol"
+      >(</a
+      ><a name="385" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="388"
+      > </a
+      ><a name="389" class="Symbol"
+      >(</a
+      ><a name="390" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="391"
+      > </a
+      ><a name="392" href="Integers.html#392" class="Bound"
+      >n</a
+      ><a name="393" class="Symbol"
+      >))</a
+      ><a name="395"
+      > </a
+      ><a name="396" class="Symbol"
+      >=</a
+      ><a name="397"
+      > </a
+      ><a name="398" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="402"
+      > </a
+      ><a name="403" class="Symbol"
+      >(</a
+      ><a name="404" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="407"
+      > </a
+      ><a name="408" class="Symbol"
+      >(</a
+      ><a name="409" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="410"
+      > </a
+      ><a name="411" href="Integers.html#392" class="Bound"
+      >n</a
+      ><a name="412" class="Symbol"
+      >))</a
+      ><a name="414"
+      >
+  </a
+      ><a name="417" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="426"
+      > </a
+      ><a name="427" class="Symbol"
+      >(</a
+      ><a name="428" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="431"
+      > </a
+      ><a name="432" href="Integers.html#432" class="Bound"
+      >n</a
+      ><a name="433" class="Symbol"
+      >)</a
+      ><a name="434"
+      > </a
+      ><a name="435" class="Symbol"
+      >=</a
+      ><a name="436"
+      > </a
+      ><a name="437" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="441"
+      > </a
+      ><a name="442" class="Symbol"
+      >(</a
+      ><a name="443" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="446"
+      > </a
+      ><a name="447" href="Integers.html#432" class="Bound"
+      >n</a
+      ><a name="448" class="Symbol"
+      >)</a
+      ><a name="449"
+      >
+
+  </a
+      ><a name="453" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="462"
+      > </a
+      ><a name="463" class="Symbol"
+      >:</a
+      ><a name="464"
+      > </a
+      ><a name="465" class="Symbol"
+      >(</a
+      ><a name="466" href="Integers.html#466" class="Bound"
+      >n</a
+      ><a name="467"
+      > </a
+      ><a name="468" class="Symbol"
+      >:</a
+      ><a name="469"
+      > </a
+      ><a name="470" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="471" class="Symbol"
+      >)</a
+      ><a name="472"
+      > </a
+      ><a name="473" class="Symbol"
+      >&#8594;</a
+      ><a name="474"
+      > </a
+      ><a name="475" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="479"
+      > </a
+      ><a name="480" class="Symbol"
+      >(</a
+      ><a name="481" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="485"
+      > </a
+      ><a name="486" href="Integers.html#466" class="Bound"
+      >n</a
+      ><a name="487" class="Symbol"
+      >)</a
+      ><a name="488"
+      > </a
+      ><a name="489" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="490"
+      > </a
+      ><a name="491" href="Integers.html#466" class="Bound"
+      >n</a
+      ><a name="492"
+      >
+  </a
+      ><a name="495" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="504"
+      > </a
+      ><a name="505" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="506"
+      > </a
+      ><a name="507" class="Symbol"
+      >=</a
+      ><a name="508"
+      > </a
+      ><a name="509" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="513"
+      > </a
+      ><a name="514" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="515"
+      >
+  </a
+      ><a name="518" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="527"
+      > </a
+      ><a name="528" class="Symbol"
+      >(</a
+      ><a name="529" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="532"
+      > </a
+      ><a name="533" href="Integers.html#533" class="Bound"
+      >n</a
+      ><a name="534" class="Symbol"
+      >)</a
+      ><a name="535"
+      > </a
+      ><a name="536" class="Symbol"
+      >=</a
+      ><a name="537"
+      > </a
+      ><a name="538" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="542"
+      > </a
+      ><a name="543" class="Symbol"
+      >(</a
+      ><a name="544" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="547"
+      > </a
+      ><a name="548" href="Integers.html#533" class="Bound"
+      >n</a
+      ><a name="549" class="Symbol"
+      >)</a
+      ><a name="550"
+      >
+  </a
+      ><a name="553" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="562"
+      > </a
+      ><a name="563" class="Symbol"
+      >(</a
+      ><a name="564" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="567"
+      > </a
+      ><a name="568" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="569" class="Symbol"
+      >)</a
+      ><a name="570"
+      > </a
+      ><a name="571" class="Symbol"
+      >=</a
+      ><a name="572"
+      > </a
+      ><a name="573" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="577"
+      > </a
+      ><a name="578" class="Symbol"
+      >(</a
+      ><a name="579" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="582"
+      > </a
+      ><a name="583" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="584" class="Symbol"
+      >)</a
+      ><a name="585"
+      >
+  </a
+      ><a name="588" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="597"
+      > </a
+      ><a name="598" class="Symbol"
+      >(</a
+      ><a name="599" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="602"
+      > </a
+      ><a name="603" class="Symbol"
+      >(</a
+      ><a name="604" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="605"
+      > </a
+      ><a name="606" href="Integers.html#606" class="Bound"
+      >n</a
+      ><a name="607" class="Symbol"
+      >))</a
+      ><a name="609"
+      > </a
+      ><a name="610" class="Symbol"
+      >=</a
+      ><a name="611"
+      > </a
+      ><a name="612" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="616"
+      > </a
+      ><a name="617" class="Symbol"
+      >(</a
+      ><a name="618" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="621"
+      > </a
+      ><a name="622" class="Symbol"
+      >(</a
+      ><a name="623" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="624"
+      > </a
+      ><a name="625" href="Integers.html#606" class="Bound"
+      >n</a
+      ><a name="626" class="Symbol"
+      >))</a
+      ><a name="628"
+      >
+
+  </a
+      ><a name="632" href="Integers.html#632" class="Function"
+      >succ-is-equiv</a
+      ><a name="645"
+      > </a
+      ><a name="646" class="Symbol"
+      >:</a
+      ><a name="647"
+      > </a
+      ><a name="648" href="Equivalences.html#254" class="Function"
+      >is-equiv</a
+      ><a name="656"
+      > </a
+      ><a name="657" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="661"
+      >
+  </a
+      ><a name="664" href="Integers.html#632" class="Function"
+      >succ-is-equiv</a
+      ><a name="677"
+      > </a
+      ><a name="678" class="Symbol"
+      >=</a
+      ><a name="679"
+      > </a
+      ><a name="680" href="Equivalences.html#3936" class="Function"
+      >iso-is-eq</a
+      ><a name="689"
+      > </a
+      ><a name="690" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="694"
+      > </a
+      ><a name="695" href="Integers.html#167" class="Function"
+      >pred</a
+      ><a name="699"
+      > </a
+      ><a name="700" href="Integers.html#274" class="Function"
+      >succ-pred</a
+      ><a name="709"
+      > </a
+      ><a name="710" href="Integers.html#453" class="Function"
+      >pred-succ</a
+      ><a name="719"
+      >
+
+</a
+      ><a name="721" href="Integers.html#721" class="Function"
+      >succ-equiv</a
+      ><a name="731"
+      > </a
+      ><a name="732" class="Symbol"
+      >:</a
+      ><a name="733"
+      > </a
+      ><a name="734" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="735"
+      > </a
+      ><a name="736" href="Equivalences.html#379" class="Function Operator"
+      >&#8771;</a
+      ><a name="737"
+      > </a
+      ><a name="738" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="739"
+      >
+</a
+      ><a name="740" href="Integers.html#721" class="Function"
+      >succ-equiv</a
+      ><a name="750"
+      > </a
+      ><a name="751" class="Symbol"
+      >=</a
+      ><a name="752"
+      > </a
+      ><a name="753" class="Symbol"
+      >(</a
+      ><a name="754" href="Integers.html#71" class="Function"
+      >succ</a
+      ><a name="758"
+      > </a
+      ><a name="759" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="760"
+      > </a
+      ><a name="761" href="Integers.html#632" class="Function"
+      >succ-is-equiv</a
+      ><a name="774" class="Symbol"
+      >)</a
+      ><a name="775"
+      >
+
+</a
+      ><a name="777" class="Comment"
+      >-- Equality on &#8469; and &#8484; is decidable and both are sets</a
+      ><a name="830"
+      >
+
+</a
+      ><a name="832" class="Keyword"
+      >private</a
+      ><a name="839"
+      >
+  </a
+      ><a name="842" href="Integers.html#842" class="Function"
+      >&#8469;-get-S</a
+      ><a name="849"
+      > </a
+      ><a name="850" class="Symbol"
+      >:</a
+      ><a name="851"
+      > </a
+      ><a name="852" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="853"
+      > </a
+      ><a name="854" class="Symbol"
+      >&#8594;</a
+      ><a name="855"
+      > </a
+      ><a name="856" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="857"
+      >
+  </a
+      ><a name="860" href="Integers.html#842" class="Function"
+      >&#8469;-get-S</a
+      ><a name="867"
+      > </a
+      ><a name="868" href="Types.html#1245" class="InductiveConstructor"
+      >0</a
+      ><a name="869"
+      > </a
+      ><a name="870" class="Symbol"
+      >=</a
+      ><a name="871"
+      > </a
+      ><a name="872" class="Number"
+      >42</a
+      ><a name="874"
+      >
+  </a
+      ><a name="877" href="Integers.html#842" class="Function"
+      >&#8469;-get-S</a
+      ><a name="884"
+      > </a
+      ><a name="885" class="Symbol"
+      >(</a
+      ><a name="886" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="887"
+      > </a
+      ><a name="888" href="Integers.html#888" class="Bound"
+      >n</a
+      ><a name="889" class="Symbol"
+      >)</a
+      ><a name="890"
+      > </a
+      ><a name="891" class="Symbol"
+      >=</a
+      ><a name="892"
+      > </a
+      ><a name="893" href="Integers.html#888" class="Bound"
+      >n</a
+      ><a name="894"
+      >
+
+  </a
+      ><a name="898" href="Integers.html#898" class="Function"
+      >S-injective</a
+      ><a name="909"
+      > </a
+      ><a name="910" class="Symbol"
+      >:</a
+      ><a name="911"
+      > </a
+      ><a name="912" class="Symbol"
+      >(</a
+      ><a name="913" href="Integers.html#913" class="Bound"
+      >n</a
+      ><a name="914"
+      > </a
+      ><a name="915" href="Integers.html#915" class="Bound"
+      >m</a
+      ><a name="916"
+      > </a
+      ><a name="917" class="Symbol"
+      >:</a
+      ><a name="918"
+      > </a
+      ><a name="919" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="920" class="Symbol"
+      >)</a
+      ><a name="921"
+      > </a
+      ><a name="922" class="Symbol"
+      >(</a
+      ><a name="923" href="Integers.html#923" class="Bound"
+      >p</a
+      ><a name="924"
+      > </a
+      ><a name="925" class="Symbol"
+      >:</a
+      ><a name="926"
+      > </a
+      ><a name="927" class="InductiveConstructor"
+      >S</a
+      ><a name="928"
+      > </a
+      ><a name="929" href="Integers.html#913" class="Bound"
+      >n</a
+      ><a name="930"
+      > </a
+      ><a name="931" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="932"
+      > </a
+      ><a name="933" class="InductiveConstructor"
+      >S</a
+      ><a name="934"
+      > </a
+      ><a name="935" href="Integers.html#915" class="Bound"
+      >m</a
+      ><a name="936" class="Symbol"
+      >)</a
+      ><a name="937"
+      > </a
+      ><a name="938" class="Symbol"
+      >&#8594;</a
+      ><a name="939"
+      > </a
+      ><a name="940" href="Integers.html#913" class="Bound"
+      >n</a
+      ><a name="941"
+      > </a
+      ><a name="942" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="943"
+      > </a
+      ><a name="944" href="Integers.html#915" class="Bound"
+      >m</a
+      ><a name="945"
+      >
+  </a
+      ><a name="948" href="Integers.html#898" class="Function"
+      >S-injective</a
+      ><a name="959"
+      > </a
+      ><a name="960" href="Integers.html#960" class="Bound"
+      >n</a
+      ><a name="961"
+      > </a
+      ><a name="962" href="Integers.html#962" class="Bound"
+      >m</a
+      ><a name="963"
+      > </a
+      ><a name="964" href="Integers.html#964" class="Bound"
+      >p</a
+      ><a name="965"
+      > </a
+      ><a name="966" class="Symbol"
+      >=</a
+      ><a name="967"
+      > </a
+      ><a name="968" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="971"
+      > </a
+      ><a name="972" href="Integers.html#842" class="Function"
+      >&#8469;-get-S</a
+      ><a name="979"
+      > </a
+      ><a name="980" href="Integers.html#964" class="Bound"
+      >p</a
+      ><a name="981"
+      >
+
+  </a
+      ><a name="985" href="Integers.html#985" class="Function"
+      >&#8469;-S&#8802;O-type</a
+      ><a name="995"
+      > </a
+      ><a name="996" class="Symbol"
+      >:</a
+      ><a name="997"
+      > </a
+      ><a name="998" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="999"
+      > </a
+      ><a name="1000" class="Symbol"
+      >&#8594;</a
+      ><a name="1001"
+      > </a
+      ><a name="1002" class="PrimitiveType"
+      >Set</a
+      ><a name="1005"
+      >
+  </a
+      ><a name="1008" href="Integers.html#985" class="Function"
+      >&#8469;-S&#8802;O-type</a
+      ><a name="1018"
+      > </a
+      ><a name="1019" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1020"
+      > </a
+      ><a name="1021" class="Symbol"
+      >=</a
+      ><a name="1022"
+      > </a
+      ><a name="1023" href="Types.html#320" class="Datatype"
+      >&#8869;</a
+      ><a name="1024"
+      >
+  </a
+      ><a name="1027" href="Integers.html#985" class="Function"
+      >&#8469;-S&#8802;O-type</a
+      ><a name="1037"
+      > </a
+      ><a name="1038" class="Symbol"
+      >(</a
+      ><a name="1039" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1040"
+      > </a
+      ><a name="1041" href="Integers.html#1041" class="Bound"
+      >n</a
+      ><a name="1042" class="Symbol"
+      >)</a
+      ><a name="1043"
+      > </a
+      ><a name="1044" class="Symbol"
+      >=</a
+      ><a name="1045"
+      > </a
+      ><a name="1046" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="1050"
+      >
+
+</a
+      ><a name="1052" class="Comment"
+      >-- Technical note: You need to write &quot;0&quot; and not &quot;O&quot; in the following types</a
+      ><a name="1127"
+      >
+</a
+      ><a name="1128" class="Comment"
+      >-- because S and O are both overloaded so Agda is confused by [S n &#8802; O]</a
+      ><a name="1199"
+      >
+</a
+      ><a name="1200" class="Keyword"
+      >abstract</a
+      ><a name="1208"
+      >
+  </a
+      ><a name="1211" href="Integers.html#1211" class="Function"
+      >&#8469;-S&#8802;O</a
+      ><a name="1216"
+      > </a
+      ><a name="1217" class="Symbol"
+      >:</a
+      ><a name="1218"
+      > </a
+      ><a name="1219" class="Symbol"
+      >(</a
+      ><a name="1220" href="Integers.html#1220" class="Bound"
+      >n</a
+      ><a name="1221"
+      > </a
+      ><a name="1222" class="Symbol"
+      >:</a
+      ><a name="1223"
+      > </a
+      ><a name="1224" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1225" class="Symbol"
+      >)</a
+      ><a name="1226"
+      > </a
+      ><a name="1227" class="Symbol"
+      >&#8594;</a
+      ><a name="1228"
+      > </a
+      ><a name="1229" class="InductiveConstructor"
+      >S</a
+      ><a name="1230"
+      > </a
+      ><a name="1231" href="Integers.html#1220" class="Bound"
+      >n</a
+      ><a name="1232"
+      > </a
+      ><a name="1233" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="1234"
+      > </a
+      ><a name="1235" class="Number"
+      >0</a
+      ><a name="1236"
+      >
+  </a
+      ><a name="1239" href="Integers.html#1211" class="Function"
+      >&#8469;-S&#8802;O</a
+      ><a name="1244"
+      > </a
+      ><a name="1245" href="Integers.html#1245" class="Bound"
+      >n</a
+      ><a name="1246"
+      > </a
+      ><a name="1247" href="Integers.html#1247" class="Bound"
+      >p</a
+      ><a name="1248"
+      > </a
+      ><a name="1249" class="Symbol"
+      >=</a
+      ><a name="1250"
+      > </a
+      ><a name="1251" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="1260"
+      > </a
+      ><a name="1261" href="Integers.html#985" class="Function"
+      >&#8469;-S&#8802;O-type</a
+      ><a name="1271"
+      > </a
+      ><a name="1272" href="Integers.html#1247" class="Bound"
+      >p</a
+      ><a name="1273"
+      > </a
+      ><a name="1274" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="1276"
+      >
+
+  </a
+      ><a name="1280" href="Integers.html#1280" class="Function"
+      >&#8469;-S&#8802;O#instance</a
+      ><a name="1294"
+      > </a
+      ><a name="1295" class="Symbol"
+      >:</a
+      ><a name="1296"
+      > </a
+      ><a name="1297" class="Symbol"
+      >{</a
+      ><a name="1298" href="Integers.html#1298" class="Bound"
+      >n</a
+      ><a name="1299"
+      > </a
+      ><a name="1300" class="Symbol"
+      >:</a
+      ><a name="1301"
+      > </a
+      ><a name="1302" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1303" class="Symbol"
+      >}</a
+      ><a name="1304"
+      > </a
+      ><a name="1305" class="Symbol"
+      >&#8594;</a
+      ><a name="1306"
+      > </a
+      ><a name="1307" class="Symbol"
+      >(</a
+      ><a name="1308" class="InductiveConstructor"
+      >S</a
+      ><a name="1309"
+      > </a
+      ><a name="1310" href="Integers.html#1298" class="Bound"
+      >n</a
+      ><a name="1311"
+      > </a
+      ><a name="1312" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="1313"
+      > </a
+      ><a name="1314" class="Number"
+      >0</a
+      ><a name="1315" class="Symbol"
+      >)</a
+      ><a name="1316"
+      >
+  </a
+      ><a name="1319" href="Integers.html#1280" class="Function"
+      >&#8469;-S&#8802;O#instance</a
+      ><a name="1333"
+      > </a
+      ><a name="1334" class="Symbol"
+      >{</a
+      ><a name="1335" href="Integers.html#1335" class="Bound"
+      >n</a
+      ><a name="1336" class="Symbol"
+      >}</a
+      ><a name="1337"
+      > </a
+      ><a name="1338" class="Symbol"
+      >=</a
+      ><a name="1339"
+      > </a
+      ><a name="1340" href="Integers.html#1211" class="Function"
+      >&#8469;-S&#8802;O</a
+      ><a name="1345"
+      > </a
+      ><a name="1346" href="Integers.html#1335" class="Bound"
+      >n</a
+      ><a name="1347"
+      >
+
+  </a
+      ><a name="1351" href="Integers.html#1351" class="Function"
+      >&#8469;-O&#8802;S</a
+      ><a name="1356"
+      > </a
+      ><a name="1357" class="Symbol"
+      >:</a
+      ><a name="1358"
+      > </a
+      ><a name="1359" class="Symbol"
+      >(</a
+      ><a name="1360" href="Integers.html#1360" class="Bound"
+      >n</a
+      ><a name="1361"
+      > </a
+      ><a name="1362" class="Symbol"
+      >:</a
+      ><a name="1363"
+      > </a
+      ><a name="1364" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1365" class="Symbol"
+      >)</a
+      ><a name="1366"
+      > </a
+      ><a name="1367" class="Symbol"
+      >&#8594;</a
+      ><a name="1368"
+      > </a
+      ><a name="1369" class="Symbol"
+      >(</a
+      ><a name="1370" class="Number"
+      >0</a
+      ><a name="1371"
+      > </a
+      ><a name="1372" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="1373"
+      > </a
+      ><a name="1374" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1375"
+      > </a
+      ><a name="1376" href="Integers.html#1360" class="Bound"
+      >n</a
+      ><a name="1377" class="Symbol"
+      >)</a
+      ><a name="1378"
+      >
+  </a
+      ><a name="1381" href="Integers.html#1351" class="Function"
+      >&#8469;-O&#8802;S</a
+      ><a name="1386"
+      > </a
+      ><a name="1387" href="Integers.html#1387" class="Bound"
+      >n</a
+      ><a name="1388"
+      > </a
+      ><a name="1389" href="Integers.html#1389" class="Bound"
+      >p</a
+      ><a name="1390"
+      > </a
+      ><a name="1391" class="Symbol"
+      >=</a
+      ><a name="1392"
+      > </a
+      ><a name="1393" href="Integers.html#1211" class="Function"
+      >&#8469;-S&#8802;O</a
+      ><a name="1398"
+      > </a
+      ><a name="1399" href="Integers.html#1387" class="Bound"
+      >n</a
+      ><a name="1400"
+      > </a
+      ><a name="1401" class="Symbol"
+      >(</a
+      ><a name="1402" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="1403"
+      > </a
+      ><a name="1404" href="Integers.html#1389" class="Bound"
+      >p</a
+      ><a name="1405" class="Symbol"
+      >)</a
+      ><a name="1406"
+      >
+
+  </a
+      ><a name="1410" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1422"
+      > </a
+      ><a name="1423" class="Symbol"
+      >:</a
+      ><a name="1424"
+      > </a
+      ><a name="1425" href="HLevel.html#965" class="Function"
+      >has-dec-eq</a
+      ><a name="1435"
+      > </a
+      ><a name="1436" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1437"
+      >
+  </a
+      ><a name="1440" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1452"
+      > </a
+      ><a name="1453" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1454"
+      > </a
+      ><a name="1455" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1456"
+      > </a
+      ><a name="1457" class="Symbol"
+      >=</a
+      ><a name="1458"
+      > </a
+      ><a name="1459" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="1462"
+      > </a
+      ><a name="1463" class="Symbol"
+      >(</a
+      ><a name="1464" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="1468"
+      > </a
+      ><a name="1469" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1470" class="Symbol"
+      >)</a
+      ><a name="1471"
+      >
+  </a
+      ><a name="1474" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1486"
+      > </a
+      ><a name="1487" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1488"
+      > </a
+      ><a name="1489" class="Symbol"
+      >(</a
+      ><a name="1490" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1491"
+      > </a
+      ><a name="1492" href="Integers.html#1492" class="Bound"
+      >n</a
+      ><a name="1493" class="Symbol"
+      >)</a
+      ><a name="1494"
+      > </a
+      ><a name="1495" class="Symbol"
+      >=</a
+      ><a name="1496"
+      > </a
+      ><a name="1497" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="1500"
+      > </a
+      ><a name="1501" class="Symbol"
+      >(</a
+      ><a name="1502" href="Integers.html#1351" class="Function"
+      >&#8469;-O&#8802;S</a
+      ><a name="1507"
+      > </a
+      ><a name="1508" href="Integers.html#1492" class="Bound"
+      >n</a
+      ><a name="1509" class="Symbol"
+      >)</a
+      ><a name="1510"
+      >
+  </a
+      ><a name="1513" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1525"
+      > </a
+      ><a name="1526" class="Symbol"
+      >(</a
+      ><a name="1527" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1528"
+      > </a
+      ><a name="1529" href="Integers.html#1529" class="Bound"
+      >n</a
+      ><a name="1530" class="Symbol"
+      >)</a
+      ><a name="1531"
+      > </a
+      ><a name="1532" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1533"
+      > </a
+      ><a name="1534" class="Symbol"
+      >=</a
+      ><a name="1535"
+      > </a
+      ><a name="1536" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="1539"
+      > </a
+      ><a name="1540" class="Symbol"
+      >(</a
+      ><a name="1541" href="Integers.html#1211" class="Function"
+      >&#8469;-S&#8802;O</a
+      ><a name="1546"
+      > </a
+      ><a name="1547" href="Integers.html#1529" class="Bound"
+      >n</a
+      ><a name="1548" class="Symbol"
+      >)</a
+      ><a name="1549"
+      >
+  </a
+      ><a name="1552" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1564"
+      > </a
+      ><a name="1565" class="Symbol"
+      >(</a
+      ><a name="1566" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1567"
+      > </a
+      ><a name="1568" href="Integers.html#1568" class="Bound"
+      >n</a
+      ><a name="1569" class="Symbol"
+      >)</a
+      ><a name="1570"
+      > </a
+      ><a name="1571" class="Symbol"
+      >(</a
+      ><a name="1572" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1573"
+      > </a
+      ><a name="1574" href="Integers.html#1574" class="Bound"
+      >m</a
+      ><a name="1575" class="Symbol"
+      >)</a
+      ><a name="1576"
+      > </a
+      ><a name="1577" class="Keyword"
+      >with</a
+      ><a name="1581"
+      > </a
+      ><a name="1582" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1594"
+      > </a
+      ><a name="1595" href="Integers.html#1568" class="Bound"
+      >n</a
+      ><a name="1596"
+      > </a
+      ><a name="1597" href="Integers.html#1574" class="Bound"
+      >m</a
+      ><a name="1598"
+      >
+  </a
+      ><a name="1601" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1613"
+      > </a
+      ><a name="1614" class="Symbol"
+      >(</a
+      ><a name="1615" class="InductiveConstructor"
+      >S</a
+      ><a name="1616"
+      > </a
+      ><a name="1617" href="Integers.html#1617" class="Bound"
+      >n</a
+      ><a name="1618" class="Symbol"
+      >)</a
+      ><a name="1619"
+      > </a
+      ><a name="1620" class="Symbol"
+      >(</a
+      ><a name="1621" class="InductiveConstructor"
+      >S</a
+      ><a name="1622"
+      > </a
+      ><a name="1623" href="Integers.html#1623" class="Bound"
+      >m</a
+      ><a name="1624" class="Symbol"
+      >)</a
+      ><a name="1625"
+      > </a
+      ><a name="1626" class="Symbol"
+      >|</a
+      ><a name="1627"
+      > </a
+      ><a name="1628" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="1631"
+      > </a
+      ><a name="1632" href="Integers.html#1632" class="Bound"
+      >p</a
+      ><a name="1633"
+      > </a
+      ><a name="1634" class="Symbol"
+      >=</a
+      ><a name="1635"
+      > </a
+      ><a name="1636" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="1639"
+      > </a
+      ><a name="1640" class="Symbol"
+      >(</a
+      ><a name="1641" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1644"
+      > </a
+      ><a name="1645" class="InductiveConstructor"
+      >S</a
+      ><a name="1646"
+      > </a
+      ><a name="1647" href="Integers.html#1632" class="Bound"
+      >p</a
+      ><a name="1648" class="Symbol"
+      >)</a
+      ><a name="1649"
+      >
+  </a
+      ><a name="1652" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1664"
+      > </a
+      ><a name="1665" class="Symbol"
+      >(</a
+      ><a name="1666" class="InductiveConstructor"
+      >S</a
+      ><a name="1667"
+      > </a
+      ><a name="1668" href="Integers.html#1668" class="Bound"
+      >n</a
+      ><a name="1669" class="Symbol"
+      >)</a
+      ><a name="1670"
+      > </a
+      ><a name="1671" class="Symbol"
+      >(</a
+      ><a name="1672" class="InductiveConstructor"
+      >S</a
+      ><a name="1673"
+      > </a
+      ><a name="1674" href="Integers.html#1674" class="Bound"
+      >m</a
+      ><a name="1675" class="Symbol"
+      >)</a
+      ><a name="1676"
+      > </a
+      ><a name="1677" class="Symbol"
+      >|</a
+      ><a name="1678"
+      > </a
+      ><a name="1679" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="1682"
+      > </a
+      ><a name="1683" href="Integers.html#1683" class="Bound"
+      >p&#8869;</a
+      ><a name="1685"
+      > </a
+      ><a name="1686" class="Symbol"
+      >=</a
+      ><a name="1687"
+      > </a
+      ><a name="1688" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="1691"
+      > </a
+      ><a name="1692" class="Symbol"
+      >(&#955;</a
+      ><a name="1694"
+      > </a
+      ><a name="1695" href="Integers.html#1695" class="Bound"
+      >p</a
+      ><a name="1696"
+      > </a
+      ><a name="1697" class="Symbol"
+      >&#8594;</a
+      ><a name="1698"
+      > </a
+      ><a name="1699" href="Integers.html#1683" class="Bound"
+      >p&#8869;</a
+      ><a name="1701"
+      > </a
+      ><a name="1702" class="Symbol"
+      >(</a
+      ><a name="1703" href="Integers.html#898" class="Function"
+      >S-injective</a
+      ><a name="1714"
+      > </a
+      ><a name="1715" href="Integers.html#1668" class="Bound"
+      >n</a
+      ><a name="1716"
+      > </a
+      ><a name="1717" href="Integers.html#1674" class="Bound"
+      >m</a
+      ><a name="1718"
+      > </a
+      ><a name="1719" href="Integers.html#1695" class="Bound"
+      >p</a
+      ><a name="1720" class="Symbol"
+      >))</a
+      ><a name="1722"
+      >
+
+  </a
+      ><a name="1726" href="Integers.html#1726" class="Function"
+      >&#8469;-is-set</a
+      ><a name="1734"
+      > </a
+      ><a name="1735" class="Symbol"
+      >:</a
+      ><a name="1736"
+      > </a
+      ><a name="1737" href="HLevel.html#482" class="Function"
+      >is-set</a
+      ><a name="1743"
+      > </a
+      ><a name="1744" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1745"
+      >
+  </a
+      ><a name="1748" href="Integers.html#1726" class="Function"
+      >&#8469;-is-set</a
+      ><a name="1756"
+      > </a
+      ><a name="1757" class="Symbol"
+      >=</a
+      ><a name="1758"
+      > </a
+      ><a name="1759" href="HLevel.html#1735" class="Function"
+      >dec-eq-is-set</a
+      ><a name="1772"
+      > </a
+      ><a name="1773" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="1785"
+      >
+
+</a
+      ><a name="1787" class="Keyword"
+      >data</a
+      ><a name="1791"
+      > </a
+      ><a name="1792" href="Integers.html#1792" class="Datatype Operator"
+      >_&lt;_</a
+      ><a name="1795"
+      > </a
+      ><a name="1796" class="Symbol"
+      >:</a
+      ><a name="1797"
+      > </a
+      ><a name="1798" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1799"
+      > </a
+      ><a name="1800" class="Symbol"
+      >&#8594;</a
+      ><a name="1801"
+      > </a
+      ><a name="1802" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1803"
+      > </a
+      ><a name="1804" class="Symbol"
+      >&#8594;</a
+      ><a name="1805"
+      > </a
+      ><a name="1806" class="PrimitiveType"
+      >Set</a
+      ><a name="1809"
+      > </a
+      ><a name="1810" class="Keyword"
+      >where</a
+      ><a name="1815"
+      >
+  </a
+      ><a name="1818" href="Integers.html#1818" class="InductiveConstructor"
+      >&lt;n</a
+      ><a name="1820"
+      > </a
+      ><a name="1821" class="Symbol"
+      >:</a
+      ><a name="1822"
+      > </a
+      ><a name="1823" class="Symbol"
+      >{</a
+      ><a name="1824" href="Integers.html#1824" class="Bound"
+      >n</a
+      ><a name="1825"
+      > </a
+      ><a name="1826" class="Symbol"
+      >:</a
+      ><a name="1827"
+      > </a
+      ><a name="1828" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1829" class="Symbol"
+      >}</a
+      ><a name="1830"
+      > </a
+      ><a name="1831" class="Symbol"
+      >&#8594;</a
+      ><a name="1832"
+      > </a
+      ><a name="1833" href="Integers.html#1824" class="Bound"
+      >n</a
+      ><a name="1834"
+      > </a
+      ><a name="1835" href="Integers.html#1792" class="Datatype Operator"
+      >&lt;</a
+      ><a name="1836"
+      > </a
+      ><a name="1837" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1838"
+      > </a
+      ><a name="1839" href="Integers.html#1824" class="Bound"
+      >n</a
+      ><a name="1840"
+      >
+  </a
+      ><a name="1843" href="Integers.html#1843" class="InductiveConstructor"
+      >&lt;S</a
+      ><a name="1845"
+      > </a
+      ><a name="1846" class="Symbol"
+      >:</a
+      ><a name="1847"
+      > </a
+      ><a name="1848" class="Symbol"
+      >{</a
+      ><a name="1849" href="Integers.html#1849" class="Bound"
+      >n</a
+      ><a name="1850"
+      > </a
+      ><a name="1851" href="Integers.html#1851" class="Bound"
+      >m</a
+      ><a name="1852"
+      > </a
+      ><a name="1853" class="Symbol"
+      >:</a
+      ><a name="1854"
+      > </a
+      ><a name="1855" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1856" class="Symbol"
+      >}</a
+      ><a name="1857"
+      > </a
+      ><a name="1858" class="Symbol"
+      >&#8594;</a
+      ><a name="1859"
+      > </a
+      ><a name="1860" class="Symbol"
+      >(</a
+      ><a name="1861" href="Integers.html#1849" class="Bound"
+      >n</a
+      ><a name="1862"
+      > </a
+      ><a name="1863" href="Integers.html#1792" class="Datatype Operator"
+      >&lt;</a
+      ><a name="1864"
+      > </a
+      ><a name="1865" href="Integers.html#1851" class="Bound"
+      >m</a
+      ><a name="1866" class="Symbol"
+      >)</a
+      ><a name="1867"
+      > </a
+      ><a name="1868" class="Symbol"
+      >&#8594;</a
+      ><a name="1869"
+      > </a
+      ><a name="1870" class="Symbol"
+      >(</a
+      ><a name="1871" href="Integers.html#1849" class="Bound"
+      >n</a
+      ><a name="1872"
+      > </a
+      ><a name="1873" href="Integers.html#1792" class="Datatype Operator"
+      >&lt;</a
+      ><a name="1874"
+      > </a
+      ><a name="1875" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1876"
+      > </a
+      ><a name="1877" href="Integers.html#1851" class="Bound"
+      >m</a
+      ><a name="1878" class="Symbol"
+      >)</a
+      ><a name="1879"
+      >
+
+</a
+      ><a name="1881" href="Integers.html#1881" class="Function Operator"
+      >_+_</a
+      ><a name="1884"
+      > </a
+      ><a name="1885" class="Symbol"
+      >:</a
+      ><a name="1886"
+      > </a
+      ><a name="1887" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1888"
+      > </a
+      ><a name="1889" class="Symbol"
+      >&#8594;</a
+      ><a name="1890"
+      > </a
+      ><a name="1891" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1892"
+      > </a
+      ><a name="1893" class="Symbol"
+      >&#8594;</a
+      ><a name="1894"
+      > </a
+      ><a name="1895" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1896"
+      >
+</a
+      ><a name="1897" href="Types.html#1245" class="InductiveConstructor"
+      >0</a
+      ><a name="1898"
+      > </a
+      ><a name="1899" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="1900"
+      > </a
+      ><a name="1901" href="Integers.html#1901" class="Bound"
+      >m</a
+      ><a name="1902"
+      > </a
+      ><a name="1903" class="Symbol"
+      >=</a
+      ><a name="1904"
+      > </a
+      ><a name="1905" href="Integers.html#1901" class="Bound"
+      >m</a
+      ><a name="1906"
+      >
+</a
+      ><a name="1907" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1908"
+      > </a
+      ><a name="1909" href="Integers.html#1909" class="Bound"
+      >n</a
+      ><a name="1910"
+      > </a
+      ><a name="1911" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="1912"
+      > </a
+      ><a name="1913" href="Integers.html#1913" class="Bound"
+      >m</a
+      ><a name="1914"
+      > </a
+      ><a name="1915" class="Symbol"
+      >=</a
+      ><a name="1916"
+      > </a
+      ><a name="1917" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1918"
+      > </a
+      ><a name="1919" class="Symbol"
+      >(</a
+      ><a name="1920" href="Integers.html#1909" class="Bound"
+      >n</a
+      ><a name="1921"
+      > </a
+      ><a name="1922" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="1923"
+      > </a
+      ><a name="1924" href="Integers.html#1913" class="Bound"
+      >m</a
+      ><a name="1925" class="Symbol"
+      >)</a
+      ><a name="1926"
+      >
+
+</a
+      ><a name="1928" href="Integers.html#1928" class="Function"
+      >+S-is-S+</a
+      ><a name="1936"
+      > </a
+      ><a name="1937" class="Symbol"
+      >:</a
+      ><a name="1938"
+      > </a
+      ><a name="1939" class="Symbol"
+      >(</a
+      ><a name="1940" href="Integers.html#1940" class="Bound"
+      >n</a
+      ><a name="1941"
+      > </a
+      ><a name="1942" href="Integers.html#1942" class="Bound"
+      >m</a
+      ><a name="1943"
+      > </a
+      ><a name="1944" class="Symbol"
+      >:</a
+      ><a name="1945"
+      > </a
+      ><a name="1946" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="1947" class="Symbol"
+      >)</a
+      ><a name="1948"
+      > </a
+      ><a name="1949" class="Symbol"
+      >&#8594;</a
+      ><a name="1950"
+      > </a
+      ><a name="1951" href="Integers.html#1940" class="Bound"
+      >n</a
+      ><a name="1952"
+      > </a
+      ><a name="1953" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="1954"
+      > </a
+      ><a name="1955" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1956"
+      > </a
+      ><a name="1957" href="Integers.html#1942" class="Bound"
+      >m</a
+      ><a name="1958"
+      > </a
+      ><a name="1959" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1960"
+      > </a
+      ><a name="1961" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1962"
+      > </a
+      ><a name="1963" href="Integers.html#1940" class="Bound"
+      >n</a
+      ><a name="1964"
+      > </a
+      ><a name="1965" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="1966"
+      > </a
+      ><a name="1967" href="Integers.html#1942" class="Bound"
+      >m</a
+      ><a name="1968"
+      >
+</a
+      ><a name="1969" href="Integers.html#1928" class="Function"
+      >+S-is-S+</a
+      ><a name="1977"
+      > </a
+      ><a name="1978" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="1979"
+      > </a
+      ><a name="1980" href="Integers.html#1980" class="Bound"
+      >m</a
+      ><a name="1981"
+      > </a
+      ><a name="1982" class="Symbol"
+      >=</a
+      ><a name="1983"
+      > </a
+      ><a name="1984" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="1988"
+      > </a
+      ><a name="1989" class="Symbol"
+      >(</a
+      ><a name="1990" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="1991"
+      > </a
+      ><a name="1992" href="Integers.html#1980" class="Bound"
+      >m</a
+      ><a name="1993" class="Symbol"
+      >)</a
+      ><a name="1994"
+      >
+</a
+      ><a name="1995" href="Integers.html#1928" class="Function"
+      >+S-is-S+</a
+      ><a name="2003"
+      > </a
+      ><a name="2004" class="Symbol"
+      >(</a
+      ><a name="2005" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="2006"
+      > </a
+      ><a name="2007" href="Integers.html#2007" class="Bound"
+      >n</a
+      ><a name="2008" class="Symbol"
+      >)</a
+      ><a name="2009"
+      > </a
+      ><a name="2010" href="Integers.html#2010" class="Bound"
+      >m</a
+      ><a name="2011"
+      > </a
+      ><a name="2012" class="Symbol"
+      >=</a
+      ><a name="2013"
+      > </a
+      ><a name="2014" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="2017"
+      > </a
+      ><a name="2018" class="InductiveConstructor"
+      >S</a
+      ><a name="2019"
+      > </a
+      ><a name="2020" class="Symbol"
+      >(</a
+      ><a name="2021" href="Integers.html#1928" class="Function"
+      >+S-is-S+</a
+      ><a name="2029"
+      > </a
+      ><a name="2030" href="Integers.html#2007" class="Bound"
+      >n</a
+      ><a name="2031"
+      > </a
+      ><a name="2032" href="Integers.html#2010" class="Bound"
+      >m</a
+      ><a name="2033" class="Symbol"
+      >)</a
+      ><a name="2034"
+      >
+
+</a
+      ><a name="2036" href="Integers.html#2036" class="Function"
+      >+0-is-id</a
+      ><a name="2044"
+      > </a
+      ><a name="2045" class="Symbol"
+      >:</a
+      ><a name="2046"
+      > </a
+      ><a name="2047" class="Symbol"
+      >(</a
+      ><a name="2048" href="Integers.html#2048" class="Bound"
+      >n</a
+      ><a name="2049"
+      > </a
+      ><a name="2050" class="Symbol"
+      >:</a
+      ><a name="2051"
+      > </a
+      ><a name="2052" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2053" class="Symbol"
+      >)</a
+      ><a name="2054"
+      > </a
+      ><a name="2055" class="Symbol"
+      >&#8594;</a
+      ><a name="2056"
+      > </a
+      ><a name="2057" href="Integers.html#2048" class="Bound"
+      >n</a
+      ><a name="2058"
+      > </a
+      ><a name="2059" href="Integers.html#1881" class="Function Operator"
+      >+</a
+      ><a name="2060"
+      > </a
+      ><a name="2061" class="Number"
+      >0</a
+      ><a name="2062"
+      > </a
+      ><a name="2063" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2064"
+      > </a
+      ><a name="2065" href="Integers.html#2048" class="Bound"
+      >n</a
+      ><a name="2066"
+      >
+</a
+      ><a name="2067" href="Integers.html#2036" class="Function"
+      >+0-is-id</a
+      ><a name="2075"
+      > </a
+      ><a name="2076" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="2077"
+      > </a
+      ><a name="2078" class="Symbol"
+      >=</a
+      ><a name="2079"
+      > </a
+      ><a name="2080" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="2084"
+      > </a
+      ><a name="2085" href="Types.html#1245" class="InductiveConstructor"
+      >O</a
+      ><a name="2086"
+      >
+</a
+      ><a name="2087" href="Integers.html#2036" class="Function"
+      >+0-is-id</a
+      ><a name="2095"
+      > </a
+      ><a name="2096" class="Symbol"
+      >(</a
+      ><a name="2097" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="2098"
+      > </a
+      ><a name="2099" href="Integers.html#2099" class="Bound"
+      >n</a
+      ><a name="2100" class="Symbol"
+      >)</a
+      ><a name="2101"
+      > </a
+      ><a name="2102" class="Symbol"
+      >=</a
+      ><a name="2103"
+      > </a
+      ><a name="2104" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="2107"
+      > </a
+      ><a name="2108" class="InductiveConstructor"
+      >S</a
+      ><a name="2109"
+      > </a
+      ><a name="2110" class="Symbol"
+      >(</a
+      ><a name="2111" href="Integers.html#2036" class="Function"
+      >+0-is-id</a
+      ><a name="2119"
+      > </a
+      ><a name="2120" href="Integers.html#2099" class="Bound"
+      >n</a
+      ><a name="2121" class="Symbol"
+      >)</a
+      ><a name="2122"
+      >
+
+</a
+      ><a name="2124" class="Keyword"
+      >private</a
+      ><a name="2131"
+      >
+  </a
+      ><a name="2134" href="Integers.html#2134" class="Function"
+      >&#8484;-get-pos</a
+      ><a name="2143"
+      > </a
+      ><a name="2144" class="Symbol"
+      >:</a
+      ><a name="2145"
+      > </a
+      ><a name="2146" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="2147"
+      > </a
+      ><a name="2148" class="Symbol"
+      >&#8594;</a
+      ><a name="2149"
+      > </a
+      ><a name="2150" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2151"
+      >
+  </a
+      ><a name="2154" href="Integers.html#2134" class="Function"
+      >&#8484;-get-pos</a
+      ><a name="2163"
+      > </a
+      ><a name="2164" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="2165"
+      > </a
+      ><a name="2166" class="Symbol"
+      >=</a
+      ><a name="2167"
+      > </a
+      ><a name="2168" class="Number"
+      >0</a
+      ><a name="2169"
+      >
+  </a
+      ><a name="2172" href="Integers.html#2134" class="Function"
+      >&#8484;-get-pos</a
+      ><a name="2181"
+      > </a
+      ><a name="2182" class="Symbol"
+      >(</a
+      ><a name="2183" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2186"
+      > </a
+      ><a name="2187" href="Integers.html#2187" class="Bound"
+      >n</a
+      ><a name="2188" class="Symbol"
+      >)</a
+      ><a name="2189"
+      > </a
+      ><a name="2190" class="Symbol"
+      >=</a
+      ><a name="2191"
+      > </a
+      ><a name="2192" href="Integers.html#2187" class="Bound"
+      >n</a
+      ><a name="2193"
+      >
+  </a
+      ><a name="2196" href="Integers.html#2134" class="Function"
+      >&#8484;-get-pos</a
+      ><a name="2205"
+      > </a
+      ><a name="2206" class="Symbol"
+      >(</a
+      ><a name="2207" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2210"
+      > </a
+      ><a name="2211" href="Integers.html#2211" class="Bound"
+      >n</a
+      ><a name="2212" class="Symbol"
+      >)</a
+      ><a name="2213"
+      > </a
+      ><a name="2214" class="Symbol"
+      >=</a
+      ><a name="2215"
+      > </a
+      ><a name="2216" class="Number"
+      >0</a
+      ><a name="2217"
+      >
+
+  </a
+      ><a name="2221" href="Integers.html#2221" class="Function"
+      >pos-injective</a
+      ><a name="2234"
+      > </a
+      ><a name="2235" class="Symbol"
+      >:</a
+      ><a name="2236"
+      > </a
+      ><a name="2237" class="Symbol"
+      >(</a
+      ><a name="2238" href="Integers.html#2238" class="Bound"
+      >n</a
+      ><a name="2239"
+      > </a
+      ><a name="2240" href="Integers.html#2240" class="Bound"
+      >m</a
+      ><a name="2241"
+      > </a
+      ><a name="2242" class="Symbol"
+      >:</a
+      ><a name="2243"
+      > </a
+      ><a name="2244" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2245" class="Symbol"
+      >)</a
+      ><a name="2246"
+      > </a
+      ><a name="2247" class="Symbol"
+      >(</a
+      ><a name="2248" href="Integers.html#2248" class="Bound"
+      >p</a
+      ><a name="2249"
+      > </a
+      ><a name="2250" class="Symbol"
+      >:</a
+      ><a name="2251"
+      > </a
+      ><a name="2252" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2255"
+      > </a
+      ><a name="2256" href="Integers.html#2238" class="Bound"
+      >n</a
+      ><a name="2257"
+      > </a
+      ><a name="2258" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2259"
+      > </a
+      ><a name="2260" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2263"
+      > </a
+      ><a name="2264" href="Integers.html#2240" class="Bound"
+      >m</a
+      ><a name="2265" class="Symbol"
+      >)</a
+      ><a name="2266"
+      > </a
+      ><a name="2267" class="Symbol"
+      >&#8594;</a
+      ><a name="2268"
+      > </a
+      ><a name="2269" href="Integers.html#2238" class="Bound"
+      >n</a
+      ><a name="2270"
+      > </a
+      ><a name="2271" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2272"
+      > </a
+      ><a name="2273" href="Integers.html#2240" class="Bound"
+      >m</a
+      ><a name="2274"
+      >
+  </a
+      ><a name="2277" href="Integers.html#2221" class="Function"
+      >pos-injective</a
+      ><a name="2290"
+      > </a
+      ><a name="2291" href="Integers.html#2291" class="Bound"
+      >n</a
+      ><a name="2292"
+      > </a
+      ><a name="2293" href="Integers.html#2293" class="Bound"
+      >m</a
+      ><a name="2294"
+      > </a
+      ><a name="2295" href="Integers.html#2295" class="Bound"
+      >p</a
+      ><a name="2296"
+      > </a
+      ><a name="2297" class="Symbol"
+      >=</a
+      ><a name="2298"
+      > </a
+      ><a name="2299" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="2302"
+      > </a
+      ><a name="2303" href="Integers.html#2134" class="Function"
+      >&#8484;-get-pos</a
+      ><a name="2312"
+      > </a
+      ><a name="2313" href="Integers.html#2295" class="Bound"
+      >p</a
+      ><a name="2314"
+      >
+
+  </a
+      ><a name="2318" href="Integers.html#2318" class="Function"
+      >&#8484;-get-neg</a
+      ><a name="2327"
+      > </a
+      ><a name="2328" class="Symbol"
+      >:</a
+      ><a name="2329"
+      > </a
+      ><a name="2330" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="2331"
+      > </a
+      ><a name="2332" class="Symbol"
+      >&#8594;</a
+      ><a name="2333"
+      > </a
+      ><a name="2334" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2335"
+      >
+  </a
+      ><a name="2338" href="Integers.html#2318" class="Function"
+      >&#8484;-get-neg</a
+      ><a name="2347"
+      > </a
+      ><a name="2348" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="2349"
+      > </a
+      ><a name="2350" class="Symbol"
+      >=</a
+      ><a name="2351"
+      > </a
+      ><a name="2352" class="Number"
+      >0</a
+      ><a name="2353"
+      >
+  </a
+      ><a name="2356" href="Integers.html#2318" class="Function"
+      >&#8484;-get-neg</a
+      ><a name="2365"
+      > </a
+      ><a name="2366" class="Symbol"
+      >(</a
+      ><a name="2367" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2370"
+      > </a
+      ><a name="2371" href="Integers.html#2371" class="Bound"
+      >n</a
+      ><a name="2372" class="Symbol"
+      >)</a
+      ><a name="2373"
+      > </a
+      ><a name="2374" class="Symbol"
+      >=</a
+      ><a name="2375"
+      > </a
+      ><a name="2376" class="Number"
+      >0</a
+      ><a name="2377"
+      >
+  </a
+      ><a name="2380" href="Integers.html#2318" class="Function"
+      >&#8484;-get-neg</a
+      ><a name="2389"
+      > </a
+      ><a name="2390" class="Symbol"
+      >(</a
+      ><a name="2391" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2394"
+      > </a
+      ><a name="2395" href="Integers.html#2395" class="Bound"
+      >n</a
+      ><a name="2396" class="Symbol"
+      >)</a
+      ><a name="2397"
+      > </a
+      ><a name="2398" class="Symbol"
+      >=</a
+      ><a name="2399"
+      > </a
+      ><a name="2400" href="Integers.html#2395" class="Bound"
+      >n</a
+      ><a name="2401"
+      >
+
+  </a
+      ><a name="2405" href="Integers.html#2405" class="Function"
+      >neg-injective</a
+      ><a name="2418"
+      > </a
+      ><a name="2419" class="Symbol"
+      >:</a
+      ><a name="2420"
+      > </a
+      ><a name="2421" class="Symbol"
+      >(</a
+      ><a name="2422" href="Integers.html#2422" class="Bound"
+      >n</a
+      ><a name="2423"
+      > </a
+      ><a name="2424" href="Integers.html#2424" class="Bound"
+      >m</a
+      ><a name="2425"
+      > </a
+      ><a name="2426" class="Symbol"
+      >:</a
+      ><a name="2427"
+      > </a
+      ><a name="2428" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2429" class="Symbol"
+      >)</a
+      ><a name="2430"
+      > </a
+      ><a name="2431" class="Symbol"
+      >(</a
+      ><a name="2432" href="Integers.html#2432" class="Bound"
+      >p</a
+      ><a name="2433"
+      > </a
+      ><a name="2434" class="Symbol"
+      >:</a
+      ><a name="2435"
+      > </a
+      ><a name="2436" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2439"
+      > </a
+      ><a name="2440" href="Integers.html#2422" class="Bound"
+      >n</a
+      ><a name="2441"
+      > </a
+      ><a name="2442" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2443"
+      > </a
+      ><a name="2444" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2447"
+      > </a
+      ><a name="2448" href="Integers.html#2424" class="Bound"
+      >m</a
+      ><a name="2449" class="Symbol"
+      >)</a
+      ><a name="2450"
+      > </a
+      ><a name="2451" class="Symbol"
+      >&#8594;</a
+      ><a name="2452"
+      > </a
+      ><a name="2453" href="Integers.html#2422" class="Bound"
+      >n</a
+      ><a name="2454"
+      > </a
+      ><a name="2455" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2456"
+      > </a
+      ><a name="2457" href="Integers.html#2424" class="Bound"
+      >m</a
+      ><a name="2458"
+      >
+  </a
+      ><a name="2461" href="Integers.html#2405" class="Function"
+      >neg-injective</a
+      ><a name="2474"
+      > </a
+      ><a name="2475" href="Integers.html#2475" class="Bound"
+      >n</a
+      ><a name="2476"
+      > </a
+      ><a name="2477" href="Integers.html#2477" class="Bound"
+      >m</a
+      ><a name="2478"
+      > </a
+      ><a name="2479" href="Integers.html#2479" class="Bound"
+      >p</a
+      ><a name="2480"
+      > </a
+      ><a name="2481" class="Symbol"
+      >=</a
+      ><a name="2482"
+      > </a
+      ><a name="2483" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="2486"
+      > </a
+      ><a name="2487" href="Integers.html#2318" class="Function"
+      >&#8484;-get-neg</a
+      ><a name="2496"
+      > </a
+      ><a name="2497" href="Integers.html#2479" class="Bound"
+      >p</a
+      ><a name="2498"
+      >
+
+  </a
+      ><a name="2502" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2518"
+      > </a
+      ><a name="2519" class="Symbol"
+      >:</a
+      ><a name="2520"
+      > </a
+      ><a name="2521" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="2522"
+      > </a
+      ><a name="2523" class="Symbol"
+      >&#8594;</a
+      ><a name="2524"
+      > </a
+      ><a name="2525" class="PrimitiveType"
+      >Set</a
+      ><a name="2528"
+      >
+  </a
+      ><a name="2531" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2547"
+      > </a
+      ><a name="2548" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="2549"
+      > </a
+      ><a name="2550" class="Symbol"
+      >=</a
+      ><a name="2551"
+      > </a
+      ><a name="2552" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="2556"
+      >
+  </a
+      ><a name="2559" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2575"
+      > </a
+      ><a name="2576" class="Symbol"
+      >(</a
+      ><a name="2577" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2580"
+      > </a
+      ><a name="2581" href="Integers.html#2581" class="Bound"
+      >n</a
+      ><a name="2582" class="Symbol"
+      >)</a
+      ><a name="2583"
+      > </a
+      ><a name="2584" class="Symbol"
+      >=</a
+      ><a name="2585"
+      > </a
+      ><a name="2586" href="Types.html#320" class="Datatype"
+      >&#8869;</a
+      ><a name="2587"
+      >
+  </a
+      ><a name="2590" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2606"
+      > </a
+      ><a name="2607" class="Symbol"
+      >(</a
+      ><a name="2608" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2611"
+      > </a
+      ><a name="2612" href="Integers.html#2612" class="Bound"
+      >n</a
+      ><a name="2613" class="Symbol"
+      >)</a
+      ><a name="2614"
+      > </a
+      ><a name="2615" class="Symbol"
+      >=</a
+      ><a name="2616"
+      > </a
+      ><a name="2617" href="Types.html#320" class="Datatype"
+      >&#8869;</a
+      ><a name="2618"
+      >
+
+  </a
+      ><a name="2622" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="2636"
+      > </a
+      ><a name="2637" class="Symbol"
+      >:</a
+      ><a name="2638"
+      > </a
+      ><a name="2639" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="2640"
+      > </a
+      ><a name="2641" class="Symbol"
+      >&#8594;</a
+      ><a name="2642"
+      > </a
+      ><a name="2643" class="PrimitiveType"
+      >Set</a
+      ><a name="2646"
+      >
+  </a
+      ><a name="2649" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="2663"
+      > </a
+      ><a name="2664" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="2665"
+      > </a
+      ><a name="2666" class="Symbol"
+      >=</a
+      ><a name="2667"
+      > </a
+      ><a name="2668" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="2672"
+      >
+  </a
+      ><a name="2675" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="2689"
+      > </a
+      ><a name="2690" class="Symbol"
+      >(</a
+      ><a name="2691" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2694"
+      > </a
+      ><a name="2695" href="Integers.html#2695" class="Bound"
+      >n</a
+      ><a name="2696" class="Symbol"
+      >)</a
+      ><a name="2697"
+      > </a
+      ><a name="2698" class="Symbol"
+      >=</a
+      ><a name="2699"
+      > </a
+      ><a name="2700" href="Types.html#320" class="Datatype"
+      >&#8869;</a
+      ><a name="2701"
+      >
+  </a
+      ><a name="2704" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="2718"
+      > </a
+      ><a name="2719" class="Symbol"
+      >(</a
+      ><a name="2720" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2723"
+      > </a
+      ><a name="2724" href="Integers.html#2724" class="Bound"
+      >n</a
+      ><a name="2725" class="Symbol"
+      >)</a
+      ><a name="2726"
+      > </a
+      ><a name="2727" class="Symbol"
+      >=</a
+      ><a name="2728"
+      > </a
+      ><a name="2729" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="2733"
+      >
+
+</a
+      ><a name="2735" class="Keyword"
+      >abstract</a
+      ><a name="2743"
+      >
+  </a
+      ><a name="2746" href="Integers.html#2746" class="Function"
+      >&#8484;-O&#8802;pos</a
+      ><a name="2753"
+      > </a
+      ><a name="2754" class="Symbol"
+      >:</a
+      ><a name="2755"
+      > </a
+      ><a name="2756" class="Symbol"
+      >(</a
+      ><a name="2757" href="Integers.html#2757" class="Bound"
+      >n</a
+      ><a name="2758"
+      > </a
+      ><a name="2759" class="Symbol"
+      >:</a
+      ><a name="2760"
+      > </a
+      ><a name="2761" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2762" class="Symbol"
+      >)</a
+      ><a name="2763"
+      > </a
+      ><a name="2764" class="Symbol"
+      >&#8594;</a
+      ><a name="2765"
+      > </a
+      ><a name="2766" class="InductiveConstructor"
+      >O</a
+      ><a name="2767"
+      > </a
+      ><a name="2768" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="2769"
+      > </a
+      ><a name="2770" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2773"
+      > </a
+      ><a name="2774" href="Integers.html#2757" class="Bound"
+      >n</a
+      ><a name="2775"
+      >
+  </a
+      ><a name="2778" href="Integers.html#2746" class="Function"
+      >&#8484;-O&#8802;pos</a
+      ><a name="2785"
+      > </a
+      ><a name="2786" href="Integers.html#2786" class="Bound"
+      >n</a
+      ><a name="2787"
+      > </a
+      ><a name="2788" href="Integers.html#2788" class="Bound"
+      >p</a
+      ><a name="2789"
+      > </a
+      ><a name="2790" class="Symbol"
+      >=</a
+      ><a name="2791"
+      > </a
+      ><a name="2792" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="2801"
+      > </a
+      ><a name="2802" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2818"
+      > </a
+      ><a name="2819" href="Integers.html#2788" class="Bound"
+      >p</a
+      ><a name="2820"
+      > </a
+      ><a name="2821" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="2823"
+      >
+
+  </a
+      ><a name="2827" href="Integers.html#2827" class="Function"
+      >&#8484;-pos&#8802;O</a
+      ><a name="2834"
+      > </a
+      ><a name="2835" class="Symbol"
+      >:</a
+      ><a name="2836"
+      > </a
+      ><a name="2837" class="Symbol"
+      >(</a
+      ><a name="2838" href="Integers.html#2838" class="Bound"
+      >n</a
+      ><a name="2839"
+      > </a
+      ><a name="2840" class="Symbol"
+      >:</a
+      ><a name="2841"
+      > </a
+      ><a name="2842" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2843" class="Symbol"
+      >)</a
+      ><a name="2844"
+      > </a
+      ><a name="2845" class="Symbol"
+      >&#8594;</a
+      ><a name="2846"
+      > </a
+      ><a name="2847" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="2850"
+      > </a
+      ><a name="2851" href="Integers.html#2838" class="Bound"
+      >n</a
+      ><a name="2852"
+      > </a
+      ><a name="2853" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="2854"
+      > </a
+      ><a name="2855" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="2856"
+      >
+  </a
+      ><a name="2859" href="Integers.html#2827" class="Function"
+      >&#8484;-pos&#8802;O</a
+      ><a name="2866"
+      > </a
+      ><a name="2867" href="Integers.html#2867" class="Bound"
+      >n</a
+      ><a name="2868"
+      > </a
+      ><a name="2869" href="Integers.html#2869" class="Bound"
+      >p</a
+      ><a name="2870"
+      > </a
+      ><a name="2871" class="Symbol"
+      >=</a
+      ><a name="2872"
+      > </a
+      ><a name="2873" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="2882"
+      > </a
+      ><a name="2883" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2899"
+      > </a
+      ><a name="2900" class="Symbol"
+      >(</a
+      ><a name="2901" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="2902"
+      > </a
+      ><a name="2903" href="Integers.html#2869" class="Bound"
+      >p</a
+      ><a name="2904" class="Symbol"
+      >)</a
+      ><a name="2905"
+      > </a
+      ><a name="2906" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="2908"
+      >
+
+  </a
+      ><a name="2912" href="Integers.html#2912" class="Function"
+      >&#8484;-O&#8802;neg</a
+      ><a name="2919"
+      > </a
+      ><a name="2920" class="Symbol"
+      >:</a
+      ><a name="2921"
+      > </a
+      ><a name="2922" class="Symbol"
+      >(</a
+      ><a name="2923" href="Integers.html#2923" class="Bound"
+      >n</a
+      ><a name="2924"
+      > </a
+      ><a name="2925" class="Symbol"
+      >:</a
+      ><a name="2926"
+      > </a
+      ><a name="2927" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="2928" class="Symbol"
+      >)</a
+      ><a name="2929"
+      > </a
+      ><a name="2930" class="Symbol"
+      >&#8594;</a
+      ><a name="2931"
+      > </a
+      ><a name="2932" class="InductiveConstructor"
+      >O</a
+      ><a name="2933"
+      > </a
+      ><a name="2934" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="2935"
+      > </a
+      ><a name="2936" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="2939"
+      > </a
+      ><a name="2940" href="Integers.html#2923" class="Bound"
+      >n</a
+      ><a name="2941"
+      >
+  </a
+      ><a name="2944" href="Integers.html#2912" class="Function"
+      >&#8484;-O&#8802;neg</a
+      ><a name="2951"
+      > </a
+      ><a name="2952" href="Integers.html#2952" class="Bound"
+      >n</a
+      ><a name="2953"
+      > </a
+      ><a name="2954" href="Integers.html#2954" class="Bound"
+      >p</a
+      ><a name="2955"
+      > </a
+      ><a name="2956" class="Symbol"
+      >=</a
+      ><a name="2957"
+      > </a
+      ><a name="2958" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="2967"
+      > </a
+      ><a name="2968" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="2984"
+      > </a
+      ><a name="2985" href="Integers.html#2954" class="Bound"
+      >p</a
+      ><a name="2986"
+      > </a
+      ><a name="2987" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="2989"
+      >
+
+  </a
+      ><a name="2993" href="Integers.html#2993" class="Function"
+      >&#8484;-neg&#8802;O</a
+      ><a name="3000"
+      > </a
+      ><a name="3001" class="Symbol"
+      >:</a
+      ><a name="3002"
+      > </a
+      ><a name="3003" class="Symbol"
+      >(</a
+      ><a name="3004" href="Integers.html#3004" class="Bound"
+      >n</a
+      ><a name="3005"
+      > </a
+      ><a name="3006" class="Symbol"
+      >:</a
+      ><a name="3007"
+      > </a
+      ><a name="3008" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="3009" class="Symbol"
+      >)</a
+      ><a name="3010"
+      > </a
+      ><a name="3011" class="Symbol"
+      >&#8594;</a
+      ><a name="3012"
+      > </a
+      ><a name="3013" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3016"
+      > </a
+      ><a name="3017" href="Integers.html#3004" class="Bound"
+      >n</a
+      ><a name="3018"
+      > </a
+      ><a name="3019" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="3020"
+      > </a
+      ><a name="3021" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3022"
+      >
+  </a
+      ><a name="3025" href="Integers.html#2993" class="Function"
+      >&#8484;-neg&#8802;O</a
+      ><a name="3032"
+      > </a
+      ><a name="3033" href="Integers.html#3033" class="Bound"
+      >n</a
+      ><a name="3034"
+      > </a
+      ><a name="3035" href="Integers.html#3035" class="Bound"
+      >p</a
+      ><a name="3036"
+      > </a
+      ><a name="3037" class="Symbol"
+      >=</a
+      ><a name="3038"
+      > </a
+      ><a name="3039" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="3048"
+      > </a
+      ><a name="3049" href="Integers.html#2502" class="Function"
+      >&#8484;-neg&#8802;O&#8802;pos-type</a
+      ><a name="3065"
+      > </a
+      ><a name="3066" class="Symbol"
+      >(</a
+      ><a name="3067" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="3068"
+      > </a
+      ><a name="3069" href="Integers.html#3035" class="Bound"
+      >p</a
+      ><a name="3070" class="Symbol"
+      >)</a
+      ><a name="3071"
+      > </a
+      ><a name="3072" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="3074"
+      >
+
+  </a
+      ><a name="3078" href="Integers.html#3078" class="Function"
+      >&#8484;-neg&#8802;pos</a
+      ><a name="3087"
+      > </a
+      ><a name="3088" class="Symbol"
+      >:</a
+      ><a name="3089"
+      > </a
+      ><a name="3090" class="Symbol"
+      >(</a
+      ><a name="3091" href="Integers.html#3091" class="Bound"
+      >n</a
+      ><a name="3092"
+      > </a
+      ><a name="3093" href="Integers.html#3093" class="Bound"
+      >m</a
+      ><a name="3094"
+      > </a
+      ><a name="3095" class="Symbol"
+      >:</a
+      ><a name="3096"
+      > </a
+      ><a name="3097" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="3098" class="Symbol"
+      >)</a
+      ><a name="3099"
+      > </a
+      ><a name="3100" class="Symbol"
+      >&#8594;</a
+      ><a name="3101"
+      > </a
+      ><a name="3102" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3105"
+      > </a
+      ><a name="3106" href="Integers.html#3091" class="Bound"
+      >n</a
+      ><a name="3107"
+      > </a
+      ><a name="3108" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="3109"
+      > </a
+      ><a name="3110" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3113"
+      > </a
+      ><a name="3114" href="Integers.html#3093" class="Bound"
+      >m</a
+      ><a name="3115"
+      >
+  </a
+      ><a name="3118" href="Integers.html#3078" class="Function"
+      >&#8484;-neg&#8802;pos</a
+      ><a name="3127"
+      > </a
+      ><a name="3128" href="Integers.html#3128" class="Bound"
+      >n</a
+      ><a name="3129"
+      > </a
+      ><a name="3130" href="Integers.html#3130" class="Bound"
+      >m</a
+      ><a name="3131"
+      > </a
+      ><a name="3132" href="Integers.html#3132" class="Bound"
+      >p</a
+      ><a name="3133"
+      > </a
+      ><a name="3134" class="Symbol"
+      >=</a
+      ><a name="3135"
+      > </a
+      ><a name="3136" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="3145"
+      > </a
+      ><a name="3146" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="3160"
+      > </a
+      ><a name="3161" href="Integers.html#3132" class="Bound"
+      >p</a
+      ><a name="3162"
+      > </a
+      ><a name="3163" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="3165"
+      >
+
+  </a
+      ><a name="3169" href="Integers.html#3169" class="Function"
+      >&#8484;-pos&#8802;neg</a
+      ><a name="3178"
+      > </a
+      ><a name="3179" class="Symbol"
+      >:</a
+      ><a name="3180"
+      > </a
+      ><a name="3181" class="Symbol"
+      >(</a
+      ><a name="3182" href="Integers.html#3182" class="Bound"
+      >n</a
+      ><a name="3183"
+      > </a
+      ><a name="3184" href="Integers.html#3184" class="Bound"
+      >m</a
+      ><a name="3185"
+      > </a
+      ><a name="3186" class="Symbol"
+      >:</a
+      ><a name="3187"
+      > </a
+      ><a name="3188" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="3189" class="Symbol"
+      >)</a
+      ><a name="3190"
+      > </a
+      ><a name="3191" class="Symbol"
+      >&#8594;</a
+      ><a name="3192"
+      > </a
+      ><a name="3193" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3196"
+      > </a
+      ><a name="3197" href="Integers.html#3182" class="Bound"
+      >n</a
+      ><a name="3198"
+      > </a
+      ><a name="3199" href="Paths.html#205" class="Function Operator"
+      >&#8802;</a
+      ><a name="3200"
+      > </a
+      ><a name="3201" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3204"
+      > </a
+      ><a name="3205" href="Integers.html#3184" class="Bound"
+      >m</a
+      ><a name="3206"
+      >
+  </a
+      ><a name="3209" href="Integers.html#3169" class="Function"
+      >&#8484;-pos&#8802;neg</a
+      ><a name="3218"
+      > </a
+      ><a name="3219" href="Integers.html#3219" class="Bound"
+      >n</a
+      ><a name="3220"
+      > </a
+      ><a name="3221" href="Integers.html#3221" class="Bound"
+      >m</a
+      ><a name="3222"
+      > </a
+      ><a name="3223" href="Integers.html#3223" class="Bound"
+      >p</a
+      ><a name="3224"
+      > </a
+      ><a name="3225" class="Symbol"
+      >=</a
+      ><a name="3226"
+      > </a
+      ><a name="3227" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="3236"
+      > </a
+      ><a name="3237" href="Integers.html#2622" class="Function"
+      >&#8484;-neg&#8802;pos-type</a
+      ><a name="3251"
+      > </a
+      ><a name="3252" class="Symbol"
+      >(</a
+      ><a name="3253" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="3254"
+      > </a
+      ><a name="3255" href="Integers.html#3223" class="Bound"
+      >p</a
+      ><a name="3256" class="Symbol"
+      >)</a
+      ><a name="3257"
+      > </a
+      ><a name="3258" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="3260"
+      >
+
+  </a
+      ><a name="3264" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3276"
+      > </a
+      ><a name="3277" class="Symbol"
+      >:</a
+      ><a name="3278"
+      > </a
+      ><a name="3279" href="HLevel.html#965" class="Function"
+      >has-dec-eq</a
+      ><a name="3289"
+      > </a
+      ><a name="3290" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="3291"
+      >
+  </a
+      ><a name="3294" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3306"
+      > </a
+      ><a name="3307" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3308"
+      > </a
+      ><a name="3309" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3310"
+      > </a
+      ><a name="3311" class="Symbol"
+      >=</a
+      ><a name="3312"
+      > </a
+      ><a name="3313" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="3316"
+      > </a
+      ><a name="3317" class="Symbol"
+      >(</a
+      ><a name="3318" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="3322"
+      > </a
+      ><a name="3323" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3324" class="Symbol"
+      >)</a
+      ><a name="3325"
+      >
+  </a
+      ><a name="3328" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3340"
+      > </a
+      ><a name="3341" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3342"
+      > </a
+      ><a name="3343" class="Symbol"
+      >(</a
+      ><a name="3344" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3347"
+      > </a
+      ><a name="3348" href="Integers.html#3348" class="Bound"
+      >n</a
+      ><a name="3349" class="Symbol"
+      >)</a
+      ><a name="3350"
+      > </a
+      ><a name="3351" class="Symbol"
+      >=</a
+      ><a name="3352"
+      > </a
+      ><a name="3353" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3356"
+      > </a
+      ><a name="3357" class="Symbol"
+      >(</a
+      ><a name="3358" href="Integers.html#2746" class="Function"
+      >&#8484;-O&#8802;pos</a
+      ><a name="3365"
+      > </a
+      ><a name="3366" href="Integers.html#3348" class="Bound"
+      >n</a
+      ><a name="3367" class="Symbol"
+      >)</a
+      ><a name="3368"
+      >
+  </a
+      ><a name="3371" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3383"
+      > </a
+      ><a name="3384" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3385"
+      > </a
+      ><a name="3386" class="Symbol"
+      >(</a
+      ><a name="3387" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3390"
+      > </a
+      ><a name="3391" href="Integers.html#3391" class="Bound"
+      >n</a
+      ><a name="3392" class="Symbol"
+      >)</a
+      ><a name="3393"
+      > </a
+      ><a name="3394" class="Symbol"
+      >=</a
+      ><a name="3395"
+      > </a
+      ><a name="3396" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3399"
+      > </a
+      ><a name="3400" class="Symbol"
+      >(</a
+      ><a name="3401" href="Integers.html#2912" class="Function"
+      >&#8484;-O&#8802;neg</a
+      ><a name="3408"
+      > </a
+      ><a name="3409" href="Integers.html#3391" class="Bound"
+      >n</a
+      ><a name="3410" class="Symbol"
+      >)</a
+      ><a name="3411"
+      >
+  </a
+      ><a name="3414" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3426"
+      > </a
+      ><a name="3427" class="Symbol"
+      >(</a
+      ><a name="3428" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3431"
+      > </a
+      ><a name="3432" href="Integers.html#3432" class="Bound"
+      >n</a
+      ><a name="3433" class="Symbol"
+      >)</a
+      ><a name="3434"
+      > </a
+      ><a name="3435" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3436"
+      > </a
+      ><a name="3437" class="Symbol"
+      >=</a
+      ><a name="3438"
+      > </a
+      ><a name="3439" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3442"
+      > </a
+      ><a name="3443" class="Symbol"
+      >(</a
+      ><a name="3444" href="Integers.html#2827" class="Function"
+      >&#8484;-pos&#8802;O</a
+      ><a name="3451"
+      > </a
+      ><a name="3452" href="Integers.html#3432" class="Bound"
+      >n</a
+      ><a name="3453" class="Symbol"
+      >)</a
+      ><a name="3454"
+      >
+  </a
+      ><a name="3457" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3469"
+      > </a
+      ><a name="3470" class="Symbol"
+      >(</a
+      ><a name="3471" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3474"
+      > </a
+      ><a name="3475" href="Integers.html#3475" class="Bound"
+      >n</a
+      ><a name="3476" class="Symbol"
+      >)</a
+      ><a name="3477"
+      > </a
+      ><a name="3478" class="Symbol"
+      >(</a
+      ><a name="3479" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3482"
+      > </a
+      ><a name="3483" href="Integers.html#3483" class="Bound"
+      >m</a
+      ><a name="3484" class="Symbol"
+      >)</a
+      ><a name="3485"
+      > </a
+      ><a name="3486" class="Keyword"
+      >with</a
+      ><a name="3490"
+      > </a
+      ><a name="3491" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="3503"
+      > </a
+      ><a name="3504" href="Integers.html#3475" class="Bound"
+      >n</a
+      ><a name="3505"
+      > </a
+      ><a name="3506" href="Integers.html#3483" class="Bound"
+      >m</a
+      ><a name="3507"
+      >
+  </a
+      ><a name="3510" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3522"
+      > </a
+      ><a name="3523" class="Symbol"
+      >(</a
+      ><a name="3524" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3527"
+      > </a
+      ><a name="3528" href="Integers.html#3528" class="Bound"
+      >n</a
+      ><a name="3529" class="Symbol"
+      >)</a
+      ><a name="3530"
+      > </a
+      ><a name="3531" class="Symbol"
+      >(</a
+      ><a name="3532" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3535"
+      > </a
+      ><a name="3536" href="Integers.html#3536" class="Bound"
+      >m</a
+      ><a name="3537" class="Symbol"
+      >)</a
+      ><a name="3538"
+      > </a
+      ><a name="3539" class="Symbol"
+      >|</a
+      ><a name="3540"
+      > </a
+      ><a name="3541" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="3544"
+      > </a
+      ><a name="3545" href="Integers.html#3545" class="Bound"
+      >p</a
+      ><a name="3546"
+      > </a
+      ><a name="3547" class="Symbol"
+      >=</a
+      ><a name="3548"
+      > </a
+      ><a name="3549" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="3552"
+      > </a
+      ><a name="3553" class="Symbol"
+      >(</a
+      ><a name="3554" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="3557"
+      > </a
+      ><a name="3558" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3561"
+      > </a
+      ><a name="3562" href="Integers.html#3545" class="Bound"
+      >p</a
+      ><a name="3563" class="Symbol"
+      >)</a
+      ><a name="3564"
+      >
+  </a
+      ><a name="3567" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3579"
+      > </a
+      ><a name="3580" class="Symbol"
+      >(</a
+      ><a name="3581" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3584"
+      > </a
+      ><a name="3585" href="Integers.html#3585" class="Bound"
+      >n</a
+      ><a name="3586" class="Symbol"
+      >)</a
+      ><a name="3587"
+      > </a
+      ><a name="3588" class="Symbol"
+      >(</a
+      ><a name="3589" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3592"
+      > </a
+      ><a name="3593" href="Integers.html#3593" class="Bound"
+      >m</a
+      ><a name="3594" class="Symbol"
+      >)</a
+      ><a name="3595"
+      > </a
+      ><a name="3596" class="Symbol"
+      >|</a
+      ><a name="3597"
+      > </a
+      ><a name="3598" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3601"
+      > </a
+      ><a name="3602" href="Integers.html#3602" class="Bound"
+      >p&#8869;</a
+      ><a name="3604"
+      > </a
+      ><a name="3605" class="Symbol"
+      >=</a
+      ><a name="3606"
+      > </a
+      ><a name="3607" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3610"
+      > </a
+      ><a name="3611" class="Symbol"
+      >(&#955;</a
+      ><a name="3613"
+      > </a
+      ><a name="3614" href="Integers.html#3614" class="Bound"
+      >p</a
+      ><a name="3615"
+      > </a
+      ><a name="3616" class="Symbol"
+      >&#8594;</a
+      ><a name="3617"
+      > </a
+      ><a name="3618" href="Integers.html#3602" class="Bound"
+      >p&#8869;</a
+      ><a name="3620"
+      > </a
+      ><a name="3621" class="Symbol"
+      >(</a
+      ><a name="3622" href="Integers.html#2221" class="Function"
+      >pos-injective</a
+      ><a name="3635"
+      > </a
+      ><a name="3636" href="Integers.html#3585" class="Bound"
+      >n</a
+      ><a name="3637"
+      > </a
+      ><a name="3638" href="Integers.html#3593" class="Bound"
+      >m</a
+      ><a name="3639"
+      > </a
+      ><a name="3640" href="Integers.html#3614" class="Bound"
+      >p</a
+      ><a name="3641" class="Symbol"
+      >))</a
+      ><a name="3643"
+      >
+  </a
+      ><a name="3646" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3658"
+      > </a
+      ><a name="3659" class="Symbol"
+      >(</a
+      ><a name="3660" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3663"
+      > </a
+      ><a name="3664" href="Integers.html#3664" class="Bound"
+      >n</a
+      ><a name="3665" class="Symbol"
+      >)</a
+      ><a name="3666"
+      > </a
+      ><a name="3667" class="Symbol"
+      >(</a
+      ><a name="3668" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3671"
+      > </a
+      ><a name="3672" href="Integers.html#3672" class="Bound"
+      >m</a
+      ><a name="3673" class="Symbol"
+      >)</a
+      ><a name="3674"
+      > </a
+      ><a name="3675" class="Symbol"
+      >=</a
+      ><a name="3676"
+      > </a
+      ><a name="3677" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3680"
+      > </a
+      ><a name="3681" class="Symbol"
+      >(</a
+      ><a name="3682" href="Integers.html#3169" class="Function"
+      >&#8484;-pos&#8802;neg</a
+      ><a name="3691"
+      > </a
+      ><a name="3692" href="Integers.html#3664" class="Bound"
+      >n</a
+      ><a name="3693"
+      > </a
+      ><a name="3694" href="Integers.html#3672" class="Bound"
+      >m</a
+      ><a name="3695" class="Symbol"
+      >)</a
+      ><a name="3696"
+      >
+  </a
+      ><a name="3699" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3711"
+      > </a
+      ><a name="3712" class="Symbol"
+      >(</a
+      ><a name="3713" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3716"
+      > </a
+      ><a name="3717" href="Integers.html#3717" class="Bound"
+      >n</a
+      ><a name="3718" class="Symbol"
+      >)</a
+      ><a name="3719"
+      > </a
+      ><a name="3720" href="Types.html#1658" class="InductiveConstructor"
+      >O</a
+      ><a name="3721"
+      > </a
+      ><a name="3722" class="Symbol"
+      >=</a
+      ><a name="3723"
+      > </a
+      ><a name="3724" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3727"
+      > </a
+      ><a name="3728" class="Symbol"
+      >(</a
+      ><a name="3729" href="Integers.html#2993" class="Function"
+      >&#8484;-neg&#8802;O</a
+      ><a name="3736"
+      > </a
+      ><a name="3737" href="Integers.html#3717" class="Bound"
+      >n</a
+      ><a name="3738" class="Symbol"
+      >)</a
+      ><a name="3739"
+      >
+  </a
+      ><a name="3742" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3754"
+      > </a
+      ><a name="3755" class="Symbol"
+      >(</a
+      ><a name="3756" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3759"
+      > </a
+      ><a name="3760" href="Integers.html#3760" class="Bound"
+      >n</a
+      ><a name="3761" class="Symbol"
+      >)</a
+      ><a name="3762"
+      > </a
+      ><a name="3763" class="Symbol"
+      >(</a
+      ><a name="3764" href="Types.html#1666" class="InductiveConstructor"
+      >pos</a
+      ><a name="3767"
+      > </a
+      ><a name="3768" href="Integers.html#3768" class="Bound"
+      >m</a
+      ><a name="3769" class="Symbol"
+      >)</a
+      ><a name="3770"
+      > </a
+      ><a name="3771" class="Symbol"
+      >=</a
+      ><a name="3772"
+      > </a
+      ><a name="3773" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3776"
+      > </a
+      ><a name="3777" class="Symbol"
+      >(</a
+      ><a name="3778" href="Integers.html#3078" class="Function"
+      >&#8484;-neg&#8802;pos</a
+      ><a name="3787"
+      > </a
+      ><a name="3788" href="Integers.html#3760" class="Bound"
+      >n</a
+      ><a name="3789"
+      > </a
+      ><a name="3790" href="Integers.html#3768" class="Bound"
+      >m</a
+      ><a name="3791" class="Symbol"
+      >)</a
+      ><a name="3792"
+      >
+  </a
+      ><a name="3795" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3807"
+      > </a
+      ><a name="3808" class="Symbol"
+      >(</a
+      ><a name="3809" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3812"
+      > </a
+      ><a name="3813" href="Integers.html#3813" class="Bound"
+      >n</a
+      ><a name="3814" class="Symbol"
+      >)</a
+      ><a name="3815"
+      > </a
+      ><a name="3816" class="Symbol"
+      >(</a
+      ><a name="3817" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3820"
+      > </a
+      ><a name="3821" href="Integers.html#3821" class="Bound"
+      >m</a
+      ><a name="3822" class="Symbol"
+      >)</a
+      ><a name="3823"
+      > </a
+      ><a name="3824" class="Keyword"
+      >with</a
+      ><a name="3828"
+      > </a
+      ><a name="3829" href="Integers.html#1410" class="Function"
+      >&#8469;-has-dec-eq</a
+      ><a name="3841"
+      > </a
+      ><a name="3842" href="Integers.html#3813" class="Bound"
+      >n</a
+      ><a name="3843"
+      > </a
+      ><a name="3844" href="Integers.html#3821" class="Bound"
+      >m</a
+      ><a name="3845"
+      >
+  </a
+      ><a name="3848" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3860"
+      > </a
+      ><a name="3861" class="Symbol"
+      >(</a
+      ><a name="3862" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3865"
+      > </a
+      ><a name="3866" href="Integers.html#3866" class="Bound"
+      >n</a
+      ><a name="3867" class="Symbol"
+      >)</a
+      ><a name="3868"
+      > </a
+      ><a name="3869" class="Symbol"
+      >(</a
+      ><a name="3870" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3873"
+      > </a
+      ><a name="3874" href="Integers.html#3874" class="Bound"
+      >m</a
+      ><a name="3875" class="Symbol"
+      >)</a
+      ><a name="3876"
+      > </a
+      ><a name="3877" class="Symbol"
+      >|</a
+      ><a name="3878"
+      > </a
+      ><a name="3879" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="3882"
+      > </a
+      ><a name="3883" href="Integers.html#3883" class="Bound"
+      >p</a
+      ><a name="3884"
+      > </a
+      ><a name="3885" class="Symbol"
+      >=</a
+      ><a name="3886"
+      > </a
+      ><a name="3887" href="Types.html#962" class="InductiveConstructor"
+      >inl</a
+      ><a name="3890"
+      > </a
+      ><a name="3891" class="Symbol"
+      >(</a
+      ><a name="3892" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="3895"
+      > </a
+      ><a name="3896" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3899"
+      > </a
+      ><a name="3900" href="Integers.html#3883" class="Bound"
+      >p</a
+      ><a name="3901" class="Symbol"
+      >)</a
+      ><a name="3902"
+      >
+  </a
+      ><a name="3905" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="3917"
+      > </a
+      ><a name="3918" class="Symbol"
+      >(</a
+      ><a name="3919" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3922"
+      > </a
+      ><a name="3923" href="Integers.html#3923" class="Bound"
+      >n</a
+      ><a name="3924" class="Symbol"
+      >)</a
+      ><a name="3925"
+      > </a
+      ><a name="3926" class="Symbol"
+      >(</a
+      ><a name="3927" href="Types.html#1686" class="InductiveConstructor"
+      >neg</a
+      ><a name="3930"
+      > </a
+      ><a name="3931" href="Integers.html#3931" class="Bound"
+      >m</a
+      ><a name="3932" class="Symbol"
+      >)</a
+      ><a name="3933"
+      > </a
+      ><a name="3934" class="Symbol"
+      >|</a
+      ><a name="3935"
+      > </a
+      ><a name="3936" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3939"
+      > </a
+      ><a name="3940" href="Integers.html#3940" class="Bound"
+      >p&#8869;</a
+      ><a name="3942"
+      > </a
+      ><a name="3943" class="Symbol"
+      >=</a
+      ><a name="3944"
+      > </a
+      ><a name="3945" href="Types.html#980" class="InductiveConstructor"
+      >inr</a
+      ><a name="3948"
+      > </a
+      ><a name="3949" class="Symbol"
+      >(&#955;</a
+      ><a name="3951"
+      > </a
+      ><a name="3952" href="Integers.html#3952" class="Bound"
+      >p</a
+      ><a name="3953"
+      > </a
+      ><a name="3954" class="Symbol"
+      >&#8594;</a
+      ><a name="3955"
+      > </a
+      ><a name="3956" href="Integers.html#3940" class="Bound"
+      >p&#8869;</a
+      ><a name="3958"
+      > </a
+      ><a name="3959" class="Symbol"
+      >(</a
+      ><a name="3960" href="Integers.html#2405" class="Function"
+      >neg-injective</a
+      ><a name="3973"
+      > </a
+      ><a name="3974" href="Integers.html#3923" class="Bound"
+      >n</a
+      ><a name="3975"
+      > </a
+      ><a name="3976" href="Integers.html#3931" class="Bound"
+      >m</a
+      ><a name="3977"
+      > </a
+      ><a name="3978" href="Integers.html#3952" class="Bound"
+      >p</a
+      ><a name="3979" class="Symbol"
+      >))</a
+      ><a name="3981"
+      >
+
+  </a
+      ><a name="3985" href="Integers.html#3985" class="Function"
+      >&#8484;-is-set</a
+      ><a name="3993"
+      > </a
+      ><a name="3994" class="Symbol"
+      >:</a
+      ><a name="3995"
+      > </a
+      ><a name="3996" href="HLevel.html#482" class="Function"
+      >is-set</a
+      ><a name="4002"
+      > </a
+      ><a name="4003" href="Types.html#1634" class="Datatype"
+      >&#8484;</a
+      ><a name="4004"
+      >
+  </a
+      ><a name="4007" href="Integers.html#3985" class="Function"
+      >&#8484;-is-set</a
+      ><a name="4015"
+      > </a
+      ><a name="4016" class="Symbol"
+      >=</a
+      ><a name="4017"
+      > </a
+      ><a name="4018" href="HLevel.html#1735" class="Function"
+      >dec-eq-is-set</a
+      ><a name="4031"
+      > </a
+      ><a name="4032" href="Integers.html#3264" class="Function"
+      >&#8484;-has-dec-eq</a
+      ><a name="4044"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

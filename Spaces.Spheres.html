@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Spaces.Spheres</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >module</a
+      ><a name="36"
+      > </a
+      ><a name="37" href="Spaces.Spheres.html#1" class="Module"
+      >Spaces.Spheres</a
+      ><a name="51"
+      > </a
+      ><a name="52" class="Keyword"
+      >where</a
+      ><a name="57"
+      >
+
+</a
+      ><a name="59" class="Keyword"
+      >open</a
+      ><a name="63"
+      > </a
+      ><a name="64" class="Keyword"
+      >import</a
+      ><a name="70"
+      > </a
+      ><a name="71" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="75"
+      >
+</a
+      ><a name="76" class="Keyword"
+      >open</a
+      ><a name="80"
+      > </a
+      ><a name="81" class="Keyword"
+      >import</a
+      ><a name="87"
+      > </a
+      ><a name="88" href="Spaces.Suspension.html#1" class="Module"
+      >Spaces.Suspension</a
+      ><a name="105"
+      > </a
+      ><a name="106" class="Keyword"
+      >public</a
+      ><a name="112"
+      >
+
+</a
+      ><a name="114" class="Comment"
+      >-- [S&#8319; n] is the sphere of dimension n</a
+      ><a name="152"
+      >
+</a
+      ><a name="153" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="155"
+      > </a
+      ><a name="156" class="Symbol"
+      >:</a
+      ><a name="157"
+      > </a
+      ><a name="158" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >&#8594;</a
+      ><a name="161"
+      > </a
+      ><a name="162" class="PrimitiveType"
+      >Set</a
+      ><a name="165"
+      >
+</a
+      ><a name="166" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="168"
+      > </a
+      ><a name="169" href="Types.html#1245" class="InductiveConstructor"
+      >0</a
+      ><a name="170"
+      > </a
+      ><a name="171" class="Symbol"
+      >=</a
+      ><a name="172"
+      > </a
+      ><a name="173" href="Types.html#629" class="Datatype"
+      >bool</a
+      ><a name="177"
+      >
+</a
+      ><a name="178" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="180"
+      > </a
+      ><a name="181" class="Symbol"
+      >(</a
+      ><a name="182" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="183"
+      > </a
+      ><a name="184" href="Spaces.Spheres.html#184" class="Bound"
+      >n</a
+      ><a name="185" class="Symbol"
+      >)</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="Symbol"
+      >=</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="199"
+      > </a
+      ><a name="200" class="Symbol"
+      >(</a
+      ><a name="201" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="203"
+      > </a
+      ><a name="204" href="Spaces.Spheres.html#184" class="Bound"
+      >n</a
+      ><a name="205" class="Symbol"
+      >)</a
+      ><a name="206"
+      >
+
+</a
+      ><a name="208" href="Spaces.Spheres.html#208" class="Function"
+      >&#8902;S&#8319;</a
+      ><a name="211"
+      > </a
+      ><a name="212" class="Symbol"
+      >:</a
+      ><a name="213"
+      > </a
+      ><a name="214" class="Symbol"
+      >(</a
+      ><a name="215" href="Spaces.Spheres.html#215" class="Bound"
+      >n</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="Symbol"
+      >:</a
+      ><a name="218"
+      > </a
+      ><a name="219" href="Types.html#1221" class="Datatype"
+      >&#8469;</a
+      ><a name="220" class="Symbol"
+      >)</a
+      ><a name="221"
+      > </a
+      ><a name="222" class="Symbol"
+      >&#8594;</a
+      ><a name="223"
+      > </a
+      ><a name="224" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="226"
+      > </a
+      ><a name="227" href="Spaces.Spheres.html#215" class="Bound"
+      >n</a
+      ><a name="228"
+      >
+</a
+      ><a name="229" href="Spaces.Spheres.html#208" class="Function"
+      >&#8902;S&#8319;</a
+      ><a name="232"
+      > </a
+      ><a name="233" href="Types.html#1245" class="InductiveConstructor"
+      >0</a
+      ><a name="234"
+      > </a
+      ><a name="235" class="Symbol"
+      >=</a
+      ><a name="236"
+      > </a
+      ><a name="237" href="Types.html#654" class="InductiveConstructor"
+      >true</a
+      ><a name="241"
+      >
+</a
+      ><a name="242" href="Spaces.Spheres.html#208" class="Function"
+      >&#8902;S&#8319;</a
+      ><a name="245"
+      > </a
+      ><a name="246" class="Symbol"
+      >(</a
+      ><a name="247" href="Types.html#1253" class="InductiveConstructor"
+      >S</a
+      ><a name="248"
+      > </a
+      ><a name="249" href="Spaces.Spheres.html#249" class="Bound"
+      >n</a
+      ><a name="250" class="Symbol"
+      >)</a
+      ><a name="251"
+      > </a
+      ><a name="252" class="Symbol"
+      >=</a
+      ><a name="253"
+      > </a
+      ><a name="254" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="259"
+      > </a
+      ><a name="260" class="Symbol"
+      >(</a
+      ><a name="261" href="Spaces.Spheres.html#153" class="Function"
+      >S&#8319;</a
+      ><a name="263"
+      > </a
+      ><a name="264" href="Spaces.Spheres.html#249" class="Bound"
+      >n</a
+      ><a name="265" class="Symbol"
+      >)</a
+      ></pre
+    ></body
+  ></html
+>

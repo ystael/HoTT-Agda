@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Spaces.Suspension</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+</a
+      ><a name="47" class="Keyword"
+      >open</a
+      ><a name="51"
+      > </a
+      ><a name="52" class="Keyword"
+      >import</a
+      ><a name="58"
+      > </a
+      ><a name="59" href="Homotopy.PushoutDef.html#1" class="Module"
+      >Homotopy.PushoutDef</a
+      ><a name="78"
+      >
+
+</a
+      ><a name="80" class="Comment"
+      >-- Suspension is defined as a particular case of pushout</a
+      ><a name="136"
+      >
+
+</a
+      ><a name="138" class="Keyword"
+      >module</a
+      ><a name="144"
+      > </a
+      ><a name="145" href="Spaces.Suspension.html#1" class="Module"
+      >Spaces.Suspension</a
+      ><a name="162"
+      > </a
+      ><a name="163" class="Symbol"
+      >{</a
+      ><a name="164" href="Spaces.Suspension.html#164" class="Bound"
+      >i</a
+      ><a name="165" class="Symbol"
+      >}</a
+      ><a name="166"
+      > </a
+      ><a name="167" class="Symbol"
+      >(</a
+      ><a name="168" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="169"
+      > </a
+      ><a name="170" class="Symbol"
+      >:</a
+      ><a name="171"
+      > </a
+      ><a name="172" class="PrimitiveType"
+      >Set</a
+      ><a name="175"
+      > </a
+      ><a name="176" href="Spaces.Suspension.html#164" class="Bound"
+      >i</a
+      ><a name="177" class="Symbol"
+      >)</a
+      ><a name="178"
+      > </a
+      ><a name="179" class="Keyword"
+      >where</a
+      ><a name="184"
+      >
+
+</a
+      ><a name="186" href="Spaces.Suspension.html#186" class="Function"
+      >suspension-diag</a
+      ><a name="201"
+      > </a
+      ><a name="202" class="Symbol"
+      >:</a
+      ><a name="203"
+      > </a
+      ><a name="204" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="216"
+      > </a
+      ><a name="217" href="Spaces.Suspension.html#164" class="Bound"
+      >i</a
+      ><a name="218"
+      >
+</a
+      ><a name="219" href="Spaces.Suspension.html#186" class="Function"
+      >suspension-diag</a
+      ><a name="234"
+      > </a
+      ><a name="235" class="Symbol"
+      >=</a
+      ><a name="236"
+      > </a
+      ><a name="237" href="Homotopy.PushoutDef.html#148" class="InductiveConstructor Operator"
+      >diag</a
+      ><a name="241"
+      > </a
+      ><a name="242" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="246"
+      > </a
+      ><a name="247" href="Homotopy.PushoutDef.html#148" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="248"
+      > </a
+      ><a name="249" href="Types.html#551" class="Record"
+      >unit</a
+      ><a name="253"
+      > </a
+      ><a name="254" href="Homotopy.PushoutDef.html#148" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="255"
+      > </a
+      ><a name="256" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="257"
+      > </a
+      ><a name="258" href="Homotopy.PushoutDef.html#148" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="259"
+      > </a
+      ><a name="260" class="Symbol"
+      >(&#955;</a
+      ><a name="262"
+      > </a
+      ><a name="263" href="Spaces.Suspension.html#263" class="Bound"
+      >_</a
+      ><a name="264"
+      > </a
+      ><a name="265" class="Symbol"
+      >&#8594;</a
+      ><a name="266"
+      > </a
+      ><a name="267" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="269" class="Symbol"
+      >)</a
+      ><a name="270"
+      > </a
+      ><a name="271" href="Homotopy.PushoutDef.html#148" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="272"
+      > </a
+      ><a name="273" class="Symbol"
+      >(&#955;</a
+      ><a name="275"
+      > </a
+      ><a name="276" href="Spaces.Suspension.html#276" class="Bound"
+      >_</a
+      ><a name="277"
+      > </a
+      ><a name="278" class="Symbol"
+      >&#8594;</a
+      ><a name="279"
+      > </a
+      ><a name="280" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="282" class="Symbol"
+      >)</a
+      ><a name="283"
+      >
+
+</a
+      ><a name="285" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="295"
+      > </a
+      ><a name="296" class="Symbol"
+      >:</a
+      ><a name="297"
+      > </a
+      ><a name="298" class="PrimitiveType"
+      >Set</a
+      ><a name="301"
+      > </a
+      ><a name="302" href="Spaces.Suspension.html#164" class="Bound"
+      >i</a
+      ><a name="303"
+      >
+</a
+      ><a name="304" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="314"
+      > </a
+      ><a name="315" class="Symbol"
+      >=</a
+      ><a name="316"
+      > </a
+      ><a name="317" href="Homotopy.PushoutDef.html#2826" class="Function"
+      >pushout</a
+      ><a name="324"
+      > </a
+      ><a name="325" href="Spaces.Suspension.html#186" class="Function"
+      >suspension-diag</a
+      ><a name="340"
+      >
+
+</a
+      ><a name="342" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="347"
+      > </a
+      ><a name="348" class="Symbol"
+      >:</a
+      ><a name="349"
+      > </a
+      ><a name="350" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="360"
+      >
+</a
+      ><a name="361" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="366"
+      > </a
+      ><a name="367" class="Symbol"
+      >=</a
+      ><a name="368"
+      > </a
+      ><a name="369" href="Homotopy.PushoutDef.html#1513" class="Function"
+      >left</a
+      ><a name="373"
+      > </a
+      ><a name="374" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="376"
+      >
+
+</a
+      ><a name="378" href="Spaces.Suspension.html#378" class="Function"
+      >south</a
+      ><a name="383"
+      > </a
+      ><a name="384" class="Symbol"
+      >:</a
+      ><a name="385"
+      > </a
+      ><a name="386" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="396"
+      >
+</a
+      ><a name="397" href="Spaces.Suspension.html#378" class="Function"
+      >south</a
+      ><a name="402"
+      > </a
+      ><a name="403" class="Symbol"
+      >=</a
+      ><a name="404"
+      > </a
+      ><a name="405" href="Homotopy.PushoutDef.html#1550" class="Function"
+      >right</a
+      ><a name="410"
+      > </a
+      ><a name="411" href="Types.html#588" class="InductiveConstructor"
+      >tt</a
+      ><a name="413"
+      >
+
+</a
+      ><a name="415" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="420"
+      > </a
+      ><a name="421" class="Symbol"
+      >:</a
+      ><a name="422"
+      > </a
+      ><a name="423" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="424"
+      > </a
+      ><a name="425" class="Symbol"
+      >&#8594;</a
+      ><a name="426"
+      > </a
+      ><a name="427" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="432"
+      > </a
+      ><a name="433" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="434"
+      > </a
+      ><a name="435" href="Spaces.Suspension.html#378" class="Function"
+      >south</a
+      ><a name="440"
+      >
+</a
+      ><a name="441" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="446"
+      > </a
+      ><a name="447" href="Spaces.Suspension.html#447" class="Bound"
+      >x</a
+      ><a name="448"
+      > </a
+      ><a name="449" class="Symbol"
+      >=</a
+      ><a name="450"
+      > </a
+      ><a name="451" href="Homotopy.PushoutDef.html#1612" class="Postulate"
+      >glue</a
+      ><a name="455"
+      > </a
+      ><a name="456" href="Spaces.Suspension.html#447" class="Bound"
+      >x</a
+      ><a name="457"
+      >
+
+</a
+      ><a name="459" href="Spaces.Suspension.html#459" class="Function"
+      >suspension-rec</a
+      ><a name="473"
+      > </a
+      ><a name="474" class="Symbol"
+      >:</a
+      ><a name="475"
+      > </a
+      ><a name="476" class="Symbol"
+      >&#8704;</a
+      ><a name="477"
+      > </a
+      ><a name="478" class="Symbol"
+      >{</a
+      ><a name="479" href="Spaces.Suspension.html#479" class="Bound"
+      >j</a
+      ><a name="480" class="Symbol"
+      >}</a
+      ><a name="481"
+      > </a
+      ><a name="482" class="Symbol"
+      >(</a
+      ><a name="483" href="Spaces.Suspension.html#483" class="Bound"
+      >P</a
+      ><a name="484"
+      > </a
+      ><a name="485" class="Symbol"
+      >:</a
+      ><a name="486"
+      > </a
+      ><a name="487" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="497"
+      > </a
+      ><a name="498" class="Symbol"
+      >&#8594;</a
+      ><a name="499"
+      > </a
+      ><a name="500" class="PrimitiveType"
+      >Set</a
+      ><a name="503"
+      > </a
+      ><a name="504" href="Spaces.Suspension.html#479" class="Bound"
+      >j</a
+      ><a name="505" class="Symbol"
+      >)</a
+      ><a name="506"
+      > </a
+      ><a name="507" class="Symbol"
+      >(</a
+      ><a name="508" href="Spaces.Suspension.html#508" class="Bound"
+      >n</a
+      ><a name="509"
+      > </a
+      ><a name="510" class="Symbol"
+      >:</a
+      ><a name="511"
+      > </a
+      ><a name="512" href="Spaces.Suspension.html#483" class="Bound"
+      >P</a
+      ><a name="513"
+      > </a
+      ><a name="514" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="519" class="Symbol"
+      >)</a
+      ><a name="520"
+      > </a
+      ><a name="521" class="Symbol"
+      >(</a
+      ><a name="522" href="Spaces.Suspension.html#522" class="Bound"
+      >s</a
+      ><a name="523"
+      > </a
+      ><a name="524" class="Symbol"
+      >:</a
+      ><a name="525"
+      > </a
+      ><a name="526" href="Spaces.Suspension.html#483" class="Bound"
+      >P</a
+      ><a name="527"
+      > </a
+      ><a name="528" href="Spaces.Suspension.html#378" class="Function"
+      >south</a
+      ><a name="533" class="Symbol"
+      >)</a
+      ><a name="534"
+      >
+  </a
+      ><a name="537" class="Symbol"
+      >(</a
+      ><a name="538" href="Spaces.Suspension.html#538" class="Bound"
+      >p</a
+      ><a name="539"
+      > </a
+      ><a name="540" class="Symbol"
+      >:</a
+      ><a name="541"
+      > </a
+      ><a name="542" class="Symbol"
+      >(</a
+      ><a name="543" href="Spaces.Suspension.html#543" class="Bound"
+      >x</a
+      ><a name="544"
+      > </a
+      ><a name="545" class="Symbol"
+      >:</a
+      ><a name="546"
+      > </a
+      ><a name="547" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="548" class="Symbol"
+      >)</a
+      ><a name="549"
+      > </a
+      ><a name="550" class="Symbol"
+      >&#8594;</a
+      ><a name="551"
+      > </a
+      ><a name="552" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="561"
+      > </a
+      ><a name="562" href="Spaces.Suspension.html#483" class="Bound"
+      >P</a
+      ><a name="563"
+      > </a
+      ><a name="564" class="Symbol"
+      >(</a
+      ><a name="565" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="570"
+      > </a
+      ><a name="571" href="Spaces.Suspension.html#543" class="Bound"
+      >x</a
+      ><a name="572" class="Symbol"
+      >)</a
+      ><a name="573"
+      > </a
+      ><a name="574" href="Spaces.Suspension.html#508" class="Bound"
+      >n</a
+      ><a name="575"
+      > </a
+      ><a name="576" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="577"
+      > </a
+      ><a name="578" href="Spaces.Suspension.html#522" class="Bound"
+      >s</a
+      ><a name="579" class="Symbol"
+      >)</a
+      ><a name="580"
+      > </a
+      ><a name="581" class="Symbol"
+      >&#8594;</a
+      ><a name="582"
+      > </a
+      ><a name="583" class="Symbol"
+      >((</a
+      ><a name="585" href="Spaces.Suspension.html#585" class="Bound"
+      >x</a
+      ><a name="586"
+      > </a
+      ><a name="587" class="Symbol"
+      >:</a
+      ><a name="588"
+      > </a
+      ><a name="589" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="599" class="Symbol"
+      >)</a
+      ><a name="600"
+      > </a
+      ><a name="601" class="Symbol"
+      >&#8594;</a
+      ><a name="602"
+      > </a
+      ><a name="603" href="Spaces.Suspension.html#483" class="Bound"
+      >P</a
+      ><a name="604"
+      > </a
+      ><a name="605" href="Spaces.Suspension.html#585" class="Bound"
+      >x</a
+      ><a name="606" class="Symbol"
+      >)</a
+      ><a name="607"
+      >
+</a
+      ><a name="608" href="Spaces.Suspension.html#459" class="Function"
+      >suspension-rec</a
+      ><a name="622"
+      > </a
+      ><a name="623" href="Spaces.Suspension.html#623" class="Bound"
+      >P</a
+      ><a name="624"
+      > </a
+      ><a name="625" href="Spaces.Suspension.html#625" class="Bound"
+      >n</a
+      ><a name="626"
+      > </a
+      ><a name="627" href="Spaces.Suspension.html#627" class="Bound"
+      >s</a
+      ><a name="628"
+      > </a
+      ><a name="629" href="Spaces.Suspension.html#629" class="Bound"
+      >p</a
+      ><a name="630"
+      > </a
+      ><a name="631" class="Symbol"
+      >=</a
+      ><a name="632"
+      > </a
+      ><a name="633" href="Homotopy.PushoutDef.html#1657" class="Function"
+      >pushout-rec</a
+      ><a name="644"
+      > </a
+      ><a name="645" href="Spaces.Suspension.html#623" class="Bound"
+      >P</a
+      ><a name="646"
+      > </a
+      ><a name="647" class="Symbol"
+      >(&#955;</a
+      ><a name="649"
+      > </a
+      ><a name="650" href="Spaces.Suspension.html#650" class="Bound"
+      >_</a
+      ><a name="651"
+      > </a
+      ><a name="652" class="Symbol"
+      >&#8594;</a
+      ><a name="653"
+      > </a
+      ><a name="654" href="Spaces.Suspension.html#625" class="Bound"
+      >n</a
+      ><a name="655" class="Symbol"
+      >)</a
+      ><a name="656"
+      > </a
+      ><a name="657" class="Symbol"
+      >(&#955;</a
+      ><a name="659"
+      > </a
+      ><a name="660" href="Spaces.Suspension.html#660" class="Bound"
+      >_</a
+      ><a name="661"
+      > </a
+      ><a name="662" class="Symbol"
+      >&#8594;</a
+      ><a name="663"
+      > </a
+      ><a name="664" href="Spaces.Suspension.html#627" class="Bound"
+      >s</a
+      ><a name="665" class="Symbol"
+      >)</a
+      ><a name="666"
+      > </a
+      ><a name="667" href="Spaces.Suspension.html#629" class="Bound"
+      >p</a
+      ><a name="668"
+      >
+
+</a
+      ><a name="670" href="Spaces.Suspension.html#670" class="Function"
+      >suspension-&#946;-paths</a
+      ><a name="688"
+      > </a
+      ><a name="689" class="Symbol"
+      >:</a
+      ><a name="690"
+      > </a
+      ><a name="691" class="Symbol"
+      >&#8704;</a
+      ><a name="692"
+      > </a
+      ><a name="693" class="Symbol"
+      >{</a
+      ><a name="694" href="Spaces.Suspension.html#694" class="Bound"
+      >j</a
+      ><a name="695" class="Symbol"
+      >}</a
+      ><a name="696"
+      > </a
+      ><a name="697" class="Symbol"
+      >(</a
+      ><a name="698" href="Spaces.Suspension.html#698" class="Bound"
+      >P</a
+      ><a name="699"
+      > </a
+      ><a name="700" class="Symbol"
+      >:</a
+      ><a name="701"
+      > </a
+      ><a name="702" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="712"
+      > </a
+      ><a name="713" class="Symbol"
+      >&#8594;</a
+      ><a name="714"
+      > </a
+      ><a name="715" class="PrimitiveType"
+      >Set</a
+      ><a name="718"
+      > </a
+      ><a name="719" href="Spaces.Suspension.html#694" class="Bound"
+      >j</a
+      ><a name="720" class="Symbol"
+      >)</a
+      ><a name="721"
+      > </a
+      ><a name="722" class="Symbol"
+      >(</a
+      ><a name="723" href="Spaces.Suspension.html#723" class="Bound"
+      >n</a
+      ><a name="724"
+      > </a
+      ><a name="725" class="Symbol"
+      >:</a
+      ><a name="726"
+      > </a
+      ><a name="727" href="Spaces.Suspension.html#698" class="Bound"
+      >P</a
+      ><a name="728"
+      > </a
+      ><a name="729" href="Spaces.Suspension.html#342" class="Function"
+      >north</a
+      ><a name="734" class="Symbol"
+      >)</a
+      ><a name="735"
+      > </a
+      ><a name="736" class="Symbol"
+      >(</a
+      ><a name="737" href="Spaces.Suspension.html#737" class="Bound"
+      >s</a
+      ><a name="738"
+      > </a
+      ><a name="739" class="Symbol"
+      >:</a
+      ><a name="740"
+      > </a
+      ><a name="741" href="Spaces.Suspension.html#698" class="Bound"
+      >P</a
+      ><a name="742"
+      > </a
+      ><a name="743" href="Spaces.Suspension.html#378" class="Function"
+      >south</a
+      ><a name="748" class="Symbol"
+      >)</a
+      ><a name="749"
+      >
+  </a
+      ><a name="752" class="Symbol"
+      >(</a
+      ><a name="753" href="Spaces.Suspension.html#753" class="Bound"
+      >p</a
+      ><a name="754"
+      > </a
+      ><a name="755" class="Symbol"
+      >:</a
+      ><a name="756"
+      > </a
+      ><a name="757" class="Symbol"
+      >(</a
+      ><a name="758" href="Spaces.Suspension.html#758" class="Bound"
+      >x</a
+      ><a name="759"
+      > </a
+      ><a name="760" class="Symbol"
+      >:</a
+      ><a name="761"
+      > </a
+      ><a name="762" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="763" class="Symbol"
+      >)</a
+      ><a name="764"
+      > </a
+      ><a name="765" class="Symbol"
+      >&#8594;</a
+      ><a name="766"
+      > </a
+      ><a name="767" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="776"
+      > </a
+      ><a name="777" href="Spaces.Suspension.html#698" class="Bound"
+      >P</a
+      ><a name="778"
+      > </a
+      ><a name="779" class="Symbol"
+      >(</a
+      ><a name="780" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="785"
+      > </a
+      ><a name="786" href="Spaces.Suspension.html#758" class="Bound"
+      >x</a
+      ><a name="787" class="Symbol"
+      >)</a
+      ><a name="788"
+      > </a
+      ><a name="789" href="Spaces.Suspension.html#723" class="Bound"
+      >n</a
+      ><a name="790"
+      > </a
+      ><a name="791" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="792"
+      > </a
+      ><a name="793" href="Spaces.Suspension.html#737" class="Bound"
+      >s</a
+      ><a name="794" class="Symbol"
+      >)</a
+      ><a name="795"
+      >
+  </a
+      ><a name="798" class="Symbol"
+      >&#8594;</a
+      ><a name="799"
+      > </a
+      ><a name="800" class="Symbol"
+      >((</a
+      ><a name="802" href="Spaces.Suspension.html#802" class="Bound"
+      >x</a
+      ><a name="803"
+      > </a
+      ><a name="804" class="Symbol"
+      >:</a
+      ><a name="805"
+      > </a
+      ><a name="806" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="807" class="Symbol"
+      >)</a
+      ><a name="808"
+      > </a
+      ><a name="809" class="Symbol"
+      >&#8594;</a
+      ><a name="810"
+      > </a
+      ><a name="811" href="Paths.html#1134" class="Function"
+      >map-dep</a
+      ><a name="818"
+      > </a
+      ><a name="819" class="Symbol"
+      >(</a
+      ><a name="820" href="Spaces.Suspension.html#459" class="Function"
+      >suspension-rec</a
+      ><a name="834"
+      > </a
+      ><a name="835" href="Spaces.Suspension.html#698" class="Bound"
+      >P</a
+      ><a name="836"
+      > </a
+      ><a name="837" href="Spaces.Suspension.html#723" class="Bound"
+      >n</a
+      ><a name="838"
+      > </a
+      ><a name="839" href="Spaces.Suspension.html#737" class="Bound"
+      >s</a
+      ><a name="840"
+      > </a
+      ><a name="841" href="Spaces.Suspension.html#753" class="Bound"
+      >p</a
+      ><a name="842" class="Symbol"
+      >)</a
+      ><a name="843"
+      > </a
+      ><a name="844" class="Symbol"
+      >(</a
+      ><a name="845" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="850"
+      > </a
+      ><a name="851" href="Spaces.Suspension.html#802" class="Bound"
+      >x</a
+      ><a name="852" class="Symbol"
+      >)</a
+      ><a name="853"
+      > </a
+      ><a name="854" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="855"
+      > </a
+      ><a name="856" href="Spaces.Suspension.html#753" class="Bound"
+      >p</a
+      ><a name="857"
+      > </a
+      ><a name="858" href="Spaces.Suspension.html#802" class="Bound"
+      >x</a
+      ><a name="859" class="Symbol"
+      >)</a
+      ><a name="860"
+      >
+</a
+      ><a name="861" href="Spaces.Suspension.html#670" class="Function"
+      >suspension-&#946;-paths</a
+      ><a name="879"
+      > </a
+      ><a name="880" href="Spaces.Suspension.html#880" class="Bound"
+      >P</a
+      ><a name="881"
+      > </a
+      ><a name="882" href="Spaces.Suspension.html#882" class="Bound"
+      >n</a
+      ><a name="883"
+      > </a
+      ><a name="884" href="Spaces.Suspension.html#884" class="Bound"
+      >s</a
+      ><a name="885"
+      > </a
+      ><a name="886" href="Spaces.Suspension.html#886" class="Bound"
+      >p</a
+      ><a name="887"
+      > </a
+      ><a name="888" class="Symbol"
+      >=</a
+      ><a name="889"
+      >
+  </a
+      ><a name="892" href="Homotopy.PushoutDef.html#2004" class="Postulate"
+      >pushout-&#946;-glue</a
+      ><a name="906"
+      > </a
+      ><a name="907" href="Spaces.Suspension.html#880" class="Bound"
+      >P</a
+      ><a name="908"
+      > </a
+      ><a name="909" class="Symbol"
+      >(&#955;</a
+      ><a name="911"
+      > </a
+      ><a name="912" href="Spaces.Suspension.html#912" class="Bound"
+      >_</a
+      ><a name="913"
+      > </a
+      ><a name="914" class="Symbol"
+      >&#8594;</a
+      ><a name="915"
+      > </a
+      ><a name="916" href="Spaces.Suspension.html#882" class="Bound"
+      >n</a
+      ><a name="917" class="Symbol"
+      >)</a
+      ><a name="918"
+      > </a
+      ><a name="919" class="Symbol"
+      >(&#955;</a
+      ><a name="921"
+      > </a
+      ><a name="922" href="Spaces.Suspension.html#922" class="Bound"
+      >_</a
+      ><a name="923"
+      > </a
+      ><a name="924" class="Symbol"
+      >&#8594;</a
+      ><a name="925"
+      > </a
+      ><a name="926" href="Spaces.Suspension.html#884" class="Bound"
+      >s</a
+      ><a name="927" class="Symbol"
+      >)</a
+      ><a name="928"
+      > </a
+      ><a name="929" href="Spaces.Suspension.html#886" class="Bound"
+      >p</a
+      ><a name="930"
+      >
+
+</a
+      ><a name="932" href="Spaces.Suspension.html#932" class="Function"
+      >suspension-rec-nondep</a
+      ><a name="953"
+      > </a
+      ><a name="954" class="Symbol"
+      >:</a
+      ><a name="955"
+      > </a
+      ><a name="956" class="Symbol"
+      >&#8704;</a
+      ><a name="957"
+      > </a
+      ><a name="958" class="Symbol"
+      >{</a
+      ><a name="959" href="Spaces.Suspension.html#959" class="Bound"
+      >j</a
+      ><a name="960" class="Symbol"
+      >}</a
+      ><a name="961"
+      > </a
+      ><a name="962" class="Symbol"
+      >(</a
+      ><a name="963" href="Spaces.Suspension.html#963" class="Bound"
+      >C</a
+      ><a name="964"
+      > </a
+      ><a name="965" class="Symbol"
+      >:</a
+      ><a name="966"
+      > </a
+      ><a name="967" class="PrimitiveType"
+      >Set</a
+      ><a name="970"
+      > </a
+      ><a name="971" href="Spaces.Suspension.html#959" class="Bound"
+      >j</a
+      ><a name="972" class="Symbol"
+      >)</a
+      ><a name="973"
+      > </a
+      ><a name="974" class="Symbol"
+      >(</a
+      ><a name="975" href="Spaces.Suspension.html#975" class="Bound"
+      >n</a
+      ><a name="976"
+      > </a
+      ><a name="977" href="Spaces.Suspension.html#977" class="Bound"
+      >s</a
+      ><a name="978"
+      > </a
+      ><a name="979" class="Symbol"
+      >:</a
+      ><a name="980"
+      > </a
+      ><a name="981" href="Spaces.Suspension.html#963" class="Bound"
+      >C</a
+      ><a name="982" class="Symbol"
+      >)</a
+      ><a name="983"
+      > </a
+      ><a name="984" class="Symbol"
+      >(</a
+      ><a name="985" href="Spaces.Suspension.html#985" class="Bound"
+      >p</a
+      ><a name="986"
+      > </a
+      ><a name="987" class="Symbol"
+      >:</a
+      ><a name="988"
+      > </a
+      ><a name="989" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="990"
+      > </a
+      ><a name="991" class="Symbol"
+      >&#8594;</a
+      ><a name="992"
+      > </a
+      ><a name="993" href="Spaces.Suspension.html#975" class="Bound"
+      >n</a
+      ><a name="994"
+      > </a
+      ><a name="995" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="996"
+      > </a
+      ><a name="997" href="Spaces.Suspension.html#977" class="Bound"
+      >s</a
+      ><a name="998" class="Symbol"
+      >)</a
+      ><a name="999"
+      >
+  </a
+      ><a name="1002" class="Symbol"
+      >&#8594;</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" class="Symbol"
+      >(</a
+      ><a name="1005" href="Spaces.Suspension.html#285" class="Function"
+      >suspension</a
+      ><a name="1015"
+      > </a
+      ><a name="1016" class="Symbol"
+      >&#8594;</a
+      ><a name="1017"
+      > </a
+      ><a name="1018" href="Spaces.Suspension.html#963" class="Bound"
+      >C</a
+      ><a name="1019" class="Symbol"
+      >)</a
+      ><a name="1020"
+      >
+</a
+      ><a name="1021" href="Spaces.Suspension.html#932" class="Function"
+      >suspension-rec-nondep</a
+      ><a name="1042"
+      > </a
+      ><a name="1043" href="Spaces.Suspension.html#1043" class="Bound"
+      >C</a
+      ><a name="1044"
+      > </a
+      ><a name="1045" href="Spaces.Suspension.html#1045" class="Bound"
+      >n</a
+      ><a name="1046"
+      > </a
+      ><a name="1047" href="Spaces.Suspension.html#1047" class="Bound"
+      >s</a
+      ><a name="1048"
+      > </a
+      ><a name="1049" href="Spaces.Suspension.html#1049" class="Bound"
+      >p</a
+      ><a name="1050"
+      > </a
+      ><a name="1051" class="Symbol"
+      >=</a
+      ><a name="1052"
+      >
+  </a
+      ><a name="1055" href="Homotopy.PushoutDef.html#2288" class="Function"
+      >pushout-rec-nondep</a
+      ><a name="1073"
+      > </a
+      ><a name="1074" href="Spaces.Suspension.html#1043" class="Bound"
+      >C</a
+      ><a name="1075"
+      > </a
+      ><a name="1076" class="Symbol"
+      >(&#955;</a
+      ><a name="1078"
+      > </a
+      ><a name="1079" href="Spaces.Suspension.html#1079" class="Bound"
+      >_</a
+      ><a name="1080"
+      > </a
+      ><a name="1081" class="Symbol"
+      >&#8594;</a
+      ><a name="1082"
+      > </a
+      ><a name="1083" href="Spaces.Suspension.html#1045" class="Bound"
+      >n</a
+      ><a name="1084" class="Symbol"
+      >)</a
+      ><a name="1085"
+      > </a
+      ><a name="1086" class="Symbol"
+      >(&#955;</a
+      ><a name="1088"
+      > </a
+      ><a name="1089" href="Spaces.Suspension.html#1089" class="Bound"
+      >_</a
+      ><a name="1090"
+      > </a
+      ><a name="1091" class="Symbol"
+      >&#8594;</a
+      ><a name="1092"
+      > </a
+      ><a name="1093" href="Spaces.Suspension.html#1047" class="Bound"
+      >s</a
+      ><a name="1094" class="Symbol"
+      >)</a
+      ><a name="1095"
+      > </a
+      ><a name="1096" href="Spaces.Suspension.html#1049" class="Bound"
+      >p</a
+      ><a name="1097"
+      >
+
+</a
+      ><a name="1099" href="Spaces.Suspension.html#1099" class="Function"
+      >suspension-&#946;-paths-nondep</a
+      ><a name="1124"
+      > </a
+      ><a name="1125" class="Symbol"
+      >:</a
+      ><a name="1126"
+      > </a
+      ><a name="1127" class="Symbol"
+      >&#8704;</a
+      ><a name="1128"
+      > </a
+      ><a name="1129" class="Symbol"
+      >{</a
+      ><a name="1130" href="Spaces.Suspension.html#1130" class="Bound"
+      >j</a
+      ><a name="1131" class="Symbol"
+      >}</a
+      ><a name="1132"
+      > </a
+      ><a name="1133" class="Symbol"
+      >(</a
+      ><a name="1134" href="Spaces.Suspension.html#1134" class="Bound"
+      >C</a
+      ><a name="1135"
+      > </a
+      ><a name="1136" class="Symbol"
+      >:</a
+      ><a name="1137"
+      > </a
+      ><a name="1138" class="PrimitiveType"
+      >Set</a
+      ><a name="1141"
+      > </a
+      ><a name="1142" href="Spaces.Suspension.html#1130" class="Bound"
+      >j</a
+      ><a name="1143" class="Symbol"
+      >)</a
+      ><a name="1144"
+      > </a
+      ><a name="1145" class="Symbol"
+      >(</a
+      ><a name="1146" href="Spaces.Suspension.html#1146" class="Bound"
+      >n</a
+      ><a name="1147"
+      > </a
+      ><a name="1148" href="Spaces.Suspension.html#1148" class="Bound"
+      >s</a
+      ><a name="1149"
+      > </a
+      ><a name="1150" class="Symbol"
+      >:</a
+      ><a name="1151"
+      > </a
+      ><a name="1152" href="Spaces.Suspension.html#1134" class="Bound"
+      >C</a
+      ><a name="1153" class="Symbol"
+      >)</a
+      ><a name="1154"
+      > </a
+      ><a name="1155" class="Symbol"
+      >(</a
+      ><a name="1156" href="Spaces.Suspension.html#1156" class="Bound"
+      >p</a
+      ><a name="1157"
+      > </a
+      ><a name="1158" class="Symbol"
+      >:</a
+      ><a name="1159"
+      > </a
+      ><a name="1160" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="1161"
+      > </a
+      ><a name="1162" class="Symbol"
+      >&#8594;</a
+      ><a name="1163"
+      > </a
+      ><a name="1164" href="Spaces.Suspension.html#1146" class="Bound"
+      >n</a
+      ><a name="1165"
+      > </a
+      ><a name="1166" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1167"
+      > </a
+      ><a name="1168" href="Spaces.Suspension.html#1148" class="Bound"
+      >s</a
+      ><a name="1169" class="Symbol"
+      >)</a
+      ><a name="1170"
+      >
+  </a
+      ><a name="1173" class="Symbol"
+      >&#8594;</a
+      ><a name="1174"
+      > </a
+      ><a name="1175" class="Symbol"
+      >((</a
+      ><a name="1177" href="Spaces.Suspension.html#1177" class="Bound"
+      >x</a
+      ><a name="1178"
+      > </a
+      ><a name="1179" class="Symbol"
+      >:</a
+      ><a name="1180"
+      > </a
+      ><a name="1181" href="Spaces.Suspension.html#168" class="Bound"
+      >A</a
+      ><a name="1182" class="Symbol"
+      >)</a
+      ><a name="1183"
+      > </a
+      ><a name="1184" class="Symbol"
+      >&#8594;</a
+      ><a name="1185"
+      > </a
+      ><a name="1186" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="1189"
+      > </a
+      ><a name="1190" class="Symbol"
+      >(</a
+      ><a name="1191" href="Spaces.Suspension.html#932" class="Function"
+      >suspension-rec-nondep</a
+      ><a name="1212"
+      > </a
+      ><a name="1213" href="Spaces.Suspension.html#1134" class="Bound"
+      >C</a
+      ><a name="1214"
+      > </a
+      ><a name="1215" href="Spaces.Suspension.html#1146" class="Bound"
+      >n</a
+      ><a name="1216"
+      > </a
+      ><a name="1217" href="Spaces.Suspension.html#1148" class="Bound"
+      >s</a
+      ><a name="1218"
+      > </a
+      ><a name="1219" href="Spaces.Suspension.html#1156" class="Bound"
+      >p</a
+      ><a name="1220" class="Symbol"
+      >)</a
+      ><a name="1221"
+      > </a
+      ><a name="1222" class="Symbol"
+      >(</a
+      ><a name="1223" href="Spaces.Suspension.html#415" class="Function"
+      >paths</a
+      ><a name="1228"
+      > </a
+      ><a name="1229" href="Spaces.Suspension.html#1177" class="Bound"
+      >x</a
+      ><a name="1230" class="Symbol"
+      >)</a
+      ><a name="1231"
+      > </a
+      ><a name="1232" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1233"
+      > </a
+      ><a name="1234" href="Spaces.Suspension.html#1156" class="Bound"
+      >p</a
+      ><a name="1235"
+      > </a
+      ><a name="1236" href="Spaces.Suspension.html#1177" class="Bound"
+      >x</a
+      ><a name="1237" class="Symbol"
+      >)</a
+      ><a name="1238"
+      >
+</a
+      ><a name="1239" href="Spaces.Suspension.html#1099" class="Function"
+      >suspension-&#946;-paths-nondep</a
+      ><a name="1264"
+      > </a
+      ><a name="1265" href="Spaces.Suspension.html#1265" class="Bound"
+      >C</a
+      ><a name="1266"
+      > </a
+      ><a name="1267" href="Spaces.Suspension.html#1267" class="Bound"
+      >n</a
+      ><a name="1268"
+      > </a
+      ><a name="1269" href="Spaces.Suspension.html#1269" class="Bound"
+      >s</a
+      ><a name="1270"
+      > </a
+      ><a name="1271" href="Spaces.Suspension.html#1271" class="Bound"
+      >p</a
+      ><a name="1272"
+      > </a
+      ><a name="1273" class="Symbol"
+      >=</a
+      ><a name="1274"
+      >
+  </a
+      ><a name="1277" href="Homotopy.PushoutDef.html#2578" class="Postulate"
+      >pushout-&#946;-glue-nondep</a
+      ><a name="1298"
+      > </a
+      ><a name="1299" href="Spaces.Suspension.html#1265" class="Bound"
+      >C</a
+      ><a name="1300"
+      > </a
+      ><a name="1301" class="Symbol"
+      >(&#955;</a
+      ><a name="1303"
+      > </a
+      ><a name="1304" href="Spaces.Suspension.html#1304" class="Bound"
+      >_</a
+      ><a name="1305"
+      > </a
+      ><a name="1306" class="Symbol"
+      >&#8594;</a
+      ><a name="1307"
+      > </a
+      ><a name="1308" href="Spaces.Suspension.html#1267" class="Bound"
+      >n</a
+      ><a name="1309" class="Symbol"
+      >)</a
+      ><a name="1310"
+      > </a
+      ><a name="1311" class="Symbol"
+      >(&#955;</a
+      ><a name="1313"
+      > </a
+      ><a name="1314" href="Spaces.Suspension.html#1314" class="Bound"
+      >_</a
+      ><a name="1315"
+      > </a
+      ><a name="1316" class="Symbol"
+      >&#8594;</a
+      ><a name="1317"
+      > </a
+      ><a name="1318" href="Spaces.Suspension.html#1269" class="Bound"
+      >s</a
+      ><a name="1319" class="Symbol"
+      >)</a
+      ><a name="1320"
+      > </a
+      ><a name="1321" href="Spaces.Suspension.html#1271" class="Bound"
+      >p</a
+      ><a name="1322"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>
