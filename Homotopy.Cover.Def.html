@@ -1,0 +1,1144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Homotopy.Cover.Def</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+
+</a
+      ><a name="48" class="Keyword"
+      >module</a
+      ><a name="54"
+      > </a
+      ><a name="55" href="Homotopy.Cover.Def.html#1" class="Module"
+      >Homotopy.Cover.Def</a
+      ><a name="73"
+      > </a
+      ><a name="74" class="Symbol"
+      >{</a
+      ><a name="75" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="76" class="Symbol"
+      >}</a
+      ><a name="77"
+      > </a
+      ><a name="78" class="Symbol"
+      >(</a
+      ><a name="79" href="Homotopy.Cover.Def.html#79" class="Bound"
+      >A</a
+      ><a name="80"
+      > </a
+      ><a name="81" class="Symbol"
+      >:</a
+      ><a name="82"
+      > </a
+      ><a name="83" class="PrimitiveType"
+      >Set</a
+      ><a name="86"
+      > </a
+      ><a name="87" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="88" class="Symbol"
+      >)</a
+      ><a name="89"
+      > </a
+      ><a name="90" class="Keyword"
+      >where</a
+      ><a name="95"
+      >
+
+</a
+      ><a name="97" class="Keyword"
+      >record</a
+      ><a name="103"
+      > </a
+      ><a name="104" href="Homotopy.Cover.Def.html#104" class="Record"
+      >covering</a
+      ><a name="112"
+      > </a
+      ><a name="113" class="Symbol"
+      >:</a
+      ><a name="114"
+      > </a
+      ><a name="115" class="PrimitiveType"
+      >Set</a
+      ><a name="118"
+      > </a
+      ><a name="119" class="Symbol"
+      >(</a
+      ><a name="120" href="Types.html#131" class="Primitive"
+      >suc</a
+      ><a name="123"
+      > </a
+      ><a name="124" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="125" class="Symbol"
+      >)</a
+      ><a name="126"
+      > </a
+      ><a name="127" class="Keyword"
+      >where</a
+      ><a name="132"
+      >
+  </a
+      ><a name="135" class="Keyword"
+      >constructor</a
+      ><a name="146"
+      > </a
+      ><a name="147" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[_,_]</a
+      ><a name="155"
+      >
+  </a
+      ><a name="158" class="Keyword"
+      >field</a
+      ><a name="163"
+      >
+    </a
+      ><a name="168" href="Homotopy.Cover.Def.html#168" class="Field"
+      >fiber</a
+      ><a name="173"
+      > </a
+      ><a name="174" class="Symbol"
+      >:</a
+      ><a name="175"
+      > </a
+      ><a name="176" href="Homotopy.Cover.Def.html#79" class="Bound"
+      >A</a
+      ><a name="177"
+      > </a
+      ><a name="178" class="Symbol"
+      >&#8594;</a
+      ><a name="179"
+      > </a
+      ><a name="180" class="PrimitiveType"
+      >Set</a
+      ><a name="183"
+      > </a
+      ><a name="184" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="185"
+      >
+    </a
+      ><a name="190" href="Homotopy.Cover.Def.html#190" class="Field"
+      >fiber-is-set</a
+      ><a name="202"
+      > </a
+      ><a name="203" class="Symbol"
+      >:</a
+      ><a name="204"
+      > </a
+      ><a name="205" class="Symbol"
+      >&#8704;</a
+      ><a name="206"
+      > </a
+      ><a name="207" href="Homotopy.Cover.Def.html#207" class="Bound"
+      >a</a
+      ><a name="208"
+      > </a
+      ><a name="209" class="Symbol"
+      >&#8594;</a
+      ><a name="210"
+      > </a
+      ><a name="211" href="HLevel.html#482" class="Function"
+      >is-set</a
+      ><a name="217"
+      > </a
+      ><a name="218" class="Symbol"
+      >(</a
+      ><a name="219" href="Homotopy.Cover.Def.html#168" class="Bound"
+      >fiber</a
+      ><a name="224"
+      > </a
+      ><a name="225" href="Homotopy.Cover.Def.html#207" class="Bound"
+      >a</a
+      ><a name="226" class="Symbol"
+      >)</a
+      ><a name="227"
+      >
+
+</a
+      ><a name="229" class="Keyword"
+      >open</a
+      ><a name="233"
+      > </a
+      ><a name="234" class="Keyword"
+      >import</a
+      ><a name="240"
+      > </a
+      ><a name="241" href="Homotopy.Truncation.html#1" class="Module"
+      >Homotopy.Truncation</a
+      ><a name="260"
+      >
+</a
+      ><a name="261" class="Keyword"
+      >open</a
+      ><a name="265"
+      > </a
+      ><a name="266" class="Keyword"
+      >import</a
+      ><a name="272"
+      > </a
+      ><a name="273" href="Homotopy.Connected.html#1" class="Module"
+      >Homotopy.Connected</a
+      ><a name="291"
+      >
+</a
+      ><a name="292" class="Keyword"
+      >open</a
+      ><a name="296"
+      > </a
+      ><a name="297" class="Keyword"
+      >import</a
+      ><a name="303"
+      > </a
+      ><a name="304" href="Homotopy.HomotopyGroupoids.html#1" class="Module"
+      >Homotopy.HomotopyGroupoids</a
+      ><a name="330"
+      >
+
+</a
+      ><a name="332" class="Comment"
+      >-- In terms of connectedness</a
+      ><a name="360"
+      >
+</a
+      ><a name="361" href="Homotopy.Cover.Def.html#361" class="Function"
+      >is-universal</a
+      ><a name="373"
+      > </a
+      ><a name="374" class="Symbol"
+      >:</a
+      ><a name="375"
+      > </a
+      ><a name="376" href="Homotopy.Cover.Def.html#104" class="Record"
+      >covering</a
+      ><a name="384"
+      > </a
+      ><a name="385" class="Symbol"
+      >&#8594;</a
+      ><a name="386"
+      > </a
+      ><a name="387" class="PrimitiveType"
+      >Set</a
+      ><a name="390"
+      > </a
+      ><a name="391" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="392"
+      >
+</a
+      ><a name="393" href="Homotopy.Cover.Def.html#361" class="Function"
+      >is-universal</a
+      ><a name="405"
+      > </a
+      ><a name="406" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[</a
+      ><a name="410"
+      > </a
+      ><a name="411" href="Homotopy.Cover.Def.html#411" class="Bound"
+      >fiber</a
+      ><a name="416"
+      > </a
+      ><a name="417" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="418"
+      > </a
+      ><a name="419" class="Symbol"
+      >_</a
+      ><a name="420"
+      > </a
+      ><a name="421" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >]</a
+      ><a name="422"
+      > </a
+      ><a name="423" class="Symbol"
+      >=</a
+      ><a name="424"
+      > </a
+      ><a name="425" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="437"
+      > </a
+      ><a name="438" href="Types.html#1591" class="Function"
+      >&#10216;1&#10217;</a
+      ><a name="441"
+      > </a
+      ><a name="442" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="443"
+      > </a
+      ><a name="444" href="Types.html#707" class="Record"
+      >&#931;</a
+      ><a name="445"
+      > </a
+      ><a name="446" href="Homotopy.Cover.Def.html#79" class="Bound"
+      >A</a
+      ><a name="447"
+      > </a
+      ><a name="448" href="Homotopy.Cover.Def.html#411" class="Bound"
+      >fiber</a
+      ><a name="453"
+      >
+
+</a
+      ><a name="455" class="Comment"
+      >-- In terms of connectedness</a
+      ><a name="483"
+      >
+</a
+      ><a name="484" href="Homotopy.Cover.Def.html#484" class="Function"
+      >universal-covering</a
+      ><a name="502"
+      > </a
+      ><a name="503" class="Symbol"
+      >:</a
+      ><a name="504"
+      > </a
+      ><a name="505" class="PrimitiveType"
+      >Set</a
+      ><a name="508"
+      > </a
+      ><a name="509" class="Symbol"
+      >(</a
+      ><a name="510" href="Types.html#131" class="Primitive"
+      >suc</a
+      ><a name="513"
+      > </a
+      ><a name="514" href="Homotopy.Cover.Def.html#75" class="Bound"
+      >i</a
+      ><a name="515" class="Symbol"
+      >)</a
+      ><a name="516"
+      >
+</a
+      ><a name="517" href="Homotopy.Cover.Def.html#484" class="Function"
+      >universal-covering</a
+      ><a name="535"
+      > </a
+      ><a name="536" class="Symbol"
+      >=</a
+      ><a name="537"
+      > </a
+      ><a name="538" href="Types.html#707" class="Record"
+      >&#931;</a
+      ><a name="539"
+      > </a
+      ><a name="540" href="Homotopy.Cover.Def.html#104" class="Record"
+      >covering</a
+      ><a name="548"
+      > </a
+      ><a name="549" href="Homotopy.Cover.Def.html#361" class="Function"
+      >is-universal</a
+      ><a name="561"
+      >
+
+</a
+      ><a name="563" href="Homotopy.Cover.Def.html#563" class="Function"
+      >tracing</a
+      ><a name="570"
+      > </a
+      ><a name="571" class="Symbol"
+      >:</a
+      ><a name="572"
+      > </a
+      ><a name="573" class="Symbol"
+      >&#8704;</a
+      ><a name="574"
+      > </a
+      ><a name="575" href="Homotopy.Cover.Def.html#575" class="Bound"
+      >cov</a
+      ><a name="578"
+      > </a
+      ><a name="579" class="Symbol"
+      >&#8594;</a
+      ><a name="580"
+      > </a
+      ><a name="581" class="Keyword"
+      >let</a
+      ><a name="584"
+      > </a
+      ><a name="585" class="Keyword"
+      >open</a
+      ><a name="589"
+      > </a
+      ><a name="590" href="Homotopy.Cover.Def.html#104" class="Module"
+      >covering</a
+      ><a name="598"
+      > </a
+      ><a name="599" href="Homotopy.Cover.Def.html#575" class="Bound"
+      >cov</a
+      ><a name="602"
+      > </a
+      ><a name="603" class="Keyword"
+      >in</a
+      ><a name="605"
+      >
+  </a
+      ><a name="608" class="Symbol"
+      >&#8704;</a
+      ><a name="609"
+      > </a
+      ><a name="610" class="Symbol"
+      >{</a
+      ><a name="611" href="Homotopy.Cover.Def.html#611" class="Bound"
+      >a&#8321;</a
+      ><a name="613"
+      > </a
+      ><a name="614" href="Homotopy.Cover.Def.html#614" class="Bound"
+      >a&#8322;</a
+      ><a name="616" class="Symbol"
+      >}</a
+      ><a name="617"
+      > </a
+      ><a name="618" class="Symbol"
+      >&#8594;</a
+      ><a name="619"
+      > </a
+      ><a name="620" href="Homotopy.Cover.Def.html#168" class="Function"
+      >fiber</a
+      ><a name="625"
+      > </a
+      ><a name="626" href="Homotopy.Cover.Def.html#611" class="Bound"
+      >a&#8321;</a
+      ><a name="628"
+      > </a
+      ><a name="629" class="Symbol"
+      >&#8594;</a
+      ><a name="630"
+      > </a
+      ><a name="631" href="Homotopy.Cover.Def.html#611" class="Bound"
+      >a&#8321;</a
+      ><a name="633"
+      > </a
+      ><a name="634" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="636"
+      > </a
+      ><a name="637" href="Homotopy.Cover.Def.html#614" class="Bound"
+      >a&#8322;</a
+      ><a name="639"
+      > </a
+      ><a name="640" class="Symbol"
+      >&#8594;</a
+      ><a name="641"
+      > </a
+      ><a name="642" href="Homotopy.Cover.Def.html#168" class="Function"
+      >fiber</a
+      ><a name="647"
+      > </a
+      ><a name="648" href="Homotopy.Cover.Def.html#614" class="Bound"
+      >a&#8322;</a
+      ><a name="650"
+      >
+</a
+      ><a name="651" href="Homotopy.Cover.Def.html#563" class="Function"
+      >tracing</a
+      ><a name="658"
+      > </a
+      ><a name="659" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[</a
+      ><a name="663"
+      > </a
+      ><a name="664" href="Homotopy.Cover.Def.html#664" class="Bound"
+      >fiber</a
+      ><a name="669"
+      > </a
+      ><a name="670" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="671"
+      > </a
+      ><a name="672" href="Homotopy.Cover.Def.html#672" class="Bound"
+      >fiber-is-set</a
+      ><a name="684"
+      > </a
+      ><a name="685" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >]</a
+      ><a name="686"
+      > </a
+      ><a name="687" href="Homotopy.Cover.Def.html#687" class="Bound"
+      >y</a
+      ><a name="688"
+      > </a
+      ><a name="689" class="Symbol"
+      >=</a
+      ><a name="690"
+      >
+  </a
+      ><a name="693" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="709"
+      >
+    </a
+      ><a name="714" class="Symbol"
+      >&#10627;</a
+      ><a name="715"
+      > </a
+      ><a name="716" href="Homotopy.Cover.Def.html#672" class="Bound"
+      >fiber-is-set</a
+      ><a name="728"
+      > </a
+      ><a name="729" class="Symbol"
+      >_</a
+      ><a name="730"
+      > </a
+      ><a name="731" class="Symbol"
+      >&#10628;</a
+      ><a name="732"
+      >
+    </a
+      ><a name="737" class="Symbol"
+      >(&#955;</a
+      ><a name="739"
+      > </a
+      ><a name="740" href="Homotopy.Cover.Def.html#740" class="Bound"
+      >p</a
+      ><a name="741"
+      > </a
+      ><a name="742" class="Symbol"
+      >&#8594;</a
+      ><a name="743"
+      > </a
+      ><a name="744" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="753"
+      > </a
+      ><a name="754" href="Homotopy.Cover.Def.html#664" class="Bound"
+      >fiber</a
+      ><a name="759"
+      > </a
+      ><a name="760" href="Homotopy.Cover.Def.html#740" class="Bound"
+      >p</a
+      ><a name="761"
+      > </a
+      ><a name="762" href="Homotopy.Cover.Def.html#687" class="Bound"
+      >y</a
+      ><a name="763" class="Symbol"
+      >)</a
+      ><a name="764"
+      >
+
+</a
+      ><a name="766" href="Homotopy.Cover.Def.html#766" class="Function"
+      >compose-tracing</a
+      ><a name="781"
+      > </a
+      ><a name="782" class="Symbol"
+      >:</a
+      ><a name="783"
+      > </a
+      ><a name="784" class="Symbol"
+      >&#8704;</a
+      ><a name="785"
+      > </a
+      ><a name="786" href="Homotopy.Cover.Def.html#786" class="Bound"
+      >cov</a
+      ><a name="789"
+      > </a
+      ><a name="790" class="Symbol"
+      >&#8594;</a
+      ><a name="791"
+      > </a
+      ><a name="792" class="Keyword"
+      >let</a
+      ><a name="795"
+      > </a
+      ><a name="796" class="Keyword"
+      >open</a
+      ><a name="800"
+      > </a
+      ><a name="801" href="Homotopy.Cover.Def.html#104" class="Module"
+      >covering</a
+      ><a name="809"
+      > </a
+      ><a name="810" href="Homotopy.Cover.Def.html#786" class="Bound"
+      >cov</a
+      ><a name="813"
+      > </a
+      ><a name="814" class="Keyword"
+      >in</a
+      ><a name="816"
+      >
+  </a
+      ><a name="819" class="Symbol"
+      >&#8704;</a
+      ><a name="820"
+      > </a
+      ><a name="821" class="Symbol"
+      >{</a
+      ><a name="822" href="Homotopy.Cover.Def.html#822" class="Bound"
+      >a&#8321;</a
+      ><a name="824"
+      > </a
+      ><a name="825" href="Homotopy.Cover.Def.html#825" class="Bound"
+      >a&#8322;</a
+      ><a name="827"
+      > </a
+      ><a name="828" href="Homotopy.Cover.Def.html#828" class="Bound"
+      >a&#8323;</a
+      ><a name="830" class="Symbol"
+      >}</a
+      ><a name="831"
+      > </a
+      ><a name="832" href="Homotopy.Cover.Def.html#832" class="Bound"
+      >y</a
+      ><a name="833"
+      > </a
+      ><a name="834" class="Symbol"
+      >(</a
+      ><a name="835" href="Homotopy.Cover.Def.html#835" class="Bound"
+      >p&#8321;</a
+      ><a name="837"
+      > </a
+      ><a name="838" class="Symbol"
+      >:</a
+      ><a name="839"
+      > </a
+      ><a name="840" href="Homotopy.Cover.Def.html#822" class="Bound"
+      >a&#8321;</a
+      ><a name="842"
+      > </a
+      ><a name="843" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="845"
+      > </a
+      ><a name="846" href="Homotopy.Cover.Def.html#825" class="Bound"
+      >a&#8322;</a
+      ><a name="848" class="Symbol"
+      >)</a
+      ><a name="849"
+      > </a
+      ><a name="850" class="Symbol"
+      >(</a
+      ><a name="851" href="Homotopy.Cover.Def.html#851" class="Bound"
+      >p&#8322;</a
+      ><a name="853"
+      > </a
+      ><a name="854" class="Symbol"
+      >:</a
+      ><a name="855"
+      > </a
+      ><a name="856" href="Homotopy.Cover.Def.html#825" class="Bound"
+      >a&#8322;</a
+      ><a name="858"
+      > </a
+      ><a name="859" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="861"
+      > </a
+      ><a name="862" href="Homotopy.Cover.Def.html#828" class="Bound"
+      >a&#8323;</a
+      ><a name="864" class="Symbol"
+      >)</a
+      ><a name="865"
+      >
+  </a
+      ><a name="868" class="Symbol"
+      >&#8594;</a
+      ><a name="869"
+      > </a
+      ><a name="870" href="Homotopy.Cover.Def.html#563" class="Function"
+      >tracing</a
+      ><a name="877"
+      > </a
+      ><a name="878" href="Homotopy.Cover.Def.html#786" class="Bound"
+      >cov</a
+      ><a name="881"
+      > </a
+      ><a name="882" class="Symbol"
+      >(</a
+      ><a name="883" href="Homotopy.Cover.Def.html#563" class="Function"
+      >tracing</a
+      ><a name="890"
+      > </a
+      ><a name="891" href="Homotopy.Cover.Def.html#786" class="Bound"
+      >cov</a
+      ><a name="894"
+      > </a
+      ><a name="895" href="Homotopy.Cover.Def.html#832" class="Bound"
+      >y</a
+      ><a name="896"
+      > </a
+      ><a name="897" href="Homotopy.Cover.Def.html#835" class="Bound"
+      >p&#8321;</a
+      ><a name="899" class="Symbol"
+      >)</a
+      ><a name="900"
+      > </a
+      ><a name="901" href="Homotopy.Cover.Def.html#851" class="Bound"
+      >p&#8322;</a
+      ><a name="903"
+      > </a
+      ><a name="904" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="905"
+      > </a
+      ><a name="906" href="Homotopy.Cover.Def.html#563" class="Function"
+      >tracing</a
+      ><a name="913"
+      > </a
+      ><a name="914" href="Homotopy.Cover.Def.html#786" class="Bound"
+      >cov</a
+      ><a name="917"
+      > </a
+      ><a name="918" href="Homotopy.Cover.Def.html#832" class="Bound"
+      >y</a
+      ><a name="919"
+      > </a
+      ><a name="920" class="Symbol"
+      >(</a
+      ><a name="921" href="Homotopy.Cover.Def.html#835" class="Bound"
+      >p&#8321;</a
+      ><a name="923"
+      > </a
+      ><a name="924" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="926"
+      > </a
+      ><a name="927" href="Homotopy.Cover.Def.html#851" class="Bound"
+      >p&#8322;</a
+      ><a name="929" class="Symbol"
+      >)</a
+      ><a name="930"
+      >
+</a
+      ><a name="931" href="Homotopy.Cover.Def.html#766" class="Function"
+      >compose-tracing</a
+      ><a name="946"
+      > </a
+      ><a name="947" href="Homotopy.Cover.Def.html#947" class="Bound"
+      >cov</a
+      ><a name="950"
+      > </a
+      ><a name="951" href="Homotopy.Cover.Def.html#951" class="Bound"
+      >y</a
+      ><a name="952"
+      > </a
+      ><a name="953" class="Symbol"
+      >=</a
+      ><a name="954"
+      > </a
+      ><a name="955" class="Keyword"
+      >let</a
+      ><a name="958"
+      > </a
+      ><a name="959" class="Keyword"
+      >open</a
+      ><a name="963"
+      > </a
+      ><a name="964" href="Homotopy.Cover.Def.html#104" class="Module"
+      >covering</a
+      ><a name="972"
+      > </a
+      ><a name="973" href="Homotopy.Cover.Def.html#947" class="Bound"
+      >cov</a
+      ><a name="976"
+      > </a
+      ><a name="977" class="Keyword"
+      >in</a
+      ><a name="979"
+      >
+  </a
+      ><a name="982" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="991"
+      >
+    </a
+      ><a name="996" class="Symbol"
+      >&#10627;</a
+      ><a name="997"
+      > </a
+      ><a name="998" class="Symbol"
+      >&#955;</a
+      ><a name="999"
+      > </a
+      ><a name="1000" href="Homotopy.Cover.Def.html#1000" class="Bound"
+      >_</a
+      ><a name="1001"
+      > </a
+      ><a name="1002" class="Symbol"
+      >&#8594;</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" href="HLevelBis.html#3558" class="Function"
+      >&#928;-is-set</a
+      ><a name="1012"
+      > </a
+      ><a name="1013" class="Symbol"
+      >&#955;</a
+      ><a name="1014"
+      > </a
+      ><a name="1015" href="Homotopy.Cover.Def.html#1015" class="Bound"
+      >_</a
+      ><a name="1016"
+      > </a
+      ><a name="1017" class="Symbol"
+      >&#8594;</a
+      ><a name="1018"
+      > </a
+      ><a name="1019" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1027"
+      > </a
+      ><a name="1028" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1029"
+      > </a
+      ><a name="1030" href="Homotopy.Cover.Def.html#190" class="Function"
+      >fiber-is-set</a
+      ><a name="1042"
+      > </a
+      ><a name="1043" class="Symbol"
+      >_</a
+      ><a name="1044"
+      > </a
+      ><a name="1045" class="Symbol"
+      >&#10628;</a
+      ><a name="1046"
+      >
+    </a
+      ><a name="1051" class="Symbol"
+      >(&#955;</a
+      ><a name="1053"
+      > </a
+      ><a name="1054" href="Homotopy.Cover.Def.html#1054" class="Bound"
+      >p&#8321;</a
+      ><a name="1056"
+      > </a
+      ><a name="1057" class="Symbol"
+      >&#8594;</a
+      ><a name="1058"
+      > </a
+      ><a name="1059" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1068"
+      >
+      </a
+      ><a name="1075" class="Symbol"
+      >&#10627;</a
+      ><a name="1076"
+      > </a
+      ><a name="1077" class="Symbol"
+      >&#955;</a
+      ><a name="1078"
+      > </a
+      ><a name="1079" href="Homotopy.Cover.Def.html#1079" class="Bound"
+      >_</a
+      ><a name="1080"
+      > </a
+      ><a name="1081" class="Symbol"
+      >&#8594;</a
+      ><a name="1082"
+      > </a
+      ><a name="1083" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1091"
+      > </a
+      ><a name="1092" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1093"
+      > </a
+      ><a name="1094" href="Homotopy.Cover.Def.html#190" class="Function"
+      >fiber-is-set</a
+      ><a name="1106"
+      > </a
+      ><a name="1107" class="Symbol"
+      >_</a
+      ><a name="1108"
+      > </a
+      ><a name="1109" class="Symbol"
+      >&#10628;</a
+      ><a name="1110"
+      >
+      </a
+      ><a name="1117" class="Symbol"
+      >(&#955;</a
+      ><a name="1119"
+      > </a
+      ><a name="1120" href="Homotopy.Cover.Def.html#1120" class="Bound"
+      >p&#8322;</a
+      ><a name="1122"
+      > </a
+      ><a name="1123" class="Symbol"
+      >&#8594;</a
+      ><a name="1124"
+      > </a
+      ><a name="1125" href="Paths.html#8202" class="Function"
+      >compose-trans</a
+      ><a name="1138"
+      > </a
+      ><a name="1139" href="Homotopy.Cover.Def.html#168" class="Function"
+      >fiber</a
+      ><a name="1144"
+      > </a
+      ><a name="1145" href="Homotopy.Cover.Def.html#1120" class="Bound"
+      >p&#8322;</a
+      ><a name="1147"
+      > </a
+      ><a name="1148" href="Homotopy.Cover.Def.html#1054" class="Bound"
+      >p&#8321;</a
+      ><a name="1150"
+      > </a
+      ><a name="1151" href="Homotopy.Cover.Def.html#951" class="Bound"
+      >y</a
+      ><a name="1152" class="Symbol"
+      >))</a
+      ><a name="1154"
+      >
+
+</a
+      ><a name="1156" href="Homotopy.Cover.Def.html#1156" class="Function"
+      >covering-eq</a
+      ><a name="1167"
+      > </a
+      ><a name="1168" class="Symbol"
+      >:</a
+      ><a name="1169"
+      > </a
+      ><a name="1170" class="Symbol"
+      >&#8704;</a
+      ><a name="1171"
+      > </a
+      ><a name="1172" class="Symbol"
+      >{</a
+      ><a name="1173" href="Homotopy.Cover.Def.html#1173" class="Bound"
+      >co&#8321;</a
+      ><a name="1176"
+      > </a
+      ><a name="1177" href="Homotopy.Cover.Def.html#1177" class="Bound"
+      >co&#8322;</a
+      ><a name="1180"
+      > </a
+      ><a name="1181" class="Symbol"
+      >:</a
+      ><a name="1182"
+      > </a
+      ><a name="1183" href="Homotopy.Cover.Def.html#104" class="Record"
+      >covering</a
+      ><a name="1191" class="Symbol"
+      >}</a
+      ><a name="1192"
+      >
+  </a
+      ><a name="1195" class="Symbol"
+      >&#8594;</a
+      ><a name="1196"
+      > </a
+      ><a name="1197" href="Homotopy.Cover.Def.html#168" class="Function"
+      >covering.fiber</a
+      ><a name="1211"
+      > </a
+      ><a name="1212" href="Homotopy.Cover.Def.html#1173" class="Bound"
+      >co&#8321;</a
+      ><a name="1215"
+      > </a
+      ><a name="1216" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1217"
+      > </a
+      ><a name="1218" href="Homotopy.Cover.Def.html#168" class="Function"
+      >covering.fiber</a
+      ><a name="1232"
+      > </a
+      ><a name="1233" href="Homotopy.Cover.Def.html#1177" class="Bound"
+      >co&#8322;</a
+      ><a name="1236"
+      >
+  </a
+      ><a name="1239" class="Symbol"
+      >&#8594;</a
+      ><a name="1240"
+      > </a
+      ><a name="1241" href="Homotopy.Cover.Def.html#1173" class="Bound"
+      >co&#8321;</a
+      ><a name="1244"
+      > </a
+      ><a name="1245" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1246"
+      > </a
+      ><a name="1247" href="Homotopy.Cover.Def.html#1177" class="Bound"
+      >co&#8322;</a
+      ><a name="1250"
+      >
+</a
+      ><a name="1251" href="Homotopy.Cover.Def.html#1156" class="Function"
+      >covering-eq</a
+      ><a name="1262"
+      > </a
+      ><a name="1263" class="Symbol"
+      >{</a
+      ><a name="1264" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[</a
+      ><a name="1268"
+      > </a
+      ><a name="1269" class="DottedPattern Symbol"
+      >._</a
+      ><a name="1271"
+      > </a
+      ><a name="1272" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1273"
+      > </a
+      ><a name="1274" href="Homotopy.Cover.Def.html#1274" class="Bound"
+      >set&#8321;</a
+      ><a name="1278"
+      > </a
+      ><a name="1279" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >]</a
+      ><a name="1280" class="Symbol"
+      >}</a
+      ><a name="1281"
+      > </a
+      ><a name="1282" class="Symbol"
+      >{</a
+      ><a name="1283" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[</a
+      ><a name="1287"
+      > </a
+      ><a name="1288" class="DottedPattern Symbol"
+      >._</a
+      ><a name="1290"
+      > </a
+      ><a name="1291" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1292"
+      > </a
+      ><a name="1293" href="Homotopy.Cover.Def.html#1293" class="Bound"
+      >set&#8322;</a
+      ><a name="1297"
+      > </a
+      ><a name="1298" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >]</a
+      ><a name="1299" class="Symbol"
+      >}</a
+      ><a name="1300"
+      > </a
+      ><a name="1301" class="Symbol"
+      >(</a
+      ><a name="1302" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="1306"
+      > </a
+      ><a name="1307" class="Symbol"
+      >_)</a
+      ><a name="1309"
+      > </a
+      ><a name="1310" class="Symbol"
+      >=</a
+      ><a name="1311"
+      >
+  </a
+      ><a name="1314" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="1316"
+      > </a
+      ><a name="1317" class="Symbol"
+      >(&#955;</a
+      ><a name="1319"
+      > </a
+      ><a name="1320" href="Homotopy.Cover.Def.html#1320" class="Bound"
+      >set</a
+      ><a name="1323"
+      > </a
+      ><a name="1324" class="Symbol"
+      >&#8594;</a
+      ><a name="1325"
+      > </a
+      ><a name="1326" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >cov[</a
+      ><a name="1330"
+      > </a
+      ><a name="1331" class="Symbol"
+      >_</a
+      ><a name="1332"
+      > </a
+      ><a name="1333" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1334"
+      > </a
+      ><a name="1335" href="Homotopy.Cover.Def.html#1320" class="Bound"
+      >set</a
+      ><a name="1338"
+      > </a
+      ><a name="1339" href="Homotopy.Cover.Def.html#147" class="InductiveConstructor Operator"
+      >]</a
+      ><a name="1340" class="Symbol"
+      >)</a
+      ><a name="1341"
+      >
+    </a
+      ><a name="1346" class="Symbol"
+      >(</a
+      ><a name="1347" href="HLevel.html#2956" class="Function"
+      >prop-has-all-paths</a
+      ><a name="1365"
+      > </a
+      ><a name="1366" class="Symbol"
+      >(</a
+      ><a name="1367" href="HLevelBis.html#3421" class="Function"
+      >&#928;-is-prop</a
+      ><a name="1376"
+      > </a
+      ><a name="1377" class="Symbol"
+      >&#955;</a
+      ><a name="1378"
+      > </a
+      ><a name="1379" href="Homotopy.Cover.Def.html#1379" class="Bound"
+      >_</a
+      ><a name="1380"
+      > </a
+      ><a name="1381" class="Symbol"
+      >&#8594;</a
+      ><a name="1382"
+      > </a
+      ><a name="1383" href="HLevelBis.html#2221" class="Function"
+      >is-set-is-prop</a
+      ><a name="1397" class="Symbol"
+      >)</a
+      ><a name="1398"
+      > </a
+      ><a name="1399" class="Symbol"
+      >_</a
+      ><a name="1400"
+      > </a
+      ><a name="1401" class="Symbol"
+      >_)</a
+      ><a name="1403"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

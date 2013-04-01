@@ -1,0 +1,6130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Homotopy.HomotopyGroupoids</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Comment"
+      >{-
+  Now it only has specialized constructs and lemmas for &#960;&#8320; (x &#8801; y)
+
+  Should be rewritten with something like Algebra.Groupoids
+-}</a
+      ><a name="163"
+      >
+
+</a
+      ><a name="165" class="Keyword"
+      >open</a
+      ><a name="169"
+      > </a
+      ><a name="170" class="Keyword"
+      >import</a
+      ><a name="176"
+      > </a
+      ><a name="177" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="181"
+      >
+
+</a
+      ><a name="183" class="Keyword"
+      >module</a
+      ><a name="189"
+      > </a
+      ><a name="190" href="Homotopy.HomotopyGroupoids.html#1" class="Module"
+      >Homotopy.HomotopyGroupoids</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="Keyword"
+      >where</a
+      ><a name="222"
+      >
+
+</a
+      ><a name="224" class="Keyword"
+      >open</a
+      ><a name="228"
+      > </a
+      ><a name="229" class="Keyword"
+      >import</a
+      ><a name="235"
+      > </a
+      ><a name="236" href="HLevel.html#1" class="Module"
+      >HLevel</a
+      ><a name="242"
+      >
+</a
+      ><a name="243" class="Keyword"
+      >open</a
+      ><a name="247"
+      > </a
+      ><a name="248" class="Keyword"
+      >import</a
+      ><a name="254"
+      > </a
+      ><a name="255" href="HLevelBis.html#1" class="Module"
+      >HLevelBis</a
+      ><a name="264"
+      >
+</a
+      ><a name="265" class="Keyword"
+      >open</a
+      ><a name="269"
+      > </a
+      ><a name="270" class="Keyword"
+      >import</a
+      ><a name="276"
+      > </a
+      ><a name="277" href="Homotopy.Truncation.html#1" class="Module"
+      >Homotopy.Truncation</a
+      ><a name="296"
+      >
+
+</a
+      ><a name="298" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >_&#8801;&#8320;_</a
+      ><a name="302"
+      > </a
+      ><a name="303" class="Symbol"
+      >:</a
+      ><a name="304"
+      > </a
+      ><a name="305" class="Symbol"
+      >&#8704;</a
+      ><a name="306"
+      > </a
+      ><a name="307" class="Symbol"
+      >{</a
+      ><a name="308" href="Homotopy.HomotopyGroupoids.html#308" class="Bound"
+      >i</a
+      ><a name="309" class="Symbol"
+      >}</a
+      ><a name="310"
+      > </a
+      ><a name="311" class="Symbol"
+      >{</a
+      ><a name="312" href="Homotopy.HomotopyGroupoids.html#312" class="Bound"
+      >A</a
+      ><a name="313"
+      > </a
+      ><a name="314" class="Symbol"
+      >:</a
+      ><a name="315"
+      > </a
+      ><a name="316" class="PrimitiveType"
+      >Set</a
+      ><a name="319"
+      > </a
+      ><a name="320" href="Homotopy.HomotopyGroupoids.html#308" class="Bound"
+      >i</a
+      ><a name="321" class="Symbol"
+      >}</a
+      ><a name="322"
+      > </a
+      ><a name="323" class="Symbol"
+      >&#8594;</a
+      ><a name="324"
+      > </a
+      ><a name="325" href="Homotopy.HomotopyGroupoids.html#312" class="Bound"
+      >A</a
+      ><a name="326"
+      > </a
+      ><a name="327" class="Symbol"
+      >&#8594;</a
+      ><a name="328"
+      > </a
+      ><a name="329" href="Homotopy.HomotopyGroupoids.html#312" class="Bound"
+      >A</a
+      ><a name="330"
+      > </a
+      ><a name="331" class="Symbol"
+      >&#8594;</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="PrimitiveType"
+      >Set</a
+      ><a name="336"
+      > </a
+      ><a name="337" href="Homotopy.HomotopyGroupoids.html#308" class="Bound"
+      >i</a
+      ><a name="338"
+      >
+</a
+      ><a name="339" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >_&#8801;&#8320;_</a
+      ><a name="343"
+      > </a
+      ><a name="344" href="Homotopy.HomotopyGroupoids.html#344" class="Bound"
+      >x</a
+      ><a name="345"
+      > </a
+      ><a name="346" href="Homotopy.HomotopyGroupoids.html#346" class="Bound"
+      >y</a
+      ><a name="347"
+      > </a
+      ><a name="348" class="Symbol"
+      >=</a
+      ><a name="349"
+      > </a
+      ><a name="350" href="Homotopy.Truncation.html#2071" class="Function"
+      >&#960;&#8320;</a
+      ><a name="352"
+      > </a
+      ><a name="353" class="Symbol"
+      >(</a
+      ><a name="354" href="Homotopy.HomotopyGroupoids.html#344" class="Bound"
+      >x</a
+      ><a name="355"
+      > </a
+      ><a name="356" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="357"
+      > </a
+      ><a name="358" href="Homotopy.HomotopyGroupoids.html#346" class="Bound"
+      >y</a
+      ><a name="359" class="Symbol"
+      >)</a
+      ><a name="360"
+      >
+
+</a
+      ><a name="362" class="Keyword"
+      >infix</a
+      ><a name="367"
+      > </a
+      ><a name="368" class="Number"
+      >8</a
+      ><a name="369"
+      > _&#8728;&#8320;_  </a
+      ><a name="376" class="Comment"
+      >-- \o\0</a
+      ><a name="383"
+      >
+</a
+      ><a name="384" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >_&#8728;&#8320;_</a
+      ><a name="388"
+      > </a
+      ><a name="389" class="Symbol"
+      >:</a
+      ><a name="390"
+      > </a
+      ><a name="391" class="Symbol"
+      >&#8704;</a
+      ><a name="392"
+      > </a
+      ><a name="393" class="Symbol"
+      >{</a
+      ><a name="394" href="Homotopy.HomotopyGroupoids.html#394" class="Bound"
+      >i</a
+      ><a name="395" class="Symbol"
+      >}</a
+      ><a name="396"
+      > </a
+      ><a name="397" class="Symbol"
+      >{</a
+      ><a name="398" href="Homotopy.HomotopyGroupoids.html#398" class="Bound"
+      >A</a
+      ><a name="399"
+      > </a
+      ><a name="400" class="Symbol"
+      >:</a
+      ><a name="401"
+      > </a
+      ><a name="402" class="PrimitiveType"
+      >Set</a
+      ><a name="405"
+      > </a
+      ><a name="406" href="Homotopy.HomotopyGroupoids.html#394" class="Bound"
+      >i</a
+      ><a name="407" class="Symbol"
+      >}</a
+      ><a name="408"
+      > </a
+      ><a name="409" class="Symbol"
+      >{</a
+      ><a name="410" href="Homotopy.HomotopyGroupoids.html#410" class="Bound"
+      >x</a
+      ><a name="411"
+      > </a
+      ><a name="412" href="Homotopy.HomotopyGroupoids.html#412" class="Bound"
+      >y</a
+      ><a name="413"
+      > </a
+      ><a name="414" href="Homotopy.HomotopyGroupoids.html#414" class="Bound"
+      >z</a
+      ><a name="415"
+      > </a
+      ><a name="416" class="Symbol"
+      >:</a
+      ><a name="417"
+      > </a
+      ><a name="418" href="Homotopy.HomotopyGroupoids.html#398" class="Bound"
+      >A</a
+      ><a name="419" class="Symbol"
+      >}</a
+      ><a name="420"
+      > </a
+      ><a name="421" class="Symbol"
+      >&#8594;</a
+      ><a name="422"
+      > </a
+      ><a name="423" href="Homotopy.HomotopyGroupoids.html#410" class="Bound"
+      >x</a
+      ><a name="424"
+      > </a
+      ><a name="425" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="427"
+      > </a
+      ><a name="428" href="Homotopy.HomotopyGroupoids.html#412" class="Bound"
+      >y</a
+      ><a name="429"
+      > </a
+      ><a name="430" class="Symbol"
+      >&#8594;</a
+      ><a name="431"
+      > </a
+      ><a name="432" href="Homotopy.HomotopyGroupoids.html#412" class="Bound"
+      >y</a
+      ><a name="433"
+      > </a
+      ><a name="434" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="436"
+      > </a
+      ><a name="437" href="Homotopy.HomotopyGroupoids.html#414" class="Bound"
+      >z</a
+      ><a name="438"
+      > </a
+      ><a name="439" class="Symbol"
+      >&#8594;</a
+      ><a name="440"
+      > </a
+      ><a name="441" href="Homotopy.HomotopyGroupoids.html#410" class="Bound"
+      >x</a
+      ><a name="442"
+      > </a
+      ><a name="443" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="445"
+      > </a
+      ><a name="446" href="Homotopy.HomotopyGroupoids.html#414" class="Bound"
+      >z</a
+      ><a name="447"
+      >
+</a
+      ><a name="448" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >_&#8728;&#8320;_</a
+      ><a name="452"
+      > </a
+      ><a name="453" class="Symbol"
+      >=</a
+      ><a name="454"
+      >
+  </a
+      ><a name="457" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="473"
+      > </a
+      ><a name="474" class="Symbol"
+      >&#10627;</a
+      ><a name="475"
+      > </a
+      ><a name="476" href="HLevelBis.html#3690" class="Function"
+      >&#8594;-is-set</a
+      ><a name="484"
+      > </a
+      ><a name="485" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="486"
+      > </a
+      ><a name="487" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="496"
+      > </a
+      ><a name="497" class="Symbol"
+      >_</a
+      ><a name="498"
+      > </a
+      ><a name="499" class="Symbol"
+      >&#10628;</a
+      ><a name="500"
+      > </a
+      ><a name="501" class="Symbol"
+      >(&#955;</a
+      ><a name="503"
+      > </a
+      ><a name="504" href="Homotopy.HomotopyGroupoids.html#504" class="Bound"
+      >p</a
+      ><a name="505"
+      > </a
+      ><a name="506" class="Symbol"
+      >&#8594;</a
+      ><a name="507"
+      >
+    </a
+      ><a name="512" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="528"
+      > </a
+      ><a name="529" class="Symbol"
+      >&#10627;</a
+      ><a name="530"
+      > </a
+      ><a name="531" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="540"
+      > </a
+      ><a name="541" class="Symbol"
+      >_</a
+      ><a name="542"
+      > </a
+      ><a name="543" class="Symbol"
+      >&#10628;</a
+      ><a name="544"
+      > </a
+      ><a name="545" class="Symbol"
+      >(&#955;</a
+      ><a name="547"
+      > </a
+      ><a name="548" href="Homotopy.HomotopyGroupoids.html#548" class="Bound"
+      >q</a
+      ><a name="549"
+      > </a
+      ><a name="550" class="Symbol"
+      >&#8594;</a
+      ><a name="551"
+      >
+      </a
+      ><a name="558" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="562"
+      > </a
+      ><a name="563" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="564"
+      > </a
+      ><a name="565" href="Homotopy.HomotopyGroupoids.html#504" class="Bound"
+      >p</a
+      ><a name="566"
+      > </a
+      ><a name="567" href="Paths.html#439" class="Function Operator"
+      >&#8728;</a
+      ><a name="568"
+      > </a
+      ><a name="569" href="Homotopy.HomotopyGroupoids.html#548" class="Bound"
+      >q</a
+      ><a name="570" class="Symbol"
+      >))</a
+      ><a name="572"
+      >
+
+</a
+      ><a name="574" href="Homotopy.HomotopyGroupoids.html#574" class="Function"
+      >!&#8320;</a
+      ><a name="576"
+      > </a
+      ><a name="577" class="Symbol"
+      >:</a
+      ><a name="578"
+      > </a
+      ><a name="579" class="Symbol"
+      >&#8704;</a
+      ><a name="580"
+      > </a
+      ><a name="581" class="Symbol"
+      >{</a
+      ><a name="582" href="Homotopy.HomotopyGroupoids.html#582" class="Bound"
+      >i</a
+      ><a name="583" class="Symbol"
+      >}</a
+      ><a name="584"
+      > </a
+      ><a name="585" class="Symbol"
+      >{</a
+      ><a name="586" href="Homotopy.HomotopyGroupoids.html#586" class="Bound"
+      >A</a
+      ><a name="587"
+      > </a
+      ><a name="588" class="Symbol"
+      >:</a
+      ><a name="589"
+      > </a
+      ><a name="590" class="PrimitiveType"
+      >Set</a
+      ><a name="593"
+      > </a
+      ><a name="594" href="Homotopy.HomotopyGroupoids.html#582" class="Bound"
+      >i</a
+      ><a name="595" class="Symbol"
+      >}</a
+      ><a name="596"
+      > </a
+      ><a name="597" class="Symbol"
+      >{</a
+      ><a name="598" href="Homotopy.HomotopyGroupoids.html#598" class="Bound"
+      >x</a
+      ><a name="599"
+      > </a
+      ><a name="600" href="Homotopy.HomotopyGroupoids.html#600" class="Bound"
+      >y</a
+      ><a name="601"
+      > </a
+      ><a name="602" class="Symbol"
+      >:</a
+      ><a name="603"
+      > </a
+      ><a name="604" href="Homotopy.HomotopyGroupoids.html#586" class="Bound"
+      >A</a
+      ><a name="605" class="Symbol"
+      >}</a
+      ><a name="606"
+      > </a
+      ><a name="607" class="Symbol"
+      >&#8594;</a
+      ><a name="608"
+      > </a
+      ><a name="609" href="Homotopy.HomotopyGroupoids.html#598" class="Bound"
+      >x</a
+      ><a name="610"
+      > </a
+      ><a name="611" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="613"
+      > </a
+      ><a name="614" href="Homotopy.HomotopyGroupoids.html#600" class="Bound"
+      >y</a
+      ><a name="615"
+      > </a
+      ><a name="616" class="Symbol"
+      >&#8594;</a
+      ><a name="617"
+      > </a
+      ><a name="618" href="Homotopy.HomotopyGroupoids.html#600" class="Bound"
+      >y</a
+      ><a name="619"
+      > </a
+      ><a name="620" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="622"
+      > </a
+      ><a name="623" href="Homotopy.HomotopyGroupoids.html#598" class="Bound"
+      >x</a
+      ><a name="624"
+      >
+</a
+      ><a name="625" href="Homotopy.HomotopyGroupoids.html#574" class="Function"
+      >!&#8320;</a
+      ><a name="627"
+      > </a
+      ><a name="628" class="Symbol"
+      >=</a
+      ><a name="629"
+      > </a
+      ><a name="630" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="646"
+      > </a
+      ><a name="647" class="Symbol"
+      >&#10627;</a
+      ><a name="648"
+      > </a
+      ><a name="649" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="658"
+      > </a
+      ><a name="659" class="Symbol"
+      >_</a
+      ><a name="660"
+      > </a
+      ><a name="661" class="Symbol"
+      >&#10628;</a
+      ><a name="662"
+      > </a
+      ><a name="663" class="Symbol"
+      >(</a
+      ><a name="664" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="668"
+      > </a
+      ><a name="669" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="670"
+      > </a
+      ><a name="671" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="672" class="Symbol"
+      >)</a
+      ><a name="673"
+      >
+
+</a
+      ><a name="675" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="680"
+      > </a
+      ><a name="681" class="Symbol"
+      >:</a
+      ><a name="682"
+      > </a
+      ><a name="683" class="Symbol"
+      >&#8704;</a
+      ><a name="684"
+      > </a
+      ><a name="685" class="Symbol"
+      >{</a
+      ><a name="686" href="Homotopy.HomotopyGroupoids.html#686" class="Bound"
+      >i</a
+      ><a name="687" class="Symbol"
+      >}</a
+      ><a name="688"
+      > </a
+      ><a name="689" class="Symbol"
+      >{</a
+      ><a name="690" href="Homotopy.HomotopyGroupoids.html#690" class="Bound"
+      >A</a
+      ><a name="691"
+      > </a
+      ><a name="692" class="Symbol"
+      >:</a
+      ><a name="693"
+      > </a
+      ><a name="694" class="PrimitiveType"
+      >Set</a
+      ><a name="697"
+      > </a
+      ><a name="698" href="Homotopy.HomotopyGroupoids.html#686" class="Bound"
+      >i</a
+      ><a name="699" class="Symbol"
+      >}</a
+      ><a name="700"
+      > </a
+      ><a name="701" class="Symbol"
+      >(</a
+      ><a name="702" href="Homotopy.HomotopyGroupoids.html#702" class="Bound"
+      >x</a
+      ><a name="703"
+      > </a
+      ><a name="704" class="Symbol"
+      >:</a
+      ><a name="705"
+      > </a
+      ><a name="706" href="Homotopy.HomotopyGroupoids.html#690" class="Bound"
+      >A</a
+      ><a name="707" class="Symbol"
+      >)</a
+      ><a name="708"
+      > </a
+      ><a name="709" class="Symbol"
+      >&#8594;</a
+      ><a name="710"
+      > </a
+      ><a name="711" href="Homotopy.HomotopyGroupoids.html#702" class="Bound"
+      >x</a
+      ><a name="712"
+      > </a
+      ><a name="713" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="715"
+      > </a
+      ><a name="716" href="Homotopy.HomotopyGroupoids.html#702" class="Bound"
+      >x</a
+      ><a name="717"
+      >
+</a
+      ><a name="718" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="723"
+      > </a
+      ><a name="724" href="Homotopy.HomotopyGroupoids.html#724" class="Bound"
+      >x</a
+      ><a name="725"
+      > </a
+      ><a name="726" class="Symbol"
+      >=</a
+      ><a name="727"
+      > </a
+      ><a name="728" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="732"
+      > </a
+      ><a name="733" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="734"
+      > </a
+      ><a name="735" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="739"
+      > </a
+      ><a name="740" href="Homotopy.HomotopyGroupoids.html#724" class="Bound"
+      >x</a
+      ><a name="741"
+      >
+
+</a
+      ><a name="743" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="746"
+      > </a
+      ><a name="747" class="Symbol"
+      >:</a
+      ><a name="748"
+      > </a
+      ><a name="749" class="Symbol"
+      >&#8704;</a
+      ><a name="750"
+      > </a
+      ><a name="751" class="Symbol"
+      >{</a
+      ><a name="752" href="Homotopy.HomotopyGroupoids.html#752" class="Bound"
+      >i</a
+      ><a name="753"
+      > </a
+      ><a name="754" href="Homotopy.HomotopyGroupoids.html#754" class="Bound"
+      >j</a
+      ><a name="755" class="Symbol"
+      >}</a
+      ><a name="756"
+      > </a
+      ><a name="757" class="Symbol"
+      >{</a
+      ><a name="758" href="Homotopy.HomotopyGroupoids.html#758" class="Bound"
+      >A</a
+      ><a name="759"
+      > </a
+      ><a name="760" class="Symbol"
+      >:</a
+      ><a name="761"
+      > </a
+      ><a name="762" class="PrimitiveType"
+      >Set</a
+      ><a name="765"
+      > </a
+      ><a name="766" href="Homotopy.HomotopyGroupoids.html#752" class="Bound"
+      >i</a
+      ><a name="767" class="Symbol"
+      >}</a
+      ><a name="768"
+      > </a
+      ><a name="769" class="Symbol"
+      >{</a
+      ><a name="770" href="Homotopy.HomotopyGroupoids.html#770" class="Bound"
+      >B</a
+      ><a name="771"
+      > </a
+      ><a name="772" class="Symbol"
+      >:</a
+      ><a name="773"
+      > </a
+      ><a name="774" class="PrimitiveType"
+      >Set</a
+      ><a name="777"
+      > </a
+      ><a name="778" href="Homotopy.HomotopyGroupoids.html#754" class="Bound"
+      >j</a
+      ><a name="779" class="Symbol"
+      >}</a
+      ><a name="780"
+      > </a
+      ><a name="781" class="Symbol"
+      >{</a
+      ><a name="782" href="Homotopy.HomotopyGroupoids.html#782" class="Bound"
+      >x</a
+      ><a name="783"
+      > </a
+      ><a name="784" href="Homotopy.HomotopyGroupoids.html#784" class="Bound"
+      >y</a
+      ><a name="785"
+      > </a
+      ><a name="786" class="Symbol"
+      >:</a
+      ><a name="787"
+      > </a
+      ><a name="788" href="Homotopy.HomotopyGroupoids.html#758" class="Bound"
+      >A</a
+      ><a name="789" class="Symbol"
+      >}</a
+      ><a name="790"
+      > </a
+      ><a name="791" class="Symbol"
+      >(</a
+      ><a name="792" href="Homotopy.HomotopyGroupoids.html#792" class="Bound"
+      >f</a
+      ><a name="793"
+      > </a
+      ><a name="794" class="Symbol"
+      >:</a
+      ><a name="795"
+      > </a
+      ><a name="796" href="Homotopy.HomotopyGroupoids.html#758" class="Bound"
+      >A</a
+      ><a name="797"
+      > </a
+      ><a name="798" class="Symbol"
+      >&#8594;</a
+      ><a name="799"
+      > </a
+      ><a name="800" href="Homotopy.HomotopyGroupoids.html#770" class="Bound"
+      >B</a
+      ><a name="801" class="Symbol"
+      >)</a
+      ><a name="802"
+      >
+  </a
+      ><a name="805" class="Symbol"
+      >&#8594;</a
+      ><a name="806"
+      > </a
+      ><a name="807" href="Homotopy.HomotopyGroupoids.html#782" class="Bound"
+      >x</a
+      ><a name="808"
+      > </a
+      ><a name="809" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="811"
+      > </a
+      ><a name="812" href="Homotopy.HomotopyGroupoids.html#784" class="Bound"
+      >y</a
+      ><a name="813"
+      > </a
+      ><a name="814" class="Symbol"
+      >&#8594;</a
+      ><a name="815"
+      > </a
+      ><a name="816" href="Homotopy.HomotopyGroupoids.html#792" class="Bound"
+      >f</a
+      ><a name="817"
+      > </a
+      ><a name="818" href="Homotopy.HomotopyGroupoids.html#782" class="Bound"
+      >x</a
+      ><a name="819"
+      > </a
+      ><a name="820" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="822"
+      > </a
+      ><a name="823" href="Homotopy.HomotopyGroupoids.html#792" class="Bound"
+      >f</a
+      ><a name="824"
+      > </a
+      ><a name="825" href="Homotopy.HomotopyGroupoids.html#784" class="Bound"
+      >y</a
+      ><a name="826"
+      >
+</a
+      ><a name="827" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="830"
+      > </a
+      ><a name="831" href="Homotopy.HomotopyGroupoids.html#831" class="Bound"
+      >f</a
+      ><a name="832"
+      > </a
+      ><a name="833" class="Symbol"
+      >=</a
+      ><a name="834"
+      > </a
+      ><a name="835" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="851"
+      > </a
+      ><a name="852" class="Symbol"
+      >&#10627;</a
+      ><a name="853"
+      > </a
+      ><a name="854" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="863"
+      > </a
+      ><a name="864" class="Symbol"
+      >_</a
+      ><a name="865"
+      > </a
+      ><a name="866" class="Symbol"
+      >&#10628;</a
+      ><a name="867"
+      > </a
+      ><a name="868" class="Symbol"
+      >(</a
+      ><a name="869" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="873"
+      > </a
+      ><a name="874" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="875"
+      > </a
+      ><a name="876" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="878"
+      > </a
+      ><a name="879" href="Homotopy.HomotopyGroupoids.html#831" class="Bound"
+      >f</a
+      ><a name="880" class="Symbol"
+      >)</a
+      ><a name="881"
+      >
+
+</a
+      ><a name="883" class="Keyword"
+      >module</a
+      ><a name="889"
+      > </a
+      ><a name="890" href="Homotopy.HomotopyGroupoids.html#890" class="Module"
+      >_</a
+      ><a name="891"
+      > </a
+      ><a name="892" class="Symbol"
+      >{</a
+      ><a name="893" href="Homotopy.HomotopyGroupoids.html#893" class="Bound"
+      >i</a
+      ><a name="894" class="Symbol"
+      >}</a
+      ><a name="895"
+      > </a
+      ><a name="896" class="Symbol"
+      >{</a
+      ><a name="897" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="898"
+      > </a
+      ><a name="899" class="Symbol"
+      >:</a
+      ><a name="900"
+      > </a
+      ><a name="901" class="PrimitiveType"
+      >Set</a
+      ><a name="904"
+      > </a
+      ><a name="905" href="Homotopy.HomotopyGroupoids.html#893" class="Bound"
+      >i</a
+      ><a name="906" class="Symbol"
+      >}</a
+      ><a name="907"
+      > </a
+      ><a name="908" class="Keyword"
+      >where</a
+      ><a name="913"
+      >
+
+  </a
+      ><a name="917" href="Homotopy.HomotopyGroupoids.html#917" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="933"
+      > </a
+      ><a name="934" class="Symbol"
+      >:</a
+      ><a name="935"
+      > </a
+      ><a name="936" class="Symbol"
+      >&#8704;</a
+      ><a name="937"
+      > </a
+      ><a name="938" class="Symbol"
+      >{</a
+      ><a name="939" href="Homotopy.HomotopyGroupoids.html#939" class="Bound"
+      >x</a
+      ><a name="940"
+      > </a
+      ><a name="941" href="Homotopy.HomotopyGroupoids.html#941" class="Bound"
+      >y</a
+      ><a name="942"
+      > </a
+      ><a name="943" class="Symbol"
+      >:</a
+      ><a name="944"
+      > </a
+      ><a name="945" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="946" class="Symbol"
+      >}</a
+      ><a name="947"
+      > </a
+      ><a name="948" class="Symbol"
+      >(</a
+      ><a name="949" href="Homotopy.HomotopyGroupoids.html#949" class="Bound"
+      >q</a
+      ><a name="950"
+      > </a
+      ><a name="951" class="Symbol"
+      >:</a
+      ><a name="952"
+      > </a
+      ><a name="953" href="Homotopy.HomotopyGroupoids.html#939" class="Bound"
+      >x</a
+      ><a name="954"
+      > </a
+      ><a name="955" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="957"
+      > </a
+      ><a name="958" href="Homotopy.HomotopyGroupoids.html#941" class="Bound"
+      >y</a
+      ><a name="959" class="Symbol"
+      >)</a
+      ><a name="960"
+      > </a
+      ><a name="961" class="Symbol"
+      >&#8594;</a
+      ><a name="962"
+      > </a
+      ><a name="963" class="Symbol"
+      >(</a
+      ><a name="964" href="Homotopy.HomotopyGroupoids.html#949" class="Bound"
+      >q</a
+      ><a name="965"
+      > </a
+      ><a name="966" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="968"
+      > </a
+      ><a name="969" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="974"
+      > </a
+      ><a name="975" href="Homotopy.HomotopyGroupoids.html#941" class="Bound"
+      >y</a
+      ><a name="976" class="Symbol"
+      >)</a
+      ><a name="977"
+      > </a
+      ><a name="978" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="979"
+      > </a
+      ><a name="980" href="Homotopy.HomotopyGroupoids.html#949" class="Bound"
+      >q</a
+      ><a name="981"
+      >
+  </a
+      ><a name="984" href="Homotopy.HomotopyGroupoids.html#917" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="1000"
+      > </a
+      ><a name="1001" class="Symbol"
+      >{</a
+      ><a name="1002"
+      >x </a
+      ><a name="1004" class="Symbol"
+      >=</a
+      ><a name="1005"
+      > </a
+      ><a name="1006" href="Homotopy.HomotopyGroupoids.html#1006" class="Bound"
+      >x</a
+      ><a name="1007" class="Symbol"
+      >}</a
+      ><a name="1008"
+      > </a
+      ><a name="1009" class="Symbol"
+      >{</a
+      ><a name="1010" href="Homotopy.HomotopyGroupoids.html#1010" class="Bound"
+      >y</a
+      ><a name="1011" class="Symbol"
+      >}</a
+      ><a name="1012"
+      > </a
+      ><a name="1013" class="Symbol"
+      >=</a
+      ><a name="1014"
+      > </a
+      ><a name="1015" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1024"
+      >
+    </a
+      ><a name="1029" class="Symbol"
+      >&#10627;</a
+      ><a name="1030"
+      > </a
+      ><a name="1031" class="Symbol"
+      >&#955;</a
+      ><a name="1032"
+      > </a
+      ><a name="1033" href="Homotopy.HomotopyGroupoids.html#1033" class="Bound"
+      >_</a
+      ><a name="1034"
+      > </a
+      ><a name="1035" class="Symbol"
+      >&#8594;</a
+      ><a name="1036"
+      >  </a
+      ><a name="1038" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1046"
+      > </a
+      ><a name="1047" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1048"
+      > </a
+      ><a name="1049" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1058"
+      > </a
+      ><a name="1059" class="Symbol"
+      >(</a
+      ><a name="1060" href="Homotopy.HomotopyGroupoids.html#1006" class="Bound"
+      >x</a
+      ><a name="1061"
+      > </a
+      ><a name="1062" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1063"
+      > </a
+      ><a name="1064" href="Homotopy.HomotopyGroupoids.html#1010" class="Bound"
+      >y</a
+      ><a name="1065" class="Symbol"
+      >)</a
+      ><a name="1066"
+      > </a
+      ><a name="1067" class="Symbol"
+      >&#10628;</a
+      ><a name="1068"
+      >
+    </a
+      ><a name="1073" class="Symbol"
+      >(&#955;</a
+      ><a name="1075"
+      > </a
+      ><a name="1076" href="Homotopy.HomotopyGroupoids.html#1076" class="Bound"
+      >x</a
+      ><a name="1077"
+      > </a
+      ><a name="1078" class="Symbol"
+      >&#8594;</a
+      ><a name="1079"
+      > </a
+      ><a name="1080" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="1082"
+      > </a
+      ><a name="1083" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1087"
+      > </a
+      ><a name="1088" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1089"
+      > </a
+      ><a name="1090" href="Paths.html#3462" class="Function"
+      >refl-right-unit</a
+      ><a name="1105"
+      > </a
+      ><a name="1106" href="Homotopy.HomotopyGroupoids.html#1076" class="Bound"
+      >x</a
+      ><a name="1107" class="Symbol"
+      >)</a
+      ><a name="1108"
+      >
+
+  </a
+      ><a name="1112" href="Homotopy.HomotopyGroupoids.html#1112" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="1127"
+      > </a
+      ><a name="1128" class="Symbol"
+      >:</a
+      ><a name="1129"
+      > </a
+      ><a name="1130" class="Symbol"
+      >&#8704;</a
+      ><a name="1131"
+      > </a
+      ><a name="1132" class="Symbol"
+      >{</a
+      ><a name="1133" href="Homotopy.HomotopyGroupoids.html#1133" class="Bound"
+      >x</a
+      ><a name="1134"
+      > </a
+      ><a name="1135" href="Homotopy.HomotopyGroupoids.html#1135" class="Bound"
+      >y</a
+      ><a name="1136"
+      > </a
+      ><a name="1137" class="Symbol"
+      >:</a
+      ><a name="1138"
+      > </a
+      ><a name="1139" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="1140" class="Symbol"
+      >}</a
+      ><a name="1141"
+      > </a
+      ><a name="1142" class="Symbol"
+      >(</a
+      ><a name="1143" href="Homotopy.HomotopyGroupoids.html#1143" class="Bound"
+      >q</a
+      ><a name="1144"
+      > </a
+      ><a name="1145" class="Symbol"
+      >:</a
+      ><a name="1146"
+      > </a
+      ><a name="1147" href="Homotopy.HomotopyGroupoids.html#1133" class="Bound"
+      >x</a
+      ><a name="1148"
+      > </a
+      ><a name="1149" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1151"
+      > </a
+      ><a name="1152" href="Homotopy.HomotopyGroupoids.html#1135" class="Bound"
+      >y</a
+      ><a name="1153" class="Symbol"
+      >)</a
+      ><a name="1154"
+      > </a
+      ><a name="1155" class="Symbol"
+      >&#8594;</a
+      ><a name="1156"
+      > </a
+      ><a name="1157" class="Symbol"
+      >(</a
+      ><a name="1158" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="1163"
+      > </a
+      ><a name="1164" href="Homotopy.HomotopyGroupoids.html#1133" class="Bound"
+      >x</a
+      ><a name="1165"
+      > </a
+      ><a name="1166" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1168"
+      > </a
+      ><a name="1169" href="Homotopy.HomotopyGroupoids.html#1143" class="Bound"
+      >q</a
+      ><a name="1170" class="Symbol"
+      >)</a
+      ><a name="1171"
+      > </a
+      ><a name="1172" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1173"
+      > </a
+      ><a name="1174" href="Homotopy.HomotopyGroupoids.html#1143" class="Bound"
+      >q</a
+      ><a name="1175"
+      >
+  </a
+      ><a name="1178" href="Homotopy.HomotopyGroupoids.html#1112" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="1193"
+      > </a
+      ><a name="1194" class="Symbol"
+      >{</a
+      ><a name="1195"
+      >x </a
+      ><a name="1197" class="Symbol"
+      >=</a
+      ><a name="1198"
+      > </a
+      ><a name="1199" href="Homotopy.HomotopyGroupoids.html#1199" class="Bound"
+      >x</a
+      ><a name="1200" class="Symbol"
+      >}</a
+      ><a name="1201"
+      > </a
+      ><a name="1202" class="Symbol"
+      >{</a
+      ><a name="1203" href="Homotopy.HomotopyGroupoids.html#1203" class="Bound"
+      >y</a
+      ><a name="1204" class="Symbol"
+      >}</a
+      ><a name="1205"
+      > </a
+      ><a name="1206" class="Symbol"
+      >=</a
+      ><a name="1207"
+      > </a
+      ><a name="1208" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1217"
+      >
+    </a
+      ><a name="1222" class="Symbol"
+      >&#10627;</a
+      ><a name="1223"
+      > </a
+      ><a name="1224" class="Symbol"
+      >&#955;</a
+      ><a name="1225"
+      > </a
+      ><a name="1226" href="Homotopy.HomotopyGroupoids.html#1226" class="Bound"
+      >_</a
+      ><a name="1227"
+      > </a
+      ><a name="1228" class="Symbol"
+      >&#8594;</a
+      ><a name="1229"
+      >  </a
+      ><a name="1231" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1239"
+      > </a
+      ><a name="1240" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1241"
+      > </a
+      ><a name="1242" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1251"
+      > </a
+      ><a name="1252" class="Symbol"
+      >(</a
+      ><a name="1253" href="Homotopy.HomotopyGroupoids.html#1199" class="Bound"
+      >x</a
+      ><a name="1254"
+      > </a
+      ><a name="1255" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1256"
+      > </a
+      ><a name="1257" href="Homotopy.HomotopyGroupoids.html#1203" class="Bound"
+      >y</a
+      ><a name="1258" class="Symbol"
+      >)</a
+      ><a name="1259"
+      > </a
+      ><a name="1260" class="Symbol"
+      >&#10628;</a
+      ><a name="1261"
+      >
+    </a
+      ><a name="1266" class="Symbol"
+      >(&#955;</a
+      ><a name="1268"
+      > </a
+      ><a name="1269" href="Homotopy.HomotopyGroupoids.html#1269" class="Bound"
+      >x</a
+      ><a name="1270"
+      > </a
+      ><a name="1271" class="Symbol"
+      >&#8594;</a
+      ><a name="1272"
+      > </a
+      ><a name="1273" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="1277"
+      > </a
+      ><a name="1278" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1279"
+      > </a
+      ><a name="1280" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1284"
+      > </a
+      ><a name="1285" href="Homotopy.HomotopyGroupoids.html#1269" class="Bound"
+      >x</a
+      ><a name="1286" class="Symbol"
+      >)</a
+      ><a name="1287"
+      >
+
+  </a
+      ><a name="1291" href="Homotopy.HomotopyGroupoids.html#1291" class="Function"
+      >concat&#8320;-assoc</a
+      ><a name="1304"
+      > </a
+      ><a name="1305" class="Symbol"
+      >:</a
+      ><a name="1306"
+      > </a
+      ><a name="1307" class="Symbol"
+      >{</a
+      ><a name="1308" href="Homotopy.HomotopyGroupoids.html#1308" class="Bound"
+      >x</a
+      ><a name="1309"
+      > </a
+      ><a name="1310" href="Homotopy.HomotopyGroupoids.html#1310" class="Bound"
+      >y</a
+      ><a name="1311"
+      > </a
+      ><a name="1312" href="Homotopy.HomotopyGroupoids.html#1312" class="Bound"
+      >z</a
+      ><a name="1313"
+      > </a
+      ><a name="1314" href="Homotopy.HomotopyGroupoids.html#1314" class="Bound"
+      >t</a
+      ><a name="1315"
+      > </a
+      ><a name="1316" class="Symbol"
+      >:</a
+      ><a name="1317"
+      > </a
+      ><a name="1318" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="1319" class="Symbol"
+      >}</a
+      ><a name="1320"
+      > </a
+      ><a name="1321" class="Symbol"
+      >(</a
+      ><a name="1322" href="Homotopy.HomotopyGroupoids.html#1322" class="Bound"
+      >p</a
+      ><a name="1323"
+      > </a
+      ><a name="1324" class="Symbol"
+      >:</a
+      ><a name="1325"
+      > </a
+      ><a name="1326" href="Homotopy.HomotopyGroupoids.html#1308" class="Bound"
+      >x</a
+      ><a name="1327"
+      > </a
+      ><a name="1328" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1330"
+      > </a
+      ><a name="1331" href="Homotopy.HomotopyGroupoids.html#1310" class="Bound"
+      >y</a
+      ><a name="1332" class="Symbol"
+      >)</a
+      ><a name="1333"
+      > </a
+      ><a name="1334" class="Symbol"
+      >(</a
+      ><a name="1335" href="Homotopy.HomotopyGroupoids.html#1335" class="Bound"
+      >q</a
+      ><a name="1336"
+      > </a
+      ><a name="1337" class="Symbol"
+      >:</a
+      ><a name="1338"
+      > </a
+      ><a name="1339" href="Homotopy.HomotopyGroupoids.html#1310" class="Bound"
+      >y</a
+      ><a name="1340"
+      > </a
+      ><a name="1341" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1343"
+      > </a
+      ><a name="1344" href="Homotopy.HomotopyGroupoids.html#1312" class="Bound"
+      >z</a
+      ><a name="1345" class="Symbol"
+      >)</a
+      ><a name="1346"
+      > </a
+      ><a name="1347" class="Symbol"
+      >(</a
+      ><a name="1348" href="Homotopy.HomotopyGroupoids.html#1348" class="Bound"
+      >r</a
+      ><a name="1349"
+      > </a
+      ><a name="1350" class="Symbol"
+      >:</a
+      ><a name="1351"
+      > </a
+      ><a name="1352" href="Homotopy.HomotopyGroupoids.html#1312" class="Bound"
+      >z</a
+      ><a name="1353"
+      > </a
+      ><a name="1354" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1356"
+      > </a
+      ><a name="1357" href="Homotopy.HomotopyGroupoids.html#1314" class="Bound"
+      >t</a
+      ><a name="1358" class="Symbol"
+      >)</a
+      ><a name="1359"
+      >
+    </a
+      ><a name="1364" class="Symbol"
+      >&#8594;</a
+      ><a name="1365"
+      > </a
+      ><a name="1366" class="Symbol"
+      >(</a
+      ><a name="1367" href="Homotopy.HomotopyGroupoids.html#1322" class="Bound"
+      >p</a
+      ><a name="1368"
+      > </a
+      ><a name="1369" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1371"
+      > </a
+      ><a name="1372" href="Homotopy.HomotopyGroupoids.html#1335" class="Bound"
+      >q</a
+      ><a name="1373" class="Symbol"
+      >)</a
+      ><a name="1374"
+      > </a
+      ><a name="1375" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1377"
+      > </a
+      ><a name="1378" href="Homotopy.HomotopyGroupoids.html#1348" class="Bound"
+      >r</a
+      ><a name="1379"
+      > </a
+      ><a name="1380" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1381"
+      > </a
+      ><a name="1382" href="Homotopy.HomotopyGroupoids.html#1322" class="Bound"
+      >p</a
+      ><a name="1383"
+      > </a
+      ><a name="1384" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1386"
+      > </a
+      ><a name="1387" class="Symbol"
+      >(</a
+      ><a name="1388" href="Homotopy.HomotopyGroupoids.html#1335" class="Bound"
+      >q</a
+      ><a name="1389"
+      > </a
+      ><a name="1390" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1392"
+      > </a
+      ><a name="1393" href="Homotopy.HomotopyGroupoids.html#1348" class="Bound"
+      >r</a
+      ><a name="1394" class="Symbol"
+      >)</a
+      ><a name="1395"
+      >
+  </a
+      ><a name="1398" href="Homotopy.HomotopyGroupoids.html#1291" class="Function"
+      >concat&#8320;-assoc</a
+      ><a name="1411"
+      > </a
+      ><a name="1412" class="Symbol"
+      >=</a
+      ><a name="1413"
+      >
+    </a
+      ><a name="1418" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1427"
+      > </a
+      ><a name="1428" class="Symbol"
+      >&#10627;</a
+      ><a name="1429"
+      > </a
+      ><a name="1430" class="Symbol"
+      >&#955;</a
+      ><a name="1431"
+      > </a
+      ><a name="1432" href="Homotopy.HomotopyGroupoids.html#1432" class="Bound"
+      >_</a
+      ><a name="1433"
+      > </a
+      ><a name="1434" class="Symbol"
+      >&#8594;</a
+      ><a name="1435"
+      > </a
+      ><a name="1436" href="HLevelBis.html#3558" class="Function"
+      >&#928;-is-set</a
+      ><a name="1444"
+      > </a
+      ><a name="1445" class="Symbol"
+      >&#955;</a
+      ><a name="1446"
+      > </a
+      ><a name="1447" href="Homotopy.HomotopyGroupoids.html#1447" class="Bound"
+      >_</a
+      ><a name="1448"
+      > </a
+      ><a name="1449" class="Symbol"
+      >&#8594;</a
+      ><a name="1450"
+      > </a
+      ><a name="1451" href="HLevelBis.html#3558" class="Function"
+      >&#928;-is-set</a
+      ><a name="1459"
+      > </a
+      ><a name="1460" class="Symbol"
+      >&#955;</a
+      ><a name="1461"
+      > </a
+      ><a name="1462" href="Homotopy.HomotopyGroupoids.html#1462" class="Bound"
+      >_</a
+      ><a name="1463"
+      > </a
+      ><a name="1464" class="Symbol"
+      >&#8594;</a
+      ><a name="1465"
+      > </a
+      ><a name="1466" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1474"
+      > </a
+      ><a name="1475" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1476"
+      > </a
+      ><a name="1477" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1486"
+      > </a
+      ><a name="1487" class="Symbol"
+      >_</a
+      ><a name="1488"
+      > </a
+      ><a name="1489" class="Symbol"
+      >&#10628;</a
+      ><a name="1490"
+      > </a
+      ><a name="1491" class="Symbol"
+      >(&#955;</a
+      ><a name="1493"
+      > </a
+      ><a name="1494" href="Homotopy.HomotopyGroupoids.html#1494" class="Bound"
+      >p</a
+      ><a name="1495"
+      > </a
+      ><a name="1496" class="Symbol"
+      >&#8594;</a
+      ><a name="1497"
+      >
+      </a
+      ><a name="1504" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1513"
+      > </a
+      ><a name="1514" class="Symbol"
+      >&#10627;</a
+      ><a name="1515"
+      > </a
+      ><a name="1516" class="Symbol"
+      >&#955;</a
+      ><a name="1517"
+      > </a
+      ><a name="1518" href="Homotopy.HomotopyGroupoids.html#1518" class="Bound"
+      >_</a
+      ><a name="1519"
+      > </a
+      ><a name="1520" class="Symbol"
+      >&#8594;</a
+      ><a name="1521"
+      > </a
+      ><a name="1522" href="HLevelBis.html#3558" class="Function"
+      >&#928;-is-set</a
+      ><a name="1530"
+      > </a
+      ><a name="1531" class="Symbol"
+      >&#955;</a
+      ><a name="1532"
+      > </a
+      ><a name="1533" href="Homotopy.HomotopyGroupoids.html#1533" class="Bound"
+      >_</a
+      ><a name="1534"
+      > </a
+      ><a name="1535" class="Symbol"
+      >&#8594;</a
+      ><a name="1536"
+      > </a
+      ><a name="1537" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1545"
+      > </a
+      ><a name="1546" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1547"
+      > </a
+      ><a name="1548" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1557"
+      > </a
+      ><a name="1558" class="Symbol"
+      >_</a
+      ><a name="1559"
+      > </a
+      ><a name="1560" class="Symbol"
+      >&#10628;</a
+      ><a name="1561"
+      > </a
+      ><a name="1562" class="Symbol"
+      >(&#955;</a
+      ><a name="1564"
+      > </a
+      ><a name="1565" href="Homotopy.HomotopyGroupoids.html#1565" class="Bound"
+      >q</a
+      ><a name="1566"
+      > </a
+      ><a name="1567" class="Symbol"
+      >&#8594;</a
+      ><a name="1568"
+      >
+        </a
+      ><a name="1577" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1586"
+      > </a
+      ><a name="1587" class="Symbol"
+      >&#10627;</a
+      ><a name="1588"
+      > </a
+      ><a name="1589" class="Symbol"
+      >&#955;</a
+      ><a name="1590"
+      > </a
+      ><a name="1591" href="Homotopy.HomotopyGroupoids.html#1591" class="Bound"
+      >_</a
+      ><a name="1592"
+      > </a
+      ><a name="1593" class="Symbol"
+      >&#8594;</a
+      ><a name="1594"
+      > </a
+      ><a name="1595" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1603"
+      > </a
+      ><a name="1604" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1605"
+      > </a
+      ><a name="1606" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1615"
+      > </a
+      ><a name="1616" class="Symbol"
+      >_</a
+      ><a name="1617"
+      > </a
+      ><a name="1618" class="Symbol"
+      >&#10628;</a
+      ><a name="1619"
+      > </a
+      ><a name="1620" class="Symbol"
+      >(&#955;</a
+      ><a name="1622"
+      > </a
+      ><a name="1623" href="Homotopy.HomotopyGroupoids.html#1623" class="Bound"
+      >r</a
+      ><a name="1624"
+      > </a
+      ><a name="1625" class="Symbol"
+      >&#8594;</a
+      ><a name="1626"
+      >
+          </a
+      ><a name="1637" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="1639"
+      > </a
+      ><a name="1640" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1644"
+      > </a
+      ><a name="1645" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1646"
+      > </a
+      ><a name="1647" href="Paths.html#3279" class="Function"
+      >concat-assoc</a
+      ><a name="1659"
+      > </a
+      ><a name="1660" href="Homotopy.HomotopyGroupoids.html#1494" class="Bound"
+      >p</a
+      ><a name="1661"
+      > </a
+      ><a name="1662" href="Homotopy.HomotopyGroupoids.html#1565" class="Bound"
+      >q</a
+      ><a name="1663"
+      > </a
+      ><a name="1664" href="Homotopy.HomotopyGroupoids.html#1623" class="Bound"
+      >r</a
+      ><a name="1665" class="Symbol"
+      >)))</a
+      ><a name="1668"
+      >
+
+  </a
+      ><a name="1672" href="Homotopy.HomotopyGroupoids.html#1672" class="Function"
+      >concat&#8320;-ap&#8320;</a
+      ><a name="1683"
+      > </a
+      ><a name="1684" class="Symbol"
+      >:</a
+      ><a name="1685"
+      > </a
+      ><a name="1686" class="Symbol"
+      >&#8704;</a
+      ><a name="1687"
+      > </a
+      ><a name="1688" class="Symbol"
+      >{</a
+      ><a name="1689" href="Homotopy.HomotopyGroupoids.html#1689" class="Bound"
+      >j</a
+      ><a name="1690" class="Symbol"
+      >}</a
+      ><a name="1691"
+      > </a
+      ><a name="1692" class="Symbol"
+      >{</a
+      ><a name="1693" href="Homotopy.HomotopyGroupoids.html#1693" class="Bound"
+      >B</a
+      ><a name="1694"
+      > </a
+      ><a name="1695" class="Symbol"
+      >:</a
+      ><a name="1696"
+      > </a
+      ><a name="1697" class="PrimitiveType"
+      >Set</a
+      ><a name="1700"
+      > </a
+      ><a name="1701" href="Homotopy.HomotopyGroupoids.html#1689" class="Bound"
+      >j</a
+      ><a name="1702" class="Symbol"
+      >}</a
+      ><a name="1703"
+      > </a
+      ><a name="1704" class="Symbol"
+      >(</a
+      ><a name="1705" href="Homotopy.HomotopyGroupoids.html#1705" class="Bound"
+      >f</a
+      ><a name="1706"
+      > </a
+      ><a name="1707" class="Symbol"
+      >:</a
+      ><a name="1708"
+      > </a
+      ><a name="1709" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="1710"
+      > </a
+      ><a name="1711" class="Symbol"
+      >&#8594;</a
+      ><a name="1712"
+      > </a
+      ><a name="1713" href="Homotopy.HomotopyGroupoids.html#1693" class="Bound"
+      >B</a
+      ><a name="1714" class="Symbol"
+      >)</a
+      ><a name="1715"
+      > </a
+      ><a name="1716" class="Symbol"
+      >{</a
+      ><a name="1717" href="Homotopy.HomotopyGroupoids.html#1717" class="Bound"
+      >x</a
+      ><a name="1718"
+      > </a
+      ><a name="1719" href="Homotopy.HomotopyGroupoids.html#1719" class="Bound"
+      >y</a
+      ><a name="1720"
+      > </a
+      ><a name="1721" href="Homotopy.HomotopyGroupoids.html#1721" class="Bound"
+      >z</a
+      ><a name="1722"
+      > </a
+      ><a name="1723" class="Symbol"
+      >:</a
+      ><a name="1724"
+      > </a
+      ><a name="1725" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="1726" class="Symbol"
+      >}</a
+      ><a name="1727"
+      > </a
+      ><a name="1728" class="Symbol"
+      >(</a
+      ><a name="1729" href="Homotopy.HomotopyGroupoids.html#1729" class="Bound"
+      >p</a
+      ><a name="1730"
+      > </a
+      ><a name="1731" class="Symbol"
+      >:</a
+      ><a name="1732"
+      > </a
+      ><a name="1733" href="Homotopy.HomotopyGroupoids.html#1717" class="Bound"
+      >x</a
+      ><a name="1734"
+      > </a
+      ><a name="1735" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1737"
+      > </a
+      ><a name="1738" href="Homotopy.HomotopyGroupoids.html#1719" class="Bound"
+      >y</a
+      ><a name="1739" class="Symbol"
+      >)</a
+      ><a name="1740"
+      > </a
+      ><a name="1741" class="Symbol"
+      >(</a
+      ><a name="1742" href="Homotopy.HomotopyGroupoids.html#1742" class="Bound"
+      >q</a
+      ><a name="1743"
+      > </a
+      ><a name="1744" class="Symbol"
+      >:</a
+      ><a name="1745"
+      > </a
+      ><a name="1746" href="Homotopy.HomotopyGroupoids.html#1719" class="Bound"
+      >y</a
+      ><a name="1747"
+      > </a
+      ><a name="1748" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1750"
+      > </a
+      ><a name="1751" href="Homotopy.HomotopyGroupoids.html#1721" class="Bound"
+      >z</a
+      ><a name="1752" class="Symbol"
+      >)</a
+      ><a name="1753"
+      >
+    </a
+      ><a name="1758" class="Symbol"
+      >&#8594;</a
+      ><a name="1759"
+      > </a
+      ><a name="1760" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="1763"
+      > </a
+      ><a name="1764" href="Homotopy.HomotopyGroupoids.html#1705" class="Bound"
+      >f</a
+      ><a name="1765"
+      > </a
+      ><a name="1766" href="Homotopy.HomotopyGroupoids.html#1729" class="Bound"
+      >p</a
+      ><a name="1767"
+      > </a
+      ><a name="1768" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1770"
+      > </a
+      ><a name="1771" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="1774"
+      > </a
+      ><a name="1775" href="Homotopy.HomotopyGroupoids.html#1705" class="Bound"
+      >f</a
+      ><a name="1776"
+      > </a
+      ><a name="1777" href="Homotopy.HomotopyGroupoids.html#1742" class="Bound"
+      >q</a
+      ><a name="1778"
+      > </a
+      ><a name="1779" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1780"
+      > </a
+      ><a name="1781" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="1784"
+      > </a
+      ><a name="1785" href="Homotopy.HomotopyGroupoids.html#1705" class="Bound"
+      >f</a
+      ><a name="1786"
+      > </a
+      ><a name="1787" class="Symbol"
+      >(</a
+      ><a name="1788" href="Homotopy.HomotopyGroupoids.html#1729" class="Bound"
+      >p</a
+      ><a name="1789"
+      > </a
+      ><a name="1790" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1792"
+      > </a
+      ><a name="1793" href="Homotopy.HomotopyGroupoids.html#1742" class="Bound"
+      >q</a
+      ><a name="1794" class="Symbol"
+      >)</a
+      ><a name="1795"
+      >
+  </a
+      ><a name="1798" href="Homotopy.HomotopyGroupoids.html#1672" class="Function"
+      >concat&#8320;-ap&#8320;</a
+      ><a name="1809"
+      > </a
+      ><a name="1810" href="Homotopy.HomotopyGroupoids.html#1810" class="Bound"
+      >f</a
+      ><a name="1811"
+      > </a
+      ><a name="1812" class="Symbol"
+      >=</a
+      ><a name="1813"
+      >
+    </a
+      ><a name="1818" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1827"
+      > </a
+      ><a name="1828" class="Symbol"
+      >&#10627;</a
+      ><a name="1829"
+      > </a
+      ><a name="1830" class="Symbol"
+      >&#955;</a
+      ><a name="1831"
+      > </a
+      ><a name="1832" href="Homotopy.HomotopyGroupoids.html#1832" class="Bound"
+      >_</a
+      ><a name="1833"
+      > </a
+      ><a name="1834" class="Symbol"
+      >&#8594;</a
+      ><a name="1835"
+      > </a
+      ><a name="1836" href="HLevelBis.html#3558" class="Function"
+      >&#928;-is-set</a
+      ><a name="1844"
+      > </a
+      ><a name="1845" class="Symbol"
+      >&#955;</a
+      ><a name="1846"
+      > </a
+      ><a name="1847" href="Homotopy.HomotopyGroupoids.html#1847" class="Bound"
+      >_</a
+      ><a name="1848"
+      > </a
+      ><a name="1849" class="Symbol"
+      >&#8594;</a
+      ><a name="1850"
+      > </a
+      ><a name="1851" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1859"
+      > </a
+      ><a name="1860" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1861"
+      > </a
+      ><a name="1862" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1871"
+      > </a
+      ><a name="1872" class="Symbol"
+      >_</a
+      ><a name="1873"
+      > </a
+      ><a name="1874" class="Symbol"
+      >&#10628;</a
+      ><a name="1875"
+      > </a
+      ><a name="1876" class="Symbol"
+      >(&#955;</a
+      ><a name="1878"
+      > </a
+      ><a name="1879" href="Homotopy.HomotopyGroupoids.html#1879" class="Bound"
+      >p</a
+      ><a name="1880"
+      > </a
+      ><a name="1881" class="Symbol"
+      >&#8594;</a
+      ><a name="1882"
+      >
+      </a
+      ><a name="1889" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1898"
+      > </a
+      ><a name="1899" class="Symbol"
+      >&#10627;</a
+      ><a name="1900"
+      > </a
+      ><a name="1901" class="Symbol"
+      >&#955;</a
+      ><a name="1902"
+      > </a
+      ><a name="1903" href="Homotopy.HomotopyGroupoids.html#1903" class="Bound"
+      >_</a
+      ><a name="1904"
+      > </a
+      ><a name="1905" class="Symbol"
+      >&#8594;</a
+      ><a name="1906"
+      > </a
+      ><a name="1907" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1915"
+      > </a
+      ><a name="1916" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1917"
+      > </a
+      ><a name="1918" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1927"
+      > </a
+      ><a name="1928" class="Symbol"
+      >_</a
+      ><a name="1929"
+      > </a
+      ><a name="1930" class="Symbol"
+      >&#10628;</a
+      ><a name="1931"
+      > </a
+      ><a name="1932" class="Symbol"
+      >(&#955;</a
+      ><a name="1934"
+      > </a
+      ><a name="1935" href="Homotopy.HomotopyGroupoids.html#1935" class="Bound"
+      >q</a
+      ><a name="1936"
+      > </a
+      ><a name="1937" class="Symbol"
+      >&#8594;</a
+      ><a name="1938"
+      >
+        </a
+      ><a name="1947" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="1949"
+      > </a
+      ><a name="1950" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1954"
+      > </a
+      ><a name="1955" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1956"
+      > </a
+      ><a name="1957" href="Paths.html#11532" class="Function"
+      >concat-ap</a
+      ><a name="1966"
+      > </a
+      ><a name="1967" href="Homotopy.HomotopyGroupoids.html#1810" class="Bound"
+      >f</a
+      ><a name="1968"
+      > </a
+      ><a name="1969" href="Homotopy.HomotopyGroupoids.html#1879" class="Bound"
+      >p</a
+      ><a name="1970"
+      > </a
+      ><a name="1971" href="Homotopy.HomotopyGroupoids.html#1935" class="Bound"
+      >q</a
+      ><a name="1972" class="Symbol"
+      >))</a
+      ><a name="1974"
+      >
+
+  </a
+      ><a name="1978" href="Homotopy.HomotopyGroupoids.html#1978" class="Function"
+      >ap&#8320;-compose</a
+      ><a name="1989"
+      > </a
+      ><a name="1990" class="Symbol"
+      >:</a
+      ><a name="1991"
+      > </a
+      ><a name="1992" class="Symbol"
+      >&#8704;</a
+      ><a name="1993"
+      > </a
+      ><a name="1994" class="Symbol"
+      >{</a
+      ><a name="1995" href="Homotopy.HomotopyGroupoids.html#1995" class="Bound"
+      >j</a
+      ><a name="1996"
+      > </a
+      ><a name="1997" href="Homotopy.HomotopyGroupoids.html#1997" class="Bound"
+      >k</a
+      ><a name="1998" class="Symbol"
+      >}</a
+      ><a name="1999"
+      > </a
+      ><a name="2000" class="Symbol"
+      >{</a
+      ><a name="2001" href="Homotopy.HomotopyGroupoids.html#2001" class="Bound"
+      >B</a
+      ><a name="2002"
+      > </a
+      ><a name="2003" class="Symbol"
+      >:</a
+      ><a name="2004"
+      > </a
+      ><a name="2005" class="PrimitiveType"
+      >Set</a
+      ><a name="2008"
+      > </a
+      ><a name="2009" href="Homotopy.HomotopyGroupoids.html#1995" class="Bound"
+      >j</a
+      ><a name="2010" class="Symbol"
+      >}</a
+      ><a name="2011"
+      > </a
+      ><a name="2012" class="Symbol"
+      >{</a
+      ><a name="2013" href="Homotopy.HomotopyGroupoids.html#2013" class="Bound"
+      >C</a
+      ><a name="2014"
+      > </a
+      ><a name="2015" class="Symbol"
+      >:</a
+      ><a name="2016"
+      > </a
+      ><a name="2017" class="PrimitiveType"
+      >Set</a
+      ><a name="2020"
+      > </a
+      ><a name="2021" href="Homotopy.HomotopyGroupoids.html#1997" class="Bound"
+      >k</a
+      ><a name="2022" class="Symbol"
+      >}</a
+      ><a name="2023"
+      > </a
+      ><a name="2024" class="Symbol"
+      >(</a
+      ><a name="2025" href="Homotopy.HomotopyGroupoids.html#2025" class="Bound"
+      >g</a
+      ><a name="2026"
+      > </a
+      ><a name="2027" class="Symbol"
+      >:</a
+      ><a name="2028"
+      > </a
+      ><a name="2029" href="Homotopy.HomotopyGroupoids.html#2001" class="Bound"
+      >B</a
+      ><a name="2030"
+      > </a
+      ><a name="2031" class="Symbol"
+      >&#8594;</a
+      ><a name="2032"
+      > </a
+      ><a name="2033" href="Homotopy.HomotopyGroupoids.html#2013" class="Bound"
+      >C</a
+      ><a name="2034" class="Symbol"
+      >)</a
+      ><a name="2035"
+      > </a
+      ><a name="2036" class="Symbol"
+      >(</a
+      ><a name="2037" href="Homotopy.HomotopyGroupoids.html#2037" class="Bound"
+      >f</a
+      ><a name="2038"
+      > </a
+      ><a name="2039" class="Symbol"
+      >:</a
+      ><a name="2040"
+      > </a
+      ><a name="2041" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="2042"
+      > </a
+      ><a name="2043" class="Symbol"
+      >&#8594;</a
+      ><a name="2044"
+      > </a
+      ><a name="2045" href="Homotopy.HomotopyGroupoids.html#2001" class="Bound"
+      >B</a
+      ><a name="2046" class="Symbol"
+      >)</a
+      ><a name="2047"
+      >
+    </a
+      ><a name="2052" class="Symbol"
+      >{</a
+      ><a name="2053" href="Homotopy.HomotopyGroupoids.html#2053" class="Bound"
+      >x</a
+      ><a name="2054"
+      > </a
+      ><a name="2055" href="Homotopy.HomotopyGroupoids.html#2055" class="Bound"
+      >y</a
+      ><a name="2056"
+      > </a
+      ><a name="2057" class="Symbol"
+      >:</a
+      ><a name="2058"
+      > </a
+      ><a name="2059" href="Homotopy.HomotopyGroupoids.html#897" class="Bound"
+      >A</a
+      ><a name="2060" class="Symbol"
+      >}</a
+      ><a name="2061"
+      > </a
+      ><a name="2062" class="Symbol"
+      >(</a
+      ><a name="2063" href="Homotopy.HomotopyGroupoids.html#2063" class="Bound"
+      >p</a
+      ><a name="2064"
+      > </a
+      ><a name="2065" class="Symbol"
+      >:</a
+      ><a name="2066"
+      > </a
+      ><a name="2067" href="Homotopy.HomotopyGroupoids.html#2053" class="Bound"
+      >x</a
+      ><a name="2068"
+      > </a
+      ><a name="2069" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2071"
+      > </a
+      ><a name="2072" href="Homotopy.HomotopyGroupoids.html#2055" class="Bound"
+      >y</a
+      ><a name="2073" class="Symbol"
+      >)</a
+      ><a name="2074"
+      > </a
+      ><a name="2075" class="Symbol"
+      >&#8594;</a
+      ><a name="2076"
+      > </a
+      ><a name="2077" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2080"
+      > </a
+      ><a name="2081" class="Symbol"
+      >(</a
+      ><a name="2082" href="Homotopy.HomotopyGroupoids.html#2025" class="Bound"
+      >g</a
+      ><a name="2083"
+      > </a
+      ><a name="2084" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="2085"
+      > </a
+      ><a name="2086" href="Homotopy.HomotopyGroupoids.html#2037" class="Bound"
+      >f</a
+      ><a name="2087" class="Symbol"
+      >)</a
+      ><a name="2088"
+      > </a
+      ><a name="2089" href="Homotopy.HomotopyGroupoids.html#2063" class="Bound"
+      >p</a
+      ><a name="2090"
+      > </a
+      ><a name="2091" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2092"
+      > </a
+      ><a name="2093" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2096"
+      > </a
+      ><a name="2097" href="Homotopy.HomotopyGroupoids.html#2025" class="Bound"
+      >g</a
+      ><a name="2098"
+      > </a
+      ><a name="2099" class="Symbol"
+      >(</a
+      ><a name="2100" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2103"
+      > </a
+      ><a name="2104" href="Homotopy.HomotopyGroupoids.html#2037" class="Bound"
+      >f</a
+      ><a name="2105"
+      > </a
+      ><a name="2106" href="Homotopy.HomotopyGroupoids.html#2063" class="Bound"
+      >p</a
+      ><a name="2107" class="Symbol"
+      >)</a
+      ><a name="2108"
+      >
+  </a
+      ><a name="2111" href="Homotopy.HomotopyGroupoids.html#1978" class="Function"
+      >ap&#8320;-compose</a
+      ><a name="2122"
+      > </a
+      ><a name="2123" href="Homotopy.HomotopyGroupoids.html#2123" class="Bound"
+      >f</a
+      ><a name="2124"
+      > </a
+      ><a name="2125" href="Homotopy.HomotopyGroupoids.html#2125" class="Bound"
+      >g</a
+      ><a name="2126"
+      > </a
+      ><a name="2127" class="Symbol"
+      >=</a
+      ><a name="2128"
+      >
+    </a
+      ><a name="2133" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="2142"
+      > </a
+      ><a name="2143" class="Symbol"
+      >&#10627;</a
+      ><a name="2144"
+      > </a
+      ><a name="2145" class="Symbol"
+      >&#955;</a
+      ><a name="2146"
+      > </a
+      ><a name="2147" href="Homotopy.HomotopyGroupoids.html#2147" class="Bound"
+      >_</a
+      ><a name="2148"
+      > </a
+      ><a name="2149" class="Symbol"
+      >&#8594;</a
+      ><a name="2150"
+      > </a
+      ><a name="2151" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2159"
+      > </a
+      ><a name="2160" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2161"
+      > </a
+      ><a name="2162" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="2171"
+      > </a
+      ><a name="2172" class="Symbol"
+      >_</a
+      ><a name="2173"
+      > </a
+      ><a name="2174" class="Symbol"
+      >&#10628;</a
+      ><a name="2175"
+      > </a
+      ><a name="2176" class="Symbol"
+      >(&#955;</a
+      ><a name="2178"
+      > </a
+      ><a name="2179" href="Homotopy.HomotopyGroupoids.html#2179" class="Bound"
+      >p</a
+      ><a name="2180"
+      > </a
+      ><a name="2181" class="Symbol"
+      >&#8594;</a
+      ><a name="2182"
+      >
+      </a
+      ><a name="2189" href="Paths.html#1468" class="Function"
+      >ap</a
+      ><a name="2191"
+      > </a
+      ><a name="2192" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2196"
+      > </a
+      ><a name="2197" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2198"
+      > </a
+      ><a name="2199" href="Paths.html#12182" class="Function"
+      >ap-compose</a
+      ><a name="2209"
+      > </a
+      ><a name="2210" href="Homotopy.HomotopyGroupoids.html#2123" class="Bound"
+      >f</a
+      ><a name="2211"
+      > </a
+      ><a name="2212" href="Homotopy.HomotopyGroupoids.html#2125" class="Bound"
+      >g</a
+      ><a name="2213"
+      > </a
+      ><a name="2214" href="Homotopy.HomotopyGroupoids.html#2179" class="Bound"
+      >p</a
+      ><a name="2215" class="Symbol"
+      >)</a
+      ><a name="2216"
+      >
+
+</a
+      ><a name="2218" class="Keyword"
+      >module</a
+      ><a name="2224"
+      > </a
+      ><a name="2225" href="Homotopy.HomotopyGroupoids.html#2225" class="Module"
+      >_</a
+      ><a name="2226"
+      > </a
+      ><a name="2227" class="Symbol"
+      >{</a
+      ><a name="2228" href="Homotopy.HomotopyGroupoids.html#2228" class="Bound"
+      >i</a
+      ><a name="2229" class="Symbol"
+      >}</a
+      ><a name="2230"
+      > </a
+      ><a name="2231" class="Symbol"
+      >{</a
+      ><a name="2232" href="Homotopy.HomotopyGroupoids.html#2232" class="Bound"
+      >A</a
+      ><a name="2233"
+      > </a
+      ><a name="2234" class="Symbol"
+      >:</a
+      ><a name="2235"
+      > </a
+      ><a name="2236" class="PrimitiveType"
+      >Set</a
+      ><a name="2239"
+      > </a
+      ><a name="2240" href="Homotopy.HomotopyGroupoids.html#2228" class="Bound"
+      >i</a
+      ><a name="2241" class="Symbol"
+      >}</a
+      ><a name="2242"
+      > </a
+      ><a name="2243" class="Keyword"
+      >where</a
+      ><a name="2248"
+      >
+  </a
+      ><a name="2251" href="Homotopy.HomotopyGroupoids.html#2251" class="Function"
+      >trans-id&#8801;&#8320;cst</a
+      ><a name="2264"
+      > </a
+      ><a name="2265" class="Symbol"
+      >:</a
+      ><a name="2266"
+      > </a
+      ><a name="2267" class="Symbol"
+      >{</a
+      ><a name="2268" href="Homotopy.HomotopyGroupoids.html#2268" class="Bound"
+      >a</a
+      ><a name="2269"
+      > </a
+      ><a name="2270" href="Homotopy.HomotopyGroupoids.html#2270" class="Bound"
+      >b</a
+      ><a name="2271"
+      > </a
+      ><a name="2272" href="Homotopy.HomotopyGroupoids.html#2272" class="Bound"
+      >c</a
+      ><a name="2273"
+      > </a
+      ><a name="2274" class="Symbol"
+      >:</a
+      ><a name="2275"
+      > </a
+      ><a name="2276" href="Homotopy.HomotopyGroupoids.html#2232" class="Bound"
+      >A</a
+      ><a name="2277" class="Symbol"
+      >}</a
+      ><a name="2278"
+      > </a
+      ><a name="2279" class="Symbol"
+      >(</a
+      ><a name="2280" href="Homotopy.HomotopyGroupoids.html#2280" class="Bound"
+      >p</a
+      ><a name="2281"
+      > </a
+      ><a name="2282" class="Symbol"
+      >:</a
+      ><a name="2283"
+      > </a
+      ><a name="2284" href="Homotopy.HomotopyGroupoids.html#2270" class="Bound"
+      >b</a
+      ><a name="2285"
+      > </a
+      ><a name="2286" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2287"
+      > </a
+      ><a name="2288" href="Homotopy.HomotopyGroupoids.html#2272" class="Bound"
+      >c</a
+      ><a name="2289" class="Symbol"
+      >)</a
+      ><a name="2290"
+      > </a
+      ><a name="2291" class="Symbol"
+      >(</a
+      ><a name="2292" href="Homotopy.HomotopyGroupoids.html#2292" class="Bound"
+      >q</a
+      ><a name="2293"
+      > </a
+      ><a name="2294" class="Symbol"
+      >:</a
+      ><a name="2295"
+      > </a
+      ><a name="2296" href="Homotopy.HomotopyGroupoids.html#2270" class="Bound"
+      >b</a
+      ><a name="2297"
+      > </a
+      ><a name="2298" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2300"
+      > </a
+      ><a name="2301" href="Homotopy.HomotopyGroupoids.html#2268" class="Bound"
+      >a</a
+      ><a name="2302" class="Symbol"
+      >)</a
+      ><a name="2303"
+      >
+    </a
+      ><a name="2308" class="Symbol"
+      >&#8594;</a
+      ><a name="2309"
+      > </a
+      ><a name="2310" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="2319"
+      > </a
+      ><a name="2320" class="Symbol"
+      >(&#955;</a
+      ><a name="2322"
+      > </a
+      ><a name="2323" href="Homotopy.HomotopyGroupoids.html#2323" class="Bound"
+      >x</a
+      ><a name="2324"
+      > </a
+      ><a name="2325" class="Symbol"
+      >&#8594;</a
+      ><a name="2326"
+      > </a
+      ><a name="2327" href="Homotopy.HomotopyGroupoids.html#2323" class="Bound"
+      >x</a
+      ><a name="2328"
+      > </a
+      ><a name="2329" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2331"
+      > </a
+      ><a name="2332" href="Homotopy.HomotopyGroupoids.html#2268" class="Bound"
+      >a</a
+      ><a name="2333" class="Symbol"
+      >)</a
+      ><a name="2334"
+      > </a
+      ><a name="2335" href="Homotopy.HomotopyGroupoids.html#2280" class="Bound"
+      >p</a
+      ><a name="2336"
+      > </a
+      ><a name="2337" href="Homotopy.HomotopyGroupoids.html#2292" class="Bound"
+      >q</a
+      ><a name="2338"
+      > </a
+      ><a name="2339" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2340"
+      > </a
+      ><a name="2341" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2345"
+      > </a
+      ><a name="2346" class="Symbol"
+      >(</a
+      ><a name="2347" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="2348"
+      > </a
+      ><a name="2349" href="Homotopy.HomotopyGroupoids.html#2280" class="Bound"
+      >p</a
+      ><a name="2350" class="Symbol"
+      >)</a
+      ><a name="2351"
+      > </a
+      ><a name="2352" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2354"
+      > </a
+      ><a name="2355" href="Homotopy.HomotopyGroupoids.html#2292" class="Bound"
+      >q</a
+      ><a name="2356"
+      >
+  </a
+      ><a name="2359" href="Homotopy.HomotopyGroupoids.html#2251" class="Function"
+      >trans-id&#8801;&#8320;cst</a
+      ><a name="2372"
+      > </a
+      ><a name="2373" class="Symbol"
+      >(</a
+      ><a name="2374" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="2378"
+      > </a
+      ><a name="2379" class="Symbol"
+      >_)</a
+      ><a name="2381"
+      > </a
+      ><a name="2382" href="Homotopy.HomotopyGroupoids.html#2382" class="Bound"
+      >q</a
+      ><a name="2383"
+      > </a
+      ><a name="2384" class="Symbol"
+      >=</a
+      ><a name="2385"
+      > </a
+      ><a name="2386" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="2387"
+      > </a
+      ><a name="2388" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2389"
+      > </a
+      ><a name="2390" href="Homotopy.HomotopyGroupoids.html#1112" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="2405"
+      > </a
+      ><a name="2406" href="Homotopy.HomotopyGroupoids.html#2382" class="Bound"
+      >q</a
+      ><a name="2407"
+      >
+
+  </a
+      ><a name="2411" href="Homotopy.HomotopyGroupoids.html#2411" class="Function"
+      >trans-cst&#8801;&#8320;id</a
+      ><a name="2424"
+      > </a
+      ><a name="2425" class="Symbol"
+      >:</a
+      ><a name="2426"
+      > </a
+      ><a name="2427" class="Symbol"
+      >{</a
+      ><a name="2428" href="Homotopy.HomotopyGroupoids.html#2428" class="Bound"
+      >a</a
+      ><a name="2429"
+      > </a
+      ><a name="2430" href="Homotopy.HomotopyGroupoids.html#2430" class="Bound"
+      >b</a
+      ><a name="2431"
+      > </a
+      ><a name="2432" href="Homotopy.HomotopyGroupoids.html#2432" class="Bound"
+      >c</a
+      ><a name="2433"
+      > </a
+      ><a name="2434" class="Symbol"
+      >:</a
+      ><a name="2435"
+      > </a
+      ><a name="2436" href="Homotopy.HomotopyGroupoids.html#2232" class="Bound"
+      >A</a
+      ><a name="2437" class="Symbol"
+      >}</a
+      ><a name="2438"
+      > </a
+      ><a name="2439" class="Symbol"
+      >(</a
+      ><a name="2440" href="Homotopy.HomotopyGroupoids.html#2440" class="Bound"
+      >p</a
+      ><a name="2441"
+      > </a
+      ><a name="2442" class="Symbol"
+      >:</a
+      ><a name="2443"
+      > </a
+      ><a name="2444" href="Homotopy.HomotopyGroupoids.html#2430" class="Bound"
+      >b</a
+      ><a name="2445"
+      > </a
+      ><a name="2446" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2447"
+      > </a
+      ><a name="2448" href="Homotopy.HomotopyGroupoids.html#2432" class="Bound"
+      >c</a
+      ><a name="2449" class="Symbol"
+      >)</a
+      ><a name="2450"
+      > </a
+      ><a name="2451" class="Symbol"
+      >(</a
+      ><a name="2452" href="Homotopy.HomotopyGroupoids.html#2452" class="Bound"
+      >q</a
+      ><a name="2453"
+      > </a
+      ><a name="2454" class="Symbol"
+      >:</a
+      ><a name="2455"
+      > </a
+      ><a name="2456" href="Homotopy.HomotopyGroupoids.html#2428" class="Bound"
+      >a</a
+      ><a name="2457"
+      > </a
+      ><a name="2458" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2460"
+      > </a
+      ><a name="2461" href="Homotopy.HomotopyGroupoids.html#2430" class="Bound"
+      >b</a
+      ><a name="2462" class="Symbol"
+      >)</a
+      ><a name="2463"
+      >
+    </a
+      ><a name="2468" class="Symbol"
+      >&#8594;</a
+      ><a name="2469"
+      > </a
+      ><a name="2470" href="Paths.html#915" class="Function"
+      >transport</a
+      ><a name="2479"
+      > </a
+      ><a name="2480" class="Symbol"
+      >(&#955;</a
+      ><a name="2482"
+      > </a
+      ><a name="2483" href="Homotopy.HomotopyGroupoids.html#2483" class="Bound"
+      >x</a
+      ><a name="2484"
+      > </a
+      ><a name="2485" class="Symbol"
+      >&#8594;</a
+      ><a name="2486"
+      > </a
+      ><a name="2487" href="Homotopy.HomotopyGroupoids.html#2428" class="Bound"
+      >a</a
+      ><a name="2488"
+      > </a
+      ><a name="2489" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2491"
+      > </a
+      ><a name="2492" href="Homotopy.HomotopyGroupoids.html#2483" class="Bound"
+      >x</a
+      ><a name="2493" class="Symbol"
+      >)</a
+      ><a name="2494"
+      > </a
+      ><a name="2495" href="Homotopy.HomotopyGroupoids.html#2440" class="Bound"
+      >p</a
+      ><a name="2496"
+      > </a
+      ><a name="2497" href="Homotopy.HomotopyGroupoids.html#2452" class="Bound"
+      >q</a
+      ><a name="2498"
+      > </a
+      ><a name="2499" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2500"
+      > </a
+      ><a name="2501" href="Homotopy.HomotopyGroupoids.html#2452" class="Bound"
+      >q</a
+      ><a name="2502"
+      > </a
+      ><a name="2503" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2505"
+      > </a
+      ><a name="2506" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2510"
+      > </a
+      ><a name="2511" href="Homotopy.HomotopyGroupoids.html#2440" class="Bound"
+      >p</a
+      ><a name="2512"
+      >
+  </a
+      ><a name="2515" href="Homotopy.HomotopyGroupoids.html#2411" class="Function"
+      >trans-cst&#8801;&#8320;id</a
+      ><a name="2528"
+      > </a
+      ><a name="2529" class="Symbol"
+      >(</a
+      ><a name="2530" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="2534"
+      > </a
+      ><a name="2535" class="Symbol"
+      >_)</a
+      ><a name="2537"
+      > </a
+      ><a name="2538" href="Homotopy.HomotopyGroupoids.html#2538" class="Bound"
+      >q</a
+      ><a name="2539"
+      > </a
+      ><a name="2540" class="Symbol"
+      >=</a
+      ><a name="2541"
+      > </a
+      ><a name="2542" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="2543"
+      > </a
+      ><a name="2544" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2545"
+      > </a
+      ><a name="2546" href="Homotopy.HomotopyGroupoids.html#917" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="2562"
+      > </a
+      ><a name="2563" href="Homotopy.HomotopyGroupoids.html#2538" class="Bound"
+      >q</a
+      ><a name="2564"
+      >
+
+</a
+      ><a name="2566" class="Keyword"
+      >module</a
+      ><a name="2572"
+      > </a
+      ><a name="2573" href="Homotopy.HomotopyGroupoids.html#2573" class="Module"
+      >_</a
+      ><a name="2574"
+      > </a
+      ><a name="2575" class="Symbol"
+      >{</a
+      ><a name="2576" href="Homotopy.HomotopyGroupoids.html#2576" class="Bound"
+      >i</a
+      ><a name="2577" class="Symbol"
+      >}</a
+      ><a name="2578"
+      > </a
+      ><a name="2579" class="Symbol"
+      >{</a
+      ><a name="2580" href="Homotopy.HomotopyGroupoids.html#2580" class="Bound"
+      >A</a
+      ><a name="2581"
+      > </a
+      ><a name="2582" class="Symbol"
+      >:</a
+      ><a name="2583"
+      > </a
+      ><a name="2584" class="PrimitiveType"
+      >Set</a
+      ><a name="2587"
+      > </a
+      ><a name="2588" href="Homotopy.HomotopyGroupoids.html#2576" class="Bound"
+      >i</a
+      ><a name="2589" class="Symbol"
+      >}</a
+      ><a name="2590"
+      > </a
+      ><a name="2591" class="Keyword"
+      >where</a
+      ><a name="2596"
+      >
+  </a
+      ><a name="2599" href="Homotopy.HomotopyGroupoids.html#2599" class="Function"
+      >homotopy&#8320;-naturality</a
+      ><a name="2619"
+      > </a
+      ><a name="2620" class="Symbol"
+      >:</a
+      ><a name="2621"
+      > </a
+      ><a name="2622" class="Symbol"
+      >&#8704;</a
+      ><a name="2623"
+      > </a
+      ><a name="2624" class="Symbol"
+      >{</a
+      ><a name="2625" href="Homotopy.HomotopyGroupoids.html#2625" class="Bound"
+      >j</a
+      ><a name="2626" class="Symbol"
+      >}</a
+      ><a name="2627"
+      > </a
+      ><a name="2628" class="Symbol"
+      >{</a
+      ><a name="2629" href="Homotopy.HomotopyGroupoids.html#2629" class="Bound"
+      >B</a
+      ><a name="2630"
+      > </a
+      ><a name="2631" class="Symbol"
+      >:</a
+      ><a name="2632"
+      > </a
+      ><a name="2633" class="PrimitiveType"
+      >Set</a
+      ><a name="2636"
+      > </a
+      ><a name="2637" href="Homotopy.HomotopyGroupoids.html#2625" class="Bound"
+      >j</a
+      ><a name="2638" class="Symbol"
+      >}</a
+      ><a name="2639"
+      > </a
+      ><a name="2640" class="Symbol"
+      >(</a
+      ><a name="2641" href="Homotopy.HomotopyGroupoids.html#2641" class="Bound"
+      >f</a
+      ><a name="2642"
+      > </a
+      ><a name="2643" href="Homotopy.HomotopyGroupoids.html#2643" class="Bound"
+      >g</a
+      ><a name="2644"
+      > </a
+      ><a name="2645" class="Symbol"
+      >:</a
+      ><a name="2646"
+      > </a
+      ><a name="2647" href="Homotopy.HomotopyGroupoids.html#2580" class="Bound"
+      >A</a
+      ><a name="2648"
+      > </a
+      ><a name="2649" class="Symbol"
+      >&#8594;</a
+      ><a name="2650"
+      > </a
+      ><a name="2651" href="Homotopy.HomotopyGroupoids.html#2629" class="Bound"
+      >B</a
+      ><a name="2652" class="Symbol"
+      >)</a
+      ><a name="2653"
+      >
+    </a
+      ><a name="2658" class="Symbol"
+      >(</a
+      ><a name="2659" href="Homotopy.HomotopyGroupoids.html#2659" class="Bound"
+      >p</a
+      ><a name="2660"
+      > </a
+      ><a name="2661" class="Symbol"
+      >:</a
+      ><a name="2662"
+      > </a
+      ><a name="2663" class="Symbol"
+      >(</a
+      ><a name="2664" href="Homotopy.HomotopyGroupoids.html#2664" class="Bound"
+      >x</a
+      ><a name="2665"
+      > </a
+      ><a name="2666" class="Symbol"
+      >:</a
+      ><a name="2667"
+      > </a
+      ><a name="2668" href="Homotopy.HomotopyGroupoids.html#2580" class="Bound"
+      >A</a
+      ><a name="2669" class="Symbol"
+      >)</a
+      ><a name="2670"
+      > </a
+      ><a name="2671" class="Symbol"
+      >&#8594;</a
+      ><a name="2672"
+      > </a
+      ><a name="2673" href="Homotopy.HomotopyGroupoids.html#2641" class="Bound"
+      >f</a
+      ><a name="2674"
+      > </a
+      ><a name="2675" href="Homotopy.HomotopyGroupoids.html#2664" class="Bound"
+      >x</a
+      ><a name="2676"
+      > </a
+      ><a name="2677" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2679"
+      > </a
+      ><a name="2680" href="Homotopy.HomotopyGroupoids.html#2643" class="Bound"
+      >g</a
+      ><a name="2681"
+      > </a
+      ><a name="2682" href="Homotopy.HomotopyGroupoids.html#2664" class="Bound"
+      >x</a
+      ><a name="2683" class="Symbol"
+      >)</a
+      ><a name="2684"
+      > </a
+      ><a name="2685" class="Symbol"
+      >{</a
+      ><a name="2686" href="Homotopy.HomotopyGroupoids.html#2686" class="Bound"
+      >x</a
+      ><a name="2687"
+      > </a
+      ><a name="2688" href="Homotopy.HomotopyGroupoids.html#2688" class="Bound"
+      >y</a
+      ><a name="2689"
+      > </a
+      ><a name="2690" class="Symbol"
+      >:</a
+      ><a name="2691"
+      > </a
+      ><a name="2692" href="Homotopy.HomotopyGroupoids.html#2580" class="Bound"
+      >A</a
+      ><a name="2693" class="Symbol"
+      >}</a
+      ><a name="2694"
+      > </a
+      ><a name="2695" class="Symbol"
+      >(</a
+      ><a name="2696" href="Homotopy.HomotopyGroupoids.html#2696" class="Bound"
+      >q</a
+      ><a name="2697"
+      > </a
+      ><a name="2698" class="Symbol"
+      >:</a
+      ><a name="2699"
+      > </a
+      ><a name="2700" href="Homotopy.HomotopyGroupoids.html#2686" class="Bound"
+      >x</a
+      ><a name="2701"
+      > </a
+      ><a name="2702" href="Homotopy.HomotopyGroupoids.html#298" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2704"
+      > </a
+      ><a name="2705" href="Homotopy.HomotopyGroupoids.html#2688" class="Bound"
+      >y</a
+      ><a name="2706" class="Symbol"
+      >)</a
+      ><a name="2707"
+      >
+    </a
+      ><a name="2712" class="Symbol"
+      >&#8594;</a
+      ><a name="2713"
+      > </a
+      ><a name="2714" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2717"
+      > </a
+      ><a name="2718" href="Homotopy.HomotopyGroupoids.html#2641" class="Bound"
+      >f</a
+      ><a name="2719"
+      > </a
+      ><a name="2720" href="Homotopy.HomotopyGroupoids.html#2696" class="Bound"
+      >q</a
+      ><a name="2721"
+      > </a
+      ><a name="2722" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2724"
+      > </a
+      ><a name="2725" href="Homotopy.HomotopyGroupoids.html#2659" class="Bound"
+      >p</a
+      ><a name="2726"
+      > </a
+      ><a name="2727" href="Homotopy.HomotopyGroupoids.html#2688" class="Bound"
+      >y</a
+      ><a name="2728"
+      > </a
+      ><a name="2729" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2730"
+      > </a
+      ><a name="2731" href="Homotopy.HomotopyGroupoids.html#2659" class="Bound"
+      >p</a
+      ><a name="2732"
+      > </a
+      ><a name="2733" href="Homotopy.HomotopyGroupoids.html#2686" class="Bound"
+      >x</a
+      ><a name="2734"
+      > </a
+      ><a name="2735" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2737"
+      > </a
+      ><a name="2738" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2741"
+      > </a
+      ><a name="2742" href="Homotopy.HomotopyGroupoids.html#2643" class="Bound"
+      >g</a
+      ><a name="2743"
+      > </a
+      ><a name="2744" href="Homotopy.HomotopyGroupoids.html#2696" class="Bound"
+      >q</a
+      ><a name="2745"
+      >
+  </a
+      ><a name="2748" href="Homotopy.HomotopyGroupoids.html#2599" class="Function"
+      >homotopy&#8320;-naturality</a
+      ><a name="2768"
+      > </a
+      ><a name="2769" href="Homotopy.HomotopyGroupoids.html#2769" class="Bound"
+      >f</a
+      ><a name="2770"
+      > </a
+      ><a name="2771" href="Homotopy.HomotopyGroupoids.html#2771" class="Bound"
+      >g</a
+      ><a name="2772"
+      > </a
+      ><a name="2773" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="2774"
+      > </a
+      ><a name="2775" class="Symbol"
+      >{</a
+      ><a name="2776" href="Homotopy.HomotopyGroupoids.html#2776" class="Bound"
+      >x</a
+      ><a name="2777" class="Symbol"
+      >}</a
+      ><a name="2778"
+      > </a
+      ><a name="2779" class="Symbol"
+      >{</a
+      ><a name="2780" href="Homotopy.HomotopyGroupoids.html#2780" class="Bound"
+      >y</a
+      ><a name="2781" class="Symbol"
+      >}</a
+      ><a name="2782"
+      > </a
+      ><a name="2783" href="Homotopy.HomotopyGroupoids.html#2783" class="Bound"
+      >q</a
+      ><a name="2784"
+      > </a
+      ><a name="2785" class="Symbol"
+      >=</a
+      ><a name="2786"
+      > </a
+      ><a name="2787" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="2796"
+      >
+    </a
+      ><a name="2801" class="Symbol"
+      >&#10627;</a
+      ><a name="2802"
+      > </a
+      ><a name="2803" class="Symbol"
+      >&#955;</a
+      ><a name="2804"
+      > </a
+      ><a name="2805" href="Homotopy.HomotopyGroupoids.html#2805" class="Bound"
+      >q</a
+      ><a name="2806"
+      > </a
+      ><a name="2807" class="Symbol"
+      >&#8594;</a
+      ><a name="2808"
+      > </a
+      ><a name="2809" href="HLevel.html#5115" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2817"
+      > </a
+      ><a name="2818" class="Symbol"
+      >{</a
+      ><a name="2819"
+      >x </a
+      ><a name="2821" class="Symbol"
+      >=</a
+      ><a name="2822"
+      > </a
+      ><a name="2823" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2826"
+      > </a
+      ><a name="2827" href="Homotopy.HomotopyGroupoids.html#2769" class="Bound"
+      >f</a
+      ><a name="2828"
+      > </a
+      ><a name="2829" href="Homotopy.HomotopyGroupoids.html#2805" class="Bound"
+      >q</a
+      ><a name="2830"
+      > </a
+      ><a name="2831" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2833"
+      > </a
+      ><a name="2834" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="2835"
+      > </a
+      ><a name="2836" href="Homotopy.HomotopyGroupoids.html#2780" class="Bound"
+      >y</a
+      ><a name="2837" class="Symbol"
+      >}</a
+      ><a name="2838"
+      > </a
+      ><a name="2839" class="Symbol"
+      >{</a
+      ><a name="2840"
+      >y </a
+      ><a name="2842" class="Symbol"
+      >=</a
+      ><a name="2843"
+      > </a
+      ><a name="2844" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="2845"
+      > </a
+      ><a name="2846" href="Homotopy.HomotopyGroupoids.html#2776" class="Bound"
+      >x</a
+      ><a name="2847"
+      > </a
+      ><a name="2848" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2850"
+      > </a
+      ><a name="2851" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2854"
+      > </a
+      ><a name="2855" href="Homotopy.HomotopyGroupoids.html#2771" class="Bound"
+      >g</a
+      ><a name="2856"
+      > </a
+      ><a name="2857" href="Homotopy.HomotopyGroupoids.html#2805" class="Bound"
+      >q</a
+      ><a name="2858" class="Symbol"
+      >}</a
+      ><a name="2859"
+      >
+            </a
+      ><a name="2872" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2873"
+      > </a
+      ><a name="2874" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="2883"
+      > </a
+      ><a name="2884" class="Symbol"
+      >(</a
+      ><a name="2885" href="Homotopy.HomotopyGroupoids.html#2769" class="Bound"
+      >f</a
+      ><a name="2886"
+      > </a
+      ><a name="2887" href="Homotopy.HomotopyGroupoids.html#2776" class="Bound"
+      >x</a
+      ><a name="2888"
+      > </a
+      ><a name="2889" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2890"
+      > </a
+      ><a name="2891" href="Homotopy.HomotopyGroupoids.html#2771" class="Bound"
+      >g</a
+      ><a name="2892"
+      > </a
+      ><a name="2893" href="Homotopy.HomotopyGroupoids.html#2780" class="Bound"
+      >y</a
+      ><a name="2894" class="Symbol"
+      >)</a
+      ><a name="2895"
+      > </a
+      ><a name="2896" class="Symbol"
+      >&#10628;</a
+      ><a name="2897"
+      >
+    </a
+      ><a name="2902" class="Symbol"
+      >(</a
+      ><a name="2903" href="Homotopy.HomotopyGroupoids.html#2936" class="Function"
+      >lemma</a
+      ><a name="2908"
+      > </a
+      ><a name="2909" class="Symbol"
+      >{</a
+      ><a name="2910" href="Homotopy.HomotopyGroupoids.html#2776" class="Bound"
+      >x</a
+      ><a name="2911" class="Symbol"
+      >}</a
+      ><a name="2912"
+      > </a
+      ><a name="2913" class="Symbol"
+      >{</a
+      ><a name="2914" href="Homotopy.HomotopyGroupoids.html#2780" class="Bound"
+      >y</a
+      ><a name="2915" class="Symbol"
+      >})</a
+      ><a name="2917"
+      > </a
+      ><a name="2918" href="Homotopy.HomotopyGroupoids.html#2783" class="Bound"
+      >q</a
+      ><a name="2919"
+      >
+    </a
+      ><a name="2924" class="Keyword"
+      >where</a
+      ><a name="2929"
+      >
+      </a
+      ><a name="2936" href="Homotopy.HomotopyGroupoids.html#2936" class="Function"
+      >lemma</a
+      ><a name="2941"
+      > </a
+      ><a name="2942" class="Symbol"
+      >:</a
+      ><a name="2943"
+      > </a
+      ><a name="2944" class="Symbol"
+      >&#8704;</a
+      ><a name="2945"
+      > </a
+      ><a name="2946" class="Symbol"
+      >{</a
+      ><a name="2947" href="Homotopy.HomotopyGroupoids.html#2947" class="Bound"
+      >x</a
+      ><a name="2948"
+      > </a
+      ><a name="2949" href="Homotopy.HomotopyGroupoids.html#2949" class="Bound"
+      >y</a
+      ><a name="2950"
+      > </a
+      ><a name="2951" class="Symbol"
+      >:</a
+      ><a name="2952"
+      > </a
+      ><a name="2953" href="Homotopy.HomotopyGroupoids.html#2580" class="Bound"
+      >A</a
+      ><a name="2954" class="Symbol"
+      >}</a
+      ><a name="2955"
+      > </a
+      ><a name="2956" class="Symbol"
+      >(</a
+      ><a name="2957" href="Homotopy.HomotopyGroupoids.html#2957" class="Bound"
+      >q</a
+      ><a name="2958"
+      > </a
+      ><a name="2959" class="Symbol"
+      >:</a
+      ><a name="2960"
+      > </a
+      ><a name="2961" href="Homotopy.HomotopyGroupoids.html#2947" class="Bound"
+      >x</a
+      ><a name="2962"
+      > </a
+      ><a name="2963" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2964"
+      > </a
+      ><a name="2965" href="Homotopy.HomotopyGroupoids.html#2949" class="Bound"
+      >y</a
+      ><a name="2966" class="Symbol"
+      >)</a
+      ><a name="2967"
+      > </a
+      ><a name="2968" class="Symbol"
+      >&#8594;</a
+      ><a name="2969"
+      > </a
+      ><a name="2970" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="2973"
+      > </a
+      ><a name="2974" href="Homotopy.HomotopyGroupoids.html#2769" class="Bound"
+      >f</a
+      ><a name="2975"
+      > </a
+      ><a name="2976" class="Symbol"
+      >(</a
+      ><a name="2977" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2981"
+      > </a
+      ><a name="2982" href="Homotopy.HomotopyGroupoids.html#2957" class="Bound"
+      >q</a
+      ><a name="2983" class="Symbol"
+      >)</a
+      ><a name="2984"
+      > </a
+      ><a name="2985" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2987"
+      > </a
+      ><a name="2988" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="2989"
+      > </a
+      ><a name="2990" href="Homotopy.HomotopyGroupoids.html#2949" class="Bound"
+      >y</a
+      ><a name="2991"
+      > </a
+      ><a name="2992" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2993"
+      > </a
+      ><a name="2994" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="2995"
+      > </a
+      ><a name="2996" href="Homotopy.HomotopyGroupoids.html#2947" class="Bound"
+      >x</a
+      ><a name="2997"
+      > </a
+      ><a name="2998" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="3000"
+      > </a
+      ><a name="3001" href="Homotopy.HomotopyGroupoids.html#743" class="Function"
+      >ap&#8320;</a
+      ><a name="3004"
+      > </a
+      ><a name="3005" href="Homotopy.HomotopyGroupoids.html#2771" class="Bound"
+      >g</a
+      ><a name="3006"
+      > </a
+      ><a name="3007" class="Symbol"
+      >(</a
+      ><a name="3008" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3012"
+      > </a
+      ><a name="3013" href="Homotopy.HomotopyGroupoids.html#2957" class="Bound"
+      >q</a
+      ><a name="3014" class="Symbol"
+      >)</a
+      ><a name="3015"
+      >
+      </a
+      ><a name="3022" href="Homotopy.HomotopyGroupoids.html#2936" class="Function"
+      >lemma</a
+      ><a name="3027"
+      > </a
+      ><a name="3028" class="Symbol"
+      >(</a
+      ><a name="3029" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="3033"
+      > </a
+      ><a name="3034" class="Symbol"
+      >_)</a
+      ><a name="3036"
+      > </a
+      ><a name="3037" class="Symbol"
+      >=</a
+      ><a name="3038"
+      >
+        </a
+      ><a name="3047" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="3052"
+      > </a
+      ><a name="3053" class="Symbol"
+      >_</a
+      ><a name="3054"
+      > </a
+      ><a name="3055" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="3057"
+      > </a
+      ><a name="3058" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="3059"
+      > </a
+      ><a name="3060" class="Symbol"
+      >_</a
+      ><a name="3061"
+      >
+          </a
+      ><a name="3072" href="Paths.html#683" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="3074"
+      > </a
+      ><a name="3075" href="Homotopy.HomotopyGroupoids.html#1112" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="3090"
+      > </a
+      ><a name="3091" class="Symbol"
+      >(</a
+      ><a name="3092" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="3093"
+      > </a
+      ><a name="3094" class="Symbol"
+      >_)</a
+      ><a name="3096"
+      > </a
+      ><a name="3097" href="Paths.html#683" class="Function Operator"
+      >&#10217;</a
+      ><a name="3098"
+      >
+        </a
+      ><a name="3107" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="3108"
+      > </a
+      ><a name="3109" class="Symbol"
+      >_</a
+      ><a name="3110"
+      >
+          </a
+      ><a name="3121" href="Paths.html#774" class="Function"
+      >&#8801;&#10216;</a
+      ><a name="3123"
+      > </a
+      ><a name="3124" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="3125"
+      > </a
+      ><a name="3126" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="3127"
+      > </a
+      ><a name="3128" href="Homotopy.HomotopyGroupoids.html#917" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="3144"
+      > </a
+      ><a name="3145" class="Symbol"
+      >_</a
+      ><a name="3146"
+      > </a
+      ><a name="3147" href="Paths.html#774" class="Function"
+      >&#10217;&#8718;</a
+      ><a name="3149"
+      >
+        </a
+      ><a name="3158" href="Homotopy.HomotopyGroupoids.html#2773" class="Bound"
+      >p</a
+      ><a name="3159"
+      > </a
+      ><a name="3160" class="Symbol"
+      >_</a
+      ><a name="3161"
+      > </a
+      ><a name="3162" href="Homotopy.HomotopyGroupoids.html#384" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="3164"
+      > </a
+      ><a name="3165" href="Homotopy.HomotopyGroupoids.html#675" class="Function"
+      >refl&#8320;</a
+      ><a name="3170"
+      > </a
+      ><a name="3171" class="Symbol"
+      >_</a
+      ><a name="3172"
+      >
+          </a
+      ><a name="3183" href="Paths.html#774" class="Function"
+      >&#8718;</a
+      ><a name="3184"
+      >
+
+</a
+      ><a name="3186" class="Comment"
+      >-- Loop space commutes with truncation in the sense that</a
+      ><a name="3242"
+      >
+</a
+      ><a name="3243" class="Comment"
+      >-- &#964; n (&#937; X) = &#937; (&#964; (S n) X)</a
+      ><a name="3271"
+      >
+</a
+      ><a name="3272" class="Comment"
+      >-- (actually, this is true more generally for paths spaces and we need this</a
+      ><a name="3347"
+      >
+</a
+      ><a name="3348" class="Comment"
+      >-- level of generality to prove it)</a
+      ><a name="3383"
+      >
+
+</a
+      ><a name="3385" class="Keyword"
+      >module</a
+      ><a name="3391"
+      > </a
+      ><a name="3392" href="Homotopy.HomotopyGroupoids.html#3392" class="Module"
+      >_</a
+      ><a name="3393"
+      > </a
+      ><a name="3394" class="Symbol"
+      >{</a
+      ><a name="3395" href="Homotopy.HomotopyGroupoids.html#3395" class="Bound"
+      >i</a
+      ><a name="3396" class="Symbol"
+      >}</a
+      ><a name="3397"
+      > </a
+      ><a name="3398" class="Symbol"
+      >{</a
+      ><a name="3399" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3400"
+      > </a
+      ><a name="3401" class="Symbol"
+      >:</a
+      ><a name="3402"
+      > </a
+      ><a name="3403" href="Types.html#1410" class="Datatype"
+      >&#8469;&#8331;&#8322;</a
+      ><a name="3406" class="Symbol"
+      >}</a
+      ><a name="3407"
+      > </a
+      ><a name="3408" class="Symbol"
+      >{</a
+      ><a name="3409" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="3410"
+      > </a
+      ><a name="3411" class="Symbol"
+      >:</a
+      ><a name="3412"
+      > </a
+      ><a name="3413" class="PrimitiveType"
+      >Set</a
+      ><a name="3416"
+      > </a
+      ><a name="3417" href="Homotopy.HomotopyGroupoids.html#3395" class="Bound"
+      >i</a
+      ><a name="3418" class="Symbol"
+      >}</a
+      ><a name="3419"
+      > </a
+      ><a name="3420" class="Keyword"
+      >where</a
+      ><a name="3425"
+      >
+
+  </a
+      ><a name="3429" class="Keyword"
+      >private</a
+      ><a name="3436"
+      >
+    </a
+      ><a name="3441" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="3443"
+      > </a
+      ><a name="3444" class="Symbol"
+      >:</a
+      ><a name="3445"
+      > </a
+      ><a name="3446" class="Symbol"
+      >(</a
+      ><a name="3447" href="Homotopy.HomotopyGroupoids.html#3447" class="Bound"
+      >x</a
+      ><a name="3448"
+      > </a
+      ><a name="3449" href="Homotopy.HomotopyGroupoids.html#3449" class="Bound"
+      >y</a
+      ><a name="3450"
+      > </a
+      ><a name="3451" class="Symbol"
+      >:</a
+      ><a name="3452"
+      > </a
+      ><a name="3453" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="3454" class="Symbol"
+      >)</a
+      ><a name="3455"
+      > </a
+      ><a name="3456" class="Symbol"
+      >&#8594;</a
+      ><a name="3457"
+      > </a
+      ><a name="3458" class="Symbol"
+      >(</a
+      ><a name="3459" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3460"
+      > </a
+      ><a name="3461" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3462"
+      > </a
+      ><a name="3463" class="Symbol"
+      >(</a
+      ><a name="3464" href="Homotopy.HomotopyGroupoids.html#3447" class="Bound"
+      >x</a
+      ><a name="3465"
+      > </a
+      ><a name="3466" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3467"
+      > </a
+      ><a name="3468" href="Homotopy.HomotopyGroupoids.html#3449" class="Bound"
+      >y</a
+      ><a name="3469" class="Symbol"
+      >))</a
+      ><a name="3471"
+      > </a
+      ><a name="3472" class="Symbol"
+      >&#8594;</a
+      ><a name="3473"
+      > </a
+      ><a name="3474" class="Symbol"
+      >((</a
+      ><a name="3476" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3480"
+      > </a
+      ><a name="3481" class="Symbol"
+      >{</a
+      ><a name="3482"
+      >n </a
+      ><a name="3484" class="Symbol"
+      >=</a
+      ><a name="3485"
+      > </a
+      ><a name="3486" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3487"
+      > </a
+      ><a name="3488" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3489" class="Symbol"
+      >}</a
+      ><a name="3490"
+      > </a
+      ><a name="3491" href="Homotopy.HomotopyGroupoids.html#3447" class="Bound"
+      >x</a
+      ><a name="3492" class="Symbol"
+      >)</a
+      ><a name="3493"
+      > </a
+      ><a name="3494" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3495"
+      > </a
+      ><a name="3496" class="Symbol"
+      >(</a
+      ><a name="3497" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3501"
+      > </a
+      ><a name="3502" href="Homotopy.HomotopyGroupoids.html#3449" class="Bound"
+      >y</a
+      ><a name="3503" class="Symbol"
+      >))</a
+      ><a name="3505"
+      >
+    </a
+      ><a name="3510" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="3512"
+      > </a
+      ><a name="3513" href="Homotopy.HomotopyGroupoids.html#3513" class="Bound"
+      >x</a
+      ><a name="3514"
+      > </a
+      ><a name="3515" href="Homotopy.HomotopyGroupoids.html#3515" class="Bound"
+      >y</a
+      ><a name="3516"
+      > </a
+      ><a name="3517" class="Symbol"
+      >=</a
+      ><a name="3518"
+      > </a
+      ><a name="3519" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3534"
+      > </a
+      ><a name="3535" class="Symbol"
+      >&#10627;</a
+      ><a name="3536"
+      > </a
+      ><a name="3537" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="3551"
+      > </a
+      ><a name="3552" class="Symbol"
+      >(</a
+      ><a name="3553" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3554"
+      > </a
+      ><a name="3555" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3556" class="Symbol"
+      >)</a
+      ><a name="3557"
+      > </a
+      ><a name="3558" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="3559"
+      > </a
+      ><a name="3560" class="Symbol"
+      >_</a
+      ><a name="3561"
+      > </a
+      ><a name="3562" class="Symbol"
+      >_</a
+      ><a name="3563"
+      > </a
+      ><a name="3564" class="Symbol"
+      >&#10628;</a
+      ><a name="3565"
+      > </a
+      ><a name="3566" class="Symbol"
+      >(</a
+      ><a name="3567" href="Paths.html#1025" class="Function"
+      >map</a
+      ><a name="3570"
+      > </a
+      ><a name="3571" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3575" class="Symbol"
+      >)</a
+      ><a name="3576"
+      >
+
+    </a
+      ><a name="3582" class="Comment"
+      >-- [truncated-path-space (proj x) (proj y)] is [&#964; n (x &#8801; y)]</a
+      ><a name="3642"
+      >
+    </a
+      ><a name="3647" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="3667"
+      > </a
+      ><a name="3668" class="Symbol"
+      >:</a
+      ><a name="3669"
+      > </a
+      ><a name="3670" class="Symbol"
+      >(</a
+      ><a name="3671" href="Homotopy.HomotopyGroupoids.html#3671" class="Bound"
+      >u</a
+      ><a name="3672"
+      > </a
+      ><a name="3673" href="Homotopy.HomotopyGroupoids.html#3673" class="Bound"
+      >v</a
+      ><a name="3674"
+      > </a
+      ><a name="3675" class="Symbol"
+      >:</a
+      ><a name="3676"
+      > </a
+      ><a name="3677" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3678"
+      > </a
+      ><a name="3679" class="Symbol"
+      >(</a
+      ><a name="3680" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3681"
+      > </a
+      ><a name="3682" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3683" class="Symbol"
+      >)</a
+      ><a name="3684"
+      > </a
+      ><a name="3685" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="3686" class="Symbol"
+      >)</a
+      ><a name="3687"
+      > </a
+      ><a name="3688" class="Symbol"
+      >&#8594;</a
+      ><a name="3689"
+      > </a
+      ><a name="3690" href="HLevelBis.html#3951" class="Function"
+      >Type&#8804;</a
+      ><a name="3695"
+      > </a
+      ><a name="3696" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3697"
+      > </a
+      ><a name="3698" href="Homotopy.HomotopyGroupoids.html#3395" class="Bound"
+      >i</a
+      ><a name="3699"
+      >
+    </a
+      ><a name="3704" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="3724"
+      > </a
+      ><a name="3725" class="Symbol"
+      >=</a
+      ><a name="3726"
+      > </a
+      ><a name="3727" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3742"
+      >
+                             </a
+      ><a name="3772" class="Symbol"
+      >&#10627;</a
+      ><a name="3773"
+      > </a
+      ><a name="3774" href="HLevelBis.html#1817" class="Function"
+      >&#8594;-is-truncated</a
+      ><a name="3788"
+      > </a
+      ><a name="3789" class="Symbol"
+      >(</a
+      ><a name="3790" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3791"
+      > </a
+      ><a name="3792" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3793" class="Symbol"
+      >)</a
+      ><a name="3794"
+      > </a
+      ><a name="3795" class="Symbol"
+      >(</a
+      ><a name="3796" href="HLevelBis.html#5197" class="Function"
+      >Type&#8804;-is-truncated</a
+      ><a name="3814"
+      > </a
+      ><a name="3815" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3816"
+      > </a
+      ><a name="3817" class="Symbol"
+      >_)</a
+      ><a name="3819"
+      > </a
+      ><a name="3820" class="Symbol"
+      >&#10628;</a
+      ><a name="3821"
+      >
+                             </a
+      ><a name="3851" class="Symbol"
+      >(&#955;</a
+      ><a name="3853"
+      > </a
+      ><a name="3854" href="Homotopy.HomotopyGroupoids.html#3854" class="Bound"
+      >x</a
+      ><a name="3855"
+      > </a
+      ><a name="3856" class="Symbol"
+      >&#8594;</a
+      ><a name="3857"
+      > </a
+      ><a name="3858" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3873"
+      > </a
+      ><a name="3874" class="Symbol"
+      >&#10627;</a
+      ><a name="3875"
+      > </a
+      ><a name="3876" href="HLevelBis.html#5197" class="Function"
+      >Type&#8804;-is-truncated</a
+      ><a name="3894"
+      > </a
+      ><a name="3895" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3896"
+      > </a
+      ><a name="3897" class="Symbol"
+      >_</a
+      ><a name="3898"
+      > </a
+      ><a name="3899" class="Symbol"
+      >&#10628;</a
+      ><a name="3900"
+      >
+                               </a
+      ><a name="3932" class="Symbol"
+      >(&#955;</a
+      ><a name="3934"
+      > </a
+      ><a name="3935" href="Homotopy.HomotopyGroupoids.html#3935" class="Bound"
+      >y</a
+      ><a name="3936"
+      > </a
+      ><a name="3937" class="Symbol"
+      >&#8594;</a
+      ><a name="3938"
+      > </a
+      ><a name="3939" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3940"
+      > </a
+      ><a name="3941" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3942"
+      > </a
+      ><a name="3943" class="Symbol"
+      >(</a
+      ><a name="3944" href="Homotopy.HomotopyGroupoids.html#3854" class="Bound"
+      >x</a
+      ><a name="3945"
+      > </a
+      ><a name="3946" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3947"
+      > </a
+      ><a name="3948" href="Homotopy.HomotopyGroupoids.html#3935" class="Bound"
+      >y</a
+      ><a name="3949" class="Symbol"
+      >)</a
+      ><a name="3950"
+      > </a
+      ><a name="3951" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="3952"
+      > </a
+      ><a name="3953" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="3967"
+      > </a
+      ><a name="3968" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="3969"
+      > </a
+      ><a name="3970" class="Symbol"
+      >_))</a
+      ><a name="3973"
+      >
+
+    </a
+      ><a name="3979" class="Comment"
+      >-- We now extend [to] to the truncation of [A], and this is why we needed to</a
+      ><a name="4055"
+      >
+    </a
+      ><a name="4060" class="Comment"
+      >-- first extend the return type of [to]</a
+      ><a name="4099"
+      >
+    </a
+      ><a name="4104" href="Homotopy.HomotopyGroupoids.html#4104" class="Function"
+      >to'</a
+      ><a name="4107"
+      > </a
+      ><a name="4108" class="Symbol"
+      >:</a
+      ><a name="4109"
+      > </a
+      ><a name="4110" class="Symbol"
+      >(</a
+      ><a name="4111" href="Homotopy.HomotopyGroupoids.html#4111" class="Bound"
+      >u</a
+      ><a name="4112"
+      > </a
+      ><a name="4113" href="Homotopy.HomotopyGroupoids.html#4113" class="Bound"
+      >v</a
+      ><a name="4114"
+      > </a
+      ><a name="4115" class="Symbol"
+      >:</a
+      ><a name="4116"
+      > </a
+      ><a name="4117" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4118"
+      > </a
+      ><a name="4119" class="Symbol"
+      >(</a
+      ><a name="4120" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4121"
+      > </a
+      ><a name="4122" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4123" class="Symbol"
+      >)</a
+      ><a name="4124"
+      > </a
+      ><a name="4125" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4126" class="Symbol"
+      >)</a
+      ><a name="4127"
+      > </a
+      ><a name="4128" class="Symbol"
+      >&#8594;</a
+      ><a name="4129"
+      > </a
+      ><a name="4130" class="Symbol"
+      >(</a
+      ><a name="4131" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4133"
+      > </a
+      ><a name="4134" class="Symbol"
+      >(</a
+      ><a name="4135" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="4155"
+      > </a
+      ><a name="4156" href="Homotopy.HomotopyGroupoids.html#4111" class="Bound"
+      >u</a
+      ><a name="4157"
+      > </a
+      ><a name="4158" href="Homotopy.HomotopyGroupoids.html#4113" class="Bound"
+      >v</a
+      ><a name="4159" class="Symbol"
+      >)</a
+      ><a name="4160"
+      > </a
+      ><a name="4161" class="Symbol"
+      >&#8594;</a
+      ><a name="4162"
+      > </a
+      ><a name="4163" href="Homotopy.HomotopyGroupoids.html#4111" class="Bound"
+      >u</a
+      ><a name="4164"
+      > </a
+      ><a name="4165" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4166"
+      > </a
+      ><a name="4167" href="Homotopy.HomotopyGroupoids.html#4113" class="Bound"
+      >v</a
+      ><a name="4168" class="Symbol"
+      >)</a
+      ><a name="4169"
+      >
+    </a
+      ><a name="4174" href="Homotopy.HomotopyGroupoids.html#4104" class="Function"
+      >to'</a
+      ><a name="4177"
+      > </a
+      ><a name="4178" class="Symbol"
+      >=</a
+      ><a name="4179"
+      > </a
+      ><a name="4180" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4188"
+      > </a
+      ><a name="4189" class="Symbol"
+      >&#10627;</a
+      ><a name="4190"
+      > </a
+      ><a name="4191" class="Symbol"
+      >&#955;</a
+      ><a name="4192"
+      > </a
+      ><a name="4193" href="Homotopy.HomotopyGroupoids.html#4193" class="Bound"
+      >x</a
+      ><a name="4194"
+      > </a
+      ><a name="4195" class="Symbol"
+      >&#8594;</a
+      ><a name="4196"
+      > </a
+      ><a name="4197" href="HLevelBis.html#1471" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4211"
+      > </a
+      ><a name="4212" class="Symbol"
+      >(</a
+      ><a name="4213" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4214"
+      > </a
+      ><a name="4215" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4216" class="Symbol"
+      >)</a
+      ><a name="4217"
+      > </a
+      ><a name="4218" class="Symbol"
+      >(&#955;</a
+      ><a name="4220"
+      > </a
+      ><a name="4221" href="Homotopy.HomotopyGroupoids.html#4221" class="Bound"
+      >a</a
+      ><a name="4222"
+      > </a
+      ><a name="4223" class="Symbol"
+      >&#8594;</a
+      ><a name="4224"
+      >
+                             </a
+      ><a name="4254" href="HLevelBis.html#1471" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4268"
+      > </a
+      ><a name="4269" class="Symbol"
+      >(</a
+      ><a name="4270" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4271"
+      > </a
+      ><a name="4272" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4273" class="Symbol"
+      >)</a
+      ><a name="4274"
+      > </a
+      ><a name="4275" class="Symbol"
+      >(&#955;</a
+      ><a name="4277"
+      > </a
+      ><a name="4278" href="Homotopy.HomotopyGroupoids.html#4278" class="Bound"
+      >b</a
+      ><a name="4279"
+      > </a
+      ><a name="4280" class="Symbol"
+      >&#8594;</a
+      ><a name="4281"
+      >
+                               </a
+      ><a name="4313" href="HLevel.html#4386" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="4327"
+      > </a
+      ><a name="4328" class="Symbol"
+      >(</a
+      ><a name="4329" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4330"
+      > </a
+      ><a name="4331" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4332" class="Symbol"
+      >)</a
+      ><a name="4333"
+      >
+                                 </a
+      ><a name="4367" class="Symbol"
+      >(</a
+      ><a name="4368" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="4382"
+      > </a
+      ><a name="4383" class="Symbol"
+      >(</a
+      ><a name="4384" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4385"
+      > </a
+      ><a name="4386" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4387" class="Symbol"
+      >)</a
+      ><a name="4388"
+      > </a
+      ><a name="4389" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4390" class="Symbol"
+      >)))&#10628;</a
+      ><a name="4394"
+      >
+            </a
+      ><a name="4407" class="Symbol"
+      >(&#955;</a
+      ><a name="4409"
+      > </a
+      ><a name="4410" href="Homotopy.HomotopyGroupoids.html#4410" class="Bound"
+      >x</a
+      ><a name="4411"
+      > </a
+      ><a name="4412" class="Symbol"
+      >&#8594;</a
+      ><a name="4413"
+      > </a
+      ><a name="4414" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4422"
+      > </a
+      ><a name="4423" class="Symbol"
+      >&#10627;</a
+      ><a name="4424"
+      > </a
+      ><a name="4425" class="Symbol"
+      >&#955;</a
+      ><a name="4426"
+      > </a
+      ><a name="4427" href="Homotopy.HomotopyGroupoids.html#4427" class="Bound"
+      >t</a
+      ><a name="4428"
+      > </a
+      ><a name="4429" class="Symbol"
+      >&#8594;</a
+      ><a name="4430"
+      > </a
+      ><a name="4431" href="HLevelBis.html#1471" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4445"
+      > </a
+      ><a name="4446" class="Symbol"
+      >(</a
+      ><a name="4447" class="InductiveConstructor"
+      >S</a
+      ><a name="4448"
+      > </a
+      ><a name="4449" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4450" class="Symbol"
+      >)</a
+      ><a name="4451"
+      > </a
+      ><a name="4452" class="Symbol"
+      >(&#955;</a
+      ><a name="4454"
+      > </a
+      ><a name="4455" href="Homotopy.HomotopyGroupoids.html#4455" class="Bound"
+      >a</a
+      ><a name="4456"
+      > </a
+      ><a name="4457" class="Symbol"
+      >&#8594;</a
+      ><a name="4458"
+      >
+                                      </a
+      ><a name="4497" href="HLevel.html#4386" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="4511"
+      > </a
+      ><a name="4512" class="Symbol"
+      >(</a
+      ><a name="4513" class="InductiveConstructor"
+      >S</a
+      ><a name="4514"
+      > </a
+      ><a name="4515" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4516" class="Symbol"
+      >)</a
+      ><a name="4517"
+      >
+                                        </a
+      ><a name="4558" class="Symbol"
+      >(</a
+      ><a name="4559" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="4573"
+      > </a
+      ><a name="4574" class="Symbol"
+      >(</a
+      ><a name="4575" class="InductiveConstructor"
+      >S</a
+      ><a name="4576"
+      > </a
+      ><a name="4577" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4578" class="Symbol"
+      >)</a
+      ><a name="4579"
+      > </a
+      ><a name="4580" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4581" class="Symbol"
+      >))&#10628;</a
+      ><a name="4584"
+      >
+              </a
+      ><a name="4599" class="Symbol"
+      >(&#955;</a
+      ><a name="4601"
+      > </a
+      ><a name="4602" href="Homotopy.HomotopyGroupoids.html#4602" class="Bound"
+      >y</a
+      ><a name="4603"
+      > </a
+      ><a name="4604" class="Symbol"
+      >&#8594;</a
+      ><a name="4605"
+      > </a
+      ><a name="4606" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="4608"
+      > </a
+      ><a name="4609" href="Homotopy.HomotopyGroupoids.html#4410" class="Bound"
+      >x</a
+      ><a name="4610"
+      > </a
+      ><a name="4611" href="Homotopy.HomotopyGroupoids.html#4602" class="Bound"
+      >y</a
+      ><a name="4612" class="Symbol"
+      >))</a
+      ><a name="4614"
+      >
+
+    </a
+      ><a name="4620" href="Homotopy.HomotopyGroupoids.html#4620" class="Function"
+      >from'-refl</a
+      ><a name="4630"
+      > </a
+      ><a name="4631" class="Symbol"
+      >:</a
+      ><a name="4632"
+      > </a
+      ><a name="4633" class="Symbol"
+      >(</a
+      ><a name="4634" href="Homotopy.HomotopyGroupoids.html#4634" class="Bound"
+      >u</a
+      ><a name="4635"
+      > </a
+      ><a name="4636" class="Symbol"
+      >:</a
+      ><a name="4637"
+      > </a
+      ><a name="4638" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4639"
+      > </a
+      ><a name="4640" class="Symbol"
+      >(</a
+      ><a name="4641" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4642"
+      > </a
+      ><a name="4643" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4644" class="Symbol"
+      >)</a
+      ><a name="4645"
+      > </a
+      ><a name="4646" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4647" class="Symbol"
+      >)</a
+      ><a name="4648"
+      > </a
+      ><a name="4649" class="Symbol"
+      >&#8594;</a
+      ><a name="4650"
+      > </a
+      ><a name="4651" class="Symbol"
+      >(</a
+      ><a name="4652" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4654"
+      > </a
+      ><a name="4655" class="Symbol"
+      >(</a
+      ><a name="4656" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="4676"
+      > </a
+      ><a name="4677" href="Homotopy.HomotopyGroupoids.html#4634" class="Bound"
+      >u</a
+      ><a name="4678"
+      > </a
+      ><a name="4679" href="Homotopy.HomotopyGroupoids.html#4634" class="Bound"
+      >u</a
+      ><a name="4680" class="Symbol"
+      >))</a
+      ><a name="4682"
+      >
+    </a
+      ><a name="4687" href="Homotopy.HomotopyGroupoids.html#4620" class="Function"
+      >from'-refl</a
+      ><a name="4697"
+      > </a
+      ><a name="4698" class="Symbol"
+      >=</a
+      ><a name="4699"
+      > </a
+      ><a name="4700" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4708"
+      > </a
+      ><a name="4709" class="Symbol"
+      >&#10627;</a
+      ><a name="4710"
+      > </a
+      ><a name="4711" class="Symbol"
+      >&#955;</a
+      ><a name="4712"
+      > </a
+      ><a name="4713" href="Homotopy.HomotopyGroupoids.html#4713" class="Bound"
+      >x</a
+      ><a name="4714"
+      > </a
+      ><a name="4715" class="Symbol"
+      >&#8594;</a
+      ><a name="4716"
+      > </a
+      ><a name="4717" href="HLevel.html#1416" class="Function"
+      >truncated-is-truncated-S</a
+      ><a name="4741"
+      > </a
+      ><a name="4742" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4743"
+      >
+                                    </a
+      ><a name="4780" class="Symbol"
+      >(</a
+      ><a name="4781" href="Types.html#833" class="Function"
+      >&#960;&#8322;</a
+      ><a name="4783"
+      > </a
+      ><a name="4784" class="Symbol"
+      >(</a
+      ><a name="4785" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="4805"
+      > </a
+      ><a name="4806" href="Homotopy.HomotopyGroupoids.html#4713" class="Bound"
+      >x</a
+      ><a name="4807"
+      > </a
+      ><a name="4808" href="Homotopy.HomotopyGroupoids.html#4713" class="Bound"
+      >x</a
+      ><a name="4809" class="Symbol"
+      >))&#10628;</a
+      ><a name="4812"
+      >
+                   </a
+      ><a name="4832" class="Symbol"
+      >(&#955;</a
+      ><a name="4834"
+      > </a
+      ><a name="4835" href="Homotopy.HomotopyGroupoids.html#4835" class="Bound"
+      >x</a
+      ><a name="4836"
+      > </a
+      ><a name="4837" class="Symbol"
+      >&#8594;</a
+      ><a name="4838"
+      > </a
+      ><a name="4839" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="4843"
+      > </a
+      ><a name="4844" class="Symbol"
+      >(</a
+      ><a name="4845" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="4849"
+      > </a
+      ><a name="4850" href="Homotopy.HomotopyGroupoids.html#4835" class="Bound"
+      >x</a
+      ><a name="4851" class="Symbol"
+      >))</a
+      ><a name="4853"
+      >
+
+    </a
+      ><a name="4859" href="Homotopy.HomotopyGroupoids.html#4859" class="Function"
+      >from'</a
+      ><a name="4864"
+      > </a
+      ><a name="4865" class="Symbol"
+      >:</a
+      ><a name="4866"
+      > </a
+      ><a name="4867" class="Symbol"
+      >(</a
+      ><a name="4868" href="Homotopy.HomotopyGroupoids.html#4868" class="Bound"
+      >u</a
+      ><a name="4869"
+      > </a
+      ><a name="4870" href="Homotopy.HomotopyGroupoids.html#4870" class="Bound"
+      >v</a
+      ><a name="4871"
+      > </a
+      ><a name="4872" class="Symbol"
+      >:</a
+      ><a name="4873"
+      > </a
+      ><a name="4874" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4875"
+      > </a
+      ><a name="4876" class="Symbol"
+      >(</a
+      ><a name="4877" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4878"
+      > </a
+      ><a name="4879" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="4880" class="Symbol"
+      >)</a
+      ><a name="4881"
+      > </a
+      ><a name="4882" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4883" class="Symbol"
+      >)</a
+      ><a name="4884"
+      > </a
+      ><a name="4885" class="Symbol"
+      >&#8594;</a
+      ><a name="4886"
+      > </a
+      ><a name="4887" class="Symbol"
+      >(</a
+      ><a name="4888" href="Homotopy.HomotopyGroupoids.html#4868" class="Bound"
+      >u</a
+      ><a name="4889"
+      > </a
+      ><a name="4890" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4891"
+      > </a
+      ><a name="4892" href="Homotopy.HomotopyGroupoids.html#4870" class="Bound"
+      >v</a
+      ><a name="4893"
+      > </a
+      ><a name="4894" class="Symbol"
+      >&#8594;</a
+      ><a name="4895"
+      > </a
+      ><a name="4896" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4898"
+      > </a
+      ><a name="4899" class="Symbol"
+      >(</a
+      ><a name="4900" href="Homotopy.HomotopyGroupoids.html#3647" class="Function"
+      >truncated-path-space</a
+      ><a name="4920"
+      > </a
+      ><a name="4921" href="Homotopy.HomotopyGroupoids.html#4868" class="Bound"
+      >u</a
+      ><a name="4922"
+      > </a
+      ><a name="4923" href="Homotopy.HomotopyGroupoids.html#4870" class="Bound"
+      >v</a
+      ><a name="4924" class="Symbol"
+      >))</a
+      ><a name="4926"
+      >
+    </a
+      ><a name="4931" href="Homotopy.HomotopyGroupoids.html#4859" class="Function"
+      >from'</a
+      ><a name="4936"
+      > </a
+      ><a name="4937" href="Homotopy.HomotopyGroupoids.html#4937" class="Bound"
+      >u</a
+      ><a name="4938"
+      > </a
+      ><a name="4939" class="DottedPattern Symbol"
+      >.</a
+      ><a name="4940" href="Homotopy.HomotopyGroupoids.html#4937" class="DottedPattern Bound"
+      >u</a
+      ><a name="4941"
+      > </a
+      ><a name="4942" class="Symbol"
+      >(</a
+      ><a name="4943" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="4947"
+      > </a
+      ><a name="4948" class="DottedPattern Symbol"
+      >.</a
+      ><a name="4949" href="Homotopy.HomotopyGroupoids.html#4937" class="DottedPattern Bound"
+      >u</a
+      ><a name="4950" class="Symbol"
+      >)</a
+      ><a name="4951"
+      > </a
+      ><a name="4952" class="Symbol"
+      >=</a
+      ><a name="4953"
+      > </a
+      ><a name="4954" href="Homotopy.HomotopyGroupoids.html#4620" class="Function"
+      >from'-refl</a
+      ><a name="4964"
+      > </a
+      ><a name="4965" href="Homotopy.HomotopyGroupoids.html#4937" class="Bound"
+      >u</a
+      ><a name="4966"
+      >
+
+    </a
+      ><a name="4972" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="4976"
+      > </a
+      ><a name="4977" class="Symbol"
+      >:</a
+      ><a name="4978"
+      > </a
+      ><a name="4979" class="Symbol"
+      >(</a
+      ><a name="4980" href="Homotopy.HomotopyGroupoids.html#4980" class="Bound"
+      >x</a
+      ><a name="4981"
+      > </a
+      ><a name="4982" href="Homotopy.HomotopyGroupoids.html#4982" class="Bound"
+      >y</a
+      ><a name="4983"
+      > </a
+      ><a name="4984" class="Symbol"
+      >:</a
+      ><a name="4985"
+      > </a
+      ><a name="4986" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="4987" class="Symbol"
+      >)</a
+      ><a name="4988"
+      > </a
+      ><a name="4989" class="Symbol"
+      >&#8594;</a
+      ><a name="4990"
+      > </a
+      ><a name="4991" class="Symbol"
+      >(</a
+      ><a name="4992" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="4996"
+      > </a
+      ><a name="4997" class="Symbol"
+      >{</a
+      ><a name="4998"
+      >n </a
+      ><a name="5000" class="Symbol"
+      >=</a
+      ><a name="5001"
+      > </a
+      ><a name="5002" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5003"
+      > </a
+      ><a name="5004" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5005" class="Symbol"
+      >}</a
+      ><a name="5006"
+      > </a
+      ><a name="5007" href="Homotopy.HomotopyGroupoids.html#4980" class="Bound"
+      >x</a
+      ><a name="5008"
+      > </a
+      ><a name="5009" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5010"
+      > </a
+      ><a name="5011" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5015"
+      > </a
+      ><a name="5016" href="Homotopy.HomotopyGroupoids.html#4982" class="Bound"
+      >y</a
+      ><a name="5017"
+      > </a
+      ><a name="5018" class="Symbol"
+      >&#8594;</a
+      ><a name="5019"
+      > </a
+      ><a name="5020" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5021"
+      > </a
+      ><a name="5022" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5023"
+      > </a
+      ><a name="5024" class="Symbol"
+      >(</a
+      ><a name="5025" href="Homotopy.HomotopyGroupoids.html#4980" class="Bound"
+      >x</a
+      ><a name="5026"
+      > </a
+      ><a name="5027" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5028"
+      > </a
+      ><a name="5029" href="Homotopy.HomotopyGroupoids.html#4982" class="Bound"
+      >y</a
+      ><a name="5030" class="Symbol"
+      >))</a
+      ><a name="5032"
+      >
+    </a
+      ><a name="5037" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="5041"
+      > </a
+      ><a name="5042" href="Homotopy.HomotopyGroupoids.html#5042" class="Bound"
+      >x</a
+      ><a name="5043"
+      > </a
+      ><a name="5044" href="Homotopy.HomotopyGroupoids.html#5044" class="Bound"
+      >y</a
+      ><a name="5045"
+      > </a
+      ><a name="5046" href="Homotopy.HomotopyGroupoids.html#5046" class="Bound"
+      >p</a
+      ><a name="5047"
+      > </a
+      ><a name="5048" class="Symbol"
+      >=</a
+      ><a name="5049"
+      > </a
+      ><a name="5050" href="Homotopy.HomotopyGroupoids.html#4859" class="Function"
+      >from'</a
+      ><a name="5055"
+      > </a
+      ><a name="5056" class="Symbol"
+      >(</a
+      ><a name="5057" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5061"
+      > </a
+      ><a name="5062" href="Homotopy.HomotopyGroupoids.html#5042" class="Bound"
+      >x</a
+      ><a name="5063" class="Symbol"
+      >)</a
+      ><a name="5064"
+      > </a
+      ><a name="5065" class="Symbol"
+      >(</a
+      ><a name="5066" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5070"
+      > </a
+      ><a name="5071" href="Homotopy.HomotopyGroupoids.html#5044" class="Bound"
+      >y</a
+      ><a name="5072" class="Symbol"
+      >)</a
+      ><a name="5073"
+      > </a
+      ><a name="5074" href="Homotopy.HomotopyGroupoids.html#5046" class="Bound"
+      >p</a
+      ><a name="5075"
+      >
+
+    </a
+      ><a name="5081" href="Homotopy.HomotopyGroupoids.html#5081" class="Function"
+      >from-to</a
+      ><a name="5088"
+      > </a
+      ><a name="5089" class="Symbol"
+      >:</a
+      ><a name="5090"
+      > </a
+      ><a name="5091" class="Symbol"
+      >(</a
+      ><a name="5092" href="Homotopy.HomotopyGroupoids.html#5092" class="Bound"
+      >x</a
+      ><a name="5093"
+      > </a
+      ><a name="5094" href="Homotopy.HomotopyGroupoids.html#5094" class="Bound"
+      >y</a
+      ><a name="5095"
+      > </a
+      ><a name="5096" class="Symbol"
+      >:</a
+      ><a name="5097"
+      > </a
+      ><a name="5098" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5099" class="Symbol"
+      >)</a
+      ><a name="5100"
+      > </a
+      ><a name="5101" class="Symbol"
+      >(</a
+      ><a name="5102" href="Homotopy.HomotopyGroupoids.html#5102" class="Bound"
+      >p</a
+      ><a name="5103"
+      > </a
+      ><a name="5104" class="Symbol"
+      >:</a
+      ><a name="5105"
+      > </a
+      ><a name="5106" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5107"
+      > </a
+      ><a name="5108" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5109"
+      > </a
+      ><a name="5110" class="Symbol"
+      >(</a
+      ><a name="5111" href="Homotopy.HomotopyGroupoids.html#5092" class="Bound"
+      >x</a
+      ><a name="5112"
+      > </a
+      ><a name="5113" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5114"
+      > </a
+      ><a name="5115" href="Homotopy.HomotopyGroupoids.html#5094" class="Bound"
+      >y</a
+      ><a name="5116" class="Symbol"
+      >))</a
+      ><a name="5118"
+      > </a
+      ><a name="5119" class="Symbol"
+      >&#8594;</a
+      ><a name="5120"
+      > </a
+      ><a name="5121" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="5125"
+      > </a
+      ><a name="5126" href="Homotopy.HomotopyGroupoids.html#5092" class="Bound"
+      >x</a
+      ><a name="5127"
+      > </a
+      ><a name="5128" href="Homotopy.HomotopyGroupoids.html#5094" class="Bound"
+      >y</a
+      ><a name="5129"
+      > </a
+      ><a name="5130" class="Symbol"
+      >(</a
+      ><a name="5131" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="5133"
+      > </a
+      ><a name="5134" href="Homotopy.HomotopyGroupoids.html#5092" class="Bound"
+      >x</a
+      ><a name="5135"
+      > </a
+      ><a name="5136" href="Homotopy.HomotopyGroupoids.html#5094" class="Bound"
+      >y</a
+      ><a name="5137"
+      > </a
+      ><a name="5138" href="Homotopy.HomotopyGroupoids.html#5102" class="Bound"
+      >p</a
+      ><a name="5139" class="Symbol"
+      >)</a
+      ><a name="5140"
+      > </a
+      ><a name="5141" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5142"
+      > </a
+      ><a name="5143" href="Homotopy.HomotopyGroupoids.html#5102" class="Bound"
+      >p</a
+      ><a name="5144"
+      >
+    </a
+      ><a name="5149" href="Homotopy.HomotopyGroupoids.html#5081" class="Function"
+      >from-to</a
+      ><a name="5156"
+      > </a
+      ><a name="5157" href="Homotopy.HomotopyGroupoids.html#5157" class="Bound"
+      >x</a
+      ><a name="5158"
+      > </a
+      ><a name="5159" href="Homotopy.HomotopyGroupoids.html#5159" class="Bound"
+      >y</a
+      ><a name="5160"
+      > </a
+      ><a name="5161" class="Symbol"
+      >=</a
+      ><a name="5162"
+      > </a
+      ><a name="5163" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="5171"
+      > </a
+      ><a name="5172" class="Symbol"
+      >&#10627;</a
+      ><a name="5173"
+      > </a
+      ><a name="5174" class="Symbol"
+      >&#955;</a
+      ><a name="5175"
+      > </a
+      ><a name="5176" href="Homotopy.HomotopyGroupoids.html#5176" class="Bound"
+      >_</a
+      ><a name="5177"
+      > </a
+      ><a name="5178" class="Symbol"
+      >&#8594;</a
+      ><a name="5179"
+      > </a
+      ><a name="5180" href="HLevel.html#4386" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5194"
+      > </a
+      ><a name="5195" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5196"
+      > </a
+      ><a name="5197" class="Symbol"
+      >(</a
+      ><a name="5198" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="5212"
+      > </a
+      ><a name="5213" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5214"
+      > </a
+      ><a name="5215" class="Symbol"
+      >_)&#10628;</a
+      ><a name="5218"
+      >
+                    </a
+      ><a name="5239" class="Symbol"
+      >(</a
+      ><a name="5240" href="Homotopy.HomotopyGroupoids.html#5267" class="Function"
+      >from-to'</a
+      ><a name="5248"
+      > </a
+      ><a name="5249" href="Homotopy.HomotopyGroupoids.html#5157" class="Bound"
+      >x</a
+      ><a name="5250"
+      > </a
+      ><a name="5251" href="Homotopy.HomotopyGroupoids.html#5159" class="Bound"
+      >y</a
+      ><a name="5252" class="Symbol"
+      >)</a
+      ><a name="5253"
+      > </a
+      ><a name="5254" class="Keyword"
+      >where</a
+      ><a name="5259"
+      >
+
+      </a
+      ><a name="5267" href="Homotopy.HomotopyGroupoids.html#5267" class="Function"
+      >from-to'</a
+      ><a name="5275"
+      > </a
+      ><a name="5276" class="Symbol"
+      >:</a
+      ><a name="5277"
+      > </a
+      ><a name="5278" class="Symbol"
+      >(</a
+      ><a name="5279" href="Homotopy.HomotopyGroupoids.html#5279" class="Bound"
+      >x</a
+      ><a name="5280"
+      > </a
+      ><a name="5281" href="Homotopy.HomotopyGroupoids.html#5281" class="Bound"
+      >y</a
+      ><a name="5282"
+      > </a
+      ><a name="5283" class="Symbol"
+      >:</a
+      ><a name="5284"
+      > </a
+      ><a name="5285" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5286" class="Symbol"
+      >)</a
+      ><a name="5287"
+      > </a
+      ><a name="5288" class="Symbol"
+      >(</a
+      ><a name="5289" href="Homotopy.HomotopyGroupoids.html#5289" class="Bound"
+      >p</a
+      ><a name="5290"
+      > </a
+      ><a name="5291" class="Symbol"
+      >:</a
+      ><a name="5292"
+      > </a
+      ><a name="5293" href="Homotopy.HomotopyGroupoids.html#5279" class="Bound"
+      >x</a
+      ><a name="5294"
+      > </a
+      ><a name="5295" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5296"
+      > </a
+      ><a name="5297" href="Homotopy.HomotopyGroupoids.html#5281" class="Bound"
+      >y</a
+      ><a name="5298" class="Symbol"
+      >)</a
+      ><a name="5299"
+      > </a
+      ><a name="5300" class="Symbol"
+      >&#8594;</a
+      ><a name="5301"
+      > </a
+      ><a name="5302" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="5306"
+      > </a
+      ><a name="5307" href="Homotopy.HomotopyGroupoids.html#5279" class="Bound"
+      >x</a
+      ><a name="5308"
+      > </a
+      ><a name="5309" href="Homotopy.HomotopyGroupoids.html#5281" class="Bound"
+      >y</a
+      ><a name="5310"
+      > </a
+      ><a name="5311" class="Symbol"
+      >(</a
+      ><a name="5312" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="5314"
+      > </a
+      ><a name="5315" href="Homotopy.HomotopyGroupoids.html#5279" class="Bound"
+      >x</a
+      ><a name="5316"
+      > </a
+      ><a name="5317" href="Homotopy.HomotopyGroupoids.html#5281" class="Bound"
+      >y</a
+      ><a name="5318"
+      > </a
+      ><a name="5319" class="Symbol"
+      >(</a
+      ><a name="5320" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5324"
+      > </a
+      ><a name="5325" href="Homotopy.HomotopyGroupoids.html#5289" class="Bound"
+      >p</a
+      ><a name="5326" class="Symbol"
+      >))</a
+      ><a name="5328"
+      > </a
+      ><a name="5329" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5330"
+      > </a
+      ><a name="5331" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5335"
+      > </a
+      ><a name="5336" href="Homotopy.HomotopyGroupoids.html#5289" class="Bound"
+      >p</a
+      ><a name="5337"
+      >
+      </a
+      ><a name="5344" href="Homotopy.HomotopyGroupoids.html#5267" class="Function"
+      >from-to'</a
+      ><a name="5352"
+      > </a
+      ><a name="5353" href="Homotopy.HomotopyGroupoids.html#5353" class="Bound"
+      >x</a
+      ><a name="5354"
+      > </a
+      ><a name="5355" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5356" href="Homotopy.HomotopyGroupoids.html#5353" class="DottedPattern Bound"
+      >x</a
+      ><a name="5357"
+      > </a
+      ><a name="5358" class="Symbol"
+      >(</a
+      ><a name="5359" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5363"
+      > </a
+      ><a name="5364" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5365" href="Homotopy.HomotopyGroupoids.html#5353" class="DottedPattern Bound"
+      >x</a
+      ><a name="5366" class="Symbol"
+      >)</a
+      ><a name="5367"
+      > </a
+      ><a name="5368" class="Symbol"
+      >=</a
+      ><a name="5369"
+      > </a
+      ><a name="5370" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5374"
+      > </a
+      ><a name="5375" class="Symbol"
+      >_</a
+      ><a name="5376"
+      >
+
+    </a
+      ><a name="5382" href="Homotopy.HomotopyGroupoids.html#5382" class="Function"
+      >to'-from'</a
+      ><a name="5391"
+      > </a
+      ><a name="5392" class="Symbol"
+      >:</a
+      ><a name="5393"
+      > </a
+      ><a name="5394" class="Symbol"
+      >(</a
+      ><a name="5395" href="Homotopy.HomotopyGroupoids.html#5395" class="Bound"
+      >u</a
+      ><a name="5396"
+      > </a
+      ><a name="5397" href="Homotopy.HomotopyGroupoids.html#5397" class="Bound"
+      >v</a
+      ><a name="5398"
+      > </a
+      ><a name="5399" class="Symbol"
+      >:</a
+      ><a name="5400"
+      > </a
+      ><a name="5401" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5402"
+      > </a
+      ><a name="5403" class="Symbol"
+      >(</a
+      ><a name="5404" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5405"
+      > </a
+      ><a name="5406" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5407" class="Symbol"
+      >)</a
+      ><a name="5408"
+      > </a
+      ><a name="5409" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5410" class="Symbol"
+      >)</a
+      ><a name="5411"
+      > </a
+      ><a name="5412" class="Symbol"
+      >(</a
+      ><a name="5413" href="Homotopy.HomotopyGroupoids.html#5413" class="Bound"
+      >p</a
+      ><a name="5414"
+      > </a
+      ><a name="5415" class="Symbol"
+      >:</a
+      ><a name="5416"
+      > </a
+      ><a name="5417" href="Homotopy.HomotopyGroupoids.html#5395" class="Bound"
+      >u</a
+      ><a name="5418"
+      > </a
+      ><a name="5419" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5420"
+      > </a
+      ><a name="5421" href="Homotopy.HomotopyGroupoids.html#5397" class="Bound"
+      >v</a
+      ><a name="5422" class="Symbol"
+      >)</a
+      ><a name="5423"
+      > </a
+      ><a name="5424" class="Symbol"
+      >&#8594;</a
+      ><a name="5425"
+      > </a
+      ><a name="5426" href="Homotopy.HomotopyGroupoids.html#4104" class="Function"
+      >to'</a
+      ><a name="5429"
+      > </a
+      ><a name="5430" href="Homotopy.HomotopyGroupoids.html#5395" class="Bound"
+      >u</a
+      ><a name="5431"
+      > </a
+      ><a name="5432" href="Homotopy.HomotopyGroupoids.html#5397" class="Bound"
+      >v</a
+      ><a name="5433"
+      > </a
+      ><a name="5434" class="Symbol"
+      >(</a
+      ><a name="5435" href="Homotopy.HomotopyGroupoids.html#4859" class="Function"
+      >from'</a
+      ><a name="5440"
+      > </a
+      ><a name="5441" href="Homotopy.HomotopyGroupoids.html#5395" class="Bound"
+      >u</a
+      ><a name="5442"
+      > </a
+      ><a name="5443" href="Homotopy.HomotopyGroupoids.html#5397" class="Bound"
+      >v</a
+      ><a name="5444"
+      > </a
+      ><a name="5445" href="Homotopy.HomotopyGroupoids.html#5413" class="Bound"
+      >p</a
+      ><a name="5446" class="Symbol"
+      >)</a
+      ><a name="5447"
+      > </a
+      ><a name="5448" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5449"
+      > </a
+      ><a name="5450" href="Homotopy.HomotopyGroupoids.html#5413" class="Bound"
+      >p</a
+      ><a name="5451"
+      >
+    </a
+      ><a name="5456" href="Homotopy.HomotopyGroupoids.html#5382" class="Function"
+      >to'-from'</a
+      ><a name="5465"
+      > </a
+      ><a name="5466" href="Homotopy.HomotopyGroupoids.html#5466" class="Bound"
+      >x</a
+      ><a name="5467"
+      > </a
+      ><a name="5468" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5469" href="Homotopy.HomotopyGroupoids.html#5466" class="DottedPattern Bound"
+      >x</a
+      ><a name="5470"
+      > </a
+      ><a name="5471" class="Symbol"
+      >(</a
+      ><a name="5472" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5476"
+      > </a
+      ><a name="5477" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5478" href="Homotopy.HomotopyGroupoids.html#5466" class="DottedPattern Bound"
+      >x</a
+      ><a name="5479" class="Symbol"
+      >)</a
+      ><a name="5480"
+      > </a
+      ><a name="5481" class="Symbol"
+      >=</a
+      ><a name="5482"
+      > </a
+      ><a name="5483" href="Homotopy.HomotopyGroupoids.html#5512" class="Function"
+      >to'-from'-refl</a
+      ><a name="5497"
+      > </a
+      ><a name="5498" href="Homotopy.HomotopyGroupoids.html#5466" class="Bound"
+      >x</a
+      ><a name="5499"
+      > </a
+      ><a name="5500" class="Keyword"
+      >where</a
+      ><a name="5505"
+      >
+      </a
+      ><a name="5512" href="Homotopy.HomotopyGroupoids.html#5512" class="Function"
+      >to'-from'-refl</a
+      ><a name="5526"
+      > </a
+      ><a name="5527" class="Symbol"
+      >:</a
+      ><a name="5528"
+      > </a
+      ><a name="5529" class="Symbol"
+      >(</a
+      ><a name="5530" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5531"
+      > </a
+      ><a name="5532" class="Symbol"
+      >:</a
+      ><a name="5533"
+      > </a
+      ><a name="5534" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5535"
+      > </a
+      ><a name="5536" class="Symbol"
+      >(</a
+      ><a name="5537" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5538"
+      > </a
+      ><a name="5539" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5540" class="Symbol"
+      >)</a
+      ><a name="5541"
+      > </a
+      ><a name="5542" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5543" class="Symbol"
+      >)</a
+      ><a name="5544"
+      > </a
+      ><a name="5545" class="Symbol"
+      >&#8594;</a
+      ><a name="5546"
+      > </a
+      ><a name="5547" href="Homotopy.HomotopyGroupoids.html#4104" class="Function"
+      >to'</a
+      ><a name="5550"
+      > </a
+      ><a name="5551" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5552"
+      > </a
+      ><a name="5553" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5554"
+      > </a
+      ><a name="5555" class="Symbol"
+      >(</a
+      ><a name="5556" href="Homotopy.HomotopyGroupoids.html#4859" class="Function"
+      >from'</a
+      ><a name="5561"
+      > </a
+      ><a name="5562" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5563"
+      > </a
+      ><a name="5564" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5565"
+      > </a
+      ><a name="5566" class="Symbol"
+      >(</a
+      ><a name="5567" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5571"
+      > </a
+      ><a name="5572" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5573" class="Symbol"
+      >))</a
+      ><a name="5575"
+      > </a
+      ><a name="5576" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5577"
+      > </a
+      ><a name="5578" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5582"
+      > </a
+      ><a name="5583" href="Homotopy.HomotopyGroupoids.html#5530" class="Bound"
+      >u</a
+      ><a name="5584"
+      >
+      </a
+      ><a name="5591" href="Homotopy.HomotopyGroupoids.html#5512" class="Function"
+      >to'-from'-refl</a
+      ><a name="5605"
+      > </a
+      ><a name="5606" class="Symbol"
+      >=</a
+      ><a name="5607"
+      > </a
+      ><a name="5608" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="5616"
+      > </a
+      ><a name="5617" class="Symbol"
+      >&#10627;</a
+      ><a name="5618"
+      > </a
+      ><a name="5619" class="Symbol"
+      >&#955;</a
+      ><a name="5620"
+      > </a
+      ><a name="5621" href="Homotopy.HomotopyGroupoids.html#5621" class="Bound"
+      >_</a
+      ><a name="5622"
+      > </a
+      ><a name="5623" class="Symbol"
+      >&#8594;</a
+      ><a name="5624"
+      > </a
+      ><a name="5625" href="HLevel.html#4386" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5639"
+      > </a
+      ><a name="5640" class="Symbol"
+      >(</a
+      ><a name="5641" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5642"
+      > </a
+      ><a name="5643" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5644" class="Symbol"
+      >)</a
+      ><a name="5645"
+      >
+                                          </a
+      ><a name="5688" class="Symbol"
+      >(</a
+      ><a name="5689" href="HLevel.html#4386" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5703"
+      > </a
+      ><a name="5704" class="Symbol"
+      >(</a
+      ><a name="5705" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5706"
+      > </a
+      ><a name="5707" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5708" class="Symbol"
+      >)</a
+      ><a name="5709"
+      >
+                                            </a
+      ><a name="5754" class="Symbol"
+      >(</a
+      ><a name="5755" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="5769"
+      > </a
+      ><a name="5770" class="Symbol"
+      >(</a
+      ><a name="5771" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5772"
+      > </a
+      ><a name="5773" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5774" class="Symbol"
+      >)</a
+      ><a name="5775"
+      > </a
+      ><a name="5776" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5777" class="Symbol"
+      >))&#10628;</a
+      ><a name="5780"
+      >
+                         </a
+      ><a name="5806" class="Symbol"
+      >(&#955;</a
+      ><a name="5808"
+      > </a
+      ><a name="5809" href="Homotopy.HomotopyGroupoids.html#5809" class="Bound"
+      >_</a
+      ><a name="5810"
+      > </a
+      ><a name="5811" class="Symbol"
+      >&#8594;</a
+      ><a name="5812"
+      > </a
+      ><a name="5813" href="Paths.html#181" class="InductiveConstructor"
+      >refl</a
+      ><a name="5817"
+      > </a
+      ><a name="5818" class="Symbol"
+      >_)</a
+      ><a name="5820"
+      >
+
+    </a
+      ><a name="5826" href="Homotopy.HomotopyGroupoids.html#5826" class="Function"
+      >to-from</a
+      ><a name="5833"
+      > </a
+      ><a name="5834" class="Symbol"
+      >:</a
+      ><a name="5835"
+      > </a
+      ><a name="5836" class="Symbol"
+      >(</a
+      ><a name="5837" href="Homotopy.HomotopyGroupoids.html#5837" class="Bound"
+      >x</a
+      ><a name="5838"
+      > </a
+      ><a name="5839" href="Homotopy.HomotopyGroupoids.html#5839" class="Bound"
+      >y</a
+      ><a name="5840"
+      > </a
+      ><a name="5841" class="Symbol"
+      >:</a
+      ><a name="5842"
+      > </a
+      ><a name="5843" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5844" class="Symbol"
+      >)</a
+      ><a name="5845"
+      > </a
+      ><a name="5846" class="Symbol"
+      >(</a
+      ><a name="5847" href="Homotopy.HomotopyGroupoids.html#5847" class="Bound"
+      >p</a
+      ><a name="5848"
+      > </a
+      ><a name="5849" class="Symbol"
+      >:</a
+      ><a name="5850"
+      > </a
+      ><a name="5851" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5855"
+      > </a
+      ><a name="5856" class="Symbol"
+      >{</a
+      ><a name="5857"
+      >n </a
+      ><a name="5859" class="Symbol"
+      >=</a
+      ><a name="5860"
+      > </a
+      ><a name="5861" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5862"
+      > </a
+      ><a name="5863" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5864" class="Symbol"
+      >}</a
+      ><a name="5865"
+      > </a
+      ><a name="5866" href="Homotopy.HomotopyGroupoids.html#5837" class="Bound"
+      >x</a
+      ><a name="5867"
+      > </a
+      ><a name="5868" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5869"
+      > </a
+      ><a name="5870" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5874"
+      > </a
+      ><a name="5875" href="Homotopy.HomotopyGroupoids.html#5839" class="Bound"
+      >y</a
+      ><a name="5876" class="Symbol"
+      >)</a
+      ><a name="5877"
+      > </a
+      ><a name="5878" class="Symbol"
+      >&#8594;</a
+      ><a name="5879"
+      > </a
+      ><a name="5880" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="5882"
+      > </a
+      ><a name="5883" href="Homotopy.HomotopyGroupoids.html#5837" class="Bound"
+      >x</a
+      ><a name="5884"
+      > </a
+      ><a name="5885" href="Homotopy.HomotopyGroupoids.html#5839" class="Bound"
+      >y</a
+      ><a name="5886"
+      > </a
+      ><a name="5887" class="Symbol"
+      >(</a
+      ><a name="5888" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="5892"
+      > </a
+      ><a name="5893" href="Homotopy.HomotopyGroupoids.html#5837" class="Bound"
+      >x</a
+      ><a name="5894"
+      > </a
+      ><a name="5895" href="Homotopy.HomotopyGroupoids.html#5839" class="Bound"
+      >y</a
+      ><a name="5896"
+      > </a
+      ><a name="5897" href="Homotopy.HomotopyGroupoids.html#5847" class="Bound"
+      >p</a
+      ><a name="5898" class="Symbol"
+      >)</a
+      ><a name="5899"
+      > </a
+      ><a name="5900" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5901"
+      > </a
+      ><a name="5902" href="Homotopy.HomotopyGroupoids.html#5847" class="Bound"
+      >p</a
+      ><a name="5903"
+      >
+    </a
+      ><a name="5908" href="Homotopy.HomotopyGroupoids.html#5826" class="Function"
+      >to-from</a
+      ><a name="5915"
+      > </a
+      ><a name="5916" href="Homotopy.HomotopyGroupoids.html#5916" class="Bound"
+      >x</a
+      ><a name="5917"
+      > </a
+      ><a name="5918" href="Homotopy.HomotopyGroupoids.html#5918" class="Bound"
+      >y</a
+      ><a name="5919"
+      > </a
+      ><a name="5920" href="Homotopy.HomotopyGroupoids.html#5920" class="Bound"
+      >p</a
+      ><a name="5921"
+      > </a
+      ><a name="5922" class="Symbol"
+      >=</a
+      ><a name="5923"
+      > </a
+      ><a name="5924" href="Homotopy.HomotopyGroupoids.html#5382" class="Function"
+      >to'-from'</a
+      ><a name="5933"
+      > </a
+      ><a name="5934" class="Symbol"
+      >(</a
+      ><a name="5935" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5939"
+      > </a
+      ><a name="5940" href="Homotopy.HomotopyGroupoids.html#5916" class="Bound"
+      >x</a
+      ><a name="5941" class="Symbol"
+      >)</a
+      ><a name="5942"
+      > </a
+      ><a name="5943" class="Symbol"
+      >(</a
+      ><a name="5944" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5948"
+      > </a
+      ><a name="5949" href="Homotopy.HomotopyGroupoids.html#5918" class="Bound"
+      >y</a
+      ><a name="5950" class="Symbol"
+      >)</a
+      ><a name="5951"
+      > </a
+      ><a name="5952" href="Homotopy.HomotopyGroupoids.html#5920" class="Bound"
+      >p</a
+      ><a name="5953"
+      >
+
+  </a
+      ><a name="5957" href="Homotopy.HomotopyGroupoids.html#5957" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="5978"
+      > </a
+      ><a name="5979" class="Symbol"
+      >:</a
+      ><a name="5980"
+      > </a
+      ><a name="5981" class="Symbol"
+      >{</a
+      ><a name="5982" href="Homotopy.HomotopyGroupoids.html#5982" class="Bound"
+      >x</a
+      ><a name="5983"
+      > </a
+      ><a name="5984" href="Homotopy.HomotopyGroupoids.html#5984" class="Bound"
+      >y</a
+      ><a name="5985"
+      > </a
+      ><a name="5986" class="Symbol"
+      >:</a
+      ><a name="5987"
+      > </a
+      ><a name="5988" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="5989" class="Symbol"
+      >}</a
+      ><a name="5990"
+      > </a
+      ><a name="5991" class="Symbol"
+      >&#8594;</a
+      ><a name="5992"
+      > </a
+      ><a name="5993" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5994"
+      > </a
+      ><a name="5995" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="5996"
+      > </a
+      ><a name="5997" class="Symbol"
+      >(</a
+      ><a name="5998" href="Homotopy.HomotopyGroupoids.html#5982" class="Bound"
+      >x</a
+      ><a name="5999"
+      > </a
+      ><a name="6000" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="6001"
+      > </a
+      ><a name="6002" href="Homotopy.HomotopyGroupoids.html#5984" class="Bound"
+      >y</a
+      ><a name="6003" class="Symbol"
+      >)</a
+      ><a name="6004"
+      > </a
+      ><a name="6005" href="Equivalences.html#379" class="Function Operator"
+      >&#8771;</a
+      ><a name="6006"
+      > </a
+      ><a name="6007" class="Symbol"
+      >(</a
+      ><a name="6008" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6012"
+      > </a
+      ><a name="6013" class="Symbol"
+      >{</a
+      ><a name="6014"
+      >n </a
+      ><a name="6016" class="Symbol"
+      >=</a
+      ><a name="6017"
+      > </a
+      ><a name="6018" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="6019"
+      > </a
+      ><a name="6020" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="6021" class="Symbol"
+      >}</a
+      ><a name="6022"
+      > </a
+      ><a name="6023" href="Homotopy.HomotopyGroupoids.html#5982" class="Bound"
+      >x</a
+      ><a name="6024"
+      > </a
+      ><a name="6025" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="6026"
+      > </a
+      ><a name="6027" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6031"
+      > </a
+      ><a name="6032" href="Homotopy.HomotopyGroupoids.html#5984" class="Bound"
+      >y</a
+      ><a name="6033" class="Symbol"
+      >)</a
+      ><a name="6034"
+      >
+  </a
+      ><a name="6037" href="Homotopy.HomotopyGroupoids.html#5957" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="6058"
+      > </a
+      ><a name="6059" class="Symbol"
+      >{</a
+      ><a name="6060" href="Homotopy.HomotopyGroupoids.html#6060" class="Bound"
+      >x</a
+      ><a name="6061" class="Symbol"
+      >}</a
+      ><a name="6062"
+      > </a
+      ><a name="6063" class="Symbol"
+      >{</a
+      ><a name="6064" href="Homotopy.HomotopyGroupoids.html#6064" class="Bound"
+      >y</a
+      ><a name="6065" class="Symbol"
+      >}</a
+      ><a name="6066"
+      > </a
+      ><a name="6067" class="Symbol"
+      >=</a
+      ><a name="6068"
+      >
+    </a
+      ><a name="6073" class="Symbol"
+      >(</a
+      ><a name="6074" href="Homotopy.HomotopyGroupoids.html#3441" class="Function"
+      >to</a
+      ><a name="6076"
+      > </a
+      ><a name="6077" href="Homotopy.HomotopyGroupoids.html#6060" class="Bound"
+      >x</a
+      ><a name="6078"
+      > </a
+      ><a name="6079" href="Homotopy.HomotopyGroupoids.html#6064" class="Bound"
+      >y</a
+      ><a name="6080"
+      > </a
+      ><a name="6081" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="6082"
+      > </a
+      ><a name="6083" href="Equivalences.html#4016" class="Function"
+      >iso-is-eq</a
+      ><a name="6092"
+      > </a
+      ><a name="6093" class="Symbol"
+      >_</a
+      ><a name="6094"
+      > </a
+      ><a name="6095" class="Symbol"
+      >(</a
+      ><a name="6096" href="Homotopy.HomotopyGroupoids.html#4972" class="Function"
+      >from</a
+      ><a name="6100"
+      > </a
+      ><a name="6101" href="Homotopy.HomotopyGroupoids.html#6060" class="Bound"
+      >x</a
+      ><a name="6102"
+      > </a
+      ><a name="6103" href="Homotopy.HomotopyGroupoids.html#6064" class="Bound"
+      >y</a
+      ><a name="6104" class="Symbol"
+      >)</a
+      ><a name="6105"
+      > </a
+      ><a name="6106" class="Symbol"
+      >(</a
+      ><a name="6107" href="Homotopy.HomotopyGroupoids.html#5826" class="Function"
+      >to-from</a
+      ><a name="6114"
+      > </a
+      ><a name="6115" href="Homotopy.HomotopyGroupoids.html#6060" class="Bound"
+      >x</a
+      ><a name="6116"
+      > </a
+      ><a name="6117" href="Homotopy.HomotopyGroupoids.html#6064" class="Bound"
+      >y</a
+      ><a name="6118" class="Symbol"
+      >)</a
+      ><a name="6119"
+      > </a
+      ><a name="6120" class="Symbol"
+      >(</a
+      ><a name="6121" href="Homotopy.HomotopyGroupoids.html#5081" class="Function"
+      >from-to</a
+      ><a name="6128"
+      > </a
+      ><a name="6129" href="Homotopy.HomotopyGroupoids.html#6060" class="Bound"
+      >x</a
+      ><a name="6130"
+      > </a
+      ><a name="6131" href="Homotopy.HomotopyGroupoids.html#6064" class="Bound"
+      >y</a
+      ><a name="6132" class="Symbol"
+      >))</a
+      ><a name="6134"
+      >
+
+  </a
+      ><a name="6138" class="Keyword"
+      >module</a
+      ><a name="6144"
+      > </a
+      ><a name="6145" href="Homotopy.HomotopyGroupoids.html#6145" class="Module"
+      >_</a
+      ><a name="6146"
+      > </a
+      ><a name="6147" class="Keyword"
+      >where</a
+      ><a name="6152"
+      >
+    </a
+      ><a name="6157" class="Keyword"
+      >open</a
+      ><a name="6161"
+      > </a
+      ><a name="6162" class="Keyword"
+      >import</a
+      ><a name="6168"
+      > </a
+      ><a name="6169" href="Homotopy.Connected.html#1" class="Module"
+      >Homotopy.Connected</a
+      ><a name="6187"
+      >
+
+    </a
+      ><a name="6193" href="Homotopy.HomotopyGroupoids.html#6193" class="Function"
+      >connected-has-all-&#964;-paths</a
+      ><a name="6218"
+      > </a
+      ><a name="6219" class="Symbol"
+      >:</a
+      ><a name="6220"
+      > </a
+      ><a name="6221" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="6233"
+      > </a
+      ><a name="6234" class="Symbol"
+      >(</a
+      ><a name="6235" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="6236"
+      > </a
+      ><a name="6237" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="6238" class="Symbol"
+      >)</a
+      ><a name="6239"
+      > </a
+      ><a name="6240" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="6241"
+      > </a
+      ><a name="6242" class="Symbol"
+      >&#8594;</a
+      ><a name="6243"
+      > </a
+      ><a name="6244" class="Symbol"
+      >(</a
+      ><a name="6245" href="Homotopy.HomotopyGroupoids.html#6245" class="Bound"
+      >p</a
+      ><a name="6246"
+      > </a
+      ><a name="6247" href="Homotopy.HomotopyGroupoids.html#6247" class="Bound"
+      >q</a
+      ><a name="6248"
+      > </a
+      ><a name="6249" class="Symbol"
+      >:</a
+      ><a name="6250"
+      > </a
+      ><a name="6251" href="Homotopy.HomotopyGroupoids.html#3409" class="Bound"
+      >A</a
+      ><a name="6252" class="Symbol"
+      >)</a
+      ><a name="6253"
+      > </a
+      ><a name="6254" class="Symbol"
+      >&#8594;</a
+      ><a name="6255"
+      > </a
+      ><a name="6256" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="6257"
+      > </a
+      ><a name="6258" href="Homotopy.HomotopyGroupoids.html#3399" class="Bound"
+      >n</a
+      ><a name="6259"
+      > </a
+      ><a name="6260" class="Symbol"
+      >(</a
+      ><a name="6261" href="Homotopy.HomotopyGroupoids.html#6245" class="Bound"
+      >p</a
+      ><a name="6262"
+      > </a
+      ><a name="6263" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="6264"
+      > </a
+      ><a name="6265" href="Homotopy.HomotopyGroupoids.html#6247" class="Bound"
+      >q</a
+      ><a name="6266" class="Symbol"
+      >)</a
+      ><a name="6267"
+      >
+    </a
+      ><a name="6272" href="Homotopy.HomotopyGroupoids.html#6193" class="Function"
+      >connected-has-all-&#964;-paths</a
+      ><a name="6297"
+      > </a
+      ><a name="6298" class="Symbol"
+      >(_</a
+      ><a name="6300"
+      > </a
+      ><a name="6301" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="6302"
+      > </a
+      ><a name="6303" href="Homotopy.HomotopyGroupoids.html#6303" class="Bound"
+      >path</a
+      ><a name="6307" class="Symbol"
+      >)</a
+      ><a name="6308"
+      > </a
+      ><a name="6309" href="Homotopy.HomotopyGroupoids.html#6309" class="Bound"
+      >p</a
+      ><a name="6310"
+      > </a
+      ><a name="6311" href="Homotopy.HomotopyGroupoids.html#6311" class="Bound"
+      >q</a
+      ><a name="6312"
+      > </a
+      ><a name="6313" class="Symbol"
+      >=</a
+      ><a name="6314"
+      > </a
+      ><a name="6315" href="Equivalences.html#883" class="Function"
+      >inverse</a
+      ><a name="6322"
+      > </a
+      ><a name="6323" href="Homotopy.HomotopyGroupoids.html#5957" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="6344"
+      >
+      </a
+      ><a name="6351" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="6352"
+      > </a
+      ><a name="6353" href="Homotopy.HomotopyGroupoids.html#6303" class="Bound"
+      >path</a
+      ><a name="6357"
+      > </a
+      ><a name="6358" class="Symbol"
+      >(</a
+      ><a name="6359" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6363"
+      > </a
+      ><a name="6364" href="Homotopy.HomotopyGroupoids.html#6309" class="Bound"
+      >p</a
+      ><a name="6365" class="Symbol"
+      >)</a
+      ><a name="6366"
+      > </a
+      ><a name="6367" href="Paths.html#439" class="Function Operator"
+      >&#8728;</a
+      ><a name="6368"
+      > </a
+      ><a name="6369" href="Paths.html#517" class="Function"
+      >!</a
+      ><a name="6370"
+      > </a
+      ><a name="6371" class="Symbol"
+      >(</a
+      ><a name="6372" href="Homotopy.HomotopyGroupoids.html#6303" class="Bound"
+      >path</a
+      ><a name="6376"
+      > </a
+      ><a name="6377" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="6378"
+      > </a
+      ><a name="6379" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6383"
+      > </a
+      ><a name="6384" href="Homotopy.HomotopyGroupoids.html#6311" class="Bound"
+      >q</a
+      ><a name="6385" class="Symbol"
+      >)</a
+      ><a name="6386"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>
