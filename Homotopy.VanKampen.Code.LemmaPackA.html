@@ -1,0 +1,3741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Homotopy.VanKampen.Code.LemmaPackA</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Keyword"
+      >open</a
+      ><a name="34"
+      > </a
+      ><a name="35" class="Keyword"
+      >import</a
+      ><a name="41"
+      > </a
+      ><a name="42" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="46"
+      >
+</a
+      ><a name="47" class="Keyword"
+      >open</a
+      ><a name="51"
+      > </a
+      ><a name="52" class="Keyword"
+      >import</a
+      ><a name="58"
+      > </a
+      ><a name="59" href="Homotopy.Pushout.html#1" class="Module"
+      >Homotopy.Pushout</a
+      ><a name="75"
+      >
+</a
+      ><a name="76" class="Keyword"
+      >open</a
+      ><a name="80"
+      > </a
+      ><a name="81" class="Keyword"
+      >import</a
+      ><a name="87"
+      > </a
+      ><a name="88" href="Homotopy.VanKampen.Guide.html#1" class="Module"
+      >Homotopy.VanKampen.Guide</a
+      ><a name="112"
+      >
+
+</a
+      ><a name="114" class="Keyword"
+      >module</a
+      ><a name="120"
+      > </a
+      ><a name="121" href="Homotopy.VanKampen.Code.LemmaPackA.html#1" class="Module"
+      >Homotopy.VanKampen.Code.LemmaPackA</a
+      ><a name="155"
+      > </a
+      ><a name="156" class="Symbol"
+      >{</a
+      ><a name="157" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="158" class="Symbol"
+      >}</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >(</a
+      ><a name="161" href="Homotopy.VanKampen.Code.LemmaPackA.html#161" class="Bound"
+      >d</a
+      ><a name="162"
+      > </a
+      ><a name="163" class="Symbol"
+      >:</a
+      ><a name="164"
+      > </a
+      ><a name="165" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="177"
+      > </a
+      ><a name="178" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="179" class="Symbol"
+      >)</a
+      ><a name="180"
+      >
+  </a
+      ><a name="183" class="Symbol"
+      >(</a
+      ><a name="184" href="Homotopy.VanKampen.Code.LemmaPackA.html#184" class="Bound"
+      >l</a
+      ><a name="185"
+      > </a
+      ><a name="186" class="Symbol"
+      >:</a
+      ><a name="187"
+      > </a
+      ><a name="188" href="Homotopy.VanKampen.Guide.html#158" class="Record"
+      >legend</a
+      ><a name="194"
+      > </a
+      ><a name="195" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="196"
+      > </a
+      ><a name="197" class="Symbol"
+      >(</a
+      ><a name="198" href="Homotopy.PushoutDef.html#202" class="Function"
+      >pushout-diag.C</a
+      ><a name="212"
+      > </a
+      ><a name="213" href="Homotopy.VanKampen.Code.LemmaPackA.html#161" class="Bound"
+      >d</a
+      ><a name="214" class="Symbol"
+      >))</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="Keyword"
+      >where</a
+      ><a name="222"
+      >
+
+  </a
+      ><a name="226" class="Keyword"
+      >open</a
+      ><a name="230"
+      > </a
+      ><a name="231" class="Keyword"
+      >import</a
+      ><a name="237"
+      > </a
+      ><a name="238" href="Homotopy.Truncation.html#1" class="Module"
+      >Homotopy.Truncation</a
+      ><a name="257"
+      >
+  </a
+      ><a name="260" class="Keyword"
+      >open</a
+      ><a name="264"
+      > </a
+      ><a name="265" class="Keyword"
+      >import</a
+      ><a name="271"
+      > </a
+      ><a name="272" href="Homotopy.PathTruncation.html#1" class="Module"
+      >Homotopy.PathTruncation</a
+      ><a name="295"
+      >
+
+  </a
+      ><a name="299" class="Keyword"
+      >private</a
+      ><a name="306"
+      >
+    </a
+      ><a name="311" class="Keyword"
+      >module</a
+      ><a name="317"
+      > </a
+      ><a name="318" href="Homotopy.VanKampen.Code.LemmaPackA.html#318" class="Module"
+      >PackA1</a
+      ><a name="324"
+      > </a
+      ><a name="325" class="Symbol"
+      >(</a
+      ><a name="326" href="Homotopy.VanKampen.Code.LemmaPackA.html#326" class="Bound"
+      >d</a
+      ><a name="327"
+      > </a
+      ><a name="328" class="Symbol"
+      >:</a
+      ><a name="329"
+      > </a
+      ><a name="330" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="342"
+      > </a
+      ><a name="343" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="344" class="Symbol"
+      >)</a
+      ><a name="345"
+      >
+      </a
+      ><a name="352" class="Symbol"
+      >(</a
+      ><a name="353" href="Homotopy.VanKampen.Code.LemmaPackA.html#353" class="Bound"
+      >l</a
+      ><a name="354"
+      > </a
+      ><a name="355" class="Symbol"
+      >:</a
+      ><a name="356"
+      > </a
+      ><a name="357" href="Homotopy.VanKampen.Guide.html#158" class="Record"
+      >legend</a
+      ><a name="363"
+      > </a
+      ><a name="364" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="365"
+      > </a
+      ><a name="366" class="Symbol"
+      >(</a
+      ><a name="367" href="Homotopy.PushoutDef.html#202" class="Function"
+      >pushout-diag.C</a
+      ><a name="381"
+      > </a
+      ><a name="382" href="Homotopy.VanKampen.Code.LemmaPackA.html#326" class="Bound"
+      >d</a
+      ><a name="383" class="Symbol"
+      >))</a
+      ><a name="385"
+      > </a
+      ><a name="386" class="Symbol"
+      >(</a
+      ><a name="387" href="Homotopy.VanKampen.Code.LemmaPackA.html#387" class="Bound"
+      >n</a
+      ><a name="388"
+      > </a
+      ><a name="389" class="Symbol"
+      >:</a
+      ><a name="390"
+      > </a
+      ><a name="391" href="Homotopy.VanKampen.Guide.html#237" class="Function"
+      >legend.name</a
+      ><a name="402"
+      > </a
+      ><a name="403" href="Homotopy.VanKampen.Code.LemmaPackA.html#353" class="Bound"
+      >l</a
+      ><a name="404" class="Symbol"
+      >)</a
+      ><a name="405"
+      > </a
+      ><a name="406" class="Keyword"
+      >where</a
+      ><a name="411"
+      >
+      </a
+      ><a name="418" class="Keyword"
+      >open</a
+      ><a name="422"
+      > </a
+      ><a name="423" href="Homotopy.PushoutDef.html#89" class="Module"
+      >pushout-diag</a
+      ><a name="435"
+      > </a
+      ><a name="436" href="Homotopy.VanKampen.Code.LemmaPackA.html#326" class="Bound"
+      >d</a
+      ><a name="437"
+      >
+      </a
+      ><a name="444" class="Keyword"
+      >open</a
+      ><a name="448"
+      > </a
+      ><a name="449" href="Homotopy.VanKampen.Guide.html#158" class="Module"
+      >legend</a
+      ><a name="455"
+      > </a
+      ><a name="456" href="Homotopy.VanKampen.Code.LemmaPackA.html#353" class="Bound"
+      >l</a
+      ><a name="457"
+      >
+
+      </a
+      ><a name="465" class="Comment"
+      >-- Code from A.</a
+      ><a name="480"
+      >
+      </a
+      ><a name="487" class="Keyword"
+      >open</a
+      ><a name="491"
+      > </a
+      ><a name="492" class="Keyword"
+      >import</a
+      ><a name="498"
+      > </a
+      ><a name="499" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="527"
+      > </a
+      ><a name="528" href="Homotopy.VanKampen.Code.LemmaPackA.html#326" class="Bound"
+      >d</a
+      ><a name="529"
+      > </a
+      ><a name="530" href="Homotopy.VanKampen.Code.LemmaPackA.html#353" class="Bound"
+      >l</a
+      ><a name="531"
+      > </a
+      ><a name="532" class="Symbol"
+      >(</a
+      ><a name="533" href="Homotopy.PushoutDef.html#216" class="Function"
+      >f</a
+      ><a name="534"
+      > </a
+      ><a name="535" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="536"
+      > </a
+      ><a name="537" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="540"
+      > </a
+      ><a name="541" href="Homotopy.VanKampen.Code.LemmaPackA.html#387" class="Bound"
+      >n</a
+      ><a name="542" class="Symbol"
+      >)</a
+      ><a name="543"
+      >
+      </a
+      ><a name="550" class="Comment"
+      >-- Code from B. F for `flipped'.</a
+      ><a name="582"
+      >
+      </a
+      ><a name="589" class="Keyword"
+      >import</a
+      ><a name="595"
+      > </a
+      ><a name="596" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="624"
+      > </a
+      ><a name="625" class="Symbol"
+      >(</a
+      ><a name="626" href="Homotopy.Pushout.html#119" class="Function"
+      >pushout-diag-flip</a
+      ><a name="643"
+      > </a
+      ><a name="644" href="Homotopy.VanKampen.Code.LemmaPackA.html#326" class="Bound"
+      >d</a
+      ><a name="645" class="Symbol"
+      >)</a
+      ><a name="646"
+      > </a
+      ><a name="647" href="Homotopy.VanKampen.Code.LemmaPackA.html#353" class="Bound"
+      >l</a
+      ><a name="648"
+      > </a
+      ><a name="649" class="Symbol"
+      >(</a
+      ><a name="650" href="Homotopy.PushoutDef.html#230" class="Function"
+      >g</a
+      ><a name="651"
+      > </a
+      ><a name="652" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="653"
+      > </a
+      ><a name="654" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="657"
+      > </a
+      ><a name="658" href="Homotopy.VanKampen.Code.LemmaPackA.html#387" class="Bound"
+      >n</a
+      ><a name="659" class="Symbol"
+      >)</a
+      ><a name="660"
+      > </a
+      ><a name="661" class="Symbol"
+      >as</a
+      ><a name="663"
+      > </a
+      ><a name="664" href="Homotopy.VanKampen.Code.LemmaPackA.html#664" class="Module"
+      >F</a
+      ><a name="665"
+      >
+
+      </a
+      ><a name="673" class="Keyword"
+      >private</a
+      ><a name="680"
+      >
+        </a
+      ><a name="689" href="Homotopy.VanKampen.Code.LemmaPackA.html#689" class="Function"
+      >ap&#8658;bp-split</a
+      ><a name="700"
+      > </a
+      ><a name="701" class="Symbol"
+      >:</a
+      ><a name="702"
+      > </a
+      ><a name="703" class="Symbol"
+      >(&#8704;</a
+      ><a name="705"
+      > </a
+      ><a name="706" class="Symbol"
+      >{</a
+      ><a name="707" href="Homotopy.VanKampen.Code.LemmaPackA.html#707" class="Bound"
+      >a&#8322;</a
+      ><a name="709" class="Symbol"
+      >}</a
+      ><a name="710"
+      > </a
+      ><a name="711" class="Symbol"
+      >&#8594;</a
+      ><a name="712"
+      > </a
+      ><a name="713" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >code-a</a
+      ><a name="719"
+      > </a
+      ><a name="720" href="Homotopy.VanKampen.Code.LemmaPackA.html#707" class="Bound"
+      >a&#8322;</a
+      ><a name="722"
+      > </a
+      ><a name="723" class="Symbol"
+      >&#8594;</a
+      ><a name="724"
+      > </a
+      ><a name="725" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >F.code-b</a
+      ><a name="733"
+      > </a
+      ><a name="734" href="Homotopy.VanKampen.Code.LemmaPackA.html#707" class="Bound"
+      >a&#8322;</a
+      ><a name="736" class="Symbol"
+      >)</a
+      ><a name="737"
+      >
+                    </a
+      ><a name="758" href="Types.html#1008" class="Function Operator"
+      >&#215;</a
+      ><a name="759"
+      > </a
+      ><a name="760" class="Symbol"
+      >(&#8704;</a
+      ><a name="762"
+      > </a
+      ><a name="763" class="Symbol"
+      >{</a
+      ><a name="764" href="Homotopy.VanKampen.Code.LemmaPackA.html#764" class="Bound"
+      >b&#8322;</a
+      ><a name="766" class="Symbol"
+      >}</a
+      ><a name="767"
+      > </a
+      ><a name="768" class="Symbol"
+      >&#8594;</a
+      ><a name="769"
+      > </a
+      ><a name="770" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >code-b</a
+      ><a name="776"
+      > </a
+      ><a name="777" href="Homotopy.VanKampen.Code.LemmaPackA.html#764" class="Bound"
+      >b&#8322;</a
+      ><a name="779"
+      > </a
+      ><a name="780" class="Symbol"
+      >&#8594;</a
+      ><a name="781"
+      > </a
+      ><a name="782" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >F.code-a</a
+      ><a name="790"
+      > </a
+      ><a name="791" href="Homotopy.VanKampen.Code.LemmaPackA.html#764" class="Bound"
+      >b&#8322;</a
+      ><a name="793" class="Symbol"
+      >)</a
+      ><a name="794"
+      >
+        </a
+      ><a name="803" href="Homotopy.VanKampen.Code.LemmaPackA.html#689" class="Function"
+      >ap&#8658;bp-split</a
+      ><a name="814"
+      > </a
+      ><a name="815" class="Symbol"
+      >=</a
+      ><a name="816"
+      > </a
+      ><a name="817" href="Homotopy.VanKampen.SplitCode.html#3329" class="Function"
+      >code-rec-nondep</a
+      ><a name="832"
+      >
+          </a
+      ><a name="843" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >F.code-b</a
+      ><a name="851"
+      > </a
+      ><a name="852" class="Symbol"
+      >&#10627;</a
+      ><a name="853"
+      > </a
+      ><a name="854" class="Symbol"
+      >&#955;</a
+      ><a name="855"
+      > </a
+      ><a name="856" href="Homotopy.VanKampen.Code.LemmaPackA.html#856" class="Bound"
+      >_</a
+      ><a name="857"
+      > </a
+      ><a name="858" class="Symbol"
+      >&#8594;</a
+      ><a name="859"
+      > </a
+      ><a name="860" href="Homotopy.VanKampen.SplitCode.html#873" class="Function"
+      >F.code-b-is-set</a
+      ><a name="875"
+      > </a
+      ><a name="876" class="Symbol"
+      >_</a
+      ><a name="877"
+      > </a
+      ><a name="878" class="Symbol"
+      >&#10628;</a
+      ><a name="879"
+      >
+          </a
+      ><a name="890" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >F.code-a</a
+      ><a name="898"
+      > </a
+      ><a name="899" class="Symbol"
+      >&#10627;</a
+      ><a name="900"
+      > </a
+      ><a name="901" class="Symbol"
+      >&#955;</a
+      ><a name="902"
+      > </a
+      ><a name="903" href="Homotopy.VanKampen.Code.LemmaPackA.html#903" class="Bound"
+      >_</a
+      ><a name="904"
+      > </a
+      ><a name="905" class="Symbol"
+      >&#8594;</a
+      ><a name="906"
+      > </a
+      ><a name="907" href="Homotopy.VanKampen.SplitCode.html#827" class="Function"
+      >F.code-a-is-set</a
+      ><a name="922"
+      > </a
+      ><a name="923" class="Symbol"
+      >_</a
+      ><a name="924"
+      > </a
+      ><a name="925" class="Symbol"
+      >&#10628;</a
+      ><a name="926"
+      >
+          </a
+      ><a name="937" class="Symbol"
+      >(&#955;</a
+      ><a name="939"
+      > </a
+      ><a name="940" href="Homotopy.VanKampen.Code.LemmaPackA.html#940" class="Bound"
+      >p</a
+      ><a name="941"
+      > </a
+      ><a name="942" class="Symbol"
+      >&#8594;</a
+      ><a name="943"
+      > </a
+      ><a name="944" href="Homotopy.VanKampen.SplitCode.html#918" class="Function"
+      >F.&#10215;a</a
+      ><a name="948"
+      > </a
+      ><a name="949" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="954"
+      > </a
+      ><a name="955" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >F.a&#10214;</a
+      ><a name="959"
+      > </a
+      ><a name="960" href="Homotopy.VanKampen.Code.LemmaPackA.html#387" class="Bound"
+      >n</a
+      ><a name="961"
+      > </a
+      ><a name="962" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >&#10215;b</a
+      ><a name="964"
+      > </a
+      ><a name="965" href="Homotopy.VanKampen.Code.LemmaPackA.html#940" class="Bound"
+      >p</a
+      ><a name="966" class="Symbol"
+      >)</a
+      ><a name="967"
+      >
+          </a
+      ><a name="978" class="Symbol"
+      >(&#955;</a
+      ><a name="980"
+      > </a
+      ><a name="981" href="Homotopy.VanKampen.Code.LemmaPackA.html#981" class="Bound"
+      >n&#8321;</a
+      ><a name="983"
+      > </a
+      ><a name="984" href="Homotopy.VanKampen.Code.LemmaPackA.html#984" class="Bound"
+      >pco</a
+      ><a name="987"
+      > </a
+      ><a name="988" href="Homotopy.VanKampen.Code.LemmaPackA.html#988" class="Bound"
+      >p</a
+      ><a name="989"
+      > </a
+      ><a name="990" class="Symbol"
+      >&#8594;</a
+      ><a name="991"
+      > </a
+      ><a name="992" href="Homotopy.VanKampen.Code.LemmaPackA.html#984" class="Bound"
+      >pco</a
+      ><a name="995"
+      > </a
+      ><a name="996" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >F.a&#10214;</a
+      ><a name="1000"
+      > </a
+      ><a name="1001" href="Homotopy.VanKampen.Code.LemmaPackA.html#981" class="Bound"
+      >n&#8321;</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >&#10215;b</a
+      ><a name="1006"
+      > </a
+      ><a name="1007" href="Homotopy.VanKampen.Code.LemmaPackA.html#988" class="Bound"
+      >p</a
+      ><a name="1008" class="Symbol"
+      >)</a
+      ><a name="1009"
+      >
+          </a
+      ><a name="1020" class="Symbol"
+      >(&#955;</a
+      ><a name="1022"
+      > </a
+      ><a name="1023" href="Homotopy.VanKampen.Code.LemmaPackA.html#1023" class="Bound"
+      >n&#8321;</a
+      ><a name="1025"
+      > </a
+      ><a name="1026" href="Homotopy.VanKampen.Code.LemmaPackA.html#1026" class="Bound"
+      >pco</a
+      ><a name="1029"
+      > </a
+      ><a name="1030" href="Homotopy.VanKampen.Code.LemmaPackA.html#1030" class="Bound"
+      >p</a
+      ><a name="1031"
+      > </a
+      ><a name="1032" class="Symbol"
+      >&#8594;</a
+      ><a name="1033"
+      > </a
+      ><a name="1034" href="Homotopy.VanKampen.Code.LemmaPackA.html#1026" class="Bound"
+      >pco</a
+      ><a name="1037"
+      > </a
+      ><a name="1038" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >F.b&#10214;</a
+      ><a name="1042"
+      > </a
+      ><a name="1043" href="Homotopy.VanKampen.Code.LemmaPackA.html#1023" class="Bound"
+      >n&#8321;</a
+      ><a name="1045"
+      > </a
+      ><a name="1046" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >&#10215;a</a
+      ><a name="1048"
+      > </a
+      ><a name="1049" href="Homotopy.VanKampen.Code.LemmaPackA.html#1030" class="Bound"
+      >p</a
+      ><a name="1050" class="Symbol"
+      >)</a
+      ><a name="1051"
+      >
+          </a
+      ><a name="1062" class="Symbol"
+      >(&#955;</a
+      ><a name="1064"
+      > </a
+      ><a name="1065" href="Homotopy.VanKampen.Code.LemmaPackA.html#1065" class="Bound"
+      >n&#8321;</a
+      ><a name="1067"
+      > </a
+      ><a name="1068" href="Homotopy.VanKampen.Code.LemmaPackA.html#1068" class="Bound"
+      >pco</a
+      ><a name="1071"
+      > </a
+      ><a name="1072" class="Symbol"
+      >&#8594;</a
+      ><a name="1073"
+      > </a
+      ><a name="1074" href="Homotopy.VanKampen.SplitCode.html#1404" class="Function"
+      >F.code-b-refl-refl</a
+      ><a name="1092"
+      > </a
+      ><a name="1093" href="Homotopy.VanKampen.Code.LemmaPackA.html#1065" class="Bound"
+      >n&#8321;</a
+      ><a name="1095"
+      > </a
+      ><a name="1096" href="Homotopy.VanKampen.Code.LemmaPackA.html#1068" class="Bound"
+      >pco</a
+      ><a name="1099" class="Symbol"
+      >)</a
+      ><a name="1100"
+      >
+          </a
+      ><a name="1111" class="Symbol"
+      >(&#955;</a
+      ><a name="1113"
+      > </a
+      ><a name="1114" href="Homotopy.VanKampen.Code.LemmaPackA.html#1114" class="Bound"
+      >n&#8321;</a
+      ><a name="1116"
+      > </a
+      ><a name="1117" href="Homotopy.VanKampen.Code.LemmaPackA.html#1117" class="Bound"
+      >pco</a
+      ><a name="1120"
+      > </a
+      ><a name="1121" class="Symbol"
+      >&#8594;</a
+      ><a name="1122"
+      > </a
+      ><a name="1123" href="Homotopy.VanKampen.SplitCode.html#1303" class="Function"
+      >F.code-a-refl-refl</a
+      ><a name="1141"
+      > </a
+      ><a name="1142" href="Homotopy.VanKampen.Code.LemmaPackA.html#1114" class="Bound"
+      >n&#8321;</a
+      ><a name="1144"
+      > </a
+      ><a name="1145" href="Homotopy.VanKampen.Code.LemmaPackA.html#1117" class="Bound"
+      >pco</a
+      ><a name="1148" class="Symbol"
+      >)</a
+      ><a name="1149"
+      >
+          </a
+      ><a name="1160" class="Symbol"
+      >(&#955;</a
+      ><a name="1162"
+      > </a
+      ><a name="1163" href="Homotopy.VanKampen.Code.LemmaPackA.html#1163" class="Bound"
+      >n&#8321;</a
+      ><a name="1165"
+      > </a
+      ><a name="1166" href="Homotopy.VanKampen.Code.LemmaPackA.html#1166" class="Bound"
+      >pco</a
+      ><a name="1169"
+      > </a
+      ><a name="1170" href="Homotopy.VanKampen.Code.LemmaPackA.html#1170" class="Bound"
+      >n&#8322;</a
+      ><a name="1172"
+      > </a
+      ><a name="1173" href="Homotopy.VanKampen.Code.LemmaPackA.html#1173" class="Bound"
+      >r</a
+      ><a name="1174"
+      > </a
+      ><a name="1175" class="Symbol"
+      >&#8594;</a
+      ><a name="1176"
+      > </a
+      ><a name="1177" href="Homotopy.VanKampen.SplitCode.html#7740" class="Function"
+      >F.code-ba-swap</a
+      ><a name="1191"
+      > </a
+      ><a name="1192" href="Homotopy.VanKampen.Code.LemmaPackA.html#1163" class="Bound"
+      >n&#8321;</a
+      ><a name="1194"
+      > </a
+      ><a name="1195" href="Homotopy.VanKampen.Code.LemmaPackA.html#1166" class="Bound"
+      >pco</a
+      ><a name="1198"
+      > </a
+      ><a name="1199" href="Homotopy.VanKampen.Code.LemmaPackA.html#1170" class="Bound"
+      >n&#8322;</a
+      ><a name="1201"
+      > </a
+      ><a name="1202" href="Homotopy.VanKampen.Code.LemmaPackA.html#1173" class="Bound"
+      >r</a
+      ><a name="1203" class="Symbol"
+      >)</a
+      ><a name="1204"
+      >
+
+      </a
+      ><a name="1212" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="1217"
+      > </a
+      ><a name="1218" class="Symbol"
+      >:</a
+      ><a name="1219"
+      > </a
+      ><a name="1220" class="Symbol"
+      >&#8704;</a
+      ><a name="1221"
+      > </a
+      ><a name="1222" class="Symbol"
+      >{</a
+      ><a name="1223" href="Homotopy.VanKampen.Code.LemmaPackA.html#1223" class="Bound"
+      >a&#8322;</a
+      ><a name="1225" class="Symbol"
+      >}</a
+      ><a name="1226"
+      > </a
+      ><a name="1227" class="Symbol"
+      >&#8594;</a
+      ><a name="1228"
+      > </a
+      ><a name="1229" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >code-a</a
+      ><a name="1235"
+      > </a
+      ><a name="1236" href="Homotopy.VanKampen.Code.LemmaPackA.html#1223" class="Bound"
+      >a&#8322;</a
+      ><a name="1238"
+      > </a
+      ><a name="1239" class="Symbol"
+      >&#8594;</a
+      ><a name="1240"
+      > </a
+      ><a name="1241" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >F.code-b</a
+      ><a name="1249"
+      > </a
+      ><a name="1250" href="Homotopy.VanKampen.Code.LemmaPackA.html#1223" class="Bound"
+      >a&#8322;</a
+      ><a name="1252"
+      >
+      </a
+      ><a name="1259" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="1264"
+      > </a
+      ><a name="1265" class="Symbol"
+      >=</a
+      ><a name="1266"
+      > </a
+      ><a name="1267" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="1269"
+      > </a
+      ><a name="1270" href="Homotopy.VanKampen.Code.LemmaPackA.html#689" class="Function"
+      >ap&#8658;bp-split</a
+      ><a name="1281"
+      >
+      </a
+      ><a name="1288" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="1293"
+      > </a
+      ><a name="1294" class="Symbol"
+      >:</a
+      ><a name="1295"
+      > </a
+      ><a name="1296" class="Symbol"
+      >&#8704;</a
+      ><a name="1297"
+      > </a
+      ><a name="1298" class="Symbol"
+      >{</a
+      ><a name="1299" href="Homotopy.VanKampen.Code.LemmaPackA.html#1299" class="Bound"
+      >b&#8322;</a
+      ><a name="1301" class="Symbol"
+      >}</a
+      ><a name="1302"
+      > </a
+      ><a name="1303" class="Symbol"
+      >&#8594;</a
+      ><a name="1304"
+      > </a
+      ><a name="1305" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >code-b</a
+      ><a name="1311"
+      > </a
+      ><a name="1312" href="Homotopy.VanKampen.Code.LemmaPackA.html#1299" class="Bound"
+      >b&#8322;</a
+      ><a name="1314"
+      > </a
+      ><a name="1315" class="Symbol"
+      >&#8594;</a
+      ><a name="1316"
+      > </a
+      ><a name="1317" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >F.code-a</a
+      ><a name="1325"
+      > </a
+      ><a name="1326" href="Homotopy.VanKampen.Code.LemmaPackA.html#1299" class="Bound"
+      >b&#8322;</a
+      ><a name="1328"
+      >
+      </a
+      ><a name="1335" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="1340"
+      > </a
+      ><a name="1341" class="Symbol"
+      >=</a
+      ><a name="1342"
+      > </a
+      ><a name="1343" href="Types.html#833" class="Function"
+      >&#960;&#8322;</a
+      ><a name="1345"
+      > </a
+      ><a name="1346" href="Homotopy.VanKampen.Code.LemmaPackA.html#689" class="Function"
+      >ap&#8658;bp-split</a
+      ><a name="1357"
+      >
+
+  </a
+      ><a name="1361" class="Keyword"
+      >private</a
+      ><a name="1368"
+      >
+    </a
+      ><a name="1373" class="Keyword"
+      >module</a
+      ><a name="1379"
+      > </a
+      ><a name="1380" href="Homotopy.VanKampen.Code.LemmaPackA.html#1380" class="Module"
+      >PackA2</a
+      ><a name="1386"
+      > </a
+      ><a name="1387" class="Symbol"
+      >(</a
+      ><a name="1388" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1389"
+      > </a
+      ><a name="1390" class="Symbol"
+      >:</a
+      ><a name="1391"
+      > </a
+      ><a name="1392" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="1404"
+      > </a
+      ><a name="1405" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="1406" class="Symbol"
+      >)</a
+      ><a name="1407"
+      >
+      </a
+      ><a name="1414" class="Symbol"
+      >(</a
+      ><a name="1415" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1416"
+      > </a
+      ><a name="1417" class="Symbol"
+      >:</a
+      ><a name="1418"
+      > </a
+      ><a name="1419" href="Homotopy.VanKampen.Guide.html#158" class="Record"
+      >legend</a
+      ><a name="1425"
+      > </a
+      ><a name="1426" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="1427"
+      > </a
+      ><a name="1428" class="Symbol"
+      >(</a
+      ><a name="1429" href="Homotopy.PushoutDef.html#202" class="Function"
+      >pushout-diag.C</a
+      ><a name="1443"
+      > </a
+      ><a name="1444" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1445" class="Symbol"
+      >))</a
+      ><a name="1447"
+      > </a
+      ><a name="1448" class="Symbol"
+      >(</a
+      ><a name="1449" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="1450"
+      > </a
+      ><a name="1451" class="Symbol"
+      >:</a
+      ><a name="1452"
+      > </a
+      ><a name="1453" href="Homotopy.VanKampen.Guide.html#237" class="Function"
+      >legend.name</a
+      ><a name="1464"
+      > </a
+      ><a name="1465" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1466" class="Symbol"
+      >)</a
+      ><a name="1467"
+      > </a
+      ><a name="1468" class="Keyword"
+      >where</a
+      ><a name="1473"
+      >
+      </a
+      ><a name="1480" class="Keyword"
+      >open</a
+      ><a name="1484"
+      > </a
+      ><a name="1485" href="Homotopy.PushoutDef.html#89" class="Module"
+      >pushout-diag</a
+      ><a name="1497"
+      > </a
+      ><a name="1498" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1499"
+      >
+      </a
+      ><a name="1506" class="Keyword"
+      >open</a
+      ><a name="1510"
+      > </a
+      ><a name="1511" href="Homotopy.VanKampen.Guide.html#158" class="Module"
+      >legend</a
+      ><a name="1517"
+      > </a
+      ><a name="1518" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1519"
+      >
+
+      </a
+      ><a name="1527" class="Comment"
+      >-- Code from A.</a
+      ><a name="1542"
+      >
+      </a
+      ><a name="1549" class="Keyword"
+      >open</a
+      ><a name="1553"
+      > </a
+      ><a name="1554" class="Keyword"
+      >import</a
+      ><a name="1560"
+      > </a
+      ><a name="1561" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="1589"
+      > </a
+      ><a name="1590" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1591"
+      > </a
+      ><a name="1592" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1593"
+      > </a
+      ><a name="1594" class="Symbol"
+      >(</a
+      ><a name="1595" href="Homotopy.PushoutDef.html#216" class="Function"
+      >f</a
+      ><a name="1596"
+      > </a
+      ><a name="1597" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1598"
+      > </a
+      ><a name="1599" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="1602"
+      > </a
+      ><a name="1603" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="1604" class="Symbol"
+      >)</a
+      ><a name="1605"
+      >
+      </a
+      ><a name="1612" class="Keyword"
+      >open</a
+      ><a name="1616"
+      > </a
+      ><a name="1617" href="Homotopy.VanKampen.Code.LemmaPackA.html#318" class="Module"
+      >PackA1</a
+      ><a name="1623"
+      > </a
+      ><a name="1624" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1625"
+      > </a
+      ><a name="1626" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1627"
+      > </a
+      ><a name="1628" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="1629"
+      > </a
+      ><a name="1630" class="Keyword"
+      >public</a
+      ><a name="1636"
+      >
+      </a
+      ><a name="1643" class="Comment"
+      >-- Code from B. F for `flipped'.</a
+      ><a name="1675"
+      >
+      </a
+      ><a name="1682" class="Keyword"
+      >private</a
+      ><a name="1689"
+      >
+        </a
+      ><a name="1698" class="Keyword"
+      >module</a
+      ><a name="1704"
+      > </a
+      ><a name="1705" href="Homotopy.VanKampen.Code.LemmaPackA.html#1705" class="Module"
+      >F</a
+      ><a name="1706"
+      > </a
+      ><a name="1707" class="Keyword"
+      >where</a
+      ><a name="1712"
+      >
+          </a
+      ><a name="1723" class="Keyword"
+      >open</a
+      ><a name="1727"
+      > </a
+      ><a name="1728" class="Keyword"
+      >import</a
+      ><a name="1734"
+      > </a
+      ><a name="1735" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="1763"
+      > </a
+      ><a name="1764" class="Symbol"
+      >(</a
+      ><a name="1765" href="Homotopy.Pushout.html#119" class="Function"
+      >pushout-diag-flip</a
+      ><a name="1782"
+      > </a
+      ><a name="1783" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1784" class="Symbol"
+      >)</a
+      ><a name="1785"
+      > </a
+      ><a name="1786" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1787"
+      > </a
+      ><a name="1788" class="Symbol"
+      >(</a
+      ><a name="1789" href="Homotopy.PushoutDef.html#230" class="Function"
+      >g</a
+      ><a name="1790"
+      > </a
+      ><a name="1791" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1792"
+      > </a
+      ><a name="1793" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="1796"
+      > </a
+      ><a name="1797" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="1798" class="Symbol"
+      >)</a
+      ><a name="1799"
+      > </a
+      ><a name="1800" class="Keyword"
+      >public</a
+      ><a name="1806"
+      >
+          </a
+      ><a name="1817" class="Keyword"
+      >open</a
+      ><a name="1821"
+      > </a
+      ><a name="1822" href="Homotopy.VanKampen.Code.LemmaPackA.html#318" class="Module"
+      >PackA1</a
+      ><a name="1828"
+      > </a
+      ><a name="1829" class="Symbol"
+      >(</a
+      ><a name="1830" href="Homotopy.Pushout.html#119" class="Function"
+      >pushout-diag-flip</a
+      ><a name="1847"
+      > </a
+      ><a name="1848" href="Homotopy.VanKampen.Code.LemmaPackA.html#1388" class="Bound"
+      >d</a
+      ><a name="1849" class="Symbol"
+      >)</a
+      ><a name="1850"
+      > </a
+      ><a name="1851" href="Homotopy.VanKampen.Code.LemmaPackA.html#1415" class="Bound"
+      >l</a
+      ><a name="1852"
+      > </a
+      ><a name="1853" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="1854"
+      > </a
+      ><a name="1855" class="Keyword"
+      >public</a
+      ><a name="1861"
+      >
+
+      </a
+      ><a name="1869" class="Keyword"
+      >private</a
+      ><a name="1876"
+      >
+        </a
+      ><a name="1885" href="Homotopy.VanKampen.Code.LemmaPackA.html#1885" class="Function"
+      >aba-glue-code-split</a
+      ><a name="1904"
+      > </a
+      ><a name="1905" class="Symbol"
+      >:</a
+      ><a name="1906"
+      > </a
+      ><a name="1907" class="Symbol"
+      >(&#8704;</a
+      ><a name="1909"
+      > </a
+      ><a name="1910" class="Symbol"
+      >{</a
+      ><a name="1911" href="Homotopy.VanKampen.Code.LemmaPackA.html#1911" class="Bound"
+      >a&#8322;</a
+      ><a name="1913" class="Symbol"
+      >}</a
+      ><a name="1914"
+      > </a
+      ><a name="1915" class="Symbol"
+      >(</a
+      ><a name="1916" href="Homotopy.VanKampen.Code.LemmaPackA.html#1916" class="Bound"
+      >co</a
+      ><a name="1918"
+      > </a
+      ><a name="1919" class="Symbol"
+      >:</a
+      ><a name="1920"
+      > </a
+      ><a name="1921" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >code-a</a
+      ><a name="1927"
+      > </a
+      ><a name="1928" href="Homotopy.VanKampen.Code.LemmaPackA.html#1911" class="Bound"
+      >a&#8322;</a
+      ><a name="1930" class="Symbol"
+      >)</a
+      ><a name="1931"
+      > </a
+      ><a name="1932" class="Symbol"
+      >&#8594;</a
+      ><a name="1933"
+      > </a
+      ><a name="1934" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >F.ab&#8658;bb</a
+      ><a name="1941"
+      > </a
+      ><a name="1942" class="Symbol"
+      >(</a
+      ><a name="1943" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="1948"
+      > </a
+      ><a name="1949" href="Homotopy.VanKampen.Code.LemmaPackA.html#1916" class="Bound"
+      >co</a
+      ><a name="1951" class="Symbol"
+      >)</a
+      ><a name="1952"
+      > </a
+      ><a name="1953" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1954"
+      > </a
+      ><a name="1955" href="Homotopy.VanKampen.Code.LemmaPackA.html#1916" class="Bound"
+      >co</a
+      ><a name="1957" class="Symbol"
+      >)</a
+      ><a name="1958"
+      >
+                            </a
+      ><a name="1987" href="Types.html#1008" class="Function Operator"
+      >&#215;</a
+      ><a name="1988"
+      > </a
+      ><a name="1989" class="Symbol"
+      >(&#8704;</a
+      ><a name="1991"
+      > </a
+      ><a name="1992" class="Symbol"
+      >{</a
+      ><a name="1993" href="Homotopy.VanKampen.Code.LemmaPackA.html#1993" class="Bound"
+      >b&#8322;</a
+      ><a name="1995" class="Symbol"
+      >}</a
+      ><a name="1996"
+      > </a
+      ><a name="1997" class="Symbol"
+      >(</a
+      ><a name="1998" href="Homotopy.VanKampen.Code.LemmaPackA.html#1998" class="Bound"
+      >co</a
+      ><a name="2000"
+      > </a
+      ><a name="2001" class="Symbol"
+      >:</a
+      ><a name="2002"
+      > </a
+      ><a name="2003" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >code-b</a
+      ><a name="2009"
+      > </a
+      ><a name="2010" href="Homotopy.VanKampen.Code.LemmaPackA.html#1993" class="Bound"
+      >b&#8322;</a
+      ><a name="2012" class="Symbol"
+      >)</a
+      ><a name="2013"
+      > </a
+      ><a name="2014" class="Symbol"
+      >&#8594;</a
+      ><a name="2015"
+      > </a
+      ><a name="2016" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >F.aa&#8658;ba</a
+      ><a name="2023"
+      > </a
+      ><a name="2024" class="Symbol"
+      >(</a
+      ><a name="2025" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="2030"
+      > </a
+      ><a name="2031" href="Homotopy.VanKampen.Code.LemmaPackA.html#1998" class="Bound"
+      >co</a
+      ><a name="2033" class="Symbol"
+      >)</a
+      ><a name="2034"
+      > </a
+      ><a name="2035" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2036"
+      > </a
+      ><a name="2037" href="Homotopy.VanKampen.Code.LemmaPackA.html#1998" class="Bound"
+      >co</a
+      ><a name="2039" class="Symbol"
+      >)</a
+      ><a name="2040"
+      >
+      </a
+      ><a name="2047" class="Keyword"
+      >abstract</a
+      ><a name="2055"
+      >
+        </a
+      ><a name="2064" href="Homotopy.VanKampen.Code.LemmaPackA.html#1885" class="Function"
+      >aba-glue-code-split</a
+      ><a name="2083"
+      > </a
+      ><a name="2084" class="Symbol"
+      >=</a
+      ><a name="2085"
+      > </a
+      ><a name="2086" href="Homotopy.VanKampen.SplitCode.html#1773" class="Function"
+      >code-rec</a
+      ><a name="2094"
+      >
+          </a
+      ><a name="2105" class="Symbol"
+      >(&#955;</a
+      ><a name="2107"
+      > </a
+      ><a name="2108" class="Symbol"
+      >{</a
+      ><a name="2109" href="Homotopy.VanKampen.Code.LemmaPackA.html#2109" class="Bound"
+      >a</a
+      ><a name="2110" class="Symbol"
+      >}</a
+      ><a name="2111"
+      > </a
+      ><a name="2112" href="Homotopy.VanKampen.Code.LemmaPackA.html#2112" class="Bound"
+      >co</a
+      ><a name="2114"
+      > </a
+      ><a name="2115" class="Symbol"
+      >&#8594;</a
+      ><a name="2116"
+      > </a
+      ><a name="2117" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >F.ab&#8658;bb</a
+      ><a name="2124"
+      > </a
+      ><a name="2125" class="Symbol"
+      >(</a
+      ><a name="2126" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="2131"
+      > </a
+      ><a name="2132" href="Homotopy.VanKampen.Code.LemmaPackA.html#2112" class="Bound"
+      >co</a
+      ><a name="2134" class="Symbol"
+      >)</a
+      ><a name="2135"
+      > </a
+      ><a name="2136" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2137"
+      > </a
+      ><a name="2138" href="Homotopy.VanKampen.Code.LemmaPackA.html#2112" class="Bound"
+      >co</a
+      ><a name="2140" class="Symbol"
+      >)</a
+      ><a name="2141"
+      >
+          </a
+      ><a name="2152" class="Symbol"
+      >&#10627;</a
+      ><a name="2153"
+      > </a
+      ><a name="2154" class="Symbol"
+      >&#955;</a
+      ><a name="2155"
+      > </a
+      ><a name="2156" href="Homotopy.VanKampen.Code.LemmaPackA.html#2156" class="Bound"
+      >_</a
+      ><a name="2157"
+      > </a
+      ><a name="2158" class="Symbol"
+      >&#8594;</a
+      ><a name="2159"
+      > </a
+      ><a name="2160" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2168"
+      > </a
+      ><a name="2169" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2170"
+      > </a
+      ><a name="2171" href="Homotopy.VanKampen.SplitCode.html#827" class="Function"
+      >code-a-is-set</a
+      ><a name="2184"
+      > </a
+      ><a name="2185" class="Symbol"
+      >_</a
+      ><a name="2186"
+      > </a
+      ><a name="2187" class="Symbol"
+      >&#10628;</a
+      ><a name="2188"
+      >
+          </a
+      ><a name="2199" class="Symbol"
+      >(&#955;</a
+      ><a name="2201"
+      > </a
+      ><a name="2202" class="Symbol"
+      >{</a
+      ><a name="2203" href="Homotopy.VanKampen.Code.LemmaPackA.html#2203" class="Bound"
+      >b</a
+      ><a name="2204" class="Symbol"
+      >}</a
+      ><a name="2205"
+      > </a
+      ><a name="2206" href="Homotopy.VanKampen.Code.LemmaPackA.html#2206" class="Bound"
+      >co</a
+      ><a name="2208"
+      > </a
+      ><a name="2209" class="Symbol"
+      >&#8594;</a
+      ><a name="2210"
+      > </a
+      ><a name="2211" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >F.aa&#8658;ba</a
+      ><a name="2218"
+      > </a
+      ><a name="2219" class="Symbol"
+      >(</a
+      ><a name="2220" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="2225"
+      > </a
+      ><a name="2226" href="Homotopy.VanKampen.Code.LemmaPackA.html#2206" class="Bound"
+      >co</a
+      ><a name="2228" class="Symbol"
+      >)</a
+      ><a name="2229"
+      > </a
+      ><a name="2230" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2231"
+      > </a
+      ><a name="2232" href="Homotopy.VanKampen.Code.LemmaPackA.html#2206" class="Bound"
+      >co</a
+      ><a name="2234" class="Symbol"
+      >)</a
+      ><a name="2235"
+      >
+          </a
+      ><a name="2246" class="Symbol"
+      >&#10627;</a
+      ><a name="2247"
+      > </a
+      ><a name="2248" class="Symbol"
+      >&#955;</a
+      ><a name="2249"
+      > </a
+      ><a name="2250" href="Homotopy.VanKampen.Code.LemmaPackA.html#2250" class="Bound"
+      >_</a
+      ><a name="2251"
+      > </a
+      ><a name="2252" class="Symbol"
+      >&#8594;</a
+      ><a name="2253"
+      > </a
+      ><a name="2254" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2262"
+      > </a
+      ><a name="2263" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2264"
+      > </a
+      ><a name="2265" href="Homotopy.VanKampen.SplitCode.html#873" class="Function"
+      >code-b-is-set</a
+      ><a name="2278"
+      > </a
+      ><a name="2279" class="Symbol"
+      >_</a
+      ><a name="2280"
+      > </a
+      ><a name="2281" class="Symbol"
+      >&#10628;</a
+      ><a name="2282"
+      >
+          </a
+      ><a name="2293" class="Symbol"
+      >(&#955;</a
+      ><a name="2295"
+      > </a
+      ><a name="2296" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2297"
+      > </a
+      ><a name="2298" class="Symbol"
+      >&#8594;</a
+      ><a name="2299"
+      >
+            </a
+      ><a name="2312" href="Homotopy.VanKampen.SplitCode.html#918" class="Function"
+      >&#10215;a</a
+      ><a name="2314"
+      > </a
+      ><a name="2315" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="2320"
+      > </a
+      ><a name="2321" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >a&#10214;</a
+      ><a name="2323"
+      > </a
+      ><a name="2324" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="2325"
+      > </a
+      ><a name="2326" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >&#10215;b</a
+      ><a name="2328"
+      > </a
+      ><a name="2329" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="2334"
+      > </a
+      ><a name="2335" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >b&#10214;</a
+      ><a name="2337"
+      > </a
+      ><a name="2338" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="2339"
+      > </a
+      ><a name="2340" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >&#10215;a</a
+      ><a name="2342"
+      > </a
+      ><a name="2343" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2344"
+      >
+                </a
+      ><a name="2361" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="2363"
+      > </a
+      ><a name="2364" href="Homotopy.VanKampen.SplitCode.html#8492" class="Function"
+      >code-a-merge</a
+      ><a name="2376"
+      > </a
+      ><a name="2377" href="Homotopy.VanKampen.Code.LemmaPackA.html#1449" class="Bound"
+      >n</a
+      ><a name="2378"
+      > </a
+      ><a name="2379" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="2384"
+      > </a
+      ><a name="2385" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2386"
+      > </a
+      ><a name="2387" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="2388"
+      >
+            </a
+      ><a name="2401" href="Homotopy.VanKampen.SplitCode.html#918" class="Function"
+      >&#10215;a</a
+      ><a name="2403"
+      > </a
+      ><a name="2404" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="2409"
+      > </a
+      ><a name="2410" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2412"
+      > </a
+      ><a name="2413" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2414"
+      >
+                </a
+      ><a name="2431" href="Paths.html#759" class="Function"
+      >&#8801;&#10216;</a
+      ><a name="2433"
+      > </a
+      ><a name="2434" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="2436"
+      > </a
+      ><a name="2437" class="Symbol"
+      >(&#955;</a
+      ><a name="2439"
+      > </a
+      ><a name="2440" href="Homotopy.VanKampen.Code.LemmaPackA.html#2440" class="Bound"
+      >x</a
+      ><a name="2441"
+      > </a
+      ><a name="2442" class="Symbol"
+      >&#8594;</a
+      ><a name="2443"
+      > </a
+      ><a name="2444" href="Homotopy.VanKampen.SplitCode.html#918" class="Function"
+      >&#10215;a</a
+      ><a name="2446"
+      > </a
+      ><a name="2447" href="Homotopy.VanKampen.Code.LemmaPackA.html#2440" class="Bound"
+      >x</a
+      ><a name="2448" class="Symbol"
+      >)</a
+      ><a name="2449"
+      > </a
+      ><a name="2450" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2451"
+      > </a
+      ><a name="2452" href="Homotopy.PathTruncation.html#1101" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="2467"
+      > </a
+      ><a name="2468" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2469"
+      > </a
+      ><a name="2470" href="Paths.html#759" class="Function"
+      >&#10217;&#8718;</a
+      ><a name="2472"
+      >
+            </a
+      ><a name="2485" href="Homotopy.VanKampen.SplitCode.html#918" class="Function"
+      >&#10215;a</a
+      ><a name="2487"
+      > </a
+      ><a name="2488" href="Homotopy.VanKampen.Code.LemmaPackA.html#2296" class="Bound"
+      >p</a
+      ><a name="2489"
+      >
+                </a
+      ><a name="2506" href="Paths.html#759" class="Function"
+      >&#8718;</a
+      ><a name="2507" class="Symbol"
+      >)</a
+      ><a name="2508"
+      >
+          </a
+      ><a name="2519" class="Symbol"
+      >(&#955;</a
+      ><a name="2521"
+      > </a
+      ><a name="2522" href="Homotopy.VanKampen.Code.LemmaPackA.html#2522" class="Bound"
+      >n&#8321;</a
+      ><a name="2524"
+      > </a
+      ><a name="2525" class="Symbol"
+      >{</a
+      ><a name="2526" href="Homotopy.VanKampen.Code.LemmaPackA.html#2526" class="Bound"
+      >co</a
+      ><a name="2528" class="Symbol"
+      >}</a
+      ><a name="2529"
+      > </a
+      ><a name="2530" href="Homotopy.VanKampen.Code.LemmaPackA.html#2530" class="Bound"
+      >eq</a
+      ><a name="2532"
+      > </a
+      ><a name="2533" href="Homotopy.VanKampen.Code.LemmaPackA.html#2533" class="Bound"
+      >p</a
+      ><a name="2534"
+      > </a
+      ><a name="2535" class="Symbol"
+      >&#8594;</a
+      ><a name="2536"
+      > </a
+      ><a name="2537" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="2539"
+      > </a
+      ><a name="2540" class="Symbol"
+      >(&#955;</a
+      ><a name="2542"
+      > </a
+      ><a name="2543" href="Homotopy.VanKampen.Code.LemmaPackA.html#2543" class="Bound"
+      >x</a
+      ><a name="2544"
+      > </a
+      ><a name="2545" class="Symbol"
+      >&#8594;</a
+      ><a name="2546"
+      > </a
+      ><a name="2547" href="Homotopy.VanKampen.Code.LemmaPackA.html#2543" class="Bound"
+      >x</a
+      ><a name="2548"
+      > </a
+      ><a name="2549" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >b&#10214;</a
+      ><a name="2551"
+      > </a
+      ><a name="2552" href="Homotopy.VanKampen.Code.LemmaPackA.html#2522" class="Bound"
+      >n&#8321;</a
+      ><a name="2554"
+      > </a
+      ><a name="2555" href="Homotopy.VanKampen.SplitCode.html#1008" class="Function"
+      >&#10215;a</a
+      ><a name="2557"
+      > </a
+      ><a name="2558" href="Homotopy.VanKampen.Code.LemmaPackA.html#2533" class="Bound"
+      >p</a
+      ><a name="2559" class="Symbol"
+      >)</a
+      ><a name="2560"
+      > </a
+      ><a name="2561" href="Homotopy.VanKampen.Code.LemmaPackA.html#2530" class="Bound"
+      >eq</a
+      ><a name="2563" class="Symbol"
+      >)</a
+      ><a name="2564"
+      >
+          </a
+      ><a name="2575" class="Symbol"
+      >(&#955;</a
+      ><a name="2577"
+      > </a
+      ><a name="2578" href="Homotopy.VanKampen.Code.LemmaPackA.html#2578" class="Bound"
+      >n&#8321;</a
+      ><a name="2580"
+      > </a
+      ><a name="2581" class="Symbol"
+      >{</a
+      ><a name="2582" href="Homotopy.VanKampen.Code.LemmaPackA.html#2582" class="Bound"
+      >co</a
+      ><a name="2584" class="Symbol"
+      >}</a
+      ><a name="2585"
+      > </a
+      ><a name="2586" href="Homotopy.VanKampen.Code.LemmaPackA.html#2586" class="Bound"
+      >eq</a
+      ><a name="2588"
+      > </a
+      ><a name="2589" href="Homotopy.VanKampen.Code.LemmaPackA.html#2589" class="Bound"
+      >p</a
+      ><a name="2590"
+      > </a
+      ><a name="2591" class="Symbol"
+      >&#8594;</a
+      ><a name="2592"
+      > </a
+      ><a name="2593" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="2595"
+      > </a
+      ><a name="2596" class="Symbol"
+      >(&#955;</a
+      ><a name="2598"
+      > </a
+      ><a name="2599" href="Homotopy.VanKampen.Code.LemmaPackA.html#2599" class="Bound"
+      >x</a
+      ><a name="2600"
+      > </a
+      ><a name="2601" class="Symbol"
+      >&#8594;</a
+      ><a name="2602"
+      > </a
+      ><a name="2603" href="Homotopy.VanKampen.Code.LemmaPackA.html#2599" class="Bound"
+      >x</a
+      ><a name="2604"
+      > </a
+      ><a name="2605" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >a&#10214;</a
+      ><a name="2607"
+      > </a
+      ><a name="2608" href="Homotopy.VanKampen.Code.LemmaPackA.html#2578" class="Bound"
+      >n&#8321;</a
+      ><a name="2610"
+      > </a
+      ><a name="2611" href="Homotopy.VanKampen.SplitCode.html#1144" class="Function"
+      >&#10215;b</a
+      ><a name="2613"
+      > </a
+      ><a name="2614" href="Homotopy.VanKampen.Code.LemmaPackA.html#2589" class="Bound"
+      >p</a
+      ><a name="2615" class="Symbol"
+      >)</a
+      ><a name="2616"
+      > </a
+      ><a name="2617" href="Homotopy.VanKampen.Code.LemmaPackA.html#2586" class="Bound"
+      >eq</a
+      ><a name="2619" class="Symbol"
+      >)</a
+      ><a name="2620"
+      >
+          </a
+      ><a name="2631" class="Symbol"
+      >(&#955;</a
+      ><a name="2633"
+      > </a
+      ><a name="2634" href="Homotopy.VanKampen.Code.LemmaPackA.html#2634" class="Bound"
+      >_</a
+      ><a name="2635"
+      > </a
+      ><a name="2636" href="Homotopy.VanKampen.Code.LemmaPackA.html#2636" class="Bound"
+      >_</a
+      ><a name="2637"
+      > </a
+      ><a name="2638" class="Symbol"
+      >&#8594;</a
+      ><a name="2639"
+      > </a
+      ><a name="2640" href="Homotopy.VanKampen.SplitCode.html#5274" class="Function"
+      >code-has-all-cells&#8322;-a</a
+      ><a name="2661"
+      > </a
+      ><a name="2662" class="Symbol"
+      >_</a
+      ><a name="2663"
+      > </a
+      ><a name="2664" class="Symbol"
+      >_)</a
+      ><a name="2666"
+      >
+          </a
+      ><a name="2677" class="Symbol"
+      >(&#955;</a
+      ><a name="2679"
+      > </a
+      ><a name="2680" href="Homotopy.VanKampen.Code.LemmaPackA.html#2680" class="Bound"
+      >_</a
+      ><a name="2681"
+      > </a
+      ><a name="2682" href="Homotopy.VanKampen.Code.LemmaPackA.html#2682" class="Bound"
+      >_</a
+      ><a name="2683"
+      > </a
+      ><a name="2684" class="Symbol"
+      >&#8594;</a
+      ><a name="2685"
+      > </a
+      ><a name="2686" href="Homotopy.VanKampen.SplitCode.html#5421" class="Function"
+      >code-has-all-cells&#8322;-b</a
+      ><a name="2707"
+      > </a
+      ><a name="2708" class="Symbol"
+      >_</a
+      ><a name="2709"
+      > </a
+      ><a name="2710" class="Symbol"
+      >_)</a
+      ><a name="2712"
+      >
+          </a
+      ><a name="2723" class="Symbol"
+      >(&#955;</a
+      ><a name="2725"
+      > </a
+      ><a name="2726" href="Homotopy.VanKampen.Code.LemmaPackA.html#2726" class="Bound"
+      >_</a
+      ><a name="2727"
+      > </a
+      ><a name="2728" href="Homotopy.VanKampen.Code.LemmaPackA.html#2728" class="Bound"
+      >_</a
+      ><a name="2729"
+      > </a
+      ><a name="2730" href="Homotopy.VanKampen.Code.LemmaPackA.html#2730" class="Bound"
+      >_</a
+      ><a name="2731"
+      > </a
+      ><a name="2732" href="Homotopy.VanKampen.Code.LemmaPackA.html#2732" class="Bound"
+      >_</a
+      ><a name="2733"
+      > </a
+      ><a name="2734" class="Symbol"
+      >&#8594;</a
+      ><a name="2735"
+      > </a
+      ><a name="2736" href="Homotopy.VanKampen.SplitCode.html#5274" class="Function"
+      >code-has-all-cells&#8322;-a</a
+      ><a name="2757"
+      > </a
+      ><a name="2758" class="Symbol"
+      >_</a
+      ><a name="2759"
+      > </a
+      ><a name="2760" class="Symbol"
+      >_)</a
+      ><a name="2762"
+      >
+
+      </a
+      ><a name="2770" href="Homotopy.VanKampen.Code.LemmaPackA.html#2770" class="Function"
+      >aba-glue-code-a</a
+      ><a name="2785"
+      > </a
+      ><a name="2786" class="Symbol"
+      >:</a
+      ><a name="2787"
+      > </a
+      ><a name="2788" class="Symbol"
+      >&#8704;</a
+      ><a name="2789"
+      > </a
+      ><a name="2790" class="Symbol"
+      >{</a
+      ><a name="2791" href="Homotopy.VanKampen.Code.LemmaPackA.html#2791" class="Bound"
+      >a&#8322;</a
+      ><a name="2793" class="Symbol"
+      >}</a
+      ><a name="2794"
+      > </a
+      ><a name="2795" class="Symbol"
+      >(</a
+      ><a name="2796" href="Homotopy.VanKampen.Code.LemmaPackA.html#2796" class="Bound"
+      >co</a
+      ><a name="2798"
+      > </a
+      ><a name="2799" class="Symbol"
+      >:</a
+      ><a name="2800"
+      > </a
+      ><a name="2801" href="Homotopy.VanKampen.SplitCode.html#759" class="Function"
+      >code-a</a
+      ><a name="2807"
+      > </a
+      ><a name="2808" href="Homotopy.VanKampen.Code.LemmaPackA.html#2791" class="Bound"
+      >a&#8322;</a
+      ><a name="2810" class="Symbol"
+      >)</a
+      ><a name="2811"
+      > </a
+      ><a name="2812" class="Symbol"
+      >&#8594;</a
+      ><a name="2813"
+      > </a
+      ><a name="2814" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >F.ab&#8658;bb</a
+      ><a name="2821"
+      > </a
+      ><a name="2822" class="Symbol"
+      >(</a
+      ><a name="2823" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="2828"
+      > </a
+      ><a name="2829" href="Homotopy.VanKampen.Code.LemmaPackA.html#2796" class="Bound"
+      >co</a
+      ><a name="2831" class="Symbol"
+      >)</a
+      ><a name="2832"
+      > </a
+      ><a name="2833" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2834"
+      > </a
+      ><a name="2835" href="Homotopy.VanKampen.Code.LemmaPackA.html#2796" class="Bound"
+      >co</a
+      ><a name="2837"
+      >
+      </a
+      ><a name="2844" href="Homotopy.VanKampen.Code.LemmaPackA.html#2770" class="Function"
+      >aba-glue-code-a</a
+      ><a name="2859"
+      > </a
+      ><a name="2860" class="Symbol"
+      >=</a
+      ><a name="2861"
+      > </a
+      ><a name="2862" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="2864"
+      > </a
+      ><a name="2865" href="Homotopy.VanKampen.Code.LemmaPackA.html#1885" class="Function"
+      >aba-glue-code-split</a
+      ><a name="2884"
+      >
+      </a
+      ><a name="2891" href="Homotopy.VanKampen.Code.LemmaPackA.html#2891" class="Function"
+      >aba-glue-code-b</a
+      ><a name="2906"
+      > </a
+      ><a name="2907" class="Symbol"
+      >:</a
+      ><a name="2908"
+      > </a
+      ><a name="2909" class="Symbol"
+      >&#8704;</a
+      ><a name="2910"
+      > </a
+      ><a name="2911" class="Symbol"
+      >{</a
+      ><a name="2912" href="Homotopy.VanKampen.Code.LemmaPackA.html#2912" class="Bound"
+      >b&#8322;</a
+      ><a name="2914" class="Symbol"
+      >}</a
+      ><a name="2915"
+      > </a
+      ><a name="2916" class="Symbol"
+      >(</a
+      ><a name="2917" href="Homotopy.VanKampen.Code.LemmaPackA.html#2917" class="Bound"
+      >co</a
+      ><a name="2919"
+      > </a
+      ><a name="2920" class="Symbol"
+      >:</a
+      ><a name="2921"
+      > </a
+      ><a name="2922" href="Homotopy.VanKampen.SplitCode.html#714" class="Function"
+      >code-b</a
+      ><a name="2928"
+      > </a
+      ><a name="2929" href="Homotopy.VanKampen.Code.LemmaPackA.html#2912" class="Bound"
+      >b&#8322;</a
+      ><a name="2931" class="Symbol"
+      >)</a
+      ><a name="2932"
+      > </a
+      ><a name="2933" class="Symbol"
+      >&#8594;</a
+      ><a name="2934"
+      > </a
+      ><a name="2935" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >F.aa&#8658;ba</a
+      ><a name="2942"
+      > </a
+      ><a name="2943" class="Symbol"
+      >(</a
+      ><a name="2944" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="2949"
+      > </a
+      ><a name="2950" href="Homotopy.VanKampen.Code.LemmaPackA.html#2917" class="Bound"
+      >co</a
+      ><a name="2952" class="Symbol"
+      >)</a
+      ><a name="2953"
+      > </a
+      ><a name="2954" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2955"
+      > </a
+      ><a name="2956" href="Homotopy.VanKampen.Code.LemmaPackA.html#2917" class="Bound"
+      >co</a
+      ><a name="2958"
+      >
+      </a
+      ><a name="2965" href="Homotopy.VanKampen.Code.LemmaPackA.html#2891" class="Function"
+      >aba-glue-code-b</a
+      ><a name="2980"
+      > </a
+      ><a name="2981" class="Symbol"
+      >=</a
+      ><a name="2982"
+      > </a
+      ><a name="2983" href="Types.html#833" class="Function"
+      >&#960;&#8322;</a
+      ><a name="2985"
+      > </a
+      ><a name="2986" href="Homotopy.VanKampen.Code.LemmaPackA.html#1885" class="Function"
+      >aba-glue-code-split</a
+      ><a name="3005"
+      >
+
+  </a
+      ><a name="3009" class="Keyword"
+      >private</a
+      ><a name="3016"
+      >
+    </a
+      ><a name="3021" class="Keyword"
+      >module</a
+      ><a name="3027"
+      > </a
+      ><a name="3028" href="Homotopy.VanKampen.Code.LemmaPackA.html#3028" class="Module"
+      >PackA3</a
+      ><a name="3034"
+      > </a
+      ><a name="3035" class="Symbol"
+      >(</a
+      ><a name="3036" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3037"
+      > </a
+      ><a name="3038" class="Symbol"
+      >:</a
+      ><a name="3039"
+      > </a
+      ><a name="3040" href="Homotopy.PushoutDef.html#89" class="Record"
+      >pushout-diag</a
+      ><a name="3052"
+      > </a
+      ><a name="3053" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="3054" class="Symbol"
+      >)</a
+      ><a name="3055"
+      >
+      </a
+      ><a name="3062" class="Symbol"
+      >(</a
+      ><a name="3063" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3064"
+      > </a
+      ><a name="3065" class="Symbol"
+      >:</a
+      ><a name="3066"
+      > </a
+      ><a name="3067" href="Homotopy.VanKampen.Guide.html#158" class="Record"
+      >legend</a
+      ><a name="3073"
+      > </a
+      ><a name="3074" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="3075"
+      > </a
+      ><a name="3076" class="Symbol"
+      >(</a
+      ><a name="3077" href="Homotopy.PushoutDef.html#202" class="Function"
+      >pushout-diag.C</a
+      ><a name="3091"
+      > </a
+      ><a name="3092" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3093" class="Symbol"
+      >))</a
+      ><a name="3095"
+      > </a
+      ><a name="3096" class="Symbol"
+      >(</a
+      ><a name="3097" href="Homotopy.VanKampen.Code.LemmaPackA.html#3097" class="Bound"
+      >n</a
+      ><a name="3098"
+      > </a
+      ><a name="3099" class="Symbol"
+      >:</a
+      ><a name="3100"
+      > </a
+      ><a name="3101" href="Homotopy.VanKampen.Guide.html#237" class="Function"
+      >legend.name</a
+      ><a name="3112"
+      > </a
+      ><a name="3113" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3114" class="Symbol"
+      >)</a
+      ><a name="3115"
+      > </a
+      ><a name="3116" class="Keyword"
+      >where</a
+      ><a name="3121"
+      >
+      </a
+      ><a name="3128" class="Keyword"
+      >open</a
+      ><a name="3132"
+      > </a
+      ><a name="3133" href="Homotopy.PushoutDef.html#89" class="Module"
+      >pushout-diag</a
+      ><a name="3145"
+      > </a
+      ><a name="3146" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3147"
+      >
+      </a
+      ><a name="3154" class="Keyword"
+      >open</a
+      ><a name="3158"
+      > </a
+      ><a name="3159" href="Homotopy.VanKampen.Guide.html#158" class="Module"
+      >legend</a
+      ><a name="3165"
+      > </a
+      ><a name="3166" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3167"
+      >
+
+      </a
+      ><a name="3175" class="Comment"
+      >-- Code from A.</a
+      ><a name="3190"
+      >
+      </a
+      ><a name="3197" class="Keyword"
+      >open</a
+      ><a name="3201"
+      > </a
+      ><a name="3202" class="Keyword"
+      >import</a
+      ><a name="3208"
+      > </a
+      ><a name="3209" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="3237"
+      > </a
+      ><a name="3238" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3239"
+      > </a
+      ><a name="3240" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3241"
+      > </a
+      ><a name="3242" class="Symbol"
+      >(</a
+      ><a name="3243" href="Homotopy.PushoutDef.html#216" class="Function"
+      >f</a
+      ><a name="3244"
+      > </a
+      ><a name="3245" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="3246"
+      > </a
+      ><a name="3247" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="3250"
+      > </a
+      ><a name="3251" href="Homotopy.VanKampen.Code.LemmaPackA.html#3097" class="Bound"
+      >n</a
+      ><a name="3252" class="Symbol"
+      >)</a
+      ><a name="3253"
+      >
+      </a
+      ><a name="3260" class="Keyword"
+      >open</a
+      ><a name="3264"
+      > </a
+      ><a name="3265" href="Homotopy.VanKampen.Code.LemmaPackA.html#1380" class="Module"
+      >PackA2</a
+      ><a name="3271"
+      > </a
+      ><a name="3272" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3273"
+      > </a
+      ><a name="3274" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3275"
+      > </a
+      ><a name="3276" href="Homotopy.VanKampen.Code.LemmaPackA.html#3097" class="Bound"
+      >n</a
+      ><a name="3277"
+      > </a
+      ><a name="3278" class="Keyword"
+      >public</a
+      ><a name="3284"
+      >
+      </a
+      ><a name="3291" class="Comment"
+      >-- Code from B. F for `flipped'.</a
+      ><a name="3323"
+      >
+      </a
+      ><a name="3330" class="Keyword"
+      >private</a
+      ><a name="3337"
+      >
+        </a
+      ><a name="3346" class="Keyword"
+      >module</a
+      ><a name="3352"
+      > </a
+      ><a name="3353" href="Homotopy.VanKampen.Code.LemmaPackA.html#3353" class="Module"
+      >F</a
+      ><a name="3354"
+      > </a
+      ><a name="3355" class="Keyword"
+      >where</a
+      ><a name="3360"
+      >
+          </a
+      ><a name="3371" class="Keyword"
+      >open</a
+      ><a name="3375"
+      > </a
+      ><a name="3376" class="Keyword"
+      >import</a
+      ><a name="3382"
+      > </a
+      ><a name="3383" href="Homotopy.VanKampen.SplitCode.html#1" class="Module"
+      >Homotopy.VanKampen.SplitCode</a
+      ><a name="3411"
+      > </a
+      ><a name="3412" class="Symbol"
+      >(</a
+      ><a name="3413" href="Homotopy.Pushout.html#119" class="Function"
+      >pushout-diag-flip</a
+      ><a name="3430"
+      > </a
+      ><a name="3431" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3432" class="Symbol"
+      >)</a
+      ><a name="3433"
+      > </a
+      ><a name="3434" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3435"
+      > </a
+      ><a name="3436" class="Symbol"
+      >(</a
+      ><a name="3437" href="Homotopy.PushoutDef.html#230" class="Function"
+      >g</a
+      ><a name="3438"
+      > </a
+      ><a name="3439" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="3440"
+      > </a
+      ><a name="3441" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="3444"
+      > </a
+      ><a name="3445" href="Homotopy.VanKampen.Code.LemmaPackA.html#3097" class="Bound"
+      >n</a
+      ><a name="3446" class="Symbol"
+      >)</a
+      ><a name="3447"
+      > </a
+      ><a name="3448" class="Keyword"
+      >public</a
+      ><a name="3454"
+      >
+          </a
+      ><a name="3465" class="Keyword"
+      >open</a
+      ><a name="3469"
+      > </a
+      ><a name="3470" href="Homotopy.VanKampen.Code.LemmaPackA.html#1380" class="Module"
+      >PackA2</a
+      ><a name="3476"
+      > </a
+      ><a name="3477" class="Symbol"
+      >(</a
+      ><a name="3478" href="Homotopy.Pushout.html#119" class="Function"
+      >pushout-diag-flip</a
+      ><a name="3495"
+      > </a
+      ><a name="3496" href="Homotopy.VanKampen.Code.LemmaPackA.html#3036" class="Bound"
+      >d</a
+      ><a name="3497" class="Symbol"
+      >)</a
+      ><a name="3498"
+      > </a
+      ><a name="3499" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3500"
+      > </a
+      ><a name="3501" href="Homotopy.VanKampen.Code.LemmaPackA.html#3097" class="Bound"
+      >n</a
+      ><a name="3502"
+      > </a
+      ><a name="3503" class="Keyword"
+      >public</a
+      ><a name="3509"
+      >
+
+      </a
+      ><a name="3517" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="3529"
+      > </a
+      ><a name="3530" class="Symbol"
+      >:</a
+      ><a name="3531"
+      > </a
+      ><a name="3532" href="Homotopy.VanKampen.SplitCode.html#12825" class="Function"
+      >P</a
+      ><a name="3533"
+      > </a
+      ><a name="3534" class="Symbol"
+      >&#8594;</a
+      ><a name="3535"
+      > </a
+      ><a name="3536" class="PrimitiveType"
+      >Set</a
+      ><a name="3539"
+      > </a
+      ><a name="3540" href="Homotopy.VanKampen.Code.LemmaPackA.html#157" class="Bound"
+      >i</a
+      ><a name="3541"
+      >
+      </a
+      ><a name="3548" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="3560"
+      > </a
+      ><a name="3561" class="Symbol"
+      >=</a
+      ><a name="3562"
+      > </a
+      ><a name="3563" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >F.code</a
+      ><a name="3569"
+      > </a
+      ><a name="3570" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="3571"
+      > </a
+      ><a name="3572" href="Homotopy.Pushout.html#248" class="Function"
+      >pushout-flip</a
+      ><a name="3584"
+      >
+
+      </a
+      ><a name="3592" class="Keyword"
+      >private</a
+      ><a name="3599"
+      >
+        </a
+      ><a name="3608" href="Homotopy.VanKampen.Code.LemmaPackA.html#3608" class="Function"
+      >ap&#8658;bp-glue</a
+      ><a name="3618"
+      > </a
+      ><a name="3619" class="Symbol"
+      >:</a
+      ><a name="3620"
+      > </a
+      ><a name="3621" class="Symbol"
+      >&#8704;</a
+      ><a name="3622"
+      > </a
+      ><a name="3623" href="Homotopy.VanKampen.Code.LemmaPackA.html#3623" class="Bound"
+      >c</a
+      ><a name="3624"
+      > </a
+      ><a name="3625" class="Symbol"
+      >&#8594;</a
+      ><a name="3626"
+      > </a
+      ><a name="3627" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="3636"
+      > </a
+      ><a name="3637" class="Symbol"
+      >(&#955;</a
+      ><a name="3639"
+      > </a
+      ><a name="3640" href="Homotopy.VanKampen.Code.LemmaPackA.html#3640" class="Bound"
+      >p</a
+      ><a name="3641"
+      > </a
+      ><a name="3642" class="Symbol"
+      >&#8594;</a
+      ><a name="3643"
+      > </a
+      ><a name="3644" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="3648"
+      > </a
+      ><a name="3649" href="Homotopy.VanKampen.Code.LemmaPackA.html#3640" class="Bound"
+      >p</a
+      ><a name="3650"
+      > </a
+      ><a name="3651" class="Symbol"
+      >&#8594;</a
+      ><a name="3652"
+      > </a
+      ><a name="3653" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="3665"
+      > </a
+      ><a name="3666" href="Homotopy.VanKampen.Code.LemmaPackA.html#3640" class="Bound"
+      >p</a
+      ><a name="3667" class="Symbol"
+      >)</a
+      ><a name="3668"
+      > </a
+      ><a name="3669" class="Symbol"
+      >(</a
+      ><a name="3670" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="3674"
+      > </a
+      ><a name="3675" href="Homotopy.VanKampen.Code.LemmaPackA.html#3623" class="Bound"
+      >c</a
+      ><a name="3676" class="Symbol"
+      >)</a
+      ><a name="3677"
+      > </a
+      ><a name="3678" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="3683"
+      > </a
+      ><a name="3684" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3685"
+      > </a
+      ><a name="3686" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="3691"
+      >
+      </a
+      ><a name="3698" class="Keyword"
+      >abstract</a
+      ><a name="3706"
+      >
+        </a
+      ><a name="3715" href="Homotopy.VanKampen.Code.LemmaPackA.html#3608" class="Function"
+      >ap&#8658;bp-glue</a
+      ><a name="3725"
+      > </a
+      ><a name="3726" class="Symbol"
+      >=</a
+      ><a name="3727"
+      > </a
+      ><a name="3728" href="Homotopy.VanKampen.Guide.html#5256" class="Function"
+      >loc-fiber-rec</a
+      ><a name="3741"
+      > </a
+      ><a name="3742" href="Homotopy.VanKampen.Code.LemmaPackA.html#3063" class="Bound"
+      >l</a
+      ><a name="3743"
+      >
+          </a
+      ><a name="3754" class="Symbol"
+      >(&#955;</a
+      ><a name="3756"
+      > </a
+      ><a name="3757" href="Homotopy.VanKampen.Code.LemmaPackA.html#3757" class="Bound"
+      >c</a
+      ><a name="3758"
+      > </a
+      ><a name="3759" class="Symbol"
+      >&#8594;</a
+      ><a name="3760"
+      > </a
+      ><a name="3761" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="3770"
+      > </a
+      ><a name="3771" class="Symbol"
+      >(&#955;</a
+      ><a name="3773"
+      > </a
+      ><a name="3774" href="Homotopy.VanKampen.Code.LemmaPackA.html#3774" class="Bound"
+      >p</a
+      ><a name="3775"
+      > </a
+      ><a name="3776" class="Symbol"
+      >&#8594;</a
+      ><a name="3777"
+      > </a
+      ><a name="3778" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="3782"
+      > </a
+      ><a name="3783" href="Homotopy.VanKampen.Code.LemmaPackA.html#3774" class="Bound"
+      >p</a
+      ><a name="3784"
+      > </a
+      ><a name="3785" class="Symbol"
+      >&#8594;</a
+      ><a name="3786"
+      > </a
+      ><a name="3787" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="3799"
+      > </a
+      ><a name="3800" href="Homotopy.VanKampen.Code.LemmaPackA.html#3774" class="Bound"
+      >p</a
+      ><a name="3801" class="Symbol"
+      >)</a
+      ><a name="3802"
+      > </a
+      ><a name="3803" class="Symbol"
+      >(</a
+      ><a name="3804" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="3808"
+      > </a
+      ><a name="3809" href="Homotopy.VanKampen.Code.LemmaPackA.html#3757" class="Bound"
+      >c</a
+      ><a name="3810" class="Symbol"
+      >)</a
+      ><a name="3811"
+      > </a
+      ><a name="3812" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="3817"
+      > </a
+      ><a name="3818" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3819"
+      > </a
+      ><a name="3820" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="3825" class="Symbol"
+      >)</a
+      ><a name="3826"
+      >
+          </a
+      ><a name="3837" class="Symbol"
+      >&#10627;</a
+      ><a name="3838"
+      > </a
+      ><a name="3839" class="Symbol"
+      >&#955;</a
+      ><a name="3840"
+      > </a
+      ><a name="3841" href="Homotopy.VanKampen.Code.LemmaPackA.html#3841" class="Bound"
+      >_</a
+      ><a name="3842"
+      > </a
+      ><a name="3843" class="Symbol"
+      >&#8594;</a
+      ><a name="3844"
+      > </a
+      ><a name="3845" href="HLevelBis.html#3546" class="Function"
+      >&#928;-is-set</a
+      ><a name="3853"
+      > </a
+      ><a name="3854" class="Symbol"
+      >(&#955;</a
+      ><a name="3856"
+      > </a
+      ><a name="3857" href="Homotopy.VanKampen.Code.LemmaPackA.html#3857" class="Bound"
+      >_</a
+      ><a name="3858"
+      > </a
+      ><a name="3859" class="Symbol"
+      >&#8594;</a
+      ><a name="3860"
+      > </a
+      ><a name="3861" href="Homotopy.VanKampen.SplitCode.html#827" class="Function"
+      >F.code-a-is-set</a
+      ><a name="3876"
+      > </a
+      ><a name="3877" class="Symbol"
+      >_)</a
+      ><a name="3879"
+      > </a
+      ><a name="3880" class="Symbol"
+      >_</a
+      ><a name="3881"
+      > </a
+      ><a name="3882" class="Symbol"
+      >_</a
+      ><a name="3883"
+      > </a
+      ><a name="3884" class="Symbol"
+      >&#10628;</a
+      ><a name="3885"
+      >
+          </a
+      ><a name="3896" class="Symbol"
+      >(&#955;</a
+      ><a name="3898"
+      > </a
+      ><a name="3899" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="3900"
+      > </a
+      ><a name="3901" class="Symbol"
+      >&#8594;</a
+      ><a name="3902"
+      > </a
+      ><a name="3903" href="Funext.html#4012" class="Function"
+      >funext</a
+      ><a name="3909"
+      > </a
+      ><a name="3910" class="Symbol"
+      >&#955;</a
+      ><a name="3911"
+      > </a
+      ><a name="3912" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="3914"
+      > </a
+      ><a name="3915" class="Symbol"
+      >&#8594;</a
+      ><a name="3916"
+      >
+            </a
+      ><a name="3929" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="3938"
+      > </a
+      ><a name="3939" class="Symbol"
+      >(&#955;</a
+      ><a name="3941"
+      > </a
+      ><a name="3942" href="Homotopy.VanKampen.Code.LemmaPackA.html#3942" class="Bound"
+      >p</a
+      ><a name="3943"
+      > </a
+      ><a name="3944" class="Symbol"
+      >&#8594;</a
+      ><a name="3945"
+      > </a
+      ><a name="3946" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="3950"
+      > </a
+      ><a name="3951" href="Homotopy.VanKampen.Code.LemmaPackA.html#3942" class="Bound"
+      >p</a
+      ><a name="3952"
+      > </a
+      ><a name="3953" class="Symbol"
+      >&#8594;</a
+      ><a name="3954"
+      > </a
+      ><a name="3955" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="3967"
+      > </a
+      ><a name="3968" href="Homotopy.VanKampen.Code.LemmaPackA.html#3942" class="Bound"
+      >p</a
+      ><a name="3969" class="Symbol"
+      >)</a
+      ><a name="3970"
+      > </a
+      ><a name="3971" class="Symbol"
+      >(</a
+      ><a name="3972" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="3976"
+      > </a
+      ><a name="3977" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="3978"
+      > </a
+      ><a name="3979" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="3982"
+      > </a
+      ><a name="3983" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="3984" class="Symbol"
+      >)</a
+      ><a name="3985"
+      > </a
+      ><a name="3986" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="3991"
+      > </a
+      ><a name="3992" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="3994"
+      >
+                </a
+      ><a name="4011" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4013"
+      > </a
+      ><a name="4014" href="Paths.html#7328" class="Function"
+      >trans-&#8594;</a
+      ><a name="4021"
+      > </a
+      ><a name="4022" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="4026"
+      > </a
+      ><a name="4027" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="4039"
+      > </a
+      ><a name="4040" class="Symbol"
+      >(</a
+      ><a name="4041" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4045"
+      > </a
+      ><a name="4046" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4047"
+      > </a
+      ><a name="4048" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4051"
+      > </a
+      ><a name="4052" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4053" class="Symbol"
+      >)</a
+      ><a name="4054"
+      > </a
+      ><a name="4055" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="4060"
+      > </a
+      ><a name="4061" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4063"
+      > </a
+      ><a name="4064" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4065"
+      >
+            </a
+      ><a name="4078" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4087"
+      > </a
+      ><a name="4088" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="4100"
+      > </a
+      ><a name="4101" class="Symbol"
+      >(</a
+      ><a name="4102" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4106"
+      > </a
+      ><a name="4107" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4108"
+      > </a
+      ><a name="4109" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4112"
+      > </a
+      ><a name="4113" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4114" class="Symbol"
+      >)</a
+      ><a name="4115"
+      >
+              </a
+      ><a name="4130" class="Symbol"
+      >(</a
+      ><a name="4131" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="4136"
+      > </a
+      ><a name="4137" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4138"
+      > </a
+      ><a name="4139" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4148"
+      > </a
+      ><a name="4149" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="4153"
+      > </a
+      ><a name="4154" class="Symbol"
+      >(</a
+      ><a name="4155" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="4156"
+      > </a
+      ><a name="4157" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4158"
+      > </a
+      ><a name="4159" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4163"
+      > </a
+      ><a name="4164" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4165"
+      > </a
+      ><a name="4166" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4169"
+      > </a
+      ><a name="4170" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4171" class="Symbol"
+      >)</a
+      ><a name="4172"
+      > </a
+      ><a name="4173" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4175" class="Symbol"
+      >)</a
+      ><a name="4176"
+      >
+                </a
+      ><a name="4193" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4195"
+      > </a
+      ><a name="4196" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="4198"
+      > </a
+      ><a name="4199" class="Symbol"
+      >(&#955;</a
+      ><a name="4201"
+      > </a
+      ><a name="4202" href="Homotopy.VanKampen.Code.LemmaPackA.html#4202" class="Bound"
+      >x</a
+      ><a name="4203"
+      > </a
+      ><a name="4204" class="Symbol"
+      >&#8594;</a
+      ><a name="4205"
+      > </a
+      ><a name="4206" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4215"
+      > </a
+      ><a name="4216" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="4228"
+      > </a
+      ><a name="4229" class="Symbol"
+      >(</a
+      ><a name="4230" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4234"
+      > </a
+      ><a name="4235" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4236"
+      > </a
+      ><a name="4237" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4240"
+      > </a
+      ><a name="4241" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4242" class="Symbol"
+      >)</a
+      ><a name="4243"
+      > </a
+      ><a name="4244" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4245"
+      > </a
+      ><a name="4246" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="4251"
+      > </a
+      ><a name="4252" href="Homotopy.VanKampen.Code.LemmaPackA.html#4202" class="Bound"
+      >x</a
+      ><a name="4253" class="Symbol"
+      >)</a
+      ><a name="4254"
+      >
+                    </a
+      ><a name="4275" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4276"
+      > </a
+      ><a name="4277" href="Homotopy.VanKampen.SplitCode.html#17589" class="Function"
+      >trans-code-!glue-loc</a
+      ><a name="4297"
+      > </a
+      ><a name="4298" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4299"
+      > </a
+      ><a name="4300" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4302"
+      > </a
+      ><a name="4303" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4304"
+      >
+            </a
+      ><a name="4317" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4326"
+      > </a
+      ><a name="4327" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="4339"
+      > </a
+      ><a name="4340" class="Symbol"
+      >(</a
+      ><a name="4341" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4345"
+      > </a
+      ><a name="4346" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4347"
+      > </a
+      ><a name="4348" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4351"
+      > </a
+      ><a name="4352" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4353" class="Symbol"
+      >)</a
+      ><a name="4354"
+      > </a
+      ><a name="4355" class="Symbol"
+      >(</a
+      ><a name="4356" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="4361"
+      > </a
+      ><a name="4362" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4363"
+      > </a
+      ><a name="4364" href="Homotopy.VanKampen.SplitCode.html#12971" class="Function"
+      >b&#8658;a</a
+      ><a name="4367"
+      > </a
+      ><a name="4368" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4369"
+      > </a
+      ><a name="4370" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4372" class="Symbol"
+      >)</a
+      ><a name="4373"
+      >
+                </a
+      ><a name="4390" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4392"
+      > </a
+      ><a name="4393" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="4397"
+      > </a
+      ><a name="4398" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4399"
+      >
+            </a
+      ><a name="4412" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4421"
+      > </a
+      ><a name="4422" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="4434"
+      > </a
+      ><a name="4435" class="Symbol"
+      >(</a
+      ><a name="4436" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4440"
+      > </a
+      ><a name="4441" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4442"
+      > </a
+      ><a name="4443" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4446"
+      > </a
+      ><a name="4447" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4448" class="Symbol"
+      >)</a
+      ><a name="4449"
+      > </a
+      ><a name="4450" class="Symbol"
+      >(</a
+      ><a name="4451" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4456"
+      > </a
+      ><a name="4457" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4458"
+      > </a
+      ><a name="4459" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4460"
+      > </a
+      ><a name="4461" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4466"
+      > </a
+      ><a name="4467" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4469" class="Symbol"
+      >)</a
+      ><a name="4470"
+      >
+                </a
+      ><a name="4487" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4489"
+      > </a
+      ><a name="4490" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="4491"
+      > </a
+      ><a name="4492" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4493"
+      > </a
+      ><a name="4494" href="Paths.html#8187" class="Function"
+      >trans-ap</a
+      ><a name="4502"
+      > </a
+      ><a name="4503" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >F.code</a
+      ><a name="4509"
+      > </a
+      ><a name="4510" href="Homotopy.Pushout.html#248" class="Function"
+      >pushout-flip</a
+      ><a name="4522"
+      > </a
+      ><a name="4523" class="Symbol"
+      >(</a
+      ><a name="4524" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4528"
+      > </a
+      ><a name="4529" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4530"
+      > </a
+      ><a name="4531" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4534"
+      > </a
+      ><a name="4535" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4536" class="Symbol"
+      >)</a
+      ><a name="4537"
+      >
+                     </a
+      ><a name="4559" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4560"
+      > </a
+      ><a name="4561" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4566"
+      > </a
+      ><a name="4567" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4568"
+      > </a
+      ><a name="4569" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4570"
+      > </a
+      ><a name="4571" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4576"
+      > </a
+      ><a name="4577" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4579"
+      > </a
+      ><a name="4580" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4581"
+      >
+            </a
+      ><a name="4594" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4603"
+      > </a
+      ><a name="4604" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >F.code</a
+      ><a name="4610"
+      > </a
+      ><a name="4611" class="Symbol"
+      >(</a
+      ><a name="4612" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="4614"
+      > </a
+      ><a name="4615" href="Homotopy.Pushout.html#248" class="Function"
+      >pushout-flip</a
+      ><a name="4627"
+      > </a
+      ><a name="4628" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4629"
+      > </a
+      ><a name="4630" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4634"
+      > </a
+      ><a name="4635" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4636"
+      > </a
+      ><a name="4637" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4640"
+      > </a
+      ><a name="4641" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4642" class="Symbol"
+      >)</a
+      ><a name="4643"
+      > </a
+      ><a name="4644" class="Symbol"
+      >(</a
+      ><a name="4645" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4650"
+      > </a
+      ><a name="4651" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4652"
+      > </a
+      ><a name="4653" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4654"
+      > </a
+      ><a name="4655" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4660"
+      > </a
+      ><a name="4661" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4663" class="Symbol"
+      >)</a
+      ><a name="4664"
+      >
+                </a
+      ><a name="4681" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4683"
+      > </a
+      ><a name="4684" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="4686"
+      > </a
+      ><a name="4687" class="Symbol"
+      >(&#955;</a
+      ><a name="4689"
+      > </a
+      ><a name="4690" href="Homotopy.VanKampen.Code.LemmaPackA.html#4690" class="Bound"
+      >x</a
+      ><a name="4691"
+      > </a
+      ><a name="4692" class="Symbol"
+      >&#8594;</a
+      ><a name="4693"
+      > </a
+      ><a name="4694" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4703"
+      > </a
+      ><a name="4704" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >F.code</a
+      ><a name="4710"
+      > </a
+      ><a name="4711" href="Homotopy.VanKampen.Code.LemmaPackA.html#4690" class="Bound"
+      >x</a
+      ><a name="4712"
+      > </a
+      ><a name="4713" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4714"
+      > </a
+      ><a name="4715" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4720"
+      > </a
+      ><a name="4721" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4722"
+      > </a
+      ><a name="4723" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4724"
+      > </a
+      ><a name="4725" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4730"
+      > </a
+      ><a name="4731" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4733" class="Symbol"
+      >)</a
+      ><a name="4734"
+      >
+                      </a
+      ><a name="4757" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4758"
+      > </a
+      ><a name="4759" href="Homotopy.PushoutDef.html#2550" class="Postulate"
+      >pushout-&#946;-glue-nondep</a
+      ><a name="4780"
+      > </a
+      ><a name="4781" class="Symbol"
+      >_</a
+      ><a name="4782"
+      > </a
+      ><a name="4783" href="Homotopy.PushoutDef.html#1526" class="Function"
+      >right</a
+      ><a name="4788"
+      > </a
+      ><a name="4789" href="Homotopy.PushoutDef.html#1489" class="Function"
+      >left</a
+      ><a name="4793"
+      > </a
+      ><a name="4794" class="Symbol"
+      >(</a
+      ><a name="4795" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="4796"
+      > </a
+      ><a name="4797" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="4798"
+      > </a
+      ><a name="4799" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4803" class="Symbol"
+      >)</a
+      ><a name="4804"
+      > </a
+      ><a name="4805" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4806"
+      > </a
+      ><a name="4807" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4810"
+      > </a
+      ><a name="4811" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4812"
+      > </a
+      ><a name="4813" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4814"
+      >
+            </a
+      ><a name="4827" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="4836"
+      > </a
+      ><a name="4837" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >F.code</a
+      ><a name="4843"
+      > </a
+      ><a name="4844" class="Symbol"
+      >(</a
+      ><a name="4845" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="4846"
+      > </a
+      ><a name="4847" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4848"
+      > </a
+      ><a name="4849" href="Homotopy.PushoutDef.html#1588" class="Postulate"
+      >glue</a
+      ><a name="4853"
+      > </a
+      ><a name="4854" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4855"
+      > </a
+      ><a name="4856" href="Homotopy.VanKampen.Guide.html#254" class="Function"
+      >loc</a
+      ><a name="4859"
+      > </a
+      ><a name="4860" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4861" class="Symbol"
+      >)</a
+      ><a name="4862"
+      > </a
+      ><a name="4863" class="Symbol"
+      >(</a
+      ><a name="4864" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4869"
+      > </a
+      ><a name="4870" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4871"
+      > </a
+      ><a name="4872" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4873"
+      > </a
+      ><a name="4874" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4879"
+      > </a
+      ><a name="4880" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4882" class="Symbol"
+      >)</a
+      ><a name="4883"
+      >
+                </a
+      ><a name="4900" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="4902"
+      > </a
+      ><a name="4903" href="Homotopy.VanKampen.SplitCode.html#17589" class="Function"
+      >F.trans-code-!glue-loc</a
+      ><a name="4925"
+      > </a
+      ><a name="4926" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4927"
+      > </a
+      ><a name="4928" class="Symbol"
+      >(</a
+      ><a name="4929" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4934"
+      > </a
+      ><a name="4935" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4936"
+      > </a
+      ><a name="4937" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4938"
+      > </a
+      ><a name="4939" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4944"
+      > </a
+      ><a name="4945" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4947" class="Symbol"
+      >)</a
+      ><a name="4948"
+      > </a
+      ><a name="4949" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="4950"
+      >
+            </a
+      ><a name="4963" href="Homotopy.VanKampen.SplitCode.html#12971" class="Function"
+      >F.b&#8658;a</a
+      ><a name="4968"
+      > </a
+      ><a name="4969" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4970"
+      > </a
+      ><a name="4971" class="Symbol"
+      >(</a
+      ><a name="4972" href="Homotopy.VanKampen.SplitCode.html#12882" class="Function"
+      >F.a&#8658;b</a
+      ><a name="4977"
+      > </a
+      ><a name="4978" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="4979"
+      > </a
+      ><a name="4980" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="4981"
+      > </a
+      ><a name="4982" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="4987"
+      > </a
+      ><a name="4988" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="4990" class="Symbol"
+      >)</a
+      ><a name="4991"
+      >
+                </a
+      ><a name="5008" href="Paths.html#759" class="Function"
+      >&#8801;&#10216;</a
+      ><a name="5010"
+      > </a
+      ><a name="5011" href="Homotopy.VanKampen.SplitCode.html#1303" class="Function"
+      >F.code-a-refl-refl</a
+      ><a name="5029"
+      > </a
+      ><a name="5030" href="Homotopy.VanKampen.Code.LemmaPackA.html#3899" class="Bound"
+      >n</a
+      ><a name="5031"
+      > </a
+      ><a name="5032" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="5033"
+      > </a
+      ><a name="5034" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="5039"
+      > </a
+      ><a name="5040" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="5042"
+      > </a
+      ><a name="5043" href="Paths.html#759" class="Function"
+      >&#10217;&#8718;</a
+      ><a name="5045"
+      >
+            </a
+      ><a name="5058" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="5063"
+      > </a
+      ><a name="5064" href="Homotopy.VanKampen.Code.LemmaPackA.html#3912" class="Bound"
+      >co</a
+      ><a name="5066"
+      >
+                </a
+      ><a name="5083" href="Paths.html#759" class="Function"
+      >&#8718;</a
+      ><a name="5084" class="Symbol"
+      >)</a
+      ><a name="5085"
+      >
+
+      </a
+      ><a name="5093" href="Homotopy.VanKampen.Code.LemmaPackA.html#5093" class="Function"
+      >ap&#8658;bp</a
+      ><a name="5098"
+      > </a
+      ><a name="5099" class="Symbol"
+      >:</a
+      ><a name="5100"
+      > </a
+      ><a name="5101" class="Symbol"
+      >&#8704;</a
+      ><a name="5102"
+      > </a
+      ><a name="5103" class="Symbol"
+      >{</a
+      ><a name="5104" href="Homotopy.VanKampen.Code.LemmaPackA.html#5104" class="Bound"
+      >p</a
+      ><a name="5105" class="Symbol"
+      >}</a
+      ><a name="5106"
+      > </a
+      ><a name="5107" class="Symbol"
+      >&#8594;</a
+      ><a name="5108"
+      > </a
+      ><a name="5109" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="5113"
+      > </a
+      ><a name="5114" href="Homotopy.VanKampen.Code.LemmaPackA.html#5104" class="Bound"
+      >p</a
+      ><a name="5115"
+      > </a
+      ><a name="5116" class="Symbol"
+      >&#8594;</a
+      ><a name="5117"
+      > </a
+      ><a name="5118" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="5130"
+      > </a
+      ><a name="5131" href="Homotopy.VanKampen.Code.LemmaPackA.html#5104" class="Bound"
+      >p</a
+      ><a name="5132"
+      >
+      </a
+      ><a name="5139" href="Homotopy.VanKampen.Code.LemmaPackA.html#5093" class="Function"
+      >ap&#8658;bp</a
+      ><a name="5144"
+      > </a
+      ><a name="5145" class="Symbol"
+      >{</a
+      ><a name="5146" href="Homotopy.VanKampen.Code.LemmaPackA.html#5146" class="Bound"
+      >p</a
+      ><a name="5147" class="Symbol"
+      >}</a
+      ><a name="5148"
+      > </a
+      ><a name="5149" class="Symbol"
+      >=</a
+      ><a name="5150"
+      > </a
+      ><a name="5151" href="Homotopy.PushoutDef.html#1633" class="Function"
+      >pushout-rec</a
+      ><a name="5162"
+      >
+        </a
+      ><a name="5171" class="Symbol"
+      >(&#955;</a
+      ><a name="5173"
+      > </a
+      ><a name="5174" href="Homotopy.VanKampen.Code.LemmaPackA.html#5174" class="Bound"
+      >x</a
+      ><a name="5175"
+      > </a
+      ><a name="5176" class="Symbol"
+      >&#8594;</a
+      ><a name="5177"
+      > </a
+      ><a name="5178" href="Homotopy.VanKampen.SplitCode.html#16454" class="Function"
+      >code</a
+      ><a name="5182"
+      > </a
+      ><a name="5183" href="Homotopy.VanKampen.Code.LemmaPackA.html#5174" class="Bound"
+      >x</a
+      ><a name="5184"
+      > </a
+      ><a name="5185" class="Symbol"
+      >&#8594;</a
+      ><a name="5186"
+      > </a
+      ><a name="5187" href="Homotopy.VanKampen.Code.LemmaPackA.html#3517" class="Function"
+      >flipped-code</a
+      ><a name="5199"
+      > </a
+      ><a name="5200" href="Homotopy.VanKampen.Code.LemmaPackA.html#5174" class="Bound"
+      >x</a
+      ><a name="5201" class="Symbol"
+      >)</a
+      ><a name="5202"
+      >
+        </a
+      ><a name="5211" class="Symbol"
+      >(&#955;</a
+      ><a name="5213"
+      > </a
+      ><a name="5214" href="Homotopy.VanKampen.Code.LemmaPackA.html#5214" class="Bound"
+      >_</a
+      ><a name="5215"
+      > </a
+      ><a name="5216" class="Symbol"
+      >&#8594;</a
+      ><a name="5217"
+      > </a
+      ><a name="5218" href="Homotopy.VanKampen.Code.LemmaPackA.html#1212" class="Function"
+      >aa&#8658;ba</a
+      ><a name="5223" class="Symbol"
+      >)</a
+      ><a name="5224"
+      >
+        </a
+      ><a name="5233" class="Symbol"
+      >(&#955;</a
+      ><a name="5235"
+      > </a
+      ><a name="5236" href="Homotopy.VanKampen.Code.LemmaPackA.html#5236" class="Bound"
+      >_</a
+      ><a name="5237"
+      > </a
+      ><a name="5238" class="Symbol"
+      >&#8594;</a
+      ><a name="5239"
+      > </a
+      ><a name="5240" href="Homotopy.VanKampen.Code.LemmaPackA.html#1288" class="Function"
+      >ab&#8658;bb</a
+      ><a name="5245" class="Symbol"
+      >)</a
+      ><a name="5246"
+      >
+        </a
+      ><a name="5255" href="Homotopy.VanKampen.Code.LemmaPackA.html#3608" class="Function"
+      >ap&#8658;bp-glue</a
+      ><a name="5265"
+      >
+        </a
+      ><a name="5274" href="Homotopy.VanKampen.Code.LemmaPackA.html#5146" class="Bound"
+      >p</a
+      ><a name="5275"
+      >
+
+  </a
+      ><a name="5279" class="Keyword"
+      >open</a
+      ><a name="5283"
+      > </a
+      ><a name="5284" href="Homotopy.VanKampen.Code.LemmaPackA.html#3028" class="Module"
+      >PackA3</a
+      ><a name="5290"
+      > </a
+      ><a name="5291" href="Homotopy.VanKampen.Code.LemmaPackA.html#161" class="Bound"
+      >d</a
+      ><a name="5292"
+      > </a
+      ><a name="5293" href="Homotopy.VanKampen.Code.LemmaPackA.html#184" class="Bound"
+      >l</a
+      ><a name="5294"
+      > </a
+      ><a name="5295" class="Keyword"
+      >public</a
+      ><a name="5301"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

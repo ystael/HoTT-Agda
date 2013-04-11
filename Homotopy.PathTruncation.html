@@ -1,0 +1,6140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Homotopy.PathTruncation</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Symbol"
+      >{-#</a
+      ><a name="4"
+      > </a
+      ><a name="5" class="Keyword"
+      >OPTIONS</a
+      ><a name="12"
+      > --without-K </a
+      ><a name="25" class="Symbol"
+      >#-}</a
+      ><a name="28"
+      >
+
+</a
+      ><a name="30" class="Comment"
+      >{-
+  Now it only has specialized constructs and lemmas for &#960;&#8320; (x &#8801; y)
+
+  Should be rewritten with something like Algebra.Groupoids
+-}</a
+      ><a name="163"
+      >
+
+</a
+      ><a name="165" class="Keyword"
+      >open</a
+      ><a name="169"
+      > </a
+      ><a name="170" class="Keyword"
+      >import</a
+      ><a name="176"
+      > </a
+      ><a name="177" href="Base.html#1" class="Module"
+      >Base</a
+      ><a name="181"
+      >
+
+</a
+      ><a name="183" class="Keyword"
+      >module</a
+      ><a name="189"
+      > </a
+      ><a name="190" href="Homotopy.PathTruncation.html#1" class="Module"
+      >Homotopy.PathTruncation</a
+      ><a name="213"
+      > </a
+      ><a name="214" class="Keyword"
+      >where</a
+      ><a name="219"
+      >
+
+</a
+      ><a name="221" class="Keyword"
+      >open</a
+      ><a name="225"
+      > </a
+      ><a name="226" class="Keyword"
+      >import</a
+      ><a name="232"
+      > </a
+      ><a name="233" href="HLevel.html#1" class="Module"
+      >HLevel</a
+      ><a name="239"
+      >
+</a
+      ><a name="240" class="Keyword"
+      >open</a
+      ><a name="244"
+      > </a
+      ><a name="245" class="Keyword"
+      >import</a
+      ><a name="251"
+      > </a
+      ><a name="252" href="HLevelBis.html#1" class="Module"
+      >HLevelBis</a
+      ><a name="261"
+      >
+</a
+      ><a name="262" class="Keyword"
+      >open</a
+      ><a name="266"
+      > </a
+      ><a name="267" class="Keyword"
+      >import</a
+      ><a name="273"
+      > </a
+      ><a name="274" href="Homotopy.Truncation.html#1" class="Module"
+      >Homotopy.Truncation</a
+      ><a name="293"
+      >
+
+</a
+      ><a name="295" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >_&#8801;&#8320;_</a
+      ><a name="299"
+      > </a
+      ><a name="300" class="Symbol"
+      >:</a
+      ><a name="301"
+      > </a
+      ><a name="302" class="Symbol"
+      >&#8704;</a
+      ><a name="303"
+      > </a
+      ><a name="304" class="Symbol"
+      >{</a
+      ><a name="305" href="Homotopy.PathTruncation.html#305" class="Bound"
+      >i</a
+      ><a name="306" class="Symbol"
+      >}</a
+      ><a name="307"
+      > </a
+      ><a name="308" class="Symbol"
+      >{</a
+      ><a name="309" href="Homotopy.PathTruncation.html#309" class="Bound"
+      >A</a
+      ><a name="310"
+      > </a
+      ><a name="311" class="Symbol"
+      >:</a
+      ><a name="312"
+      > </a
+      ><a name="313" class="PrimitiveType"
+      >Set</a
+      ><a name="316"
+      > </a
+      ><a name="317" href="Homotopy.PathTruncation.html#305" class="Bound"
+      >i</a
+      ><a name="318" class="Symbol"
+      >}</a
+      ><a name="319"
+      > </a
+      ><a name="320" class="Symbol"
+      >&#8594;</a
+      ><a name="321"
+      > </a
+      ><a name="322" href="Homotopy.PathTruncation.html#309" class="Bound"
+      >A</a
+      ><a name="323"
+      > </a
+      ><a name="324" class="Symbol"
+      >&#8594;</a
+      ><a name="325"
+      > </a
+      ><a name="326" href="Homotopy.PathTruncation.html#309" class="Bound"
+      >A</a
+      ><a name="327"
+      > </a
+      ><a name="328" class="Symbol"
+      >&#8594;</a
+      ><a name="329"
+      > </a
+      ><a name="330" class="PrimitiveType"
+      >Set</a
+      ><a name="333"
+      > </a
+      ><a name="334" href="Homotopy.PathTruncation.html#305" class="Bound"
+      >i</a
+      ><a name="335"
+      >
+</a
+      ><a name="336" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >_&#8801;&#8320;_</a
+      ><a name="340"
+      > </a
+      ><a name="341" href="Homotopy.PathTruncation.html#341" class="Bound"
+      >x</a
+      ><a name="342"
+      > </a
+      ><a name="343" href="Homotopy.PathTruncation.html#343" class="Bound"
+      >y</a
+      ><a name="344"
+      > </a
+      ><a name="345" class="Symbol"
+      >=</a
+      ><a name="346"
+      > </a
+      ><a name="347" href="Homotopy.Truncation.html#2071" class="Function"
+      >&#960;&#8320;</a
+      ><a name="349"
+      > </a
+      ><a name="350" class="Symbol"
+      >(</a
+      ><a name="351" href="Homotopy.PathTruncation.html#341" class="Bound"
+      >x</a
+      ><a name="352"
+      > </a
+      ><a name="353" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="354"
+      > </a
+      ><a name="355" href="Homotopy.PathTruncation.html#343" class="Bound"
+      >y</a
+      ><a name="356" class="Symbol"
+      >)</a
+      ><a name="357"
+      >
+
+</a
+      ><a name="359" class="Keyword"
+      >infix</a
+      ><a name="364"
+      > </a
+      ><a name="365" class="Number"
+      >8</a
+      ><a name="366"
+      > _&#8728;&#8320;_  </a
+      ><a name="373" class="Comment"
+      >-- \o\0</a
+      ><a name="380"
+      >
+</a
+      ><a name="381" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >_&#8728;&#8320;_</a
+      ><a name="385"
+      > </a
+      ><a name="386" class="Symbol"
+      >:</a
+      ><a name="387"
+      > </a
+      ><a name="388" class="Symbol"
+      >&#8704;</a
+      ><a name="389"
+      > </a
+      ><a name="390" class="Symbol"
+      >{</a
+      ><a name="391" href="Homotopy.PathTruncation.html#391" class="Bound"
+      >i</a
+      ><a name="392" class="Symbol"
+      >}</a
+      ><a name="393"
+      > </a
+      ><a name="394" class="Symbol"
+      >{</a
+      ><a name="395" href="Homotopy.PathTruncation.html#395" class="Bound"
+      >A</a
+      ><a name="396"
+      > </a
+      ><a name="397" class="Symbol"
+      >:</a
+      ><a name="398"
+      > </a
+      ><a name="399" class="PrimitiveType"
+      >Set</a
+      ><a name="402"
+      > </a
+      ><a name="403" href="Homotopy.PathTruncation.html#391" class="Bound"
+      >i</a
+      ><a name="404" class="Symbol"
+      >}</a
+      ><a name="405"
+      > </a
+      ><a name="406" class="Symbol"
+      >{</a
+      ><a name="407" href="Homotopy.PathTruncation.html#407" class="Bound"
+      >x</a
+      ><a name="408"
+      > </a
+      ><a name="409" href="Homotopy.PathTruncation.html#409" class="Bound"
+      >y</a
+      ><a name="410"
+      > </a
+      ><a name="411" href="Homotopy.PathTruncation.html#411" class="Bound"
+      >z</a
+      ><a name="412"
+      > </a
+      ><a name="413" class="Symbol"
+      >:</a
+      ><a name="414"
+      > </a
+      ><a name="415" href="Homotopy.PathTruncation.html#395" class="Bound"
+      >A</a
+      ><a name="416" class="Symbol"
+      >}</a
+      ><a name="417"
+      > </a
+      ><a name="418" class="Symbol"
+      >&#8594;</a
+      ><a name="419"
+      > </a
+      ><a name="420" href="Homotopy.PathTruncation.html#407" class="Bound"
+      >x</a
+      ><a name="421"
+      > </a
+      ><a name="422" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="424"
+      > </a
+      ><a name="425" href="Homotopy.PathTruncation.html#409" class="Bound"
+      >y</a
+      ><a name="426"
+      > </a
+      ><a name="427" class="Symbol"
+      >&#8594;</a
+      ><a name="428"
+      > </a
+      ><a name="429" href="Homotopy.PathTruncation.html#409" class="Bound"
+      >y</a
+      ><a name="430"
+      > </a
+      ><a name="431" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="433"
+      > </a
+      ><a name="434" href="Homotopy.PathTruncation.html#411" class="Bound"
+      >z</a
+      ><a name="435"
+      > </a
+      ><a name="436" class="Symbol"
+      >&#8594;</a
+      ><a name="437"
+      > </a
+      ><a name="438" href="Homotopy.PathTruncation.html#407" class="Bound"
+      >x</a
+      ><a name="439"
+      > </a
+      ><a name="440" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="442"
+      > </a
+      ><a name="443" href="Homotopy.PathTruncation.html#411" class="Bound"
+      >z</a
+      ><a name="444"
+      >
+</a
+      ><a name="445" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >_&#8728;&#8320;_</a
+      ><a name="449"
+      > </a
+      ><a name="450" class="Symbol"
+      >=</a
+      ><a name="451"
+      >
+  </a
+      ><a name="454" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="470"
+      > </a
+      ><a name="471" class="Symbol"
+      >&#10627;</a
+      ><a name="472"
+      > </a
+      ><a name="473" href="HLevelBis.html#3678" class="Function"
+      >&#8594;-is-set</a
+      ><a name="481"
+      > </a
+      ><a name="482" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="483"
+      > </a
+      ><a name="484" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="493"
+      > </a
+      ><a name="494" class="Symbol"
+      >_</a
+      ><a name="495"
+      > </a
+      ><a name="496" class="Symbol"
+      >&#10628;</a
+      ><a name="497"
+      > </a
+      ><a name="498" class="Symbol"
+      >(&#955;</a
+      ><a name="500"
+      > </a
+      ><a name="501" href="Homotopy.PathTruncation.html#501" class="Bound"
+      >p</a
+      ><a name="502"
+      > </a
+      ><a name="503" class="Symbol"
+      >&#8594;</a
+      ><a name="504"
+      >
+    </a
+      ><a name="509" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="525"
+      > </a
+      ><a name="526" class="Symbol"
+      >&#10627;</a
+      ><a name="527"
+      > </a
+      ><a name="528" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="537"
+      > </a
+      ><a name="538" class="Symbol"
+      >_</a
+      ><a name="539"
+      > </a
+      ><a name="540" class="Symbol"
+      >&#10628;</a
+      ><a name="541"
+      > </a
+      ><a name="542" class="Symbol"
+      >(&#955;</a
+      ><a name="544"
+      > </a
+      ><a name="545" href="Homotopy.PathTruncation.html#545" class="Bound"
+      >q</a
+      ><a name="546"
+      > </a
+      ><a name="547" class="Symbol"
+      >&#8594;</a
+      ><a name="548"
+      >
+      </a
+      ><a name="555" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="561"
+      > </a
+      ><a name="562" href="Homotopy.PathTruncation.html#501" class="Bound"
+      >p</a
+      ><a name="563"
+      > </a
+      ><a name="564" href="Paths.html#432" class="Function Operator"
+      >&#8728;</a
+      ><a name="565"
+      > </a
+      ><a name="566" href="Homotopy.PathTruncation.html#545" class="Bound"
+      >q</a
+      ><a name="567" class="Symbol"
+      >))</a
+      ><a name="569"
+      >
+
+</a
+      ><a name="571" href="Homotopy.PathTruncation.html#571" class="Function"
+      >!&#8320;</a
+      ><a name="573"
+      > </a
+      ><a name="574" class="Symbol"
+      >:</a
+      ><a name="575"
+      > </a
+      ><a name="576" class="Symbol"
+      >&#8704;</a
+      ><a name="577"
+      > </a
+      ><a name="578" class="Symbol"
+      >{</a
+      ><a name="579" href="Homotopy.PathTruncation.html#579" class="Bound"
+      >i</a
+      ><a name="580" class="Symbol"
+      >}</a
+      ><a name="581"
+      > </a
+      ><a name="582" class="Symbol"
+      >{</a
+      ><a name="583" href="Homotopy.PathTruncation.html#583" class="Bound"
+      >A</a
+      ><a name="584"
+      > </a
+      ><a name="585" class="Symbol"
+      >:</a
+      ><a name="586"
+      > </a
+      ><a name="587" class="PrimitiveType"
+      >Set</a
+      ><a name="590"
+      > </a
+      ><a name="591" href="Homotopy.PathTruncation.html#579" class="Bound"
+      >i</a
+      ><a name="592" class="Symbol"
+      >}</a
+      ><a name="593"
+      > </a
+      ><a name="594" class="Symbol"
+      >{</a
+      ><a name="595" href="Homotopy.PathTruncation.html#595" class="Bound"
+      >x</a
+      ><a name="596"
+      > </a
+      ><a name="597" href="Homotopy.PathTruncation.html#597" class="Bound"
+      >y</a
+      ><a name="598"
+      > </a
+      ><a name="599" class="Symbol"
+      >:</a
+      ><a name="600"
+      > </a
+      ><a name="601" href="Homotopy.PathTruncation.html#583" class="Bound"
+      >A</a
+      ><a name="602" class="Symbol"
+      >}</a
+      ><a name="603"
+      > </a
+      ><a name="604" class="Symbol"
+      >&#8594;</a
+      ><a name="605"
+      > </a
+      ><a name="606" href="Homotopy.PathTruncation.html#595" class="Bound"
+      >x</a
+      ><a name="607"
+      > </a
+      ><a name="608" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="610"
+      > </a
+      ><a name="611" href="Homotopy.PathTruncation.html#597" class="Bound"
+      >y</a
+      ><a name="612"
+      > </a
+      ><a name="613" class="Symbol"
+      >&#8594;</a
+      ><a name="614"
+      > </a
+      ><a name="615" href="Homotopy.PathTruncation.html#597" class="Bound"
+      >y</a
+      ><a name="616"
+      > </a
+      ><a name="617" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="619"
+      > </a
+      ><a name="620" href="Homotopy.PathTruncation.html#595" class="Bound"
+      >x</a
+      ><a name="621"
+      >
+</a
+      ><a name="622" href="Homotopy.PathTruncation.html#571" class="Function"
+      >!&#8320;</a
+      ><a name="624"
+      > </a
+      ><a name="625" class="Symbol"
+      >=</a
+      ><a name="626"
+      > </a
+      ><a name="627" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="643"
+      > </a
+      ><a name="644" class="Symbol"
+      >&#10627;</a
+      ><a name="645"
+      > </a
+      ><a name="646" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="655"
+      > </a
+      ><a name="656" class="Symbol"
+      >_</a
+      ><a name="657"
+      > </a
+      ><a name="658" class="Symbol"
+      >&#10628;</a
+      ><a name="659"
+      > </a
+      ><a name="660" class="Symbol"
+      >(</a
+      ><a name="661" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="665"
+      > </a
+      ><a name="666" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="667"
+      > </a
+      ><a name="668" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="669" class="Symbol"
+      >)</a
+      ><a name="670"
+      >
+
+</a
+      ><a name="672" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="677"
+      > </a
+      ><a name="678" class="Symbol"
+      >:</a
+      ><a name="679"
+      > </a
+      ><a name="680" class="Symbol"
+      >&#8704;</a
+      ><a name="681"
+      > </a
+      ><a name="682" class="Symbol"
+      >{</a
+      ><a name="683" href="Homotopy.PathTruncation.html#683" class="Bound"
+      >i</a
+      ><a name="684" class="Symbol"
+      >}</a
+      ><a name="685"
+      > </a
+      ><a name="686" class="Symbol"
+      >{</a
+      ><a name="687" href="Homotopy.PathTruncation.html#687" class="Bound"
+      >A</a
+      ><a name="688"
+      > </a
+      ><a name="689" class="Symbol"
+      >:</a
+      ><a name="690"
+      > </a
+      ><a name="691" class="PrimitiveType"
+      >Set</a
+      ><a name="694"
+      > </a
+      ><a name="695" href="Homotopy.PathTruncation.html#683" class="Bound"
+      >i</a
+      ><a name="696" class="Symbol"
+      >}</a
+      ><a name="697"
+      > </a
+      ><a name="698" class="Symbol"
+      >{</a
+      ><a name="699" href="Homotopy.PathTruncation.html#699" class="Bound"
+      >a</a
+      ><a name="700"
+      > </a
+      ><a name="701" class="Symbol"
+      >:</a
+      ><a name="702"
+      > </a
+      ><a name="703" href="Homotopy.PathTruncation.html#687" class="Bound"
+      >A</a
+      ><a name="704" class="Symbol"
+      >}</a
+      ><a name="705"
+      > </a
+      ><a name="706" class="Symbol"
+      >&#8594;</a
+      ><a name="707"
+      > </a
+      ><a name="708" href="Homotopy.PathTruncation.html#699" class="Bound"
+      >a</a
+      ><a name="709"
+      > </a
+      ><a name="710" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="712"
+      > </a
+      ><a name="713" href="Homotopy.PathTruncation.html#699" class="Bound"
+      >a</a
+      ><a name="714"
+      >
+</a
+      ><a name="715" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="720"
+      > </a
+      ><a name="721" class="Symbol"
+      >=</a
+      ><a name="722"
+      > </a
+      ><a name="723" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="727"
+      > </a
+      ><a name="728" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="732"
+      >
+
+</a
+      ><a name="734" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="737"
+      > </a
+      ><a name="738" class="Symbol"
+      >:</a
+      ><a name="739"
+      > </a
+      ><a name="740" class="Symbol"
+      >&#8704;</a
+      ><a name="741"
+      > </a
+      ><a name="742" class="Symbol"
+      >{</a
+      ><a name="743" href="Homotopy.PathTruncation.html#743" class="Bound"
+      >i</a
+      ><a name="744"
+      > </a
+      ><a name="745" href="Homotopy.PathTruncation.html#745" class="Bound"
+      >j</a
+      ><a name="746" class="Symbol"
+      >}</a
+      ><a name="747"
+      > </a
+      ><a name="748" class="Symbol"
+      >{</a
+      ><a name="749" href="Homotopy.PathTruncation.html#749" class="Bound"
+      >A</a
+      ><a name="750"
+      > </a
+      ><a name="751" class="Symbol"
+      >:</a
+      ><a name="752"
+      > </a
+      ><a name="753" class="PrimitiveType"
+      >Set</a
+      ><a name="756"
+      > </a
+      ><a name="757" href="Homotopy.PathTruncation.html#743" class="Bound"
+      >i</a
+      ><a name="758" class="Symbol"
+      >}</a
+      ><a name="759"
+      > </a
+      ><a name="760" class="Symbol"
+      >{</a
+      ><a name="761" href="Homotopy.PathTruncation.html#761" class="Bound"
+      >B</a
+      ><a name="762"
+      > </a
+      ><a name="763" class="Symbol"
+      >:</a
+      ><a name="764"
+      > </a
+      ><a name="765" class="PrimitiveType"
+      >Set</a
+      ><a name="768"
+      > </a
+      ><a name="769" href="Homotopy.PathTruncation.html#745" class="Bound"
+      >j</a
+      ><a name="770" class="Symbol"
+      >}</a
+      ><a name="771"
+      > </a
+      ><a name="772" class="Symbol"
+      >{</a
+      ><a name="773" href="Homotopy.PathTruncation.html#773" class="Bound"
+      >x</a
+      ><a name="774"
+      > </a
+      ><a name="775" href="Homotopy.PathTruncation.html#775" class="Bound"
+      >y</a
+      ><a name="776"
+      > </a
+      ><a name="777" class="Symbol"
+      >:</a
+      ><a name="778"
+      > </a
+      ><a name="779" href="Homotopy.PathTruncation.html#749" class="Bound"
+      >A</a
+      ><a name="780" class="Symbol"
+      >}</a
+      ><a name="781"
+      > </a
+      ><a name="782" class="Symbol"
+      >(</a
+      ><a name="783" href="Homotopy.PathTruncation.html#783" class="Bound"
+      >f</a
+      ><a name="784"
+      > </a
+      ><a name="785" class="Symbol"
+      >:</a
+      ><a name="786"
+      > </a
+      ><a name="787" href="Homotopy.PathTruncation.html#749" class="Bound"
+      >A</a
+      ><a name="788"
+      > </a
+      ><a name="789" class="Symbol"
+      >&#8594;</a
+      ><a name="790"
+      > </a
+      ><a name="791" href="Homotopy.PathTruncation.html#761" class="Bound"
+      >B</a
+      ><a name="792" class="Symbol"
+      >)</a
+      ><a name="793"
+      >
+  </a
+      ><a name="796" class="Symbol"
+      >&#8594;</a
+      ><a name="797"
+      > </a
+      ><a name="798" href="Homotopy.PathTruncation.html#773" class="Bound"
+      >x</a
+      ><a name="799"
+      > </a
+      ><a name="800" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="802"
+      > </a
+      ><a name="803" href="Homotopy.PathTruncation.html#775" class="Bound"
+      >y</a
+      ><a name="804"
+      > </a
+      ><a name="805" class="Symbol"
+      >&#8594;</a
+      ><a name="806"
+      > </a
+      ><a name="807" href="Homotopy.PathTruncation.html#783" class="Bound"
+      >f</a
+      ><a name="808"
+      > </a
+      ><a name="809" href="Homotopy.PathTruncation.html#773" class="Bound"
+      >x</a
+      ><a name="810"
+      > </a
+      ><a name="811" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="813"
+      > </a
+      ><a name="814" href="Homotopy.PathTruncation.html#783" class="Bound"
+      >f</a
+      ><a name="815"
+      > </a
+      ><a name="816" href="Homotopy.PathTruncation.html#775" class="Bound"
+      >y</a
+      ><a name="817"
+      >
+</a
+      ><a name="818" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="821"
+      > </a
+      ><a name="822" href="Homotopy.PathTruncation.html#822" class="Bound"
+      >f</a
+      ><a name="823"
+      > </a
+      ><a name="824" class="Symbol"
+      >=</a
+      ><a name="825"
+      > </a
+      ><a name="826" href="Homotopy.Truncation.html#2339" class="Function"
+      >&#960;&#8320;-extend-nondep</a
+      ><a name="842"
+      > </a
+      ><a name="843" class="Symbol"
+      >&#10627;</a
+      ><a name="844"
+      > </a
+      ><a name="845" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="854"
+      > </a
+      ><a name="855" class="Symbol"
+      >_</a
+      ><a name="856"
+      > </a
+      ><a name="857" class="Symbol"
+      >&#10628;</a
+      ><a name="858"
+      > </a
+      ><a name="859" class="Symbol"
+      >(</a
+      ><a name="860" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="864"
+      > </a
+      ><a name="865" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="866"
+      > </a
+      ><a name="867" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="869"
+      > </a
+      ><a name="870" href="Homotopy.PathTruncation.html#822" class="Bound"
+      >f</a
+      ><a name="871" class="Symbol"
+      >)</a
+      ><a name="872"
+      >
+
+</a
+      ><a name="874" class="Keyword"
+      >module</a
+      ><a name="880"
+      > </a
+      ><a name="881" href="Homotopy.PathTruncation.html#881" class="Module"
+      >_</a
+      ><a name="882"
+      > </a
+      ><a name="883" class="Symbol"
+      >{</a
+      ><a name="884" href="Homotopy.PathTruncation.html#884" class="Bound"
+      >i</a
+      ><a name="885" class="Symbol"
+      >}</a
+      ><a name="886"
+      > </a
+      ><a name="887" class="Symbol"
+      >{</a
+      ><a name="888" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="889"
+      > </a
+      ><a name="890" class="Symbol"
+      >:</a
+      ><a name="891"
+      > </a
+      ><a name="892" class="PrimitiveType"
+      >Set</a
+      ><a name="895"
+      > </a
+      ><a name="896" href="Homotopy.PathTruncation.html#884" class="Bound"
+      >i</a
+      ><a name="897" class="Symbol"
+      >}</a
+      ><a name="898"
+      > </a
+      ><a name="899" class="Keyword"
+      >where</a
+      ><a name="904"
+      >
+
+  </a
+      ><a name="908" href="Homotopy.PathTruncation.html#908" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="924"
+      > </a
+      ><a name="925" class="Symbol"
+      >:</a
+      ><a name="926"
+      > </a
+      ><a name="927" class="Symbol"
+      >&#8704;</a
+      ><a name="928"
+      > </a
+      ><a name="929" class="Symbol"
+      >{</a
+      ><a name="930" href="Homotopy.PathTruncation.html#930" class="Bound"
+      >x</a
+      ><a name="931"
+      > </a
+      ><a name="932" href="Homotopy.PathTruncation.html#932" class="Bound"
+      >y</a
+      ><a name="933"
+      > </a
+      ><a name="934" class="Symbol"
+      >:</a
+      ><a name="935"
+      > </a
+      ><a name="936" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="937" class="Symbol"
+      >}</a
+      ><a name="938"
+      > </a
+      ><a name="939" class="Symbol"
+      >(</a
+      ><a name="940" href="Homotopy.PathTruncation.html#940" class="Bound"
+      >q</a
+      ><a name="941"
+      > </a
+      ><a name="942" class="Symbol"
+      >:</a
+      ><a name="943"
+      > </a
+      ><a name="944" href="Homotopy.PathTruncation.html#930" class="Bound"
+      >x</a
+      ><a name="945"
+      > </a
+      ><a name="946" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="948"
+      > </a
+      ><a name="949" href="Homotopy.PathTruncation.html#932" class="Bound"
+      >y</a
+      ><a name="950" class="Symbol"
+      >)</a
+      ><a name="951"
+      > </a
+      ><a name="952" class="Symbol"
+      >&#8594;</a
+      ><a name="953"
+      > </a
+      ><a name="954" class="Symbol"
+      >(</a
+      ><a name="955" href="Homotopy.PathTruncation.html#940" class="Bound"
+      >q</a
+      ><a name="956"
+      > </a
+      ><a name="957" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="959"
+      > </a
+      ><a name="960" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="965" class="Symbol"
+      >)</a
+      ><a name="966"
+      > </a
+      ><a name="967" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="968"
+      > </a
+      ><a name="969" href="Homotopy.PathTruncation.html#940" class="Bound"
+      >q</a
+      ><a name="970"
+      >
+  </a
+      ><a name="973" href="Homotopy.PathTruncation.html#908" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="989"
+      > </a
+      ><a name="990" class="Symbol"
+      >{</a
+      ><a name="991"
+      >x </a
+      ><a name="993" class="Symbol"
+      >=</a
+      ><a name="994"
+      > </a
+      ><a name="995" href="Homotopy.PathTruncation.html#995" class="Bound"
+      >x</a
+      ><a name="996" class="Symbol"
+      >}</a
+      ><a name="997"
+      > </a
+      ><a name="998" class="Symbol"
+      >{</a
+      ><a name="999" href="Homotopy.PathTruncation.html#999" class="Bound"
+      >y</a
+      ><a name="1000" class="Symbol"
+      >}</a
+      ><a name="1001"
+      > </a
+      ><a name="1002" class="Symbol"
+      >=</a
+      ><a name="1003"
+      > </a
+      ><a name="1004" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1013"
+      >
+    </a
+      ><a name="1018" class="Symbol"
+      >&#10627;</a
+      ><a name="1019"
+      > </a
+      ><a name="1020" class="Symbol"
+      >&#955;</a
+      ><a name="1021"
+      > </a
+      ><a name="1022" href="Homotopy.PathTruncation.html#1022" class="Bound"
+      >_</a
+      ><a name="1023"
+      > </a
+      ><a name="1024" class="Symbol"
+      >&#8594;</a
+      ><a name="1025"
+      >  </a
+      ><a name="1027" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1035"
+      > </a
+      ><a name="1036" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1037"
+      > </a
+      ><a name="1038" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1047"
+      > </a
+      ><a name="1048" class="Symbol"
+      >(</a
+      ><a name="1049" href="Homotopy.PathTruncation.html#995" class="Bound"
+      >x</a
+      ><a name="1050"
+      > </a
+      ><a name="1051" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1052"
+      > </a
+      ><a name="1053" href="Homotopy.PathTruncation.html#999" class="Bound"
+      >y</a
+      ><a name="1054" class="Symbol"
+      >)</a
+      ><a name="1055"
+      > </a
+      ><a name="1056" class="Symbol"
+      >&#10628;</a
+      ><a name="1057"
+      >
+    </a
+      ><a name="1062" class="Symbol"
+      >(&#955;</a
+      ><a name="1064"
+      > </a
+      ><a name="1065" href="Homotopy.PathTruncation.html#1065" class="Bound"
+      >x</a
+      ><a name="1066"
+      > </a
+      ><a name="1067" class="Symbol"
+      >&#8594;</a
+      ><a name="1068"
+      > </a
+      ><a name="1069" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="1071"
+      > </a
+      ><a name="1072" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1076"
+      > </a
+      ><a name="1077" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1078"
+      > </a
+      ><a name="1079" href="Paths.html#3095" class="Function"
+      >refl-right-unit</a
+      ><a name="1094"
+      > </a
+      ><a name="1095" href="Homotopy.PathTruncation.html#1065" class="Bound"
+      >x</a
+      ><a name="1096" class="Symbol"
+      >)</a
+      ><a name="1097"
+      >
+
+  </a
+      ><a name="1101" href="Homotopy.PathTruncation.html#1101" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="1116"
+      > </a
+      ><a name="1117" class="Symbol"
+      >:</a
+      ><a name="1118"
+      > </a
+      ><a name="1119" class="Symbol"
+      >&#8704;</a
+      ><a name="1120"
+      > </a
+      ><a name="1121" class="Symbol"
+      >{</a
+      ><a name="1122" href="Homotopy.PathTruncation.html#1122" class="Bound"
+      >x</a
+      ><a name="1123"
+      > </a
+      ><a name="1124" href="Homotopy.PathTruncation.html#1124" class="Bound"
+      >y</a
+      ><a name="1125"
+      > </a
+      ><a name="1126" class="Symbol"
+      >:</a
+      ><a name="1127"
+      > </a
+      ><a name="1128" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="1129" class="Symbol"
+      >}</a
+      ><a name="1130"
+      > </a
+      ><a name="1131" class="Symbol"
+      >(</a
+      ><a name="1132" href="Homotopy.PathTruncation.html#1132" class="Bound"
+      >q</a
+      ><a name="1133"
+      > </a
+      ><a name="1134" class="Symbol"
+      >:</a
+      ><a name="1135"
+      > </a
+      ><a name="1136" href="Homotopy.PathTruncation.html#1122" class="Bound"
+      >x</a
+      ><a name="1137"
+      > </a
+      ><a name="1138" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1140"
+      > </a
+      ><a name="1141" href="Homotopy.PathTruncation.html#1124" class="Bound"
+      >y</a
+      ><a name="1142" class="Symbol"
+      >)</a
+      ><a name="1143"
+      > </a
+      ><a name="1144" class="Symbol"
+      >&#8594;</a
+      ><a name="1145"
+      > </a
+      ><a name="1146" class="Symbol"
+      >(</a
+      ><a name="1147" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="1152"
+      > </a
+      ><a name="1153" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1155"
+      > </a
+      ><a name="1156" href="Homotopy.PathTruncation.html#1132" class="Bound"
+      >q</a
+      ><a name="1157" class="Symbol"
+      >)</a
+      ><a name="1158"
+      > </a
+      ><a name="1159" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1160"
+      > </a
+      ><a name="1161" href="Homotopy.PathTruncation.html#1132" class="Bound"
+      >q</a
+      ><a name="1162"
+      >
+  </a
+      ><a name="1165" href="Homotopy.PathTruncation.html#1101" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="1180"
+      > </a
+      ><a name="1181" class="Symbol"
+      >{</a
+      ><a name="1182"
+      >x </a
+      ><a name="1184" class="Symbol"
+      >=</a
+      ><a name="1185"
+      > </a
+      ><a name="1186" href="Homotopy.PathTruncation.html#1186" class="Bound"
+      >x</a
+      ><a name="1187" class="Symbol"
+      >}</a
+      ><a name="1188"
+      > </a
+      ><a name="1189" class="Symbol"
+      >{</a
+      ><a name="1190" href="Homotopy.PathTruncation.html#1190" class="Bound"
+      >y</a
+      ><a name="1191" class="Symbol"
+      >}</a
+      ><a name="1192"
+      > </a
+      ><a name="1193" class="Symbol"
+      >=</a
+      ><a name="1194"
+      > </a
+      ><a name="1195" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1204"
+      >
+    </a
+      ><a name="1209" class="Symbol"
+      >&#10627;</a
+      ><a name="1210"
+      > </a
+      ><a name="1211" class="Symbol"
+      >&#955;</a
+      ><a name="1212"
+      > </a
+      ><a name="1213" href="Homotopy.PathTruncation.html#1213" class="Bound"
+      >_</a
+      ><a name="1214"
+      > </a
+      ><a name="1215" class="Symbol"
+      >&#8594;</a
+      ><a name="1216"
+      >  </a
+      ><a name="1218" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1226"
+      > </a
+      ><a name="1227" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1228"
+      > </a
+      ><a name="1229" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1238"
+      > </a
+      ><a name="1239" class="Symbol"
+      >(</a
+      ><a name="1240" href="Homotopy.PathTruncation.html#1186" class="Bound"
+      >x</a
+      ><a name="1241"
+      > </a
+      ><a name="1242" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1243"
+      > </a
+      ><a name="1244" href="Homotopy.PathTruncation.html#1190" class="Bound"
+      >y</a
+      ><a name="1245" class="Symbol"
+      >)</a
+      ><a name="1246"
+      > </a
+      ><a name="1247" class="Symbol"
+      >&#10628;</a
+      ><a name="1248"
+      >
+    </a
+      ><a name="1253" class="Symbol"
+      >(&#955;</a
+      ><a name="1255"
+      > </a
+      ><a name="1256" href="Homotopy.PathTruncation.html#1256" class="Bound"
+      >_</a
+      ><a name="1257"
+      > </a
+      ><a name="1258" class="Symbol"
+      >&#8594;</a
+      ><a name="1259"
+      > </a
+      ><a name="1260" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="1264" class="Symbol"
+      >)</a
+      ><a name="1265"
+      >
+
+  </a
+      ><a name="1269" href="Homotopy.PathTruncation.html#1269" class="Function"
+      >concat&#8320;-assoc</a
+      ><a name="1282"
+      > </a
+      ><a name="1283" class="Symbol"
+      >:</a
+      ><a name="1284"
+      > </a
+      ><a name="1285" class="Symbol"
+      >{</a
+      ><a name="1286" href="Homotopy.PathTruncation.html#1286" class="Bound"
+      >x</a
+      ><a name="1287"
+      > </a
+      ><a name="1288" href="Homotopy.PathTruncation.html#1288" class="Bound"
+      >y</a
+      ><a name="1289"
+      > </a
+      ><a name="1290" href="Homotopy.PathTruncation.html#1290" class="Bound"
+      >z</a
+      ><a name="1291"
+      > </a
+      ><a name="1292" href="Homotopy.PathTruncation.html#1292" class="Bound"
+      >t</a
+      ><a name="1293"
+      > </a
+      ><a name="1294" class="Symbol"
+      >:</a
+      ><a name="1295"
+      > </a
+      ><a name="1296" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="1297" class="Symbol"
+      >}</a
+      ><a name="1298"
+      > </a
+      ><a name="1299" class="Symbol"
+      >(</a
+      ><a name="1300" href="Homotopy.PathTruncation.html#1300" class="Bound"
+      >p</a
+      ><a name="1301"
+      > </a
+      ><a name="1302" class="Symbol"
+      >:</a
+      ><a name="1303"
+      > </a
+      ><a name="1304" href="Homotopy.PathTruncation.html#1286" class="Bound"
+      >x</a
+      ><a name="1305"
+      > </a
+      ><a name="1306" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1308"
+      > </a
+      ><a name="1309" href="Homotopy.PathTruncation.html#1288" class="Bound"
+      >y</a
+      ><a name="1310" class="Symbol"
+      >)</a
+      ><a name="1311"
+      > </a
+      ><a name="1312" class="Symbol"
+      >(</a
+      ><a name="1313" href="Homotopy.PathTruncation.html#1313" class="Bound"
+      >q</a
+      ><a name="1314"
+      > </a
+      ><a name="1315" class="Symbol"
+      >:</a
+      ><a name="1316"
+      > </a
+      ><a name="1317" href="Homotopy.PathTruncation.html#1288" class="Bound"
+      >y</a
+      ><a name="1318"
+      > </a
+      ><a name="1319" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1321"
+      > </a
+      ><a name="1322" href="Homotopy.PathTruncation.html#1290" class="Bound"
+      >z</a
+      ><a name="1323" class="Symbol"
+      >)</a
+      ><a name="1324"
+      > </a
+      ><a name="1325" class="Symbol"
+      >(</a
+      ><a name="1326" href="Homotopy.PathTruncation.html#1326" class="Bound"
+      >r</a
+      ><a name="1327"
+      > </a
+      ><a name="1328" class="Symbol"
+      >:</a
+      ><a name="1329"
+      > </a
+      ><a name="1330" href="Homotopy.PathTruncation.html#1290" class="Bound"
+      >z</a
+      ><a name="1331"
+      > </a
+      ><a name="1332" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1334"
+      > </a
+      ><a name="1335" href="Homotopy.PathTruncation.html#1292" class="Bound"
+      >t</a
+      ><a name="1336" class="Symbol"
+      >)</a
+      ><a name="1337"
+      >
+    </a
+      ><a name="1342" class="Symbol"
+      >&#8594;</a
+      ><a name="1343"
+      > </a
+      ><a name="1344" class="Symbol"
+      >(</a
+      ><a name="1345" href="Homotopy.PathTruncation.html#1300" class="Bound"
+      >p</a
+      ><a name="1346"
+      > </a
+      ><a name="1347" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1349"
+      > </a
+      ><a name="1350" href="Homotopy.PathTruncation.html#1313" class="Bound"
+      >q</a
+      ><a name="1351" class="Symbol"
+      >)</a
+      ><a name="1352"
+      > </a
+      ><a name="1353" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1355"
+      > </a
+      ><a name="1356" href="Homotopy.PathTruncation.html#1326" class="Bound"
+      >r</a
+      ><a name="1357"
+      > </a
+      ><a name="1358" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1359"
+      > </a
+      ><a name="1360" href="Homotopy.PathTruncation.html#1300" class="Bound"
+      >p</a
+      ><a name="1361"
+      > </a
+      ><a name="1362" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1364"
+      > </a
+      ><a name="1365" class="Symbol"
+      >(</a
+      ><a name="1366" href="Homotopy.PathTruncation.html#1313" class="Bound"
+      >q</a
+      ><a name="1367"
+      > </a
+      ><a name="1368" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1370"
+      > </a
+      ><a name="1371" href="Homotopy.PathTruncation.html#1326" class="Bound"
+      >r</a
+      ><a name="1372" class="Symbol"
+      >)</a
+      ><a name="1373"
+      >
+  </a
+      ><a name="1376" href="Homotopy.PathTruncation.html#1269" class="Function"
+      >concat&#8320;-assoc</a
+      ><a name="1389"
+      > </a
+      ><a name="1390" class="Symbol"
+      >=</a
+      ><a name="1391"
+      >
+    </a
+      ><a name="1396" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1405"
+      > </a
+      ><a name="1406" class="Symbol"
+      >&#10627;</a
+      ><a name="1407"
+      > </a
+      ><a name="1408" class="Symbol"
+      >&#955;</a
+      ><a name="1409"
+      > </a
+      ><a name="1410" href="Homotopy.PathTruncation.html#1410" class="Bound"
+      >_</a
+      ><a name="1411"
+      > </a
+      ><a name="1412" class="Symbol"
+      >&#8594;</a
+      ><a name="1413"
+      > </a
+      ><a name="1414" href="HLevelBis.html#3546" class="Function"
+      >&#928;-is-set</a
+      ><a name="1422"
+      > </a
+      ><a name="1423" class="Symbol"
+      >&#955;</a
+      ><a name="1424"
+      > </a
+      ><a name="1425" href="Homotopy.PathTruncation.html#1425" class="Bound"
+      >_</a
+      ><a name="1426"
+      > </a
+      ><a name="1427" class="Symbol"
+      >&#8594;</a
+      ><a name="1428"
+      > </a
+      ><a name="1429" href="HLevelBis.html#3546" class="Function"
+      >&#928;-is-set</a
+      ><a name="1437"
+      > </a
+      ><a name="1438" class="Symbol"
+      >&#955;</a
+      ><a name="1439"
+      > </a
+      ><a name="1440" href="Homotopy.PathTruncation.html#1440" class="Bound"
+      >_</a
+      ><a name="1441"
+      > </a
+      ><a name="1442" class="Symbol"
+      >&#8594;</a
+      ><a name="1443"
+      > </a
+      ><a name="1444" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1452"
+      > </a
+      ><a name="1453" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1454"
+      > </a
+      ><a name="1455" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1464"
+      > </a
+      ><a name="1465" class="Symbol"
+      >_</a
+      ><a name="1466"
+      > </a
+      ><a name="1467" class="Symbol"
+      >&#10628;</a
+      ><a name="1468"
+      > </a
+      ><a name="1469" class="Symbol"
+      >(&#955;</a
+      ><a name="1471"
+      > </a
+      ><a name="1472" href="Homotopy.PathTruncation.html#1472" class="Bound"
+      >p</a
+      ><a name="1473"
+      > </a
+      ><a name="1474" class="Symbol"
+      >&#8594;</a
+      ><a name="1475"
+      >
+      </a
+      ><a name="1482" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1491"
+      > </a
+      ><a name="1492" class="Symbol"
+      >&#10627;</a
+      ><a name="1493"
+      > </a
+      ><a name="1494" class="Symbol"
+      >&#955;</a
+      ><a name="1495"
+      > </a
+      ><a name="1496" href="Homotopy.PathTruncation.html#1496" class="Bound"
+      >_</a
+      ><a name="1497"
+      > </a
+      ><a name="1498" class="Symbol"
+      >&#8594;</a
+      ><a name="1499"
+      > </a
+      ><a name="1500" href="HLevelBis.html#3546" class="Function"
+      >&#928;-is-set</a
+      ><a name="1508"
+      > </a
+      ><a name="1509" class="Symbol"
+      >&#955;</a
+      ><a name="1510"
+      > </a
+      ><a name="1511" href="Homotopy.PathTruncation.html#1511" class="Bound"
+      >_</a
+      ><a name="1512"
+      > </a
+      ><a name="1513" class="Symbol"
+      >&#8594;</a
+      ><a name="1514"
+      > </a
+      ><a name="1515" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1523"
+      > </a
+      ><a name="1524" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1525"
+      > </a
+      ><a name="1526" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1535"
+      > </a
+      ><a name="1536" class="Symbol"
+      >_</a
+      ><a name="1537"
+      > </a
+      ><a name="1538" class="Symbol"
+      >&#10628;</a
+      ><a name="1539"
+      > </a
+      ><a name="1540" class="Symbol"
+      >(&#955;</a
+      ><a name="1542"
+      > </a
+      ><a name="1543" href="Homotopy.PathTruncation.html#1543" class="Bound"
+      >q</a
+      ><a name="1544"
+      > </a
+      ><a name="1545" class="Symbol"
+      >&#8594;</a
+      ><a name="1546"
+      >
+        </a
+      ><a name="1555" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1564"
+      > </a
+      ><a name="1565" class="Symbol"
+      >&#10627;</a
+      ><a name="1566"
+      > </a
+      ><a name="1567" class="Symbol"
+      >&#955;</a
+      ><a name="1568"
+      > </a
+      ><a name="1569" href="Homotopy.PathTruncation.html#1569" class="Bound"
+      >_</a
+      ><a name="1570"
+      > </a
+      ><a name="1571" class="Symbol"
+      >&#8594;</a
+      ><a name="1572"
+      > </a
+      ><a name="1573" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1581"
+      > </a
+      ><a name="1582" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1583"
+      > </a
+      ><a name="1584" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1593"
+      > </a
+      ><a name="1594" class="Symbol"
+      >_</a
+      ><a name="1595"
+      > </a
+      ><a name="1596" class="Symbol"
+      >&#10628;</a
+      ><a name="1597"
+      > </a
+      ><a name="1598" class="Symbol"
+      >(&#955;</a
+      ><a name="1600"
+      > </a
+      ><a name="1601" href="Homotopy.PathTruncation.html#1601" class="Bound"
+      >r</a
+      ><a name="1602"
+      > </a
+      ><a name="1603" class="Symbol"
+      >&#8594;</a
+      ><a name="1604"
+      >
+          </a
+      ><a name="1615" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="1617"
+      > </a
+      ><a name="1618" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1622"
+      > </a
+      ><a name="1623" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1624"
+      > </a
+      ><a name="1625" href="Paths.html#2918" class="Function"
+      >concat-assoc</a
+      ><a name="1637"
+      > </a
+      ><a name="1638" href="Homotopy.PathTruncation.html#1472" class="Bound"
+      >p</a
+      ><a name="1639"
+      > </a
+      ><a name="1640" href="Homotopy.PathTruncation.html#1543" class="Bound"
+      >q</a
+      ><a name="1641"
+      > </a
+      ><a name="1642" href="Homotopy.PathTruncation.html#1601" class="Bound"
+      >r</a
+      ><a name="1643" class="Symbol"
+      >)))</a
+      ><a name="1646"
+      >
+
+  </a
+      ><a name="1650" href="Homotopy.PathTruncation.html#1650" class="Function"
+      >concat&#8320;-ap&#8320;</a
+      ><a name="1661"
+      > </a
+      ><a name="1662" class="Symbol"
+      >:</a
+      ><a name="1663"
+      > </a
+      ><a name="1664" class="Symbol"
+      >&#8704;</a
+      ><a name="1665"
+      > </a
+      ><a name="1666" class="Symbol"
+      >{</a
+      ><a name="1667" href="Homotopy.PathTruncation.html#1667" class="Bound"
+      >j</a
+      ><a name="1668" class="Symbol"
+      >}</a
+      ><a name="1669"
+      > </a
+      ><a name="1670" class="Symbol"
+      >{</a
+      ><a name="1671" href="Homotopy.PathTruncation.html#1671" class="Bound"
+      >B</a
+      ><a name="1672"
+      > </a
+      ><a name="1673" class="Symbol"
+      >:</a
+      ><a name="1674"
+      > </a
+      ><a name="1675" class="PrimitiveType"
+      >Set</a
+      ><a name="1678"
+      > </a
+      ><a name="1679" href="Homotopy.PathTruncation.html#1667" class="Bound"
+      >j</a
+      ><a name="1680" class="Symbol"
+      >}</a
+      ><a name="1681"
+      > </a
+      ><a name="1682" class="Symbol"
+      >(</a
+      ><a name="1683" href="Homotopy.PathTruncation.html#1683" class="Bound"
+      >f</a
+      ><a name="1684"
+      > </a
+      ><a name="1685" class="Symbol"
+      >:</a
+      ><a name="1686"
+      > </a
+      ><a name="1687" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="1688"
+      > </a
+      ><a name="1689" class="Symbol"
+      >&#8594;</a
+      ><a name="1690"
+      > </a
+      ><a name="1691" href="Homotopy.PathTruncation.html#1671" class="Bound"
+      >B</a
+      ><a name="1692" class="Symbol"
+      >)</a
+      ><a name="1693"
+      > </a
+      ><a name="1694" class="Symbol"
+      >{</a
+      ><a name="1695" href="Homotopy.PathTruncation.html#1695" class="Bound"
+      >x</a
+      ><a name="1696"
+      > </a
+      ><a name="1697" href="Homotopy.PathTruncation.html#1697" class="Bound"
+      >y</a
+      ><a name="1698"
+      > </a
+      ><a name="1699" href="Homotopy.PathTruncation.html#1699" class="Bound"
+      >z</a
+      ><a name="1700"
+      > </a
+      ><a name="1701" class="Symbol"
+      >:</a
+      ><a name="1702"
+      > </a
+      ><a name="1703" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="1704" class="Symbol"
+      >}</a
+      ><a name="1705"
+      > </a
+      ><a name="1706" class="Symbol"
+      >(</a
+      ><a name="1707" href="Homotopy.PathTruncation.html#1707" class="Bound"
+      >p</a
+      ><a name="1708"
+      > </a
+      ><a name="1709" class="Symbol"
+      >:</a
+      ><a name="1710"
+      > </a
+      ><a name="1711" href="Homotopy.PathTruncation.html#1695" class="Bound"
+      >x</a
+      ><a name="1712"
+      > </a
+      ><a name="1713" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1715"
+      > </a
+      ><a name="1716" href="Homotopy.PathTruncation.html#1697" class="Bound"
+      >y</a
+      ><a name="1717" class="Symbol"
+      >)</a
+      ><a name="1718"
+      > </a
+      ><a name="1719" class="Symbol"
+      >(</a
+      ><a name="1720" href="Homotopy.PathTruncation.html#1720" class="Bound"
+      >q</a
+      ><a name="1721"
+      > </a
+      ><a name="1722" class="Symbol"
+      >:</a
+      ><a name="1723"
+      > </a
+      ><a name="1724" href="Homotopy.PathTruncation.html#1697" class="Bound"
+      >y</a
+      ><a name="1725"
+      > </a
+      ><a name="1726" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="1728"
+      > </a
+      ><a name="1729" href="Homotopy.PathTruncation.html#1699" class="Bound"
+      >z</a
+      ><a name="1730" class="Symbol"
+      >)</a
+      ><a name="1731"
+      >
+    </a
+      ><a name="1736" class="Symbol"
+      >&#8594;</a
+      ><a name="1737"
+      > </a
+      ><a name="1738" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="1741"
+      > </a
+      ><a name="1742" href="Homotopy.PathTruncation.html#1683" class="Bound"
+      >f</a
+      ><a name="1743"
+      > </a
+      ><a name="1744" href="Homotopy.PathTruncation.html#1707" class="Bound"
+      >p</a
+      ><a name="1745"
+      > </a
+      ><a name="1746" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1748"
+      > </a
+      ><a name="1749" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="1752"
+      > </a
+      ><a name="1753" href="Homotopy.PathTruncation.html#1683" class="Bound"
+      >f</a
+      ><a name="1754"
+      > </a
+      ><a name="1755" href="Homotopy.PathTruncation.html#1720" class="Bound"
+      >q</a
+      ><a name="1756"
+      > </a
+      ><a name="1757" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="1758"
+      > </a
+      ><a name="1759" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="1762"
+      > </a
+      ><a name="1763" href="Homotopy.PathTruncation.html#1683" class="Bound"
+      >f</a
+      ><a name="1764"
+      > </a
+      ><a name="1765" class="Symbol"
+      >(</a
+      ><a name="1766" href="Homotopy.PathTruncation.html#1707" class="Bound"
+      >p</a
+      ><a name="1767"
+      > </a
+      ><a name="1768" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="1770"
+      > </a
+      ><a name="1771" href="Homotopy.PathTruncation.html#1720" class="Bound"
+      >q</a
+      ><a name="1772" class="Symbol"
+      >)</a
+      ><a name="1773"
+      >
+  </a
+      ><a name="1776" href="Homotopy.PathTruncation.html#1650" class="Function"
+      >concat&#8320;-ap&#8320;</a
+      ><a name="1787"
+      > </a
+      ><a name="1788" href="Homotopy.PathTruncation.html#1788" class="Bound"
+      >f</a
+      ><a name="1789"
+      > </a
+      ><a name="1790" class="Symbol"
+      >=</a
+      ><a name="1791"
+      >
+    </a
+      ><a name="1796" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1805"
+      > </a
+      ><a name="1806" class="Symbol"
+      >&#10627;</a
+      ><a name="1807"
+      > </a
+      ><a name="1808" class="Symbol"
+      >&#955;</a
+      ><a name="1809"
+      > </a
+      ><a name="1810" href="Homotopy.PathTruncation.html#1810" class="Bound"
+      >_</a
+      ><a name="1811"
+      > </a
+      ><a name="1812" class="Symbol"
+      >&#8594;</a
+      ><a name="1813"
+      > </a
+      ><a name="1814" href="HLevelBis.html#3546" class="Function"
+      >&#928;-is-set</a
+      ><a name="1822"
+      > </a
+      ><a name="1823" class="Symbol"
+      >&#955;</a
+      ><a name="1824"
+      > </a
+      ><a name="1825" href="Homotopy.PathTruncation.html#1825" class="Bound"
+      >_</a
+      ><a name="1826"
+      > </a
+      ><a name="1827" class="Symbol"
+      >&#8594;</a
+      ><a name="1828"
+      > </a
+      ><a name="1829" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1837"
+      > </a
+      ><a name="1838" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1839"
+      > </a
+      ><a name="1840" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1849"
+      > </a
+      ><a name="1850" class="Symbol"
+      >_</a
+      ><a name="1851"
+      > </a
+      ><a name="1852" class="Symbol"
+      >&#10628;</a
+      ><a name="1853"
+      > </a
+      ><a name="1854" class="Symbol"
+      >(&#955;</a
+      ><a name="1856"
+      > </a
+      ><a name="1857" href="Homotopy.PathTruncation.html#1857" class="Bound"
+      >p</a
+      ><a name="1858"
+      > </a
+      ><a name="1859" class="Symbol"
+      >&#8594;</a
+      ><a name="1860"
+      >
+      </a
+      ><a name="1867" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="1876"
+      > </a
+      ><a name="1877" class="Symbol"
+      >&#10627;</a
+      ><a name="1878"
+      > </a
+      ><a name="1879" class="Symbol"
+      >&#955;</a
+      ><a name="1880"
+      > </a
+      ><a name="1881" href="Homotopy.PathTruncation.html#1881" class="Bound"
+      >_</a
+      ><a name="1882"
+      > </a
+      ><a name="1883" class="Symbol"
+      >&#8594;</a
+      ><a name="1884"
+      > </a
+      ><a name="1885" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="1893"
+      > </a
+      ><a name="1894" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1895"
+      > </a
+      ><a name="1896" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="1905"
+      > </a
+      ><a name="1906" class="Symbol"
+      >_</a
+      ><a name="1907"
+      > </a
+      ><a name="1908" class="Symbol"
+      >&#10628;</a
+      ><a name="1909"
+      > </a
+      ><a name="1910" class="Symbol"
+      >(&#955;</a
+      ><a name="1912"
+      > </a
+      ><a name="1913" href="Homotopy.PathTruncation.html#1913" class="Bound"
+      >q</a
+      ><a name="1914"
+      > </a
+      ><a name="1915" class="Symbol"
+      >&#8594;</a
+      ><a name="1916"
+      >
+        </a
+      ><a name="1925" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="1927"
+      > </a
+      ><a name="1928" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="1932"
+      > </a
+      ><a name="1933" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="1934"
+      > </a
+      ><a name="1935" href="Paths.html#10643" class="Function"
+      >concat-ap</a
+      ><a name="1944"
+      > </a
+      ><a name="1945" href="Homotopy.PathTruncation.html#1788" class="Bound"
+      >f</a
+      ><a name="1946"
+      > </a
+      ><a name="1947" href="Homotopy.PathTruncation.html#1857" class="Bound"
+      >p</a
+      ><a name="1948"
+      > </a
+      ><a name="1949" href="Homotopy.PathTruncation.html#1913" class="Bound"
+      >q</a
+      ><a name="1950" class="Symbol"
+      >))</a
+      ><a name="1952"
+      >
+
+  </a
+      ><a name="1956" href="Homotopy.PathTruncation.html#1956" class="Function"
+      >ap&#8320;-compose</a
+      ><a name="1967"
+      > </a
+      ><a name="1968" class="Symbol"
+      >:</a
+      ><a name="1969"
+      > </a
+      ><a name="1970" class="Symbol"
+      >&#8704;</a
+      ><a name="1971"
+      > </a
+      ><a name="1972" class="Symbol"
+      >{</a
+      ><a name="1973" href="Homotopy.PathTruncation.html#1973" class="Bound"
+      >j</a
+      ><a name="1974"
+      > </a
+      ><a name="1975" href="Homotopy.PathTruncation.html#1975" class="Bound"
+      >k</a
+      ><a name="1976" class="Symbol"
+      >}</a
+      ><a name="1977"
+      > </a
+      ><a name="1978" class="Symbol"
+      >{</a
+      ><a name="1979" href="Homotopy.PathTruncation.html#1979" class="Bound"
+      >B</a
+      ><a name="1980"
+      > </a
+      ><a name="1981" class="Symbol"
+      >:</a
+      ><a name="1982"
+      > </a
+      ><a name="1983" class="PrimitiveType"
+      >Set</a
+      ><a name="1986"
+      > </a
+      ><a name="1987" href="Homotopy.PathTruncation.html#1973" class="Bound"
+      >j</a
+      ><a name="1988" class="Symbol"
+      >}</a
+      ><a name="1989"
+      > </a
+      ><a name="1990" class="Symbol"
+      >{</a
+      ><a name="1991" href="Homotopy.PathTruncation.html#1991" class="Bound"
+      >C</a
+      ><a name="1992"
+      > </a
+      ><a name="1993" class="Symbol"
+      >:</a
+      ><a name="1994"
+      > </a
+      ><a name="1995" class="PrimitiveType"
+      >Set</a
+      ><a name="1998"
+      > </a
+      ><a name="1999" href="Homotopy.PathTruncation.html#1975" class="Bound"
+      >k</a
+      ><a name="2000" class="Symbol"
+      >}</a
+      ><a name="2001"
+      > </a
+      ><a name="2002" class="Symbol"
+      >(</a
+      ><a name="2003" href="Homotopy.PathTruncation.html#2003" class="Bound"
+      >g</a
+      ><a name="2004"
+      > </a
+      ><a name="2005" class="Symbol"
+      >:</a
+      ><a name="2006"
+      > </a
+      ><a name="2007" href="Homotopy.PathTruncation.html#1979" class="Bound"
+      >B</a
+      ><a name="2008"
+      > </a
+      ><a name="2009" class="Symbol"
+      >&#8594;</a
+      ><a name="2010"
+      > </a
+      ><a name="2011" href="Homotopy.PathTruncation.html#1991" class="Bound"
+      >C</a
+      ><a name="2012" class="Symbol"
+      >)</a
+      ><a name="2013"
+      > </a
+      ><a name="2014" class="Symbol"
+      >(</a
+      ><a name="2015" href="Homotopy.PathTruncation.html#2015" class="Bound"
+      >f</a
+      ><a name="2016"
+      > </a
+      ><a name="2017" class="Symbol"
+      >:</a
+      ><a name="2018"
+      > </a
+      ><a name="2019" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="2020"
+      > </a
+      ><a name="2021" class="Symbol"
+      >&#8594;</a
+      ><a name="2022"
+      > </a
+      ><a name="2023" href="Homotopy.PathTruncation.html#1979" class="Bound"
+      >B</a
+      ><a name="2024" class="Symbol"
+      >)</a
+      ><a name="2025"
+      >
+    </a
+      ><a name="2030" class="Symbol"
+      >{</a
+      ><a name="2031" href="Homotopy.PathTruncation.html#2031" class="Bound"
+      >x</a
+      ><a name="2032"
+      > </a
+      ><a name="2033" href="Homotopy.PathTruncation.html#2033" class="Bound"
+      >y</a
+      ><a name="2034"
+      > </a
+      ><a name="2035" class="Symbol"
+      >:</a
+      ><a name="2036"
+      > </a
+      ><a name="2037" href="Homotopy.PathTruncation.html#888" class="Bound"
+      >A</a
+      ><a name="2038" class="Symbol"
+      >}</a
+      ><a name="2039"
+      > </a
+      ><a name="2040" class="Symbol"
+      >(</a
+      ><a name="2041" href="Homotopy.PathTruncation.html#2041" class="Bound"
+      >p</a
+      ><a name="2042"
+      > </a
+      ><a name="2043" class="Symbol"
+      >:</a
+      ><a name="2044"
+      > </a
+      ><a name="2045" href="Homotopy.PathTruncation.html#2031" class="Bound"
+      >x</a
+      ><a name="2046"
+      > </a
+      ><a name="2047" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2049"
+      > </a
+      ><a name="2050" href="Homotopy.PathTruncation.html#2033" class="Bound"
+      >y</a
+      ><a name="2051" class="Symbol"
+      >)</a
+      ><a name="2052"
+      > </a
+      ><a name="2053" class="Symbol"
+      >&#8594;</a
+      ><a name="2054"
+      > </a
+      ><a name="2055" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2058"
+      > </a
+      ><a name="2059" class="Symbol"
+      >(</a
+      ><a name="2060" href="Homotopy.PathTruncation.html#2003" class="Bound"
+      >g</a
+      ><a name="2061"
+      > </a
+      ><a name="2062" href="Functions.html#277" class="Function Operator"
+      >&#9711;</a
+      ><a name="2063"
+      > </a
+      ><a name="2064" href="Homotopy.PathTruncation.html#2015" class="Bound"
+      >f</a
+      ><a name="2065" class="Symbol"
+      >)</a
+      ><a name="2066"
+      > </a
+      ><a name="2067" href="Homotopy.PathTruncation.html#2041" class="Bound"
+      >p</a
+      ><a name="2068"
+      > </a
+      ><a name="2069" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2070"
+      > </a
+      ><a name="2071" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2074"
+      > </a
+      ><a name="2075" href="Homotopy.PathTruncation.html#2003" class="Bound"
+      >g</a
+      ><a name="2076"
+      > </a
+      ><a name="2077" class="Symbol"
+      >(</a
+      ><a name="2078" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2081"
+      > </a
+      ><a name="2082" href="Homotopy.PathTruncation.html#2015" class="Bound"
+      >f</a
+      ><a name="2083"
+      > </a
+      ><a name="2084" href="Homotopy.PathTruncation.html#2041" class="Bound"
+      >p</a
+      ><a name="2085" class="Symbol"
+      >)</a
+      ><a name="2086"
+      >
+  </a
+      ><a name="2089" href="Homotopy.PathTruncation.html#1956" class="Function"
+      >ap&#8320;-compose</a
+      ><a name="2100"
+      > </a
+      ><a name="2101" href="Homotopy.PathTruncation.html#2101" class="Bound"
+      >f</a
+      ><a name="2102"
+      > </a
+      ><a name="2103" href="Homotopy.PathTruncation.html#2103" class="Bound"
+      >g</a
+      ><a name="2104"
+      > </a
+      ><a name="2105" class="Symbol"
+      >=</a
+      ><a name="2106"
+      >
+    </a
+      ><a name="2111" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="2120"
+      > </a
+      ><a name="2121" class="Symbol"
+      >&#10627;</a
+      ><a name="2122"
+      > </a
+      ><a name="2123" class="Symbol"
+      >&#955;</a
+      ><a name="2124"
+      > </a
+      ><a name="2125" href="Homotopy.PathTruncation.html#2125" class="Bound"
+      >_</a
+      ><a name="2126"
+      > </a
+      ><a name="2127" class="Symbol"
+      >&#8594;</a
+      ><a name="2128"
+      > </a
+      ><a name="2129" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2137"
+      > </a
+      ><a name="2138" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2139"
+      > </a
+      ><a name="2140" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="2149"
+      > </a
+      ><a name="2150" class="Symbol"
+      >_</a
+      ><a name="2151"
+      > </a
+      ><a name="2152" class="Symbol"
+      >&#10628;</a
+      ><a name="2153"
+      > </a
+      ><a name="2154" class="Symbol"
+      >(&#955;</a
+      ><a name="2156"
+      > </a
+      ><a name="2157" href="Homotopy.PathTruncation.html#2157" class="Bound"
+      >p</a
+      ><a name="2158"
+      > </a
+      ><a name="2159" class="Symbol"
+      >&#8594;</a
+      ><a name="2160"
+      >
+      </a
+      ><a name="2167" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="2169"
+      > </a
+      ><a name="2170" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2174"
+      > </a
+      ><a name="2175" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2176"
+      > </a
+      ><a name="2177" href="Paths.html#11093" class="Function"
+      >ap-compose</a
+      ><a name="2187"
+      > </a
+      ><a name="2188" href="Homotopy.PathTruncation.html#2101" class="Bound"
+      >f</a
+      ><a name="2189"
+      > </a
+      ><a name="2190" href="Homotopy.PathTruncation.html#2103" class="Bound"
+      >g</a
+      ><a name="2191"
+      > </a
+      ><a name="2192" href="Homotopy.PathTruncation.html#2157" class="Bound"
+      >p</a
+      ><a name="2193" class="Symbol"
+      >)</a
+      ><a name="2194"
+      >
+
+</a
+      ><a name="2196" class="Keyword"
+      >module</a
+      ><a name="2202"
+      > </a
+      ><a name="2203" href="Homotopy.PathTruncation.html#2203" class="Module"
+      >_</a
+      ><a name="2204"
+      > </a
+      ><a name="2205" class="Symbol"
+      >{</a
+      ><a name="2206" href="Homotopy.PathTruncation.html#2206" class="Bound"
+      >i</a
+      ><a name="2207" class="Symbol"
+      >}</a
+      ><a name="2208"
+      > </a
+      ><a name="2209" class="Symbol"
+      >{</a
+      ><a name="2210" href="Homotopy.PathTruncation.html#2210" class="Bound"
+      >A</a
+      ><a name="2211"
+      > </a
+      ><a name="2212" class="Symbol"
+      >:</a
+      ><a name="2213"
+      > </a
+      ><a name="2214" class="PrimitiveType"
+      >Set</a
+      ><a name="2217"
+      > </a
+      ><a name="2218" href="Homotopy.PathTruncation.html#2206" class="Bound"
+      >i</a
+      ><a name="2219" class="Symbol"
+      >}</a
+      ><a name="2220"
+      > </a
+      ><a name="2221" class="Keyword"
+      >where</a
+      ><a name="2226"
+      >
+  </a
+      ><a name="2229" href="Homotopy.PathTruncation.html#2229" class="Function"
+      >trans-id&#8801;&#8320;cst</a
+      ><a name="2242"
+      > </a
+      ><a name="2243" class="Symbol"
+      >:</a
+      ><a name="2244"
+      > </a
+      ><a name="2245" class="Symbol"
+      >{</a
+      ><a name="2246" href="Homotopy.PathTruncation.html#2246" class="Bound"
+      >a</a
+      ><a name="2247"
+      > </a
+      ><a name="2248" href="Homotopy.PathTruncation.html#2248" class="Bound"
+      >b</a
+      ><a name="2249"
+      > </a
+      ><a name="2250" href="Homotopy.PathTruncation.html#2250" class="Bound"
+      >c</a
+      ><a name="2251"
+      > </a
+      ><a name="2252" class="Symbol"
+      >:</a
+      ><a name="2253"
+      > </a
+      ><a name="2254" href="Homotopy.PathTruncation.html#2210" class="Bound"
+      >A</a
+      ><a name="2255" class="Symbol"
+      >}</a
+      ><a name="2256"
+      > </a
+      ><a name="2257" class="Symbol"
+      >(</a
+      ><a name="2258" href="Homotopy.PathTruncation.html#2258" class="Bound"
+      >p</a
+      ><a name="2259"
+      > </a
+      ><a name="2260" class="Symbol"
+      >:</a
+      ><a name="2261"
+      > </a
+      ><a name="2262" href="Homotopy.PathTruncation.html#2248" class="Bound"
+      >b</a
+      ><a name="2263"
+      > </a
+      ><a name="2264" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2265"
+      > </a
+      ><a name="2266" href="Homotopy.PathTruncation.html#2250" class="Bound"
+      >c</a
+      ><a name="2267" class="Symbol"
+      >)</a
+      ><a name="2268"
+      > </a
+      ><a name="2269" class="Symbol"
+      >(</a
+      ><a name="2270" href="Homotopy.PathTruncation.html#2270" class="Bound"
+      >q</a
+      ><a name="2271"
+      > </a
+      ><a name="2272" class="Symbol"
+      >:</a
+      ><a name="2273"
+      > </a
+      ><a name="2274" href="Homotopy.PathTruncation.html#2248" class="Bound"
+      >b</a
+      ><a name="2275"
+      > </a
+      ><a name="2276" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2278"
+      > </a
+      ><a name="2279" href="Homotopy.PathTruncation.html#2246" class="Bound"
+      >a</a
+      ><a name="2280" class="Symbol"
+      >)</a
+      ><a name="2281"
+      >
+    </a
+      ><a name="2286" class="Symbol"
+      >&#8594;</a
+      ><a name="2287"
+      > </a
+      ><a name="2288" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="2297"
+      > </a
+      ><a name="2298" class="Symbol"
+      >(&#955;</a
+      ><a name="2300"
+      > </a
+      ><a name="2301" href="Homotopy.PathTruncation.html#2301" class="Bound"
+      >x</a
+      ><a name="2302"
+      > </a
+      ><a name="2303" class="Symbol"
+      >&#8594;</a
+      ><a name="2304"
+      > </a
+      ><a name="2305" href="Homotopy.PathTruncation.html#2301" class="Bound"
+      >x</a
+      ><a name="2306"
+      > </a
+      ><a name="2307" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2309"
+      > </a
+      ><a name="2310" href="Homotopy.PathTruncation.html#2246" class="Bound"
+      >a</a
+      ><a name="2311" class="Symbol"
+      >)</a
+      ><a name="2312"
+      > </a
+      ><a name="2313" href="Homotopy.PathTruncation.html#2258" class="Bound"
+      >p</a
+      ><a name="2314"
+      > </a
+      ><a name="2315" href="Homotopy.PathTruncation.html#2270" class="Bound"
+      >q</a
+      ><a name="2316"
+      > </a
+      ><a name="2317" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2318"
+      > </a
+      ><a name="2319" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2323"
+      > </a
+      ><a name="2324" class="Symbol"
+      >(</a
+      ><a name="2325" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="2326"
+      > </a
+      ><a name="2327" href="Homotopy.PathTruncation.html#2258" class="Bound"
+      >p</a
+      ><a name="2328" class="Symbol"
+      >)</a
+      ><a name="2329"
+      > </a
+      ><a name="2330" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2332"
+      > </a
+      ><a name="2333" href="Homotopy.PathTruncation.html#2270" class="Bound"
+      >q</a
+      ><a name="2334"
+      >
+  </a
+      ><a name="2337" href="Homotopy.PathTruncation.html#2229" class="Function"
+      >trans-id&#8801;&#8320;cst</a
+      ><a name="2350"
+      > </a
+      ><a name="2351" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="2355"
+      > </a
+      ><a name="2356" href="Homotopy.PathTruncation.html#2356" class="Bound"
+      >q</a
+      ><a name="2357"
+      > </a
+      ><a name="2358" class="Symbol"
+      >=</a
+      ><a name="2359"
+      > </a
+      ><a name="2360" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="2361"
+      > </a
+      ><a name="2362" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2363"
+      > </a
+      ><a name="2364" href="Homotopy.PathTruncation.html#1101" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="2379"
+      > </a
+      ><a name="2380" href="Homotopy.PathTruncation.html#2356" class="Bound"
+      >q</a
+      ><a name="2381"
+      >
+
+  </a
+      ><a name="2385" href="Homotopy.PathTruncation.html#2385" class="Function"
+      >trans-cst&#8801;&#8320;id</a
+      ><a name="2398"
+      > </a
+      ><a name="2399" class="Symbol"
+      >:</a
+      ><a name="2400"
+      > </a
+      ><a name="2401" class="Symbol"
+      >{</a
+      ><a name="2402" href="Homotopy.PathTruncation.html#2402" class="Bound"
+      >a</a
+      ><a name="2403"
+      > </a
+      ><a name="2404" href="Homotopy.PathTruncation.html#2404" class="Bound"
+      >b</a
+      ><a name="2405"
+      > </a
+      ><a name="2406" href="Homotopy.PathTruncation.html#2406" class="Bound"
+      >c</a
+      ><a name="2407"
+      > </a
+      ><a name="2408" class="Symbol"
+      >:</a
+      ><a name="2409"
+      > </a
+      ><a name="2410" href="Homotopy.PathTruncation.html#2210" class="Bound"
+      >A</a
+      ><a name="2411" class="Symbol"
+      >}</a
+      ><a name="2412"
+      > </a
+      ><a name="2413" class="Symbol"
+      >(</a
+      ><a name="2414" href="Homotopy.PathTruncation.html#2414" class="Bound"
+      >p</a
+      ><a name="2415"
+      > </a
+      ><a name="2416" class="Symbol"
+      >:</a
+      ><a name="2417"
+      > </a
+      ><a name="2418" href="Homotopy.PathTruncation.html#2404" class="Bound"
+      >b</a
+      ><a name="2419"
+      > </a
+      ><a name="2420" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2421"
+      > </a
+      ><a name="2422" href="Homotopy.PathTruncation.html#2406" class="Bound"
+      >c</a
+      ><a name="2423" class="Symbol"
+      >)</a
+      ><a name="2424"
+      > </a
+      ><a name="2425" class="Symbol"
+      >(</a
+      ><a name="2426" href="Homotopy.PathTruncation.html#2426" class="Bound"
+      >q</a
+      ><a name="2427"
+      > </a
+      ><a name="2428" class="Symbol"
+      >:</a
+      ><a name="2429"
+      > </a
+      ><a name="2430" href="Homotopy.PathTruncation.html#2402" class="Bound"
+      >a</a
+      ><a name="2431"
+      > </a
+      ><a name="2432" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2434"
+      > </a
+      ><a name="2435" href="Homotopy.PathTruncation.html#2404" class="Bound"
+      >b</a
+      ><a name="2436" class="Symbol"
+      >)</a
+      ><a name="2437"
+      >
+    </a
+      ><a name="2442" class="Symbol"
+      >&#8594;</a
+      ><a name="2443"
+      > </a
+      ><a name="2444" href="Paths.html#1000" class="Function"
+      >transport</a
+      ><a name="2453"
+      > </a
+      ><a name="2454" class="Symbol"
+      >(&#955;</a
+      ><a name="2456"
+      > </a
+      ><a name="2457" href="Homotopy.PathTruncation.html#2457" class="Bound"
+      >x</a
+      ><a name="2458"
+      > </a
+      ><a name="2459" class="Symbol"
+      >&#8594;</a
+      ><a name="2460"
+      > </a
+      ><a name="2461" href="Homotopy.PathTruncation.html#2402" class="Bound"
+      >a</a
+      ><a name="2462"
+      > </a
+      ><a name="2463" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2465"
+      > </a
+      ><a name="2466" href="Homotopy.PathTruncation.html#2457" class="Bound"
+      >x</a
+      ><a name="2467" class="Symbol"
+      >)</a
+      ><a name="2468"
+      > </a
+      ><a name="2469" href="Homotopy.PathTruncation.html#2414" class="Bound"
+      >p</a
+      ><a name="2470"
+      > </a
+      ><a name="2471" href="Homotopy.PathTruncation.html#2426" class="Bound"
+      >q</a
+      ><a name="2472"
+      > </a
+      ><a name="2473" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2474"
+      > </a
+      ><a name="2475" href="Homotopy.PathTruncation.html#2426" class="Bound"
+      >q</a
+      ><a name="2476"
+      > </a
+      ><a name="2477" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2479"
+      > </a
+      ><a name="2480" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2484"
+      > </a
+      ><a name="2485" href="Homotopy.PathTruncation.html#2414" class="Bound"
+      >p</a
+      ><a name="2486"
+      >
+  </a
+      ><a name="2489" href="Homotopy.PathTruncation.html#2385" class="Function"
+      >trans-cst&#8801;&#8320;id</a
+      ><a name="2502"
+      > </a
+      ><a name="2503" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="2507"
+      > </a
+      ><a name="2508" href="Homotopy.PathTruncation.html#2508" class="Bound"
+      >q</a
+      ><a name="2509"
+      > </a
+      ><a name="2510" class="Symbol"
+      >=</a
+      ><a name="2511"
+      > </a
+      ><a name="2512" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="2513"
+      > </a
+      ><a name="2514" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2515"
+      > </a
+      ><a name="2516" href="Homotopy.PathTruncation.html#908" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="2532"
+      > </a
+      ><a name="2533" href="Homotopy.PathTruncation.html#2508" class="Bound"
+      >q</a
+      ><a name="2534"
+      >
+
+</a
+      ><a name="2536" class="Keyword"
+      >module</a
+      ><a name="2542"
+      > </a
+      ><a name="2543" href="Homotopy.PathTruncation.html#2543" class="Module"
+      >_</a
+      ><a name="2544"
+      > </a
+      ><a name="2545" class="Symbol"
+      >{</a
+      ><a name="2546" href="Homotopy.PathTruncation.html#2546" class="Bound"
+      >i</a
+      ><a name="2547" class="Symbol"
+      >}</a
+      ><a name="2548"
+      > </a
+      ><a name="2549" class="Symbol"
+      >{</a
+      ><a name="2550" href="Homotopy.PathTruncation.html#2550" class="Bound"
+      >A</a
+      ><a name="2551"
+      > </a
+      ><a name="2552" class="Symbol"
+      >:</a
+      ><a name="2553"
+      > </a
+      ><a name="2554" class="PrimitiveType"
+      >Set</a
+      ><a name="2557"
+      > </a
+      ><a name="2558" href="Homotopy.PathTruncation.html#2546" class="Bound"
+      >i</a
+      ><a name="2559" class="Symbol"
+      >}</a
+      ><a name="2560"
+      > </a
+      ><a name="2561" class="Keyword"
+      >where</a
+      ><a name="2566"
+      >
+  </a
+      ><a name="2569" href="Homotopy.PathTruncation.html#2569" class="Function"
+      >homotopy&#8320;-naturality</a
+      ><a name="2589"
+      > </a
+      ><a name="2590" class="Symbol"
+      >:</a
+      ><a name="2591"
+      > </a
+      ><a name="2592" class="Symbol"
+      >&#8704;</a
+      ><a name="2593"
+      > </a
+      ><a name="2594" class="Symbol"
+      >{</a
+      ><a name="2595" href="Homotopy.PathTruncation.html#2595" class="Bound"
+      >j</a
+      ><a name="2596" class="Symbol"
+      >}</a
+      ><a name="2597"
+      > </a
+      ><a name="2598" class="Symbol"
+      >{</a
+      ><a name="2599" href="Homotopy.PathTruncation.html#2599" class="Bound"
+      >B</a
+      ><a name="2600"
+      > </a
+      ><a name="2601" class="Symbol"
+      >:</a
+      ><a name="2602"
+      > </a
+      ><a name="2603" class="PrimitiveType"
+      >Set</a
+      ><a name="2606"
+      > </a
+      ><a name="2607" href="Homotopy.PathTruncation.html#2595" class="Bound"
+      >j</a
+      ><a name="2608" class="Symbol"
+      >}</a
+      ><a name="2609"
+      > </a
+      ><a name="2610" class="Symbol"
+      >(</a
+      ><a name="2611" href="Homotopy.PathTruncation.html#2611" class="Bound"
+      >f</a
+      ><a name="2612"
+      > </a
+      ><a name="2613" href="Homotopy.PathTruncation.html#2613" class="Bound"
+      >g</a
+      ><a name="2614"
+      > </a
+      ><a name="2615" class="Symbol"
+      >:</a
+      ><a name="2616"
+      > </a
+      ><a name="2617" href="Homotopy.PathTruncation.html#2550" class="Bound"
+      >A</a
+      ><a name="2618"
+      > </a
+      ><a name="2619" class="Symbol"
+      >&#8594;</a
+      ><a name="2620"
+      > </a
+      ><a name="2621" href="Homotopy.PathTruncation.html#2599" class="Bound"
+      >B</a
+      ><a name="2622" class="Symbol"
+      >)</a
+      ><a name="2623"
+      >
+    </a
+      ><a name="2628" class="Symbol"
+      >(</a
+      ><a name="2629" href="Homotopy.PathTruncation.html#2629" class="Bound"
+      >p</a
+      ><a name="2630"
+      > </a
+      ><a name="2631" class="Symbol"
+      >:</a
+      ><a name="2632"
+      > </a
+      ><a name="2633" class="Symbol"
+      >(</a
+      ><a name="2634" href="Homotopy.PathTruncation.html#2634" class="Bound"
+      >x</a
+      ><a name="2635"
+      > </a
+      ><a name="2636" class="Symbol"
+      >:</a
+      ><a name="2637"
+      > </a
+      ><a name="2638" href="Homotopy.PathTruncation.html#2550" class="Bound"
+      >A</a
+      ><a name="2639" class="Symbol"
+      >)</a
+      ><a name="2640"
+      > </a
+      ><a name="2641" class="Symbol"
+      >&#8594;</a
+      ><a name="2642"
+      > </a
+      ><a name="2643" href="Homotopy.PathTruncation.html#2611" class="Bound"
+      >f</a
+      ><a name="2644"
+      > </a
+      ><a name="2645" href="Homotopy.PathTruncation.html#2634" class="Bound"
+      >x</a
+      ><a name="2646"
+      > </a
+      ><a name="2647" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2649"
+      > </a
+      ><a name="2650" href="Homotopy.PathTruncation.html#2613" class="Bound"
+      >g</a
+      ><a name="2651"
+      > </a
+      ><a name="2652" href="Homotopy.PathTruncation.html#2634" class="Bound"
+      >x</a
+      ><a name="2653" class="Symbol"
+      >)</a
+      ><a name="2654"
+      > </a
+      ><a name="2655" class="Symbol"
+      >{</a
+      ><a name="2656" href="Homotopy.PathTruncation.html#2656" class="Bound"
+      >x</a
+      ><a name="2657"
+      > </a
+      ><a name="2658" href="Homotopy.PathTruncation.html#2658" class="Bound"
+      >y</a
+      ><a name="2659"
+      > </a
+      ><a name="2660" class="Symbol"
+      >:</a
+      ><a name="2661"
+      > </a
+      ><a name="2662" href="Homotopy.PathTruncation.html#2550" class="Bound"
+      >A</a
+      ><a name="2663" class="Symbol"
+      >}</a
+      ><a name="2664"
+      > </a
+      ><a name="2665" class="Symbol"
+      >(</a
+      ><a name="2666" href="Homotopy.PathTruncation.html#2666" class="Bound"
+      >q</a
+      ><a name="2667"
+      > </a
+      ><a name="2668" class="Symbol"
+      >:</a
+      ><a name="2669"
+      > </a
+      ><a name="2670" href="Homotopy.PathTruncation.html#2656" class="Bound"
+      >x</a
+      ><a name="2671"
+      > </a
+      ><a name="2672" href="Homotopy.PathTruncation.html#295" class="Function Operator"
+      >&#8801;&#8320;</a
+      ><a name="2674"
+      > </a
+      ><a name="2675" href="Homotopy.PathTruncation.html#2658" class="Bound"
+      >y</a
+      ><a name="2676" class="Symbol"
+      >)</a
+      ><a name="2677"
+      >
+    </a
+      ><a name="2682" class="Symbol"
+      >&#8594;</a
+      ><a name="2683"
+      > </a
+      ><a name="2684" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2687"
+      > </a
+      ><a name="2688" href="Homotopy.PathTruncation.html#2611" class="Bound"
+      >f</a
+      ><a name="2689"
+      > </a
+      ><a name="2690" href="Homotopy.PathTruncation.html#2666" class="Bound"
+      >q</a
+      ><a name="2691"
+      > </a
+      ><a name="2692" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2694"
+      > </a
+      ><a name="2695" href="Homotopy.PathTruncation.html#2629" class="Bound"
+      >p</a
+      ><a name="2696"
+      > </a
+      ><a name="2697" href="Homotopy.PathTruncation.html#2658" class="Bound"
+      >y</a
+      ><a name="2698"
+      > </a
+      ><a name="2699" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2700"
+      > </a
+      ><a name="2701" href="Homotopy.PathTruncation.html#2629" class="Bound"
+      >p</a
+      ><a name="2702"
+      > </a
+      ><a name="2703" href="Homotopy.PathTruncation.html#2656" class="Bound"
+      >x</a
+      ><a name="2704"
+      > </a
+      ><a name="2705" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2707"
+      > </a
+      ><a name="2708" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2711"
+      > </a
+      ><a name="2712" href="Homotopy.PathTruncation.html#2613" class="Bound"
+      >g</a
+      ><a name="2713"
+      > </a
+      ><a name="2714" href="Homotopy.PathTruncation.html#2666" class="Bound"
+      >q</a
+      ><a name="2715"
+      >
+  </a
+      ><a name="2718" href="Homotopy.PathTruncation.html#2569" class="Function"
+      >homotopy&#8320;-naturality</a
+      ><a name="2738"
+      > </a
+      ><a name="2739" href="Homotopy.PathTruncation.html#2739" class="Bound"
+      >f</a
+      ><a name="2740"
+      > </a
+      ><a name="2741" href="Homotopy.PathTruncation.html#2741" class="Bound"
+      >g</a
+      ><a name="2742"
+      > </a
+      ><a name="2743" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="2744"
+      > </a
+      ><a name="2745" class="Symbol"
+      >{</a
+      ><a name="2746" href="Homotopy.PathTruncation.html#2746" class="Bound"
+      >x</a
+      ><a name="2747" class="Symbol"
+      >}</a
+      ><a name="2748"
+      > </a
+      ><a name="2749" class="Symbol"
+      >{</a
+      ><a name="2750" href="Homotopy.PathTruncation.html#2750" class="Bound"
+      >y</a
+      ><a name="2751" class="Symbol"
+      >}</a
+      ><a name="2752"
+      > </a
+      ><a name="2753" href="Homotopy.PathTruncation.html#2753" class="Bound"
+      >q</a
+      ><a name="2754"
+      > </a
+      ><a name="2755" class="Symbol"
+      >=</a
+      ><a name="2756"
+      > </a
+      ><a name="2757" href="Homotopy.Truncation.html#2178" class="Function"
+      >&#960;&#8320;-extend</a
+      ><a name="2766"
+      >
+    </a
+      ><a name="2771" class="Symbol"
+      >&#10627;</a
+      ><a name="2772"
+      > </a
+      ><a name="2773" class="Symbol"
+      >&#955;</a
+      ><a name="2774"
+      > </a
+      ><a name="2775" href="Homotopy.PathTruncation.html#2775" class="Bound"
+      >q</a
+      ><a name="2776"
+      > </a
+      ><a name="2777" class="Symbol"
+      >&#8594;</a
+      ><a name="2778"
+      > </a
+      ><a name="2779" href="HLevel.html#5078" class="Function"
+      >&#8801;-is-set</a
+      ><a name="2787"
+      > </a
+      ><a name="2788" class="Symbol"
+      >{</a
+      ><a name="2789"
+      >x </a
+      ><a name="2791" class="Symbol"
+      >=</a
+      ><a name="2792"
+      > </a
+      ><a name="2793" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2796"
+      > </a
+      ><a name="2797" href="Homotopy.PathTruncation.html#2739" class="Bound"
+      >f</a
+      ><a name="2798"
+      > </a
+      ><a name="2799" href="Homotopy.PathTruncation.html#2775" class="Bound"
+      >q</a
+      ><a name="2800"
+      > </a
+      ><a name="2801" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2803"
+      > </a
+      ><a name="2804" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="2805"
+      > </a
+      ><a name="2806" href="Homotopy.PathTruncation.html#2750" class="Bound"
+      >y</a
+      ><a name="2807" class="Symbol"
+      >}</a
+      ><a name="2808"
+      > </a
+      ><a name="2809" class="Symbol"
+      >{</a
+      ><a name="2810"
+      >y </a
+      ><a name="2812" class="Symbol"
+      >=</a
+      ><a name="2813"
+      > </a
+      ><a name="2814" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="2815"
+      > </a
+      ><a name="2816" href="Homotopy.PathTruncation.html#2746" class="Bound"
+      >x</a
+      ><a name="2817"
+      > </a
+      ><a name="2818" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2820"
+      > </a
+      ><a name="2821" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2824"
+      > </a
+      ><a name="2825" href="Homotopy.PathTruncation.html#2741" class="Bound"
+      >g</a
+      ><a name="2826"
+      > </a
+      ><a name="2827" href="Homotopy.PathTruncation.html#2775" class="Bound"
+      >q</a
+      ><a name="2828" class="Symbol"
+      >}</a
+      ><a name="2829"
+      >
+            </a
+      ><a name="2842" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="2843"
+      > </a
+      ><a name="2844" href="Homotopy.Truncation.html#2102" class="Function"
+      >&#960;&#8320;-is-set</a
+      ><a name="2853"
+      > </a
+      ><a name="2854" class="Symbol"
+      >(</a
+      ><a name="2855" href="Homotopy.PathTruncation.html#2739" class="Bound"
+      >f</a
+      ><a name="2856"
+      > </a
+      ><a name="2857" href="Homotopy.PathTruncation.html#2746" class="Bound"
+      >x</a
+      ><a name="2858"
+      > </a
+      ><a name="2859" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2860"
+      > </a
+      ><a name="2861" href="Homotopy.PathTruncation.html#2741" class="Bound"
+      >g</a
+      ><a name="2862"
+      > </a
+      ><a name="2863" href="Homotopy.PathTruncation.html#2750" class="Bound"
+      >y</a
+      ><a name="2864" class="Symbol"
+      >)</a
+      ><a name="2865"
+      > </a
+      ><a name="2866" class="Symbol"
+      >&#10628;</a
+      ><a name="2867"
+      >
+    </a
+      ><a name="2872" class="Symbol"
+      >(</a
+      ><a name="2873" href="Homotopy.PathTruncation.html#2906" class="Function"
+      >lemma</a
+      ><a name="2878"
+      > </a
+      ><a name="2879" class="Symbol"
+      >{</a
+      ><a name="2880" href="Homotopy.PathTruncation.html#2746" class="Bound"
+      >x</a
+      ><a name="2881" class="Symbol"
+      >}</a
+      ><a name="2882"
+      > </a
+      ><a name="2883" class="Symbol"
+      >{</a
+      ><a name="2884" href="Homotopy.PathTruncation.html#2750" class="Bound"
+      >y</a
+      ><a name="2885" class="Symbol"
+      >})</a
+      ><a name="2887"
+      > </a
+      ><a name="2888" href="Homotopy.PathTruncation.html#2753" class="Bound"
+      >q</a
+      ><a name="2889"
+      >
+    </a
+      ><a name="2894" class="Keyword"
+      >where</a
+      ><a name="2899"
+      >
+      </a
+      ><a name="2906" href="Homotopy.PathTruncation.html#2906" class="Function"
+      >lemma</a
+      ><a name="2911"
+      > </a
+      ><a name="2912" class="Symbol"
+      >:</a
+      ><a name="2913"
+      > </a
+      ><a name="2914" class="Symbol"
+      >&#8704;</a
+      ><a name="2915"
+      > </a
+      ><a name="2916" class="Symbol"
+      >{</a
+      ><a name="2917" href="Homotopy.PathTruncation.html#2917" class="Bound"
+      >x</a
+      ><a name="2918"
+      > </a
+      ><a name="2919" href="Homotopy.PathTruncation.html#2919" class="Bound"
+      >y</a
+      ><a name="2920"
+      > </a
+      ><a name="2921" class="Symbol"
+      >:</a
+      ><a name="2922"
+      > </a
+      ><a name="2923" href="Homotopy.PathTruncation.html#2550" class="Bound"
+      >A</a
+      ><a name="2924" class="Symbol"
+      >}</a
+      ><a name="2925"
+      > </a
+      ><a name="2926" class="Symbol"
+      >(</a
+      ><a name="2927" href="Homotopy.PathTruncation.html#2927" class="Bound"
+      >q</a
+      ><a name="2928"
+      > </a
+      ><a name="2929" class="Symbol"
+      >:</a
+      ><a name="2930"
+      > </a
+      ><a name="2931" href="Homotopy.PathTruncation.html#2917" class="Bound"
+      >x</a
+      ><a name="2932"
+      > </a
+      ><a name="2933" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2934"
+      > </a
+      ><a name="2935" href="Homotopy.PathTruncation.html#2919" class="Bound"
+      >y</a
+      ><a name="2936" class="Symbol"
+      >)</a
+      ><a name="2937"
+      > </a
+      ><a name="2938" class="Symbol"
+      >&#8594;</a
+      ><a name="2939"
+      > </a
+      ><a name="2940" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2943"
+      > </a
+      ><a name="2944" href="Homotopy.PathTruncation.html#2739" class="Bound"
+      >f</a
+      ><a name="2945"
+      > </a
+      ><a name="2946" class="Symbol"
+      >(</a
+      ><a name="2947" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2951"
+      > </a
+      ><a name="2952" href="Homotopy.PathTruncation.html#2927" class="Bound"
+      >q</a
+      ><a name="2953" class="Symbol"
+      >)</a
+      ><a name="2954"
+      > </a
+      ><a name="2955" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2957"
+      > </a
+      ><a name="2958" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="2959"
+      > </a
+      ><a name="2960" href="Homotopy.PathTruncation.html#2919" class="Bound"
+      >y</a
+      ><a name="2961"
+      > </a
+      ><a name="2962" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="2963"
+      > </a
+      ><a name="2964" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="2965"
+      > </a
+      ><a name="2966" href="Homotopy.PathTruncation.html#2917" class="Bound"
+      >x</a
+      ><a name="2967"
+      > </a
+      ><a name="2968" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="2970"
+      > </a
+      ><a name="2971" href="Homotopy.PathTruncation.html#734" class="Function"
+      >ap&#8320;</a
+      ><a name="2974"
+      > </a
+      ><a name="2975" href="Homotopy.PathTruncation.html#2741" class="Bound"
+      >g</a
+      ><a name="2976"
+      > </a
+      ><a name="2977" class="Symbol"
+      >(</a
+      ><a name="2978" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="2982"
+      > </a
+      ><a name="2983" href="Homotopy.PathTruncation.html#2927" class="Bound"
+      >q</a
+      ><a name="2984" class="Symbol"
+      >)</a
+      ><a name="2985"
+      >
+      </a
+      ><a name="2992" href="Homotopy.PathTruncation.html#2906" class="Function"
+      >lemma</a
+      ><a name="2997"
+      > </a
+      ><a name="2998" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="3002"
+      > </a
+      ><a name="3003" class="Symbol"
+      >=</a
+      ><a name="3004"
+      >
+        </a
+      ><a name="3013" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="3018"
+      > </a
+      ><a name="3019" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="3021"
+      > </a
+      ><a name="3022" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="3023"
+      > </a
+      ><a name="3024" class="Symbol"
+      >_</a
+      ><a name="3025"
+      >
+          </a
+      ><a name="3036" href="Paths.html#668" class="Function Operator"
+      >&#8801;&#10216;</a
+      ><a name="3038"
+      > </a
+      ><a name="3039" href="Homotopy.PathTruncation.html#1101" class="Function"
+      >refl&#8320;-left-unit</a
+      ><a name="3054"
+      > </a
+      ><a name="3055" class="Symbol"
+      >(</a
+      ><a name="3056" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="3057"
+      > </a
+      ><a name="3058" class="Symbol"
+      >_)</a
+      ><a name="3060"
+      > </a
+      ><a name="3061" href="Paths.html#668" class="Function Operator"
+      >&#10217;</a
+      ><a name="3062"
+      >
+        </a
+      ><a name="3071" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="3072"
+      > </a
+      ><a name="3073" class="Symbol"
+      >_</a
+      ><a name="3074"
+      >
+          </a
+      ><a name="3085" href="Paths.html#759" class="Function"
+      >&#8801;&#10216;</a
+      ><a name="3087"
+      > </a
+      ><a name="3088" href="Paths.html#508" class="Function"
+      >!</a
+      ><a name="3089"
+      > </a
+      ><a name="3090" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="3091"
+      > </a
+      ><a name="3092" href="Homotopy.PathTruncation.html#908" class="Function"
+      >refl&#8320;-right-unit</a
+      ><a name="3108"
+      > </a
+      ><a name="3109" class="Symbol"
+      >_</a
+      ><a name="3110"
+      > </a
+      ><a name="3111" href="Paths.html#759" class="Function"
+      >&#10217;&#8718;</a
+      ><a name="3113"
+      >
+        </a
+      ><a name="3122" href="Homotopy.PathTruncation.html#2743" class="Bound"
+      >p</a
+      ><a name="3123"
+      > </a
+      ><a name="3124" class="Symbol"
+      >_</a
+      ><a name="3125"
+      > </a
+      ><a name="3126" href="Homotopy.PathTruncation.html#381" class="Function Operator"
+      >&#8728;&#8320;</a
+      ><a name="3128"
+      > </a
+      ><a name="3129" href="Homotopy.PathTruncation.html#672" class="Function"
+      >refl&#8320;</a
+      ><a name="3134"
+      >
+          </a
+      ><a name="3145" href="Paths.html#759" class="Function"
+      >&#8718;</a
+      ><a name="3146"
+      >
+
+</a
+      ><a name="3148" class="Comment"
+      >-- Loop space commutes with truncation in the sense that</a
+      ><a name="3204"
+      >
+</a
+      ><a name="3205" class="Comment"
+      >-- &#964; n (&#937; X) = &#937; (&#964; (S n) X)</a
+      ><a name="3233"
+      >
+</a
+      ><a name="3234" class="Comment"
+      >-- (actually, this is true more generally for paths spaces and we need this</a
+      ><a name="3309"
+      >
+</a
+      ><a name="3310" class="Comment"
+      >-- level of generality to prove it)</a
+      ><a name="3345"
+      >
+
+</a
+      ><a name="3347" class="Keyword"
+      >module</a
+      ><a name="3353"
+      > </a
+      ><a name="3354" href="Homotopy.PathTruncation.html#3354" class="Module"
+      >_</a
+      ><a name="3355"
+      > </a
+      ><a name="3356" class="Symbol"
+      >{</a
+      ><a name="3357" href="Homotopy.PathTruncation.html#3357" class="Bound"
+      >i</a
+      ><a name="3358" class="Symbol"
+      >}</a
+      ><a name="3359"
+      > </a
+      ><a name="3360" class="Symbol"
+      >{</a
+      ><a name="3361" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3362"
+      > </a
+      ><a name="3363" class="Symbol"
+      >:</a
+      ><a name="3364"
+      > </a
+      ><a name="3365" href="Types.html#1410" class="Datatype"
+      >&#8469;&#8331;&#8322;</a
+      ><a name="3368" class="Symbol"
+      >}</a
+      ><a name="3369"
+      > </a
+      ><a name="3370" class="Symbol"
+      >{</a
+      ><a name="3371" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="3372"
+      > </a
+      ><a name="3373" class="Symbol"
+      >:</a
+      ><a name="3374"
+      > </a
+      ><a name="3375" class="PrimitiveType"
+      >Set</a
+      ><a name="3378"
+      > </a
+      ><a name="3379" href="Homotopy.PathTruncation.html#3357" class="Bound"
+      >i</a
+      ><a name="3380" class="Symbol"
+      >}</a
+      ><a name="3381"
+      > </a
+      ><a name="3382" class="Keyword"
+      >where</a
+      ><a name="3387"
+      >
+
+  </a
+      ><a name="3391" class="Keyword"
+      >private</a
+      ><a name="3398"
+      >
+    </a
+      ><a name="3403" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="3405"
+      > </a
+      ><a name="3406" class="Symbol"
+      >:</a
+      ><a name="3407"
+      > </a
+      ><a name="3408" class="Symbol"
+      >(</a
+      ><a name="3409" href="Homotopy.PathTruncation.html#3409" class="Bound"
+      >x</a
+      ><a name="3410"
+      > </a
+      ><a name="3411" href="Homotopy.PathTruncation.html#3411" class="Bound"
+      >y</a
+      ><a name="3412"
+      > </a
+      ><a name="3413" class="Symbol"
+      >:</a
+      ><a name="3414"
+      > </a
+      ><a name="3415" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="3416" class="Symbol"
+      >)</a
+      ><a name="3417"
+      > </a
+      ><a name="3418" class="Symbol"
+      >&#8594;</a
+      ><a name="3419"
+      > </a
+      ><a name="3420" class="Symbol"
+      >(</a
+      ><a name="3421" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3422"
+      > </a
+      ><a name="3423" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3424"
+      > </a
+      ><a name="3425" class="Symbol"
+      >(</a
+      ><a name="3426" href="Homotopy.PathTruncation.html#3409" class="Bound"
+      >x</a
+      ><a name="3427"
+      > </a
+      ><a name="3428" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3429"
+      > </a
+      ><a name="3430" href="Homotopy.PathTruncation.html#3411" class="Bound"
+      >y</a
+      ><a name="3431" class="Symbol"
+      >))</a
+      ><a name="3433"
+      > </a
+      ><a name="3434" class="Symbol"
+      >&#8594;</a
+      ><a name="3435"
+      > </a
+      ><a name="3436" class="Symbol"
+      >((</a
+      ><a name="3438" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3442"
+      > </a
+      ><a name="3443" class="Symbol"
+      >{</a
+      ><a name="3444"
+      >n </a
+      ><a name="3446" class="Symbol"
+      >=</a
+      ><a name="3447"
+      > </a
+      ><a name="3448" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3449"
+      > </a
+      ><a name="3450" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3451" class="Symbol"
+      >}</a
+      ><a name="3452"
+      > </a
+      ><a name="3453" href="Homotopy.PathTruncation.html#3409" class="Bound"
+      >x</a
+      ><a name="3454" class="Symbol"
+      >)</a
+      ><a name="3455"
+      > </a
+      ><a name="3456" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3457"
+      > </a
+      ><a name="3458" class="Symbol"
+      >(</a
+      ><a name="3459" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3463"
+      > </a
+      ><a name="3464" href="Homotopy.PathTruncation.html#3411" class="Bound"
+      >y</a
+      ><a name="3465" class="Symbol"
+      >))</a
+      ><a name="3467"
+      >
+    </a
+      ><a name="3472" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="3474"
+      > </a
+      ><a name="3475" href="Homotopy.PathTruncation.html#3475" class="Bound"
+      >x</a
+      ><a name="3476"
+      > </a
+      ><a name="3477" href="Homotopy.PathTruncation.html#3477" class="Bound"
+      >y</a
+      ><a name="3478"
+      > </a
+      ><a name="3479" class="Symbol"
+      >=</a
+      ><a name="3480"
+      > </a
+      ><a name="3481" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3496"
+      > </a
+      ><a name="3497" class="Symbol"
+      >&#10627;</a
+      ><a name="3498"
+      > </a
+      ><a name="3499" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="3513"
+      > </a
+      ><a name="3514" class="Symbol"
+      >(</a
+      ><a name="3515" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3516"
+      > </a
+      ><a name="3517" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3518" class="Symbol"
+      >)</a
+      ><a name="3519"
+      > </a
+      ><a name="3520" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="3521"
+      > </a
+      ><a name="3522" class="Symbol"
+      >_</a
+      ><a name="3523"
+      > </a
+      ><a name="3524" class="Symbol"
+      >_</a
+      ><a name="3525"
+      > </a
+      ><a name="3526" class="Symbol"
+      >&#10628;</a
+      ><a name="3527"
+      > </a
+      ><a name="3528" class="Symbol"
+      >(</a
+      ><a name="3529" href="Paths.html#899" class="Function"
+      >ap</a
+      ><a name="3531"
+      > </a
+      ><a name="3532" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="3536" class="Symbol"
+      >)</a
+      ><a name="3537"
+      >
+
+    </a
+      ><a name="3543" class="Comment"
+      >-- [truncated-path-space (proj x) (proj y)] is [&#964; n (x &#8801; y)]</a
+      ><a name="3603"
+      >
+    </a
+      ><a name="3608" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="3628"
+      > </a
+      ><a name="3629" class="Symbol"
+      >:</a
+      ><a name="3630"
+      > </a
+      ><a name="3631" class="Symbol"
+      >(</a
+      ><a name="3632" href="Homotopy.PathTruncation.html#3632" class="Bound"
+      >u</a
+      ><a name="3633"
+      > </a
+      ><a name="3634" href="Homotopy.PathTruncation.html#3634" class="Bound"
+      >v</a
+      ><a name="3635"
+      > </a
+      ><a name="3636" class="Symbol"
+      >:</a
+      ><a name="3637"
+      > </a
+      ><a name="3638" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3639"
+      > </a
+      ><a name="3640" class="Symbol"
+      >(</a
+      ><a name="3641" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3642"
+      > </a
+      ><a name="3643" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3644" class="Symbol"
+      >)</a
+      ><a name="3645"
+      > </a
+      ><a name="3646" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="3647" class="Symbol"
+      >)</a
+      ><a name="3648"
+      > </a
+      ><a name="3649" class="Symbol"
+      >&#8594;</a
+      ><a name="3650"
+      > </a
+      ><a name="3651" href="HLevelBis.html#3939" class="Function"
+      >Type&#8804;</a
+      ><a name="3656"
+      > </a
+      ><a name="3657" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3658"
+      > </a
+      ><a name="3659" href="Homotopy.PathTruncation.html#3357" class="Bound"
+      >i</a
+      ><a name="3660"
+      >
+    </a
+      ><a name="3665" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="3685"
+      > </a
+      ><a name="3686" class="Symbol"
+      >=</a
+      ><a name="3687"
+      > </a
+      ><a name="3688" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3703"
+      >
+                             </a
+      ><a name="3733" class="Symbol"
+      >&#10627;</a
+      ><a name="3734"
+      > </a
+      ><a name="3735" href="HLevelBis.html#1805" class="Function"
+      >&#8594;-is-truncated</a
+      ><a name="3749"
+      > </a
+      ><a name="3750" class="Symbol"
+      >(</a
+      ><a name="3751" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="3752"
+      > </a
+      ><a name="3753" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3754" class="Symbol"
+      >)</a
+      ><a name="3755"
+      > </a
+      ><a name="3756" class="Symbol"
+      >(</a
+      ><a name="3757" href="HLevelBis.html#5185" class="Function"
+      >Type&#8804;-is-truncated</a
+      ><a name="3775"
+      > </a
+      ><a name="3776" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3777"
+      > </a
+      ><a name="3778" class="Symbol"
+      >_)</a
+      ><a name="3780"
+      > </a
+      ><a name="3781" class="Symbol"
+      >&#10628;</a
+      ><a name="3782"
+      >
+                             </a
+      ><a name="3812" class="Symbol"
+      >(&#955;</a
+      ><a name="3814"
+      > </a
+      ><a name="3815" href="Homotopy.PathTruncation.html#3815" class="Bound"
+      >x</a
+      ><a name="3816"
+      > </a
+      ><a name="3817" class="Symbol"
+      >&#8594;</a
+      ><a name="3818"
+      > </a
+      ><a name="3819" href="Homotopy.Truncation.html#1137" class="Function"
+      >&#964;-extend-nondep</a
+      ><a name="3834"
+      > </a
+      ><a name="3835" class="Symbol"
+      >&#10627;</a
+      ><a name="3836"
+      > </a
+      ><a name="3837" href="HLevelBis.html#5185" class="Function"
+      >Type&#8804;-is-truncated</a
+      ><a name="3855"
+      > </a
+      ><a name="3856" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3857"
+      > </a
+      ><a name="3858" class="Symbol"
+      >_</a
+      ><a name="3859"
+      > </a
+      ><a name="3860" class="Symbol"
+      >&#10628;</a
+      ><a name="3861"
+      >
+                               </a
+      ><a name="3893" class="Symbol"
+      >(&#955;</a
+      ><a name="3895"
+      > </a
+      ><a name="3896" href="Homotopy.PathTruncation.html#3896" class="Bound"
+      >y</a
+      ><a name="3897"
+      > </a
+      ><a name="3898" class="Symbol"
+      >&#8594;</a
+      ><a name="3899"
+      > </a
+      ><a name="3900" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="3901"
+      > </a
+      ><a name="3902" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3903"
+      > </a
+      ><a name="3904" class="Symbol"
+      >(</a
+      ><a name="3905" href="Homotopy.PathTruncation.html#3815" class="Bound"
+      >x</a
+      ><a name="3906"
+      > </a
+      ><a name="3907" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="3908"
+      > </a
+      ><a name="3909" href="Homotopy.PathTruncation.html#3896" class="Bound"
+      >y</a
+      ><a name="3910" class="Symbol"
+      >)</a
+      ><a name="3911"
+      > </a
+      ><a name="3912" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="3913"
+      > </a
+      ><a name="3914" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="3928"
+      > </a
+      ><a name="3929" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="3930"
+      > </a
+      ><a name="3931" class="Symbol"
+      >_))</a
+      ><a name="3934"
+      >
+
+    </a
+      ><a name="3940" class="Comment"
+      >-- We now extend [to] to the truncation of [A], and this is why we needed to</a
+      ><a name="4016"
+      >
+    </a
+      ><a name="4021" class="Comment"
+      >-- first extend the return type of [to]</a
+      ><a name="4060"
+      >
+    </a
+      ><a name="4065" href="Homotopy.PathTruncation.html#4065" class="Function"
+      >to'</a
+      ><a name="4068"
+      > </a
+      ><a name="4069" class="Symbol"
+      >:</a
+      ><a name="4070"
+      > </a
+      ><a name="4071" class="Symbol"
+      >(</a
+      ><a name="4072" href="Homotopy.PathTruncation.html#4072" class="Bound"
+      >u</a
+      ><a name="4073"
+      > </a
+      ><a name="4074" href="Homotopy.PathTruncation.html#4074" class="Bound"
+      >v</a
+      ><a name="4075"
+      > </a
+      ><a name="4076" class="Symbol"
+      >:</a
+      ><a name="4077"
+      > </a
+      ><a name="4078" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4079"
+      > </a
+      ><a name="4080" class="Symbol"
+      >(</a
+      ><a name="4081" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4082"
+      > </a
+      ><a name="4083" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4084" class="Symbol"
+      >)</a
+      ><a name="4085"
+      > </a
+      ><a name="4086" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4087" class="Symbol"
+      >)</a
+      ><a name="4088"
+      > </a
+      ><a name="4089" class="Symbol"
+      >&#8594;</a
+      ><a name="4090"
+      > </a
+      ><a name="4091" class="Symbol"
+      >(</a
+      ><a name="4092" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4094"
+      > </a
+      ><a name="4095" class="Symbol"
+      >(</a
+      ><a name="4096" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="4116"
+      > </a
+      ><a name="4117" href="Homotopy.PathTruncation.html#4072" class="Bound"
+      >u</a
+      ><a name="4118"
+      > </a
+      ><a name="4119" href="Homotopy.PathTruncation.html#4074" class="Bound"
+      >v</a
+      ><a name="4120" class="Symbol"
+      >)</a
+      ><a name="4121"
+      > </a
+      ><a name="4122" class="Symbol"
+      >&#8594;</a
+      ><a name="4123"
+      > </a
+      ><a name="4124" href="Homotopy.PathTruncation.html#4072" class="Bound"
+      >u</a
+      ><a name="4125"
+      > </a
+      ><a name="4126" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4127"
+      > </a
+      ><a name="4128" href="Homotopy.PathTruncation.html#4074" class="Bound"
+      >v</a
+      ><a name="4129" class="Symbol"
+      >)</a
+      ><a name="4130"
+      >
+    </a
+      ><a name="4135" href="Homotopy.PathTruncation.html#4065" class="Function"
+      >to'</a
+      ><a name="4138"
+      > </a
+      ><a name="4139" class="Symbol"
+      >=</a
+      ><a name="4140"
+      > </a
+      ><a name="4141" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4149"
+      > </a
+      ><a name="4150" class="Symbol"
+      >&#10627;</a
+      ><a name="4151"
+      > </a
+      ><a name="4152" class="Symbol"
+      >&#955;</a
+      ><a name="4153"
+      > </a
+      ><a name="4154" href="Homotopy.PathTruncation.html#4154" class="Bound"
+      >x</a
+      ><a name="4155"
+      > </a
+      ><a name="4156" class="Symbol"
+      >&#8594;</a
+      ><a name="4157"
+      > </a
+      ><a name="4158" href="HLevelBis.html#1459" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4172"
+      > </a
+      ><a name="4173" class="Symbol"
+      >(</a
+      ><a name="4174" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4175"
+      > </a
+      ><a name="4176" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4177" class="Symbol"
+      >)</a
+      ><a name="4178"
+      > </a
+      ><a name="4179" class="Symbol"
+      >(&#955;</a
+      ><a name="4181"
+      > </a
+      ><a name="4182" href="Homotopy.PathTruncation.html#4182" class="Bound"
+      >a</a
+      ><a name="4183"
+      > </a
+      ><a name="4184" class="Symbol"
+      >&#8594;</a
+      ><a name="4185"
+      >
+                             </a
+      ><a name="4215" href="HLevelBis.html#1459" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4229"
+      > </a
+      ><a name="4230" class="Symbol"
+      >(</a
+      ><a name="4231" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4232"
+      > </a
+      ><a name="4233" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4234" class="Symbol"
+      >)</a
+      ><a name="4235"
+      > </a
+      ><a name="4236" class="Symbol"
+      >(&#955;</a
+      ><a name="4238"
+      > </a
+      ><a name="4239" href="Homotopy.PathTruncation.html#4239" class="Bound"
+      >b</a
+      ><a name="4240"
+      > </a
+      ><a name="4241" class="Symbol"
+      >&#8594;</a
+      ><a name="4242"
+      >
+                               </a
+      ><a name="4274" href="HLevel.html#4362" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="4288"
+      > </a
+      ><a name="4289" class="Symbol"
+      >(</a
+      ><a name="4290" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4291"
+      > </a
+      ><a name="4292" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4293" class="Symbol"
+      >)</a
+      ><a name="4294"
+      >
+                                 </a
+      ><a name="4328" class="Symbol"
+      >(</a
+      ><a name="4329" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="4343"
+      > </a
+      ><a name="4344" class="Symbol"
+      >(</a
+      ><a name="4345" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4346"
+      > </a
+      ><a name="4347" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4348" class="Symbol"
+      >)</a
+      ><a name="4349"
+      > </a
+      ><a name="4350" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4351" class="Symbol"
+      >)))&#10628;</a
+      ><a name="4355"
+      >
+            </a
+      ><a name="4368" class="Symbol"
+      >(&#955;</a
+      ><a name="4370"
+      > </a
+      ><a name="4371" href="Homotopy.PathTruncation.html#4371" class="Bound"
+      >x</a
+      ><a name="4372"
+      > </a
+      ><a name="4373" class="Symbol"
+      >&#8594;</a
+      ><a name="4374"
+      > </a
+      ><a name="4375" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4383"
+      > </a
+      ><a name="4384" class="Symbol"
+      >&#10627;</a
+      ><a name="4385"
+      > </a
+      ><a name="4386" class="Symbol"
+      >&#955;</a
+      ><a name="4387"
+      > </a
+      ><a name="4388" href="Homotopy.PathTruncation.html#4388" class="Bound"
+      >t</a
+      ><a name="4389"
+      > </a
+      ><a name="4390" class="Symbol"
+      >&#8594;</a
+      ><a name="4391"
+      > </a
+      ><a name="4392" href="HLevelBis.html#1459" class="Function"
+      >&#928;-is-truncated</a
+      ><a name="4406"
+      > </a
+      ><a name="4407" class="Symbol"
+      >(</a
+      ><a name="4408" class="InductiveConstructor"
+      >S</a
+      ><a name="4409"
+      > </a
+      ><a name="4410" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4411" class="Symbol"
+      >)</a
+      ><a name="4412"
+      > </a
+      ><a name="4413" class="Symbol"
+      >(&#955;</a
+      ><a name="4415"
+      > </a
+      ><a name="4416" href="Homotopy.PathTruncation.html#4416" class="Bound"
+      >a</a
+      ><a name="4417"
+      > </a
+      ><a name="4418" class="Symbol"
+      >&#8594;</a
+      ><a name="4419"
+      >
+                                      </a
+      ><a name="4458" href="HLevel.html#4362" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="4472"
+      > </a
+      ><a name="4473" class="Symbol"
+      >(</a
+      ><a name="4474" class="InductiveConstructor"
+      >S</a
+      ><a name="4475"
+      > </a
+      ><a name="4476" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4477" class="Symbol"
+      >)</a
+      ><a name="4478"
+      >
+                                        </a
+      ><a name="4519" class="Symbol"
+      >(</a
+      ><a name="4520" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="4534"
+      > </a
+      ><a name="4535" class="Symbol"
+      >(</a
+      ><a name="4536" class="InductiveConstructor"
+      >S</a
+      ><a name="4537"
+      > </a
+      ><a name="4538" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4539" class="Symbol"
+      >)</a
+      ><a name="4540"
+      > </a
+      ><a name="4541" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4542" class="Symbol"
+      >))&#10628;</a
+      ><a name="4545"
+      >
+              </a
+      ><a name="4560" class="Symbol"
+      >(&#955;</a
+      ><a name="4562"
+      > </a
+      ><a name="4563" href="Homotopy.PathTruncation.html#4563" class="Bound"
+      >y</a
+      ><a name="4564"
+      > </a
+      ><a name="4565" class="Symbol"
+      >&#8594;</a
+      ><a name="4566"
+      > </a
+      ><a name="4567" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="4569"
+      > </a
+      ><a name="4570" href="Homotopy.PathTruncation.html#4371" class="Bound"
+      >x</a
+      ><a name="4571"
+      > </a
+      ><a name="4572" href="Homotopy.PathTruncation.html#4563" class="Bound"
+      >y</a
+      ><a name="4573" class="Symbol"
+      >))</a
+      ><a name="4575"
+      >
+
+    </a
+      ><a name="4581" href="Homotopy.PathTruncation.html#4581" class="Function"
+      >from'-refl</a
+      ><a name="4591"
+      > </a
+      ><a name="4592" class="Symbol"
+      >:</a
+      ><a name="4593"
+      > </a
+      ><a name="4594" class="Symbol"
+      >(</a
+      ><a name="4595" href="Homotopy.PathTruncation.html#4595" class="Bound"
+      >u</a
+      ><a name="4596"
+      > </a
+      ><a name="4597" class="Symbol"
+      >:</a
+      ><a name="4598"
+      > </a
+      ><a name="4599" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4600"
+      > </a
+      ><a name="4601" class="Symbol"
+      >(</a
+      ><a name="4602" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4603"
+      > </a
+      ><a name="4604" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4605" class="Symbol"
+      >)</a
+      ><a name="4606"
+      > </a
+      ><a name="4607" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4608" class="Symbol"
+      >)</a
+      ><a name="4609"
+      > </a
+      ><a name="4610" class="Symbol"
+      >&#8594;</a
+      ><a name="4611"
+      > </a
+      ><a name="4612" class="Symbol"
+      >(</a
+      ><a name="4613" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4615"
+      > </a
+      ><a name="4616" class="Symbol"
+      >(</a
+      ><a name="4617" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="4637"
+      > </a
+      ><a name="4638" href="Homotopy.PathTruncation.html#4595" class="Bound"
+      >u</a
+      ><a name="4639"
+      > </a
+      ><a name="4640" href="Homotopy.PathTruncation.html#4595" class="Bound"
+      >u</a
+      ><a name="4641" class="Symbol"
+      >))</a
+      ><a name="4643"
+      >
+    </a
+      ><a name="4648" href="Homotopy.PathTruncation.html#4581" class="Function"
+      >from'-refl</a
+      ><a name="4658"
+      > </a
+      ><a name="4659" class="Symbol"
+      >=</a
+      ><a name="4660"
+      > </a
+      ><a name="4661" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="4669"
+      > </a
+      ><a name="4670" class="Symbol"
+      >&#10627;</a
+      ><a name="4671"
+      > </a
+      ><a name="4672" class="Symbol"
+      >&#955;</a
+      ><a name="4673"
+      > </a
+      ><a name="4674" href="Homotopy.PathTruncation.html#4674" class="Bound"
+      >x</a
+      ><a name="4675"
+      > </a
+      ><a name="4676" class="Symbol"
+      >&#8594;</a
+      ><a name="4677"
+      > </a
+      ><a name="4678" href="HLevel.html#1415" class="Function"
+      >truncated-is-truncated-S</a
+      ><a name="4702"
+      > </a
+      ><a name="4703" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4704"
+      >
+                                    </a
+      ><a name="4741" class="Symbol"
+      >(</a
+      ><a name="4742" href="Types.html#833" class="Function"
+      >&#960;&#8322;</a
+      ><a name="4744"
+      > </a
+      ><a name="4745" class="Symbol"
+      >(</a
+      ><a name="4746" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="4766"
+      > </a
+      ><a name="4767" href="Homotopy.PathTruncation.html#4674" class="Bound"
+      >x</a
+      ><a name="4768"
+      > </a
+      ><a name="4769" href="Homotopy.PathTruncation.html#4674" class="Bound"
+      >x</a
+      ><a name="4770" class="Symbol"
+      >))&#10628;</a
+      ><a name="4773"
+      >
+                   </a
+      ><a name="4793" class="Symbol"
+      >(&#955;</a
+      ><a name="4795"
+      > </a
+      ><a name="4796" href="Homotopy.PathTruncation.html#4796" class="Bound"
+      >x</a
+      ><a name="4797"
+      > </a
+      ><a name="4798" class="Symbol"
+      >&#8594;</a
+      ><a name="4799"
+      > </a
+      ><a name="4800" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="4804"
+      > </a
+      ><a name="4805" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="4809" class="Symbol"
+      >)</a
+      ><a name="4810"
+      >
+
+    </a
+      ><a name="4816" href="Homotopy.PathTruncation.html#4816" class="Function"
+      >from'</a
+      ><a name="4821"
+      > </a
+      ><a name="4822" class="Symbol"
+      >:</a
+      ><a name="4823"
+      > </a
+      ><a name="4824" class="Symbol"
+      >(</a
+      ><a name="4825" href="Homotopy.PathTruncation.html#4825" class="Bound"
+      >u</a
+      ><a name="4826"
+      > </a
+      ><a name="4827" href="Homotopy.PathTruncation.html#4827" class="Bound"
+      >v</a
+      ><a name="4828"
+      > </a
+      ><a name="4829" class="Symbol"
+      >:</a
+      ><a name="4830"
+      > </a
+      ><a name="4831" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4832"
+      > </a
+      ><a name="4833" class="Symbol"
+      >(</a
+      ><a name="4834" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4835"
+      > </a
+      ><a name="4836" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4837" class="Symbol"
+      >)</a
+      ><a name="4838"
+      > </a
+      ><a name="4839" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4840" class="Symbol"
+      >)</a
+      ><a name="4841"
+      > </a
+      ><a name="4842" class="Symbol"
+      >&#8594;</a
+      ><a name="4843"
+      > </a
+      ><a name="4844" class="Symbol"
+      >(</a
+      ><a name="4845" href="Homotopy.PathTruncation.html#4825" class="Bound"
+      >u</a
+      ><a name="4846"
+      > </a
+      ><a name="4847" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4848"
+      > </a
+      ><a name="4849" href="Homotopy.PathTruncation.html#4827" class="Bound"
+      >v</a
+      ><a name="4850"
+      > </a
+      ><a name="4851" class="Symbol"
+      >&#8594;</a
+      ><a name="4852"
+      > </a
+      ><a name="4853" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="4855"
+      > </a
+      ><a name="4856" class="Symbol"
+      >(</a
+      ><a name="4857" href="Homotopy.PathTruncation.html#3608" class="Function"
+      >truncated-path-space</a
+      ><a name="4877"
+      > </a
+      ><a name="4878" href="Homotopy.PathTruncation.html#4825" class="Bound"
+      >u</a
+      ><a name="4879"
+      > </a
+      ><a name="4880" href="Homotopy.PathTruncation.html#4827" class="Bound"
+      >v</a
+      ><a name="4881" class="Symbol"
+      >))</a
+      ><a name="4883"
+      >
+    </a
+      ><a name="4888" href="Homotopy.PathTruncation.html#4816" class="Function"
+      >from'</a
+      ><a name="4893"
+      > </a
+      ><a name="4894" href="Homotopy.PathTruncation.html#4894" class="Bound"
+      >u</a
+      ><a name="4895"
+      > </a
+      ><a name="4896" class="DottedPattern Symbol"
+      >.</a
+      ><a name="4897" href="Homotopy.PathTruncation.html#4894" class="DottedPattern Bound"
+      >u</a
+      ><a name="4898"
+      > </a
+      ><a name="4899" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="4903"
+      > </a
+      ><a name="4904" class="Symbol"
+      >=</a
+      ><a name="4905"
+      > </a
+      ><a name="4906" href="Homotopy.PathTruncation.html#4581" class="Function"
+      >from'-refl</a
+      ><a name="4916"
+      > </a
+      ><a name="4917" href="Homotopy.PathTruncation.html#4894" class="Bound"
+      >u</a
+      ><a name="4918"
+      >
+
+    </a
+      ><a name="4924" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="4928"
+      > </a
+      ><a name="4929" class="Symbol"
+      >:</a
+      ><a name="4930"
+      > </a
+      ><a name="4931" class="Symbol"
+      >(</a
+      ><a name="4932" href="Homotopy.PathTruncation.html#4932" class="Bound"
+      >x</a
+      ><a name="4933"
+      > </a
+      ><a name="4934" href="Homotopy.PathTruncation.html#4934" class="Bound"
+      >y</a
+      ><a name="4935"
+      > </a
+      ><a name="4936" class="Symbol"
+      >:</a
+      ><a name="4937"
+      > </a
+      ><a name="4938" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="4939" class="Symbol"
+      >)</a
+      ><a name="4940"
+      > </a
+      ><a name="4941" class="Symbol"
+      >&#8594;</a
+      ><a name="4942"
+      > </a
+      ><a name="4943" class="Symbol"
+      >(</a
+      ><a name="4944" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="4948"
+      > </a
+      ><a name="4949" class="Symbol"
+      >{</a
+      ><a name="4950"
+      >n </a
+      ><a name="4952" class="Symbol"
+      >=</a
+      ><a name="4953"
+      > </a
+      ><a name="4954" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="4955"
+      > </a
+      ><a name="4956" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4957" class="Symbol"
+      >}</a
+      ><a name="4958"
+      > </a
+      ><a name="4959" href="Homotopy.PathTruncation.html#4932" class="Bound"
+      >x</a
+      ><a name="4960"
+      > </a
+      ><a name="4961" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4962"
+      > </a
+      ><a name="4963" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="4967"
+      > </a
+      ><a name="4968" href="Homotopy.PathTruncation.html#4934" class="Bound"
+      >y</a
+      ><a name="4969"
+      > </a
+      ><a name="4970" class="Symbol"
+      >&#8594;</a
+      ><a name="4971"
+      > </a
+      ><a name="4972" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="4973"
+      > </a
+      ><a name="4974" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="4975"
+      > </a
+      ><a name="4976" class="Symbol"
+      >(</a
+      ><a name="4977" href="Homotopy.PathTruncation.html#4932" class="Bound"
+      >x</a
+      ><a name="4978"
+      > </a
+      ><a name="4979" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="4980"
+      > </a
+      ><a name="4981" href="Homotopy.PathTruncation.html#4934" class="Bound"
+      >y</a
+      ><a name="4982" class="Symbol"
+      >))</a
+      ><a name="4984"
+      >
+    </a
+      ><a name="4989" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="4993"
+      > </a
+      ><a name="4994" href="Homotopy.PathTruncation.html#4994" class="Bound"
+      >x</a
+      ><a name="4995"
+      > </a
+      ><a name="4996" href="Homotopy.PathTruncation.html#4996" class="Bound"
+      >y</a
+      ><a name="4997"
+      > </a
+      ><a name="4998" href="Homotopy.PathTruncation.html#4998" class="Bound"
+      >p</a
+      ><a name="4999"
+      > </a
+      ><a name="5000" class="Symbol"
+      >=</a
+      ><a name="5001"
+      > </a
+      ><a name="5002" href="Homotopy.PathTruncation.html#4816" class="Function"
+      >from'</a
+      ><a name="5007"
+      > </a
+      ><a name="5008" class="Symbol"
+      >(</a
+      ><a name="5009" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5013"
+      > </a
+      ><a name="5014" href="Homotopy.PathTruncation.html#4994" class="Bound"
+      >x</a
+      ><a name="5015" class="Symbol"
+      >)</a
+      ><a name="5016"
+      > </a
+      ><a name="5017" class="Symbol"
+      >(</a
+      ><a name="5018" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5022"
+      > </a
+      ><a name="5023" href="Homotopy.PathTruncation.html#4996" class="Bound"
+      >y</a
+      ><a name="5024" class="Symbol"
+      >)</a
+      ><a name="5025"
+      > </a
+      ><a name="5026" href="Homotopy.PathTruncation.html#4998" class="Bound"
+      >p</a
+      ><a name="5027"
+      >
+
+    </a
+      ><a name="5033" href="Homotopy.PathTruncation.html#5033" class="Function"
+      >from-to</a
+      ><a name="5040"
+      > </a
+      ><a name="5041" class="Symbol"
+      >:</a
+      ><a name="5042"
+      > </a
+      ><a name="5043" class="Symbol"
+      >(</a
+      ><a name="5044" href="Homotopy.PathTruncation.html#5044" class="Bound"
+      >x</a
+      ><a name="5045"
+      > </a
+      ><a name="5046" href="Homotopy.PathTruncation.html#5046" class="Bound"
+      >y</a
+      ><a name="5047"
+      > </a
+      ><a name="5048" class="Symbol"
+      >:</a
+      ><a name="5049"
+      > </a
+      ><a name="5050" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5051" class="Symbol"
+      >)</a
+      ><a name="5052"
+      > </a
+      ><a name="5053" class="Symbol"
+      >(</a
+      ><a name="5054" href="Homotopy.PathTruncation.html#5054" class="Bound"
+      >p</a
+      ><a name="5055"
+      > </a
+      ><a name="5056" class="Symbol"
+      >:</a
+      ><a name="5057"
+      > </a
+      ><a name="5058" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5059"
+      > </a
+      ><a name="5060" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5061"
+      > </a
+      ><a name="5062" class="Symbol"
+      >(</a
+      ><a name="5063" href="Homotopy.PathTruncation.html#5044" class="Bound"
+      >x</a
+      ><a name="5064"
+      > </a
+      ><a name="5065" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5066"
+      > </a
+      ><a name="5067" href="Homotopy.PathTruncation.html#5046" class="Bound"
+      >y</a
+      ><a name="5068" class="Symbol"
+      >))</a
+      ><a name="5070"
+      > </a
+      ><a name="5071" class="Symbol"
+      >&#8594;</a
+      ><a name="5072"
+      > </a
+      ><a name="5073" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="5077"
+      > </a
+      ><a name="5078" href="Homotopy.PathTruncation.html#5044" class="Bound"
+      >x</a
+      ><a name="5079"
+      > </a
+      ><a name="5080" href="Homotopy.PathTruncation.html#5046" class="Bound"
+      >y</a
+      ><a name="5081"
+      > </a
+      ><a name="5082" class="Symbol"
+      >(</a
+      ><a name="5083" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="5085"
+      > </a
+      ><a name="5086" href="Homotopy.PathTruncation.html#5044" class="Bound"
+      >x</a
+      ><a name="5087"
+      > </a
+      ><a name="5088" href="Homotopy.PathTruncation.html#5046" class="Bound"
+      >y</a
+      ><a name="5089"
+      > </a
+      ><a name="5090" href="Homotopy.PathTruncation.html#5054" class="Bound"
+      >p</a
+      ><a name="5091" class="Symbol"
+      >)</a
+      ><a name="5092"
+      > </a
+      ><a name="5093" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5094"
+      > </a
+      ><a name="5095" href="Homotopy.PathTruncation.html#5054" class="Bound"
+      >p</a
+      ><a name="5096"
+      >
+    </a
+      ><a name="5101" href="Homotopy.PathTruncation.html#5033" class="Function"
+      >from-to</a
+      ><a name="5108"
+      > </a
+      ><a name="5109" href="Homotopy.PathTruncation.html#5109" class="Bound"
+      >x</a
+      ><a name="5110"
+      > </a
+      ><a name="5111" href="Homotopy.PathTruncation.html#5111" class="Bound"
+      >y</a
+      ><a name="5112"
+      > </a
+      ><a name="5113" class="Symbol"
+      >=</a
+      ><a name="5114"
+      > </a
+      ><a name="5115" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="5123"
+      > </a
+      ><a name="5124" class="Symbol"
+      >&#10627;</a
+      ><a name="5125"
+      > </a
+      ><a name="5126" class="Symbol"
+      >&#955;</a
+      ><a name="5127"
+      > </a
+      ><a name="5128" href="Homotopy.PathTruncation.html#5128" class="Bound"
+      >_</a
+      ><a name="5129"
+      > </a
+      ><a name="5130" class="Symbol"
+      >&#8594;</a
+      ><a name="5131"
+      > </a
+      ><a name="5132" href="HLevel.html#4362" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5146"
+      > </a
+      ><a name="5147" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5148"
+      > </a
+      ><a name="5149" class="Symbol"
+      >(</a
+      ><a name="5150" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="5164"
+      > </a
+      ><a name="5165" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5166"
+      > </a
+      ><a name="5167" class="Symbol"
+      >_)&#10628;</a
+      ><a name="5170"
+      >
+                    </a
+      ><a name="5191" class="Symbol"
+      >(</a
+      ><a name="5192" href="Homotopy.PathTruncation.html#5219" class="Function"
+      >from-to'</a
+      ><a name="5200"
+      > </a
+      ><a name="5201" href="Homotopy.PathTruncation.html#5109" class="Bound"
+      >x</a
+      ><a name="5202"
+      > </a
+      ><a name="5203" href="Homotopy.PathTruncation.html#5111" class="Bound"
+      >y</a
+      ><a name="5204" class="Symbol"
+      >)</a
+      ><a name="5205"
+      > </a
+      ><a name="5206" class="Keyword"
+      >where</a
+      ><a name="5211"
+      >
+
+      </a
+      ><a name="5219" href="Homotopy.PathTruncation.html#5219" class="Function"
+      >from-to'</a
+      ><a name="5227"
+      > </a
+      ><a name="5228" class="Symbol"
+      >:</a
+      ><a name="5229"
+      > </a
+      ><a name="5230" class="Symbol"
+      >(</a
+      ><a name="5231" href="Homotopy.PathTruncation.html#5231" class="Bound"
+      >x</a
+      ><a name="5232"
+      > </a
+      ><a name="5233" href="Homotopy.PathTruncation.html#5233" class="Bound"
+      >y</a
+      ><a name="5234"
+      > </a
+      ><a name="5235" class="Symbol"
+      >:</a
+      ><a name="5236"
+      > </a
+      ><a name="5237" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5238" class="Symbol"
+      >)</a
+      ><a name="5239"
+      > </a
+      ><a name="5240" class="Symbol"
+      >(</a
+      ><a name="5241" href="Homotopy.PathTruncation.html#5241" class="Bound"
+      >p</a
+      ><a name="5242"
+      > </a
+      ><a name="5243" class="Symbol"
+      >:</a
+      ><a name="5244"
+      > </a
+      ><a name="5245" href="Homotopy.PathTruncation.html#5231" class="Bound"
+      >x</a
+      ><a name="5246"
+      > </a
+      ><a name="5247" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5248"
+      > </a
+      ><a name="5249" href="Homotopy.PathTruncation.html#5233" class="Bound"
+      >y</a
+      ><a name="5250" class="Symbol"
+      >)</a
+      ><a name="5251"
+      > </a
+      ><a name="5252" class="Symbol"
+      >&#8594;</a
+      ><a name="5253"
+      > </a
+      ><a name="5254" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="5258"
+      > </a
+      ><a name="5259" href="Homotopy.PathTruncation.html#5231" class="Bound"
+      >x</a
+      ><a name="5260"
+      > </a
+      ><a name="5261" href="Homotopy.PathTruncation.html#5233" class="Bound"
+      >y</a
+      ><a name="5262"
+      > </a
+      ><a name="5263" class="Symbol"
+      >(</a
+      ><a name="5264" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="5266"
+      > </a
+      ><a name="5267" href="Homotopy.PathTruncation.html#5231" class="Bound"
+      >x</a
+      ><a name="5268"
+      > </a
+      ><a name="5269" href="Homotopy.PathTruncation.html#5233" class="Bound"
+      >y</a
+      ><a name="5270"
+      > </a
+      ><a name="5271" class="Symbol"
+      >(</a
+      ><a name="5272" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5276"
+      > </a
+      ><a name="5277" href="Homotopy.PathTruncation.html#5241" class="Bound"
+      >p</a
+      ><a name="5278" class="Symbol"
+      >))</a
+      ><a name="5280"
+      > </a
+      ><a name="5281" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5282"
+      > </a
+      ><a name="5283" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5287"
+      > </a
+      ><a name="5288" href="Homotopy.PathTruncation.html#5241" class="Bound"
+      >p</a
+      ><a name="5289"
+      >
+      </a
+      ><a name="5296" href="Homotopy.PathTruncation.html#5219" class="Function"
+      >from-to'</a
+      ><a name="5304"
+      > </a
+      ><a name="5305" href="Homotopy.PathTruncation.html#5305" class="Bound"
+      >x</a
+      ><a name="5306"
+      > </a
+      ><a name="5307" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5308" href="Homotopy.PathTruncation.html#5305" class="DottedPattern Bound"
+      >x</a
+      ><a name="5309"
+      > </a
+      ><a name="5310" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5314"
+      > </a
+      ><a name="5315" class="Symbol"
+      >=</a
+      ><a name="5316"
+      > </a
+      ><a name="5317" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5321"
+      >
+
+    </a
+      ><a name="5327" href="Homotopy.PathTruncation.html#5327" class="Function"
+      >to'-from'</a
+      ><a name="5336"
+      > </a
+      ><a name="5337" class="Symbol"
+      >:</a
+      ><a name="5338"
+      > </a
+      ><a name="5339" class="Symbol"
+      >(</a
+      ><a name="5340" href="Homotopy.PathTruncation.html#5340" class="Bound"
+      >u</a
+      ><a name="5341"
+      > </a
+      ><a name="5342" href="Homotopy.PathTruncation.html#5342" class="Bound"
+      >v</a
+      ><a name="5343"
+      > </a
+      ><a name="5344" class="Symbol"
+      >:</a
+      ><a name="5345"
+      > </a
+      ><a name="5346" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5347"
+      > </a
+      ><a name="5348" class="Symbol"
+      >(</a
+      ><a name="5349" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5350"
+      > </a
+      ><a name="5351" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5352" class="Symbol"
+      >)</a
+      ><a name="5353"
+      > </a
+      ><a name="5354" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5355" class="Symbol"
+      >)</a
+      ><a name="5356"
+      > </a
+      ><a name="5357" class="Symbol"
+      >(</a
+      ><a name="5358" href="Homotopy.PathTruncation.html#5358" class="Bound"
+      >p</a
+      ><a name="5359"
+      > </a
+      ><a name="5360" class="Symbol"
+      >:</a
+      ><a name="5361"
+      > </a
+      ><a name="5362" href="Homotopy.PathTruncation.html#5340" class="Bound"
+      >u</a
+      ><a name="5363"
+      > </a
+      ><a name="5364" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5365"
+      > </a
+      ><a name="5366" href="Homotopy.PathTruncation.html#5342" class="Bound"
+      >v</a
+      ><a name="5367" class="Symbol"
+      >)</a
+      ><a name="5368"
+      > </a
+      ><a name="5369" class="Symbol"
+      >&#8594;</a
+      ><a name="5370"
+      > </a
+      ><a name="5371" href="Homotopy.PathTruncation.html#4065" class="Function"
+      >to'</a
+      ><a name="5374"
+      > </a
+      ><a name="5375" href="Homotopy.PathTruncation.html#5340" class="Bound"
+      >u</a
+      ><a name="5376"
+      > </a
+      ><a name="5377" href="Homotopy.PathTruncation.html#5342" class="Bound"
+      >v</a
+      ><a name="5378"
+      > </a
+      ><a name="5379" class="Symbol"
+      >(</a
+      ><a name="5380" href="Homotopy.PathTruncation.html#4816" class="Function"
+      >from'</a
+      ><a name="5385"
+      > </a
+      ><a name="5386" href="Homotopy.PathTruncation.html#5340" class="Bound"
+      >u</a
+      ><a name="5387"
+      > </a
+      ><a name="5388" href="Homotopy.PathTruncation.html#5342" class="Bound"
+      >v</a
+      ><a name="5389"
+      > </a
+      ><a name="5390" href="Homotopy.PathTruncation.html#5358" class="Bound"
+      >p</a
+      ><a name="5391" class="Symbol"
+      >)</a
+      ><a name="5392"
+      > </a
+      ><a name="5393" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5394"
+      > </a
+      ><a name="5395" href="Homotopy.PathTruncation.html#5358" class="Bound"
+      >p</a
+      ><a name="5396"
+      >
+    </a
+      ><a name="5401" href="Homotopy.PathTruncation.html#5327" class="Function"
+      >to'-from'</a
+      ><a name="5410"
+      > </a
+      ><a name="5411" href="Homotopy.PathTruncation.html#5411" class="Bound"
+      >x</a
+      ><a name="5412"
+      > </a
+      ><a name="5413" class="DottedPattern Symbol"
+      >.</a
+      ><a name="5414" href="Homotopy.PathTruncation.html#5411" class="DottedPattern Bound"
+      >x</a
+      ><a name="5415"
+      > </a
+      ><a name="5416" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5420"
+      > </a
+      ><a name="5421" class="Symbol"
+      >=</a
+      ><a name="5422"
+      > </a
+      ><a name="5423" href="Homotopy.PathTruncation.html#5452" class="Function"
+      >to'-from'-refl</a
+      ><a name="5437"
+      > </a
+      ><a name="5438" href="Homotopy.PathTruncation.html#5411" class="Bound"
+      >x</a
+      ><a name="5439"
+      > </a
+      ><a name="5440" class="Keyword"
+      >where</a
+      ><a name="5445"
+      >
+      </a
+      ><a name="5452" href="Homotopy.PathTruncation.html#5452" class="Function"
+      >to'-from'-refl</a
+      ><a name="5466"
+      > </a
+      ><a name="5467" class="Symbol"
+      >:</a
+      ><a name="5468"
+      > </a
+      ><a name="5469" class="Symbol"
+      >(</a
+      ><a name="5470" href="Homotopy.PathTruncation.html#5470" class="Bound"
+      >u</a
+      ><a name="5471"
+      > </a
+      ><a name="5472" class="Symbol"
+      >:</a
+      ><a name="5473"
+      > </a
+      ><a name="5474" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5475"
+      > </a
+      ><a name="5476" class="Symbol"
+      >(</a
+      ><a name="5477" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5478"
+      > </a
+      ><a name="5479" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5480" class="Symbol"
+      >)</a
+      ><a name="5481"
+      > </a
+      ><a name="5482" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5483" class="Symbol"
+      >)</a
+      ><a name="5484"
+      > </a
+      ><a name="5485" class="Symbol"
+      >&#8594;</a
+      ><a name="5486"
+      > </a
+      ><a name="5487" href="Homotopy.PathTruncation.html#4065" class="Function"
+      >to'</a
+      ><a name="5490"
+      > </a
+      ><a name="5491" href="Homotopy.PathTruncation.html#5470" class="Bound"
+      >u</a
+      ><a name="5492"
+      > </a
+      ><a name="5493" href="Homotopy.PathTruncation.html#5470" class="Bound"
+      >u</a
+      ><a name="5494"
+      > </a
+      ><a name="5495" class="Symbol"
+      >(</a
+      ><a name="5496" href="Homotopy.PathTruncation.html#4816" class="Function"
+      >from'</a
+      ><a name="5501"
+      > </a
+      ><a name="5502" href="Homotopy.PathTruncation.html#5470" class="Bound"
+      >u</a
+      ><a name="5503"
+      > </a
+      ><a name="5504" href="Homotopy.PathTruncation.html#5470" class="Bound"
+      >u</a
+      ><a name="5505"
+      > </a
+      ><a name="5506" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5510" class="Symbol"
+      >)</a
+      ><a name="5511"
+      > </a
+      ><a name="5512" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5513"
+      > </a
+      ><a name="5514" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5518"
+      >
+      </a
+      ><a name="5525" href="Homotopy.PathTruncation.html#5452" class="Function"
+      >to'-from'-refl</a
+      ><a name="5539"
+      > </a
+      ><a name="5540" class="Symbol"
+      >=</a
+      ><a name="5541"
+      > </a
+      ><a name="5542" href="Homotopy.Truncation.html#626" class="Function"
+      >&#964;-extend</a
+      ><a name="5550"
+      > </a
+      ><a name="5551" class="Symbol"
+      >&#10627;</a
+      ><a name="5552"
+      > </a
+      ><a name="5553" class="Symbol"
+      >&#955;</a
+      ><a name="5554"
+      > </a
+      ><a name="5555" href="Homotopy.PathTruncation.html#5555" class="Bound"
+      >_</a
+      ><a name="5556"
+      > </a
+      ><a name="5557" class="Symbol"
+      >&#8594;</a
+      ><a name="5558"
+      > </a
+      ><a name="5559" href="HLevel.html#4362" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5573"
+      > </a
+      ><a name="5574" class="Symbol"
+      >(</a
+      ><a name="5575" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5576"
+      > </a
+      ><a name="5577" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5578" class="Symbol"
+      >)</a
+      ><a name="5579"
+      >
+                                          </a
+      ><a name="5622" class="Symbol"
+      >(</a
+      ><a name="5623" href="HLevel.html#4362" class="Function"
+      >&#8801;-is-truncated</a
+      ><a name="5637"
+      > </a
+      ><a name="5638" class="Symbol"
+      >(</a
+      ><a name="5639" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5640"
+      > </a
+      ><a name="5641" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5642" class="Symbol"
+      >)</a
+      ><a name="5643"
+      >
+                                            </a
+      ><a name="5688" class="Symbol"
+      >(</a
+      ><a name="5689" href="Homotopy.Truncation.html#406" class="Function"
+      >&#964;-is-truncated</a
+      ><a name="5703"
+      > </a
+      ><a name="5704" class="Symbol"
+      >(</a
+      ><a name="5705" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5706"
+      > </a
+      ><a name="5707" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5708" class="Symbol"
+      >)</a
+      ><a name="5709"
+      > </a
+      ><a name="5710" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5711" class="Symbol"
+      >))&#10628;</a
+      ><a name="5714"
+      >
+                         </a
+      ><a name="5740" class="Symbol"
+      >(&#955;</a
+      ><a name="5742"
+      > </a
+      ><a name="5743" href="Homotopy.PathTruncation.html#5743" class="Bound"
+      >_</a
+      ><a name="5744"
+      > </a
+      ><a name="5745" class="Symbol"
+      >&#8594;</a
+      ><a name="5746"
+      > </a
+      ><a name="5747" href="Paths.html#185" class="InductiveConstructor"
+      >refl</a
+      ><a name="5751" class="Symbol"
+      >)</a
+      ><a name="5752"
+      >
+
+    </a
+      ><a name="5758" href="Homotopy.PathTruncation.html#5758" class="Function"
+      >to-from</a
+      ><a name="5765"
+      > </a
+      ><a name="5766" class="Symbol"
+      >:</a
+      ><a name="5767"
+      > </a
+      ><a name="5768" class="Symbol"
+      >(</a
+      ><a name="5769" href="Homotopy.PathTruncation.html#5769" class="Bound"
+      >x</a
+      ><a name="5770"
+      > </a
+      ><a name="5771" href="Homotopy.PathTruncation.html#5771" class="Bound"
+      >y</a
+      ><a name="5772"
+      > </a
+      ><a name="5773" class="Symbol"
+      >:</a
+      ><a name="5774"
+      > </a
+      ><a name="5775" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5776" class="Symbol"
+      >)</a
+      ><a name="5777"
+      > </a
+      ><a name="5778" class="Symbol"
+      >(</a
+      ><a name="5779" href="Homotopy.PathTruncation.html#5779" class="Bound"
+      >p</a
+      ><a name="5780"
+      > </a
+      ><a name="5781" class="Symbol"
+      >:</a
+      ><a name="5782"
+      > </a
+      ><a name="5783" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5787"
+      > </a
+      ><a name="5788" class="Symbol"
+      >{</a
+      ><a name="5789"
+      >n </a
+      ><a name="5791" class="Symbol"
+      >=</a
+      ><a name="5792"
+      > </a
+      ><a name="5793" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5794"
+      > </a
+      ><a name="5795" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5796" class="Symbol"
+      >}</a
+      ><a name="5797"
+      > </a
+      ><a name="5798" href="Homotopy.PathTruncation.html#5769" class="Bound"
+      >x</a
+      ><a name="5799"
+      > </a
+      ><a name="5800" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5801"
+      > </a
+      ><a name="5802" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5806"
+      > </a
+      ><a name="5807" href="Homotopy.PathTruncation.html#5771" class="Bound"
+      >y</a
+      ><a name="5808" class="Symbol"
+      >)</a
+      ><a name="5809"
+      > </a
+      ><a name="5810" class="Symbol"
+      >&#8594;</a
+      ><a name="5811"
+      > </a
+      ><a name="5812" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="5814"
+      > </a
+      ><a name="5815" href="Homotopy.PathTruncation.html#5769" class="Bound"
+      >x</a
+      ><a name="5816"
+      > </a
+      ><a name="5817" href="Homotopy.PathTruncation.html#5771" class="Bound"
+      >y</a
+      ><a name="5818"
+      > </a
+      ><a name="5819" class="Symbol"
+      >(</a
+      ><a name="5820" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="5824"
+      > </a
+      ><a name="5825" href="Homotopy.PathTruncation.html#5769" class="Bound"
+      >x</a
+      ><a name="5826"
+      > </a
+      ><a name="5827" href="Homotopy.PathTruncation.html#5771" class="Bound"
+      >y</a
+      ><a name="5828"
+      > </a
+      ><a name="5829" href="Homotopy.PathTruncation.html#5779" class="Bound"
+      >p</a
+      ><a name="5830" class="Symbol"
+      >)</a
+      ><a name="5831"
+      > </a
+      ><a name="5832" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5833"
+      > </a
+      ><a name="5834" href="Homotopy.PathTruncation.html#5779" class="Bound"
+      >p</a
+      ><a name="5835"
+      >
+    </a
+      ><a name="5840" href="Homotopy.PathTruncation.html#5758" class="Function"
+      >to-from</a
+      ><a name="5847"
+      > </a
+      ><a name="5848" href="Homotopy.PathTruncation.html#5848" class="Bound"
+      >x</a
+      ><a name="5849"
+      > </a
+      ><a name="5850" href="Homotopy.PathTruncation.html#5850" class="Bound"
+      >y</a
+      ><a name="5851"
+      > </a
+      ><a name="5852" href="Homotopy.PathTruncation.html#5852" class="Bound"
+      >p</a
+      ><a name="5853"
+      > </a
+      ><a name="5854" class="Symbol"
+      >=</a
+      ><a name="5855"
+      > </a
+      ><a name="5856" href="Homotopy.PathTruncation.html#5327" class="Function"
+      >to'-from'</a
+      ><a name="5865"
+      > </a
+      ><a name="5866" class="Symbol"
+      >(</a
+      ><a name="5867" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5871"
+      > </a
+      ><a name="5872" href="Homotopy.PathTruncation.html#5848" class="Bound"
+      >x</a
+      ><a name="5873" class="Symbol"
+      >)</a
+      ><a name="5874"
+      > </a
+      ><a name="5875" class="Symbol"
+      >(</a
+      ><a name="5876" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5880"
+      > </a
+      ><a name="5881" href="Homotopy.PathTruncation.html#5850" class="Bound"
+      >y</a
+      ><a name="5882" class="Symbol"
+      >)</a
+      ><a name="5883"
+      > </a
+      ><a name="5884" href="Homotopy.PathTruncation.html#5852" class="Bound"
+      >p</a
+      ><a name="5885"
+      >
+
+  </a
+      ><a name="5889" href="Homotopy.PathTruncation.html#5889" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="5910"
+      > </a
+      ><a name="5911" class="Symbol"
+      >:</a
+      ><a name="5912"
+      > </a
+      ><a name="5913" class="Symbol"
+      >{</a
+      ><a name="5914" href="Homotopy.PathTruncation.html#5914" class="Bound"
+      >x</a
+      ><a name="5915"
+      > </a
+      ><a name="5916" href="Homotopy.PathTruncation.html#5916" class="Bound"
+      >y</a
+      ><a name="5917"
+      > </a
+      ><a name="5918" class="Symbol"
+      >:</a
+      ><a name="5919"
+      > </a
+      ><a name="5920" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="5921" class="Symbol"
+      >}</a
+      ><a name="5922"
+      > </a
+      ><a name="5923" class="Symbol"
+      >&#8594;</a
+      ><a name="5924"
+      > </a
+      ><a name="5925" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="5926"
+      > </a
+      ><a name="5927" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5928"
+      > </a
+      ><a name="5929" class="Symbol"
+      >(</a
+      ><a name="5930" href="Homotopy.PathTruncation.html#5914" class="Bound"
+      >x</a
+      ><a name="5931"
+      > </a
+      ><a name="5932" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5933"
+      > </a
+      ><a name="5934" href="Homotopy.PathTruncation.html#5916" class="Bound"
+      >y</a
+      ><a name="5935" class="Symbol"
+      >)</a
+      ><a name="5936"
+      > </a
+      ><a name="5937" href="Equivalences.html#379" class="Function Operator"
+      >&#8771;</a
+      ><a name="5938"
+      > </a
+      ><a name="5939" class="Symbol"
+      >(</a
+      ><a name="5940" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5944"
+      > </a
+      ><a name="5945" class="Symbol"
+      >{</a
+      ><a name="5946"
+      >n </a
+      ><a name="5948" class="Symbol"
+      >=</a
+      ><a name="5949"
+      > </a
+      ><a name="5950" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="5951"
+      > </a
+      ><a name="5952" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="5953" class="Symbol"
+      >}</a
+      ><a name="5954"
+      > </a
+      ><a name="5955" href="Homotopy.PathTruncation.html#5914" class="Bound"
+      >x</a
+      ><a name="5956"
+      > </a
+      ><a name="5957" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="5958"
+      > </a
+      ><a name="5959" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="5963"
+      > </a
+      ><a name="5964" href="Homotopy.PathTruncation.html#5916" class="Bound"
+      >y</a
+      ><a name="5965" class="Symbol"
+      >)</a
+      ><a name="5966"
+      >
+  </a
+      ><a name="5969" href="Homotopy.PathTruncation.html#5889" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="5990"
+      > </a
+      ><a name="5991" class="Symbol"
+      >{</a
+      ><a name="5992" href="Homotopy.PathTruncation.html#5992" class="Bound"
+      >x</a
+      ><a name="5993" class="Symbol"
+      >}</a
+      ><a name="5994"
+      > </a
+      ><a name="5995" class="Symbol"
+      >{</a
+      ><a name="5996" href="Homotopy.PathTruncation.html#5996" class="Bound"
+      >y</a
+      ><a name="5997" class="Symbol"
+      >}</a
+      ><a name="5998"
+      > </a
+      ><a name="5999" class="Symbol"
+      >=</a
+      ><a name="6000"
+      >
+    </a
+      ><a name="6005" class="Symbol"
+      >(</a
+      ><a name="6006" href="Homotopy.PathTruncation.html#3403" class="Function"
+      >to</a
+      ><a name="6008"
+      > </a
+      ><a name="6009" href="Homotopy.PathTruncation.html#5992" class="Bound"
+      >x</a
+      ><a name="6010"
+      > </a
+      ><a name="6011" href="Homotopy.PathTruncation.html#5996" class="Bound"
+      >y</a
+      ><a name="6012"
+      > </a
+      ><a name="6013" href="Types.html#790" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="6014"
+      > </a
+      ><a name="6015" href="Equivalences.html#3942" class="Function"
+      >iso-is-eq</a
+      ><a name="6024"
+      > </a
+      ><a name="6025" class="Symbol"
+      >_</a
+      ><a name="6026"
+      > </a
+      ><a name="6027" class="Symbol"
+      >(</a
+      ><a name="6028" href="Homotopy.PathTruncation.html#4924" class="Function"
+      >from</a
+      ><a name="6032"
+      > </a
+      ><a name="6033" href="Homotopy.PathTruncation.html#5992" class="Bound"
+      >x</a
+      ><a name="6034"
+      > </a
+      ><a name="6035" href="Homotopy.PathTruncation.html#5996" class="Bound"
+      >y</a
+      ><a name="6036" class="Symbol"
+      >)</a
+      ><a name="6037"
+      > </a
+      ><a name="6038" class="Symbol"
+      >(</a
+      ><a name="6039" href="Homotopy.PathTruncation.html#5758" class="Function"
+      >to-from</a
+      ><a name="6046"
+      > </a
+      ><a name="6047" href="Homotopy.PathTruncation.html#5992" class="Bound"
+      >x</a
+      ><a name="6048"
+      > </a
+      ><a name="6049" href="Homotopy.PathTruncation.html#5996" class="Bound"
+      >y</a
+      ><a name="6050" class="Symbol"
+      >)</a
+      ><a name="6051"
+      > </a
+      ><a name="6052" class="Symbol"
+      >(</a
+      ><a name="6053" href="Homotopy.PathTruncation.html#5033" class="Function"
+      >from-to</a
+      ><a name="6060"
+      > </a
+      ><a name="6061" href="Homotopy.PathTruncation.html#5992" class="Bound"
+      >x</a
+      ><a name="6062"
+      > </a
+      ><a name="6063" href="Homotopy.PathTruncation.html#5996" class="Bound"
+      >y</a
+      ><a name="6064" class="Symbol"
+      >))</a
+      ><a name="6066"
+      >
+
+  </a
+      ><a name="6070" class="Keyword"
+      >module</a
+      ><a name="6076"
+      > </a
+      ><a name="6077" href="Homotopy.PathTruncation.html#6077" class="Module"
+      >_</a
+      ><a name="6078"
+      > </a
+      ><a name="6079" class="Keyword"
+      >where</a
+      ><a name="6084"
+      >
+    </a
+      ><a name="6089" class="Keyword"
+      >open</a
+      ><a name="6093"
+      > </a
+      ><a name="6094" class="Keyword"
+      >import</a
+      ><a name="6100"
+      > </a
+      ><a name="6101" href="Homotopy.Connected.html#1" class="Module"
+      >Homotopy.Connected</a
+      ><a name="6119"
+      >
+
+    </a
+      ><a name="6125" class="Keyword"
+      >abstract</a
+      ><a name="6133"
+      >
+      </a
+      ><a name="6140" href="Homotopy.PathTruncation.html#6140" class="Function"
+      >connected-has-connected-paths</a
+      ><a name="6169"
+      > </a
+      ><a name="6170" class="Symbol"
+      >:</a
+      ><a name="6171"
+      > </a
+      ><a name="6172" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="6184"
+      > </a
+      ><a name="6185" class="Symbol"
+      >(</a
+      ><a name="6186" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="6187"
+      > </a
+      ><a name="6188" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="6189" class="Symbol"
+      >)</a
+      ><a name="6190"
+      > </a
+      ><a name="6191" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="6192"
+      > </a
+      ><a name="6193" class="Symbol"
+      >&#8594;</a
+      ><a name="6194"
+      > </a
+      ><a name="6195" class="Symbol"
+      >(</a
+      ><a name="6196" href="Homotopy.PathTruncation.html#6196" class="Bound"
+      >p</a
+      ><a name="6197"
+      > </a
+      ><a name="6198" href="Homotopy.PathTruncation.html#6198" class="Bound"
+      >q</a
+      ><a name="6199"
+      > </a
+      ><a name="6200" class="Symbol"
+      >:</a
+      ><a name="6201"
+      > </a
+      ><a name="6202" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="6203" class="Symbol"
+      >)</a
+      ><a name="6204"
+      > </a
+      ><a name="6205" class="Symbol"
+      >&#8594;</a
+      ><a name="6206"
+      > </a
+      ><a name="6207" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="6219"
+      > </a
+      ><a name="6220" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="6221"
+      > </a
+      ><a name="6222" class="Symbol"
+      >(</a
+      ><a name="6223" href="Homotopy.PathTruncation.html#6196" class="Bound"
+      >p</a
+      ><a name="6224"
+      > </a
+      ><a name="6225" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="6226"
+      > </a
+      ><a name="6227" href="Homotopy.PathTruncation.html#6198" class="Bound"
+      >q</a
+      ><a name="6228" class="Symbol"
+      >)</a
+      ><a name="6229"
+      >
+      </a
+      ><a name="6236" href="Homotopy.PathTruncation.html#6140" class="Function"
+      >connected-has-connected-paths</a
+      ><a name="6265"
+      > </a
+      ><a name="6266" href="Homotopy.PathTruncation.html#6266" class="Bound"
+      >conn</a
+      ><a name="6270"
+      > </a
+      ><a name="6271" href="Homotopy.PathTruncation.html#6271" class="Bound"
+      >p</a
+      ><a name="6272"
+      > </a
+      ><a name="6273" href="Homotopy.PathTruncation.html#6273" class="Bound"
+      >q</a
+      ><a name="6274"
+      > </a
+      ><a name="6275" class="Symbol"
+      >=</a
+      ><a name="6276"
+      >
+        </a
+      ><a name="6285" href="HLevelBis.html#1095" class="Function"
+      >equiv-types-truncated</a
+      ><a name="6306"
+      > </a
+      ><a name="6307" href="Types.html#1428" class="InductiveConstructor"
+      >&#10216;-2&#10217;</a
+      ><a name="6311"
+      > </a
+      ><a name="6312" class="Symbol"
+      >(</a
+      ><a name="6313" href="Homotopy.PathTruncation.html#5889" class="Function"
+      >&#964;-path-equiv-path-&#964;-S</a
+      ><a name="6334"
+      > </a
+      ><a name="6335" href="Equivalences.html#4688" class="Function Operator"
+      >&#8315;&#185;</a
+      ><a name="6337" class="Symbol"
+      >)</a
+      ><a name="6338"
+      > </a
+      ><a name="6339" class="Symbol"
+      >(</a
+      ><a name="6340" href="HLevel.html#3796" class="Function"
+      >contr-is-prop</a
+      ><a name="6353"
+      > </a
+      ><a name="6354" href="Homotopy.PathTruncation.html#6266" class="Bound"
+      >conn</a
+      ><a name="6358"
+      > </a
+      ><a name="6359" class="Symbol"
+      >(</a
+      ><a name="6360" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6364"
+      > </a
+      ><a name="6365" href="Homotopy.PathTruncation.html#6271" class="Bound"
+      >p</a
+      ><a name="6366" class="Symbol"
+      >)</a
+      ><a name="6367"
+      > </a
+      ><a name="6368" class="Symbol"
+      >(</a
+      ><a name="6369" href="Homotopy.Truncation.html#336" class="Function"
+      >proj</a
+      ><a name="6373"
+      > </a
+      ><a name="6374" href="Homotopy.PathTruncation.html#6273" class="Bound"
+      >q</a
+      ><a name="6375" class="Symbol"
+      >))</a
+      ><a name="6377"
+      >
+
+    </a
+      ><a name="6383" href="Homotopy.PathTruncation.html#6383" class="Function"
+      >connected-has-all-&#964;-paths</a
+      ><a name="6408"
+      > </a
+      ><a name="6409" class="Symbol"
+      >:</a
+      ><a name="6410"
+      > </a
+      ><a name="6411" href="Homotopy.Connected.html#117" class="Function"
+      >is-connected</a
+      ><a name="6423"
+      > </a
+      ><a name="6424" class="Symbol"
+      >(</a
+      ><a name="6425" href="Types.html#1441" class="InductiveConstructor"
+      >S</a
+      ><a name="6426"
+      > </a
+      ><a name="6427" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="6428" class="Symbol"
+      >)</a
+      ><a name="6429"
+      > </a
+      ><a name="6430" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="6431"
+      > </a
+      ><a name="6432" class="Symbol"
+      >&#8594;</a
+      ><a name="6433"
+      > </a
+      ><a name="6434" class="Symbol"
+      >(</a
+      ><a name="6435" href="Homotopy.PathTruncation.html#6435" class="Bound"
+      >p</a
+      ><a name="6436"
+      > </a
+      ><a name="6437" href="Homotopy.PathTruncation.html#6437" class="Bound"
+      >q</a
+      ><a name="6438"
+      > </a
+      ><a name="6439" class="Symbol"
+      >:</a
+      ><a name="6440"
+      > </a
+      ><a name="6441" href="Homotopy.PathTruncation.html#3371" class="Bound"
+      >A</a
+      ><a name="6442" class="Symbol"
+      >)</a
+      ><a name="6443"
+      > </a
+      ><a name="6444" class="Symbol"
+      >&#8594;</a
+      ><a name="6445"
+      > </a
+      ><a name="6446" href="Homotopy.Truncation.html#295" class="Function"
+      >&#964;</a
+      ><a name="6447"
+      > </a
+      ><a name="6448" href="Homotopy.PathTruncation.html#3361" class="Bound"
+      >n</a
+      ><a name="6449"
+      > </a
+      ><a name="6450" class="Symbol"
+      >(</a
+      ><a name="6451" href="Homotopy.PathTruncation.html#6435" class="Bound"
+      >p</a
+      ><a name="6452"
+      > </a
+      ><a name="6453" href="Paths.html#137" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="6454"
+      > </a
+      ><a name="6455" href="Homotopy.PathTruncation.html#6437" class="Bound"
+      >q</a
+      ><a name="6456" class="Symbol"
+      >)</a
+      ><a name="6457"
+      >
+    </a
+      ><a name="6462" href="Homotopy.PathTruncation.html#6383" class="Function"
+      >connected-has-all-&#964;-paths</a
+      ><a name="6487"
+      > </a
+      ><a name="6488" href="Homotopy.PathTruncation.html#6488" class="Bound"
+      >conn</a
+      ><a name="6492"
+      > </a
+      ><a name="6493" href="Homotopy.PathTruncation.html#6493" class="Bound"
+      >p</a
+      ><a name="6494"
+      > </a
+      ><a name="6495" href="Homotopy.PathTruncation.html#6495" class="Bound"
+      >q</a
+      ><a name="6496"
+      > </a
+      ><a name="6497" class="Symbol"
+      >=</a
+      ><a name="6498"
+      > </a
+      ><a name="6499" href="Types.html#806" class="Function"
+      >&#960;&#8321;</a
+      ><a name="6501"
+      > </a
+      ><a name="6502" href="Functions.html#474" class="Function Operator"
+      >$</a
+      ><a name="6503"
+      > </a
+      ><a name="6504" href="Homotopy.PathTruncation.html#6140" class="Function"
+      >connected-has-connected-paths</a
+      ><a name="6533"
+      > </a
+      ><a name="6534" href="Homotopy.PathTruncation.html#6488" class="Bound"
+      >conn</a
+      ><a name="6538"
+      > </a
+      ><a name="6539" href="Homotopy.PathTruncation.html#6493" class="Bound"
+      >p</a
+      ><a name="6540"
+      > </a
+      ><a name="6541" href="Homotopy.PathTruncation.html#6495" class="Bound"
+      >q</a
+      ><a name="6542"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>
